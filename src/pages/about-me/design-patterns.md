@@ -19,7 +19,3 @@ layout: ../../layouts/MainLayout.astro
 ## Builder
 
 ## Observer
-
-## Model View Controller
-
-## Model View-Model View
