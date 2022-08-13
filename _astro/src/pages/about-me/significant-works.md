@@ -6,5 +6,32 @@ layout: ../../layouts/MainLayout.astro
 
 **Overview**
 
-Hellos! This site has many purposes. Servers as my personal profolio, pointers to many resources and tips and tricks around the many technologies I am passionate about. Feel free to dive in to find out more about myself, or
-discover the many tips and resources I have gathered on this site. Enjoy.
+This section is a history of some siginificant works that I have been involved, an overview and very briefly the technologies involved. NOT an exuastive list, but ones that come to mind that took a combination of great work, research and implementation effort. Links here could later be invalid as resources could have changed since I have last looked at them.
+
+### ShareSpace
+
+### SMRT
+
+### ADIS
+
+### OET
+
+### Salesforce communities
+
+### Salesforce point of sale
+
+### Disney fastpass bot
+
+### Starlight
+
+### Artropy
+
+### Event Component
+
+### Whiteboard
+
+### Starlight CI/CD
+
+### Authorize integration
+
+### 

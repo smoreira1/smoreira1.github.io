@@ -1,21 +1,21 @@
 export const SITE = {
-  title: 'Stephen D. Moreira',
-  description: 'Software Engineering',
-  defaultLanguage: 'en_US',
+  title: "Stephen D. Moreira",
+  description: "Software Engineering",
+  defaultLanguage: "en_US",
 };
 
 export const OPEN_GRAPH = {
   image: {
-    src: 'https://github.com/withastro/astro/blob/main/assets/social/banner.jpg?raw=true',
+    src: "https://github.com/withastro/astro/blob/main/assets/social/banner.jpg?raw=true",
     alt:
-      'astro logo on a starry expanse of space,' +
-      ' with a purple saturn-like planet floating in the right foreground',
+      "astro logo on a starry expanse of space," +
+      " with a purple saturn-like planet floating in the right foreground",
   },
-  twitter: 'astrodotbuild',
+  twitter: "astrodotbuild",
 };
 
 export const KNOWN_LANGUAGES = {
-  English: 'en',
+  English: "en",
 };
 
 // Uncomment this to add an "Edit this page" button to every page of documentation.
@@ -34,24 +34,18 @@ export const KNOWN_LANGUAGES = {
 
 export const SIDEBAR = {
   en: [
-    { text: '', header: true },
-    { text: 'About Me', header: true },
-    { text: 'Introduction', link: 'about-me/introduction' },
-    { text: 'Résumé', link: 'about-me/resume' },
-    { text: 'Significant Works', link: 'about-me/significant-works' },
-    { text: 'The Toolbag', link: 'about-me/the-toolbag' },
-    { text: 'Design Patterns', link: 'about-me/design-patterns' },
-    { text: 'Tips', header: true },
-    { text: 'TypeScript', link: 'tips/typescript' },
-    { text: 'CSS', link: 'tips/css' },
-    { text: 'RxJS', link: 'tips/rxjs' },
-    { text: 'Projects', header: true },
-    { text: 'Project Starlight', link: 'about-me/project-starlight' },
-    { text: 'Project ArchType', link: 'about-me/project-starlight' },
-    { text: 'Other', header: true },
-    { text: 'Art', link: 'about-me/project-starlight' },
-    { text: 'Photography', link: 'about-me/project-starlight' },
-    { text: '3D-Printing', link: 'about-me/project-starlight' },
-    { text: 'Blender', link: 'about-me/project-starlight' },
+    { text: "", header: true },
+    { text: "About Me", header: true },
+    { text: "Introduction", link: "about-me/introduction" },
+    { text: "Résumé", link: "about-me/resume" },
+    { text: "Significant Works", link: "about-me/significant-works" },
+    { text: "Tech Stack", link: "about-me/tech-stack" },
+    { text: "Design Patterns", link: "about-me/design-patterns" },
+    { text: "Tips", header: true },
+    { text: "TypeScript", link: "tips/typescript" },
+    { text: "CSS", link: "tips/css" },
+    { text: "RxJS", link: "tips/rxjs" },
+    { text: "Projects", header: true },
+    { text: "Project Starlight", link: "projects/starlight" },
   ],
 };
