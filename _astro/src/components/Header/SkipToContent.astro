@@ -1,11 +1,16 @@
-<a href="#article" class="sr-only focus:not-sr-only skiplink"><span>Skip to Content</span></a>
+---
+import UIString from '../UIString.astro';
+---
+<a href="#article" class="sr-only focus:not-sr-only skiplink">
+	<span><UIString key="a11y.skipLink" /></span>
+</a>
 
 <style>
 	.skiplink,
 	.skiplink:focus,
 	.skiplink:focus-visible {
 		position: absolute;
-		padding: 0.25em;
+		padding: 1em;
 		font-size: larger;
 		top: 0;
 		left: 0;
@@ -13,8 +18,8 @@
 		z-index: 9;
 		display: block;
 		text-align: center;
-		background-color: var(--theme-text-accent);
-		color: var(--theme-bg);
+		background-color: var(--theme-accent);
+		color: white;
 		border-radius: 0.25em;
 		outline: var(--theme-bg) solid 1px;
 		outline-offset: 0;

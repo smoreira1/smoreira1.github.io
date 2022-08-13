@@ -1,1 +1,0 @@
-import{h as e,P as f}from"./chunks/preact.module.8a47de0f.js";const n=({value:t,name:r})=>t?e("astro-slot",{name:r,dangerouslySetInnerHTML:{__html:t}}):null;n.shouldComponentUpdate=()=>!1;var m=t=>(r,o,{default:a,...s})=>{if(!!t.hasAttribute("ssr")){for(const[l,u]of Object.entries(s))o[l]=e(n,{value:u,name:l});f(e(r,o,a!=null?e(n,{value:a}):a),t)}};export{m as default};

@@ -1,140 +1,173 @@
 ---
-import { getLanguageFromURL, KNOWN_LANGUAGE_CODES } from "../../languages.ts";
-import * as CONFIG from "../../config.ts";
-import AstroLogo from "./AstroLogo.astro";
-import SkipToContent from "./SkipToContent.astro";
-import SidebarToggle from "./SidebarToggle.tsx";
-import LanguageSelect from "./LanguageSelect.tsx";
-import Search from "./Search.tsx";
+import SkipToContent from './SkipToContent.astro';
+import SidebarToggle from './SidebarToggle';
+import LanguageSelect from './LanguageSelect';
+import Search from './Search.astro';
+import ThemeToggleButton from './ThemeToggleButton';
+import { getLanguageFromURL } from '../../util';
+import { getDocSearchStrings, useTranslations } from '../../i18n/util';
 
 const { currentPage } = Astro.props;
 const lang = currentPage && getLanguageFromURL(currentPage);
+const docsearchStrings = getDocSearchStrings(Astro);
+const t = useTranslations(Astro);
 ---
 
 <header>
 	<SkipToContent />
-	<nav class="nav-wrapper" title="Top Navigation">
-		<div class="menu-toggle">
-			<SidebarToggle client:idle />
+	<nav class="nav-wrapper" aria-label={t('navbar.a11yTitle')}>
+		<div dir="ltr" lang="en" class="logo flex">
+			<ul>
+				<li>
+					<a class="astro" href="https://smoreira1.github.io">
+					<span class="sr-only">Astrso</span>
+						Stephen D. M.
+					</a>
+				</li>
+			</ul>
 		</div>
-		<div class="logo flex">
-			<a href="/">
-				<AstroLogo size={40} />
-				<h1>{CONFIG.SITE.title ?? "Documentation"}</h1>
-			</a>
-		</div>
-		<div style="flex-grow: 1;"></div>
-		{KNOWN_LANGUAGE_CODES.length > 1 && <LanguageSelect lang={lang} client:idle />}
-		{CONFIG.ALGOLIA && (
-			<div class="search-item">
-				<Search client:idle />
-			</div>
-		)}
+			<ThemeToggleButton 
+				client:visible 
+				labels={{  useLight: t('themeToggle.useLight'), useDark: t('themeToggle.useDark')  }}
+				isInsideHeader={true} 
+			/>
+		<!-- {lang && <LanguageSelect lang={lang} client:idle />}
+		<Search {lang} labels={docsearchStrings} />
+		<SidebarToggle client:idle /> -->
 	</nav>
 </header>
 
 <style>
 	header {
-		z-index: 11;
+		position: fixed;
+		left: 0;
+		top: 0;
+		right: 0;
 		height: var(--theme-navbar-height);
-		width: 100%;
+		z-index: 11;
+		padding: 2rem 0;
 		background-color: var(--theme-navbar-bg);
 		display: flex;
 		align-items: center;
-		justify-content: center;
+		justify-content: left;
 		overflow: hidden;
-		position: sticky;
-		top: 0;
 	}
 
-	.logo {
-		flex: 1;
-		display: flex;
-		overflow: hidden;
-		width: 30px;
-		font-size: 2rem;
-		flex-shrink: 0;
-		font-weight: 600;
-		line-height: 1;
-		color: hsla(var(--color-base-white), 100%, 1);
-		gap: 0.25em;
-		z-index: -1;
-	}
-
-	.logo a {
-		display: flex;
-		padding: 0.5em 0.25em;
-		margin: -0.5em -0.25em;
-		text-decoration: none;
-		font-weight: bold;
-	}
-
-	.logo a {
-		transition: color 100ms ease-out;
-		color: var(--theme-text);
-	}
-
-	.logo a:hover,
-	.logo a:focus {
-		color: var(--theme-text-accent);
-	}
-
-	.logo h1 {
-		display: none;
-		font: inherit;
-		color: inherit;
-		margin: 0;
+	ul, li {
+		all: inherit;
+		flex-grow: 0;
 	}
 
 	.nav-wrapper {
 		display: flex;
 		align-items: center;
-		justify-content: flex-end;
-		gap: 1em;
+		justify-content: center;
+		gap: 0.75rem;
 		width: 100%;
-		max-width: 82em;
-		padding: 0 1rem;
+		padding-inline: var(--min-spacing-inline);
+	}
+
+	/* If the device is likely to show a scrollbar gutter, reserve space for it */
+	@media (hover: hover) {
+		.nav-wrapper {
+			max-width: calc(100vw - 1.1rem);
+		}
+	}
+
+	.logo {
+		display: flex;
+		justify-content: flex-start;
+		font-size: 1rem;
+		flex-grow: 1;
+		flex-shrink: 0;
+		font-weight: 600;
+		line-height: 1;
+		color: hsla(var(--color-base-white), 100%, 1);
+		text-decoration: none;
+		gap: 0.5em;
+	}
+
+	:global([dir='rtl']) .logo {
+		justify-content: flex-end;
+	}
+
+	.logo a {
+		padding: 0.5em 0.25em;
+		margin: -0.5em -0.25em;
+	}
+
+	.logo svg {
+		height: 40px;
+		width: auto;
+		display: block;
+		color: var(--theme-accent);
+	}
+
+	.logo .hover {
+		opacity: 0;
+	}
+	.logo a {
+		transition: transform 180ms ease-out;
+	}
+
+	.logo a:hover,
+	.logo a:focus {
+		opacity: 1;
+		transform: translateY(-2px);
+	}
+
+	.logo a:focus:not(:focus-visible) {
+		outline: none;
+	}
+
+	.logo h1 {
+		font: inherit;
+		color: inherit;
+		margin: 0;
+	}
+
+	.astro {
+		overflow: hidden;
+		width: 41px;
+		font-size: 2em;
+		text-decoration-line: none;
+	}
+
+	.docs {
+		display: none;
+	}
+
+	@media (min-width: 20em) {
+		.docs {
+			display: inherit;
+			max-width: 80px;
+		}
+	}
+
+	@media (min-width: 23.5em) {
+		.docs {
+			max-width: none;
+		}
+		.nav-wrapper {
+			gap: 1rem;
+		}
 	}
 
 	@media (min-width: 50em) {
 		header {
-			position: static;
-			padding: 2rem 0rem;
+			padding: 2.5rem 0 1.5rem 0;
 		}
-		.logo {
+		.astro {
 			width: auto;
-			margin: 0;
-			z-index: 0;
-		}
-		.logo h1 {
-			display: initial;
-		}
-		.menu-toggle {
-			display: none;
 		}
 	}
 
-	/** Style Algolia */
-	:root {
-		--docsearch-primary-color: var(--theme-accent);
-		--docsearch-logo-color: var(--theme-text);
-	}
-
-	.search-item {
-		display: none;
-		position: relative;
-		z-index: 10;
-		flex-grow: 1;
-		padding-right: 0.7rem;
-		display: flex;
-		max-width: 200px;
-	}
-	:global(.search-item > *) {
-		flex-grow: 1;
-	}
-	@media (min-width: 50em) {
-		.search-item {
-			max-width: 400px;
+	@media (forced-colors: active) {
+		.text {
+			fill: LinkText;
+		}
+		.docs-path {
+			fill: ActiveText;
 		}
 	}
 </style>

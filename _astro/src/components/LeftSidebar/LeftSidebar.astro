@@ -1,121 +1,95 @@
 ---
-import { getLanguageFromURL } from "../../languages.ts";
-import { SIDEBAR } from "../../config.ts";
-const { currentPage } = Astro.props;
-const currentPageMatch = currentPage.slice(1);
-const langCode = getLanguageFromURL(currentPage);
-// SIDEBAR is a flat array. Group it by sections to properly render.
-const sidebarSections = SIDEBAR[langCode].reduce((col, item, i) => {
-	// If the first item is not a section header, create a new container section.
-	if (i === 0) {
-		if (!item.header) {
-			const pesudoSection = { text: "" };
-			col.push({ ...pesudoSection, children: [] });
-		}
-	}
-	if (item.header) {
-		col.push({ ...item, children: [] });
+import Sponsors from './Sponsors.astro';
+import { removeLeadingSlash, removeTrailingSlash } from '../../util';
+import { getNav, useTranslations } from "../../i18n/util";
+import SidebarContent from './SidebarContent.astro';
+import SidebarToggleTabGroup from '../TabGroup/SidebarToggleTabGroup';
+import CommunityMenu from "../RightSidebar/CommunityMenu.astro";
+import ThemeToggleButton from "../Header/ThemeToggleButton";
+
+export interface Props {
+	currentPage: string;
+}
+
+const t = useTranslations(Astro);
+
+const { currentPage } = Astro.props as Props;
+const currentPageMatch = removeLeadingSlash(removeTrailingSlash(currentPage));
+
+// Group nav menu by sections to properly render.
+const sidebarSections = (await getNav(Astro)).reduce((collection, item) => {
+	if ('header' in item) {
+		collection.push({ ...item, children: [] });
 	} else {
-		col[col.length - 1].children.push(item);
+		collection[collection.length - 1].children.push(item);
 	}
-	return col;
-}, []);
+	return collection;
+}, [] as Parameters<typeof SidebarContent>[0]['sidebarSections']);
+
+const learnSections = sidebarSections.filter((section) => section.type === 'learn');
+const apiSections = sidebarSections.filter((section) => section.type === 'api');
+let activeTab: 'learn' | 'api' = 'learn';
+for (const section of sidebarSections) {
+	if (section.children.some((item) => currentPageMatch.includes(item.slug))) {
+		activeTab = section.type;
+	}
+}
 ---
 
-<nav aria-labelledby="grid-left">
-	<ul class="nav-groups">
-		{sidebarSections.map((section) => (
-			<li>
-				<div class="nav-group">
-					<h2 class="nav-group-title">{section.text}</h2>
-					<ul>
-						{section.children.map((child) => (
-							<li class="nav-link">
-								<a
-									href={`${Astro.site.pathname}${child.link}`}
-									aria-current={`${currentPageMatch === child.link ? "page" : "false"}`}
-								>
-									{child.text}
-								</a>
-							</li>
-						))}
-					</ul>
-				</div>
-			</li>
-		))}
+<nav aria-label={t('leftSidebar.a11yTitle')}>
+	<SidebarToggleTabGroup 
+		client:load 
+		defaultActiveTab={activeTab} 
+		labels={{ learn: t('leftSidebar.learnTab'), api: t('leftSidebar.referenceTab') }}
+	/>
+	<ul class={`nav-groups`}>
+		<SidebarContent type={'learn'} defaultActiveTab={activeTab} sidebarSections={learnSections} {currentPageMatch} />
+		<SidebarContent type={'api'} defaultActiveTab={activeTab} sidebarSections={apiSections} {currentPageMatch} />
+		<CommunityMenu hideOnLargerScreens={true} />
+		<li style="text-align: center;">
+			<ThemeToggleButton 
+				client:visible 
+				labels={{  useLight: t('themeToggle.useLight'), useDark: t('themeToggle.useDark')  }} 
+			/>
+		</li>
+		<li>
+			<Sponsors />
+		</li>
 	</ul>
 </nav>
 
-<script is:inline>
-	window.addEventListener("DOMContentLoaded", (event) => {
-		var target = document.querySelector('[aria-current="page"]');
-		if (target && target.offsetTop > window.innerHeight - 100) {
-			document.querySelector(".nav-groups").scrollTop = target.offsetTop;
-		}
+<script>
+	window.addEventListener('DOMContentLoaded', () => {
+		var target = document.querySelector('[data-current-parent="true"]');
+		target?.scrollIntoView({ block: 'center' });
 	});
 </script>
 
 <style>
 	nav {
 		width: 100%;
-		margin-right: 1rem;
+		height: 100%;
+		padding-top: 0rem;
 	}
 	.nav-groups {
-		height: 100%;
-		padding: 2rem 0;
+		max-height: 100%;
 		overflow-x: visible;
 		overflow-y: auto;
-		max-height: 100vh;
-	}
-
-	.nav-groups > li + li {
-		margin-top: 2rem;
-	}
-
-	.nav-groups > :first-child {
-		padding-top: var(--doc-padding);
-	}
-
-	.nav-groups > :last-child {
-		padding-bottom: 2rem;
-		margin-bottom: var(--theme-navbar-height);
-	}
-
-	.nav-group-title {
-		font-size: 1rem;
-		font-weight: 700;
-		padding: 0.1rem 1rem;
-		text-transform: uppercase;
-		margin-bottom: 0.5rem;
-	}
-
-	.nav-link a {
-		font-size: 1rem;
-		margin: 1px;
-		padding: 0.3rem 1rem;
-		font: inherit;
-		color: inherit;
-		text-decoration: none;
-		display: block;
-	}
-	.nav-link a:hover,
-	.nav-link a:focus {
-		background-color: var(--theme-bg-hover);
-	}
-
-	.nav-link a[aria-current="page"] {
-		color: var(--theme-text-accent);
-		background-color: var(--theme-bg-accent);
-		font-weight: 600;
-	}
-
-	:global(:root.theme-dark) .nav-link a[aria-current="page"] {
-		color: hsla(var(--color-base-white), 100%, 1);
 	}
 
 	@media (min-width: 50em) {
 		.nav-groups {
-			padding: 0;
+			position: fixed;
+			top: calc(var(--theme-navbar-height) + 3rem);
+			bottom: 0;
+			right: unset;
+			width: calc(var(--theme-left-sidebar-width) - var(--min-spacing-inline) * 1.6);
+		}
+	}
+
+	@media not screen and (min-width: 50em) {
+		nav :global(.TabGroup) {
+			display: none;
 		}
 	}
 </style>
