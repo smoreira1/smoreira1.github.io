@@ -23,6 +23,10 @@ For reference this site is created using Astro technology visit them and create 
 - **Resources**  Ever had a resource that you loved and can no longer find?
 - **References**  My commonly used references. 
 
+
+:::caution
+This site is essentially always under construction, and mainly for my personal use. Many links or assets could be incomplete.
+:::
 <!-- - **`client:visible` component loading:** If your user never sees it, it never loads. -->
 <!-- - **Image optimizations:** Astro's very own `<Image />` component. -->
 <!-- - **TypeScript support**  -->

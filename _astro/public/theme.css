@@ -97,7 +97,7 @@
 
 :root {
 	color-scheme: light;
-	--theme-accent: hsla(var(--color-orange), 1);
+	--theme-accent: #DBB68F;
 	--theme-accent-secondary: hsl(324, 75%, 38%);
 	--theme-dim: hsla(var(--color-gray-70), 1);
 	--theme-dim-light: hsla(var(--color-gray-80), 1);
@@ -142,11 +142,11 @@
 :root.theme-dark {
 	color-scheme: dark;
 	/* We lighten-up the orange in dark mode, to help with link contrast. */
-	--color-orange: var(--color-base-orange), 60%;
+	--color-orange: #DBB68F;
 	--theme-accent-opacity: 0.4;
-	--theme-accent: hsla(var(--color-orange), 1);
-	--theme-accent-secondary: hsla(var(--color-purple), 1);
-	--theme-text-accent: hsla(var(--color-orange), 1);
+	--theme-accent: #DBB68F;
+	--theme-accent-secondary:#DBB68F;
+	--theme-text-accent: #DBB68F;
 	--theme-dim: hsla(var(--color-gray-90), 0.3);
 	--theme-dim-light: hsla(var(--color-gray-90), 0.2);
 	--theme-dim-lighter: hsla(var(--color-gray-90), 0.1);
@@ -155,7 +155,7 @@
 	--theme-text: hsla(var(--color-gray-90), 1);
 	--theme-text-light: hsla(var(--color-gray-80), 1);
 	--theme-text-lighter: hsla(var(--color-gray-70), 1);
-	--theme-bg: hsl(122, 100%, 5%);
+	--theme-bg: #0B5C4F;
 	--theme-bg-gradient-top: var(--theme-bg);
 	--theme-bg-gradient-bottom: hsl(251, 29%, 11%);
 	--theme-bg-hover: hsla(var(--color-purple), 0.2);
