@@ -4,9 +4,9 @@ setup: |
     import ContributorList from '../../components/ContributorList.astro'
     import PackageManagerTabs from '~/components/tabs/PackageManagerTabs.astro'
 layout: ~/layouts/MainLayout.astro
-title: Welcome
-description: Welcome
-i18nReady: true
+title: About
+description: About Me
+i18nReady: false
 ---
 
 #### About Me

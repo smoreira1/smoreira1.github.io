@@ -19,10 +19,7 @@ const SidebarToggleTabGroup = ({ defaultActiveTab, labels }: Props) => {
 	return (
 		<div class="TabGroup">
 			<button class={activeTab === 'learn' ? 'active' : ''} onClick={() => toggleType('learn')}>
-				{labels.learn}
-			</button>
-			<button class={activeTab === 'api' ? 'active' : ''} onClick={() => toggleType('api')}>
-				{labels.api}
+				Main
 			</button>
 		</div>
 	);
