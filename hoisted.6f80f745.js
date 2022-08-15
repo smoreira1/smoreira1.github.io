@@ -1,0 +1,1 @@
+import"./chunks/HeadCommon.astro_astro_type_script_index_2_lang.7f371aaf.js";window.addEventListener("DOMContentLoaded",()=>{var e=document.querySelector('[data-current-parent="true"]');e?.scrollIntoView({block:"center"})});

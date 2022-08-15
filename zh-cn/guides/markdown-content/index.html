@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="zh-CN" class="initial astro-6SNADQYA">
+	<head>
+		<!-- Global Metadata --><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="hsl(256, 44%, 15%)" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="hsl(273, 37%, 93%)" media="(prefers-color-scheme: light)">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate icon" type="image/x-icon" href="/favicon.ico">
+<link rel="sitemap" href="/sitemap-index.xml">
+
+<!-- Global CSS -->
+<link rel="stylesheet" href="/theme.css">
+<link rel="stylesheet" href="/index.css">
+
+<!-- Scrollable a11y code helper -->
+<script type="module" src="/make-scrollable-code-focusable.js"></script>
+
+<!-- This is intentionally inlined to avoid FOUC -->
+
+
+<!-- Double-click to highlight code blocks (inline only). -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-130280175-15"></script>
+
+
+		<!-- Page Metadata --><link rel="canonical" href="https://docs.astro.build/zh-cn/guides/markdown-content/">
+
+
+<link rel="alternate" href="https://docs.astro.build/en/guides/markdown-content/" hreflang="en"><link rel="alternate" href="https://docs.astro.build/de/guides/markdown-content/" hreflang="de"><link rel="alternate" href="https://docs.astro.build/nl/guides/markdown-content/" hreflang="nl"><link rel="alternate" href="https://docs.astro.build/pt-br/guides/markdown-content/" hreflang="pt-BR"><link rel="alternate" href="https://docs.astro.build/fi/guides/markdown-content/" hreflang="fi"><link rel="alternate" href="https://docs.astro.build/es/guides/markdown-content/" hreflang="es"><link rel="alternate" href="https://docs.astro.build/zh-cn/guides/markdown-content/" hreflang="zh-CN"><link rel="alternate" href="https://docs.astro.build/zh-tw/guides/markdown-content/" hreflang="zh-TW"><link rel="alternate" href="https://docs.astro.build/bg/guides/markdown-content/" hreflang="bg"><link rel="alternate" href="https://docs.astro.build/fr/guides/markdown-content/" hreflang="fr"><link rel="alternate" href="https://docs.astro.build/bn/guides/markdown-content/" hreflang="bn"><link rel="alternate" href="https://docs.astro.build/kr/guides/markdown-content/" hreflang="kr"><link rel="alternate" href="https://docs.astro.build/ar/guides/markdown-content/" hreflang="ar"><link rel="alternate" href="https://docs.astro.build/da/guides/markdown-content/" hreflang="da"><link rel="alternate" href="https://docs.astro.build/ja/guides/markdown-content/" hreflang="ja"><link rel="alternate" href="https://docs.astro.build/ru/guides/markdown-content/" hreflang="ru"><link rel="alternate" href="https://docs.astro.build/it/guides/markdown-content/" hreflang="it"><link rel="alternate" href="https://docs.astro.build/pl/guides/markdown-content/" hreflang="pl"><link rel="alternate" href="https://docs.astro.build/hu/guides/markdown-content/" hreflang="hu">
+
+<!-- Algolia docsearch language facet -->
+<meta name="docsearch:language" content="zh-CN">
+
+<!-- OpenGraph Tags -->
+<meta property="og:title" content="Markdown">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://docs.astro.build/zh-cn/guides/markdown-content/">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://docs.astro.build/default-og-image.png?v=1">
+<meta property="og:image:alt" content="星辰浩瀚的太空中的 astro 标志，右侧前景中漂浮着一颗紫色的土星状行星。">
+<meta name="description" property="og:description" content="在 Astro 中使用 Markdown">
+<meta property="og:site_name" content="Astro 文档">
+
+<!-- Twitter Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="astrodotbuild">
+<meta name="twitter:title" content="Markdown">
+<meta name="twitter:description" content="在 Astro 中使用 Markdown">
+<meta name="twitter:image" content="https://docs.astro.build/default-og-image.png?v=1">
+<meta name="twitter:image:alt" content="星辰浩瀚的太空中的 astro 标志，右侧前景中漂浮着一颗紫色的土星状行星。">
+
+<!--
+  TODO: Add json+ld data, maybe https://schema.org/APIReference makes sense?
+  Docs: https://developers.google.com/search/docs/advanced/structured-data/intro-structured-data
+  https://www.npmjs.com/package/schema-dts seems like a great resource for implementing this.
+  Even better, there’s a React component that integrates with `schema-dts`: https://github.com/google/react-schemaorg
+-->
+
+		<title>Markdown 🚀 Astro 文档</title>
+		
+		<script>
+			// This code was migrated/copied from ThemToggleBotton to make the
+			// dark mode toggle instant, vs. hidden inside of a Preact useEffect() call.
+			const theme = (() => {
+				if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+					return localStorage.getItem('theme');
+				}
+				if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+					return 'dark';
+				}
+				return 'light';
+			})();
+			if (theme === 'light') {
+				document.documentElement.classList.remove('theme-dark');
+			} else {
+				document.documentElement.classList.add('theme-dark');
+			}
+		</script>
+	<link rel="stylesheet" href="/assets/f542069c.c28a3eae.css" />
+<link rel="stylesheet" href="/assets/e2317e16.36ca0ba9.css" />
+<link rel="stylesheet" href="/assets/9cf9e8db.97bfbd59.css" />
+<link rel="stylesheet" href="/assets/7b344959.9c17731f.css" />
+<link rel="stylesheet" href="/assets/6b9ff114.c5aa952c.css" /><script type="module" src="/hoisted.6f80f745.js"></script></head>
+
+	<body class="astro-6SNADQYA">
+		<header class="astro-OWYKDMOT">
+	<a href="#article" class="sr-only focus:not-sr-only skiplink astro-D5GPSQS7">
+	<span class="astro-D5GPSQS7">跳转到内容
+</span>
+</a>
+
+
+	<nav class="nav-wrapper astro-OWYKDMOT" aria-label="导航顶部">
+		<div dir="ltr" lang="en" class="logo flex astro-OWYKDMOT">
+			<ul class="astro-OWYKDMOT">
+				<li class="astro-OWYKDMOT">
+					<a class="astro astro-OWYKDMOT" href="https://smoreira1.github.io">
+						<span class="sr-only astro-OWYKDMOT">Astrso</span>
+						Stephen D. M.
+					</a>
+					<a class="astro-OWYKDMOT">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="astro-OWYKDMOT">
+							<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" class="astro-OWYKDMOT"></path>
+						</svg>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- <ThemeToggleButton 
+				client:visible 
+				labels={{  useLight: t('themeToggle.useLight'), useDark: t('themeToggle.useDark')  }}
+				isInsideHeader={true} 
+			/> -->
+		<!-- {lang && <LanguageSelect lang={lang} client:idle />}
+		<Search {lang} labels={docsearchStrings} />
+		<SidebarToggle client:idle /> -->
+	</nav>
+</header>
+		<main class="layout astro-6SNADQYA">
+			<aside id="left-sidebar" class="sidebar astro-6SNADQYA">
+				<nav aria-label="站点导航" class="astro-M2FRLZWK">
+	<style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).load=a=>{(async()=>await(await a())())()};var a;{const l={0:t=>t,1:t=>JSON.parse(t,n),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,n)),5:t=>new Set(JSON.parse(t,n)),6:t=>BigInt(t),7:t=>new URL(t)},n=(t,r)=>{if(t===""||!Array.isArray(r))return r;const[e,i]=r;return e in l?l[e](i):void 0};customElements.get("astro-island")||customElements.define("astro-island",(a=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement?.closest("astro-island[ssr]"))return;const r=this.querySelectorAll("astro-slot"),e={},i=this.querySelectorAll("template[data-astro-template]");for(const s of i)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("data-astro-template")||"default"]=s.innerHTML,s.remove());for(const s of r)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("name")||"default"]=s.innerHTML);const o=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),n):{};this.hydrator(this)(this.Component,o,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((r,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate),await import(this.getAttribute("before-hydration-url"));const r=JSON.parse(this.getAttribute("opts"));Astro[this.getAttribute("client")](async()=>{const e=this.getAttribute("renderer-url"),[i,{default:o}]=await Promise.all([import(this.getAttribute("component-url")),e?import(e):()=>()=>{}]);return this.Component=i[this.getAttribute("component-export")||"default"],this.hydrator=o,this.hydrate},r,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},a.observedAttributes=["props"],a))}</script><astro-island uid="BTT5z" component-url="/SidebarToggleTabGroup.053ded21.js" component-export="default" renderer-url="/client.f1d83173.js" props="{&quot;defaultActiveTab&quot;:[0,&quot;learn&quot;],&quot;labels&quot;:[0,{&quot;learn&quot;:[0,&quot;学习&quot;],&quot;api&quot;:[0,&quot;参考&quot;]}],&quot;class&quot;:[0,&quot;astro-M2FRLZWK&quot;]}" ssr="" client="load" before-hydration-url="data:text/javascript;charset=utf-8,//[no before-hydration script]" opts="{&quot;name&quot;:&quot;SidebarToggleTabGroup&quot;,&quot;value&quot;:true}" await-children=""><div class="TabGroup"><button class="active">学习</button><button class>参考</button></div></astro-island>
+	<ul class="nav-groups astro-M2FRLZWK">
+		
+<li class="nav-group learn active astro-VB2AOOVT">
+		<details open class="astro-VB2AOOVT">
+			<summary class="nav-group-title astro-VB2AOOVT">
+				<h2 class="astro-VB2AOOVT">
+					起步
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true" class="astro-VB2AOOVT">
+						<path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z" class="astro-VB2AOOVT"></path>
+					</svg>
+				</h2>
+			</summary>
+			<ul class="astro-VB2AOOVT">
+				<li class="nav-link astro-VB2AOOVT">
+						<a href="/zh-cn/getting-started/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">入门指南 </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/zh-cn/install/auto/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">安装 </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/zh-cn/editor-setup/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">编辑器设置 </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/zh-cn/migrate/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">迁移指南 </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/zh-cn/migrate/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">迁移指南 </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/zh-cn/migrate/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">迁移指南 </a>
+					</li>
+			</ul>
+		</details>
+	</li><li class="nav-group learn active astro-VB2AOOVT">
+		<details open class="astro-VB2AOOVT">
+			<summary class="nav-group-title astro-VB2AOOVT">
+				<h2 class="astro-VB2AOOVT">
+					基础内容
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true" class="astro-VB2AOOVT">
+						<path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z" class="astro-VB2AOOVT"></path>
+					</svg>
+				</h2>
+			</summary>
+			<ul class="astro-VB2AOOVT">
+				<li class="nav-link astro-VB2AOOVT">
+						<a href="/zh-cn/guides/deploy/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">部署 </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/zh-cn/guides/deploy/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">部署 </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/zh-cn/core-concepts/project-structure/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">项目结构 </a>
+					</li>
+			</ul>
+		</details>
+	</li><li class="nav-group learn active astro-VB2AOOVT">
+		<details open class="astro-VB2AOOVT">
+			<summary class="nav-group-title astro-VB2AOOVT">
+				<h2 class="astro-VB2AOOVT">
+					特点
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true" class="astro-VB2AOOVT">
+						<path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z" class="astro-VB2AOOVT"></path>
+					</svg>
+				</h2>
+			</summary>
+			<ul class="astro-VB2AOOVT">
+				<li class="nav-link astro-VB2AOOVT">
+						<a href="/zh-cn/guides/configuring-astro/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">配置 Astro </a>
+					</li>
+			</ul>
+		</details>
+	</li><li class="nav-group learn active astro-VB2AOOVT">
+		<details open class="astro-VB2AOOVT">
+			<summary class="nav-group-title astro-VB2AOOVT">
+				<h2 class="astro-VB2AOOVT">
+					核心理念
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true" class="astro-VB2AOOVT">
+						<path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z" class="astro-VB2AOOVT"></path>
+					</svg>
+				</h2>
+			</summary>
+			<ul class="astro-VB2AOOVT">
+				<li class="nav-link astro-VB2AOOVT">
+						<a href="/zh-cn/concepts/why-astro/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Angular <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/zh-cn/concepts/why-astro/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">TypeScript <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/zh-cn/concepts/why-astro/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">CSS <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/zh-cn/concepts/why-astro/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">HTML <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/zh-cn/concepts/why-astro/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">GIT <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li>
+			</ul>
+		</details>
+	</li>
+
+
+		
+<li class="nav-group api  astro-VB2AOOVT">
+		<details open class="astro-VB2AOOVT">
+			<summary class="nav-group-title astro-VB2AOOVT">
+				<h2 class="astro-VB2AOOVT">
+					参考
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true" class="astro-VB2AOOVT">
+						<path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z" class="astro-VB2AOOVT"></path>
+					</svg>
+				</h2>
+			</summary>
+			<ul class="astro-VB2AOOVT">
+				<li class="nav-link astro-VB2AOOVT">
+						<a href="/zh-cn/reference/configuration-reference/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">配置 </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/zh-cn/reference/cli-reference/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">命令行 </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/zh-cn/reference/api-reference/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">运行时 API </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/zh-cn/reference/integrations-reference/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">集成 API </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/zh-cn/reference/adapter-reference/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">适配器 API（实验） </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/zh-cn/reference/directives-reference/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">模板指令 </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/zh-cn/guides/publish-to-npm/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">NPM 包格式 </a>
+					</li>
+			</ul>
+		</details>
+	</li>
+
+
+		<details open class="hide-on-large-screens astro-TL4TIEEL"><summary class="astro-TL4TIEEL"><h2 class="heading astro-TL4TIEEL">Socials
+</h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true" class="astro-TL4TIEEL">
+			<path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z" class="astro-TL4TIEEL">
+			</path>
+		</svg></summary><ul class="astro-TL4TIEEL">
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://astro.build/chat" target="_blank" class="astro-TL4TIEEL">
+				<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="comment-alt" class="svg-inline--fa fa-comment-alt fa-w-16 astro-TL4TIEEL" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" height="1em" width="1em">
+					<path fill="currentColor" d="M448 0H64C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h96v84c0 9.8 11.2 15.5 19.1 9.7L304 416h144c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64z" class="astro-TL4TIEEL">
+					</path>
+				</svg>
+				<span class="astro-TL4TIEEL">407-310-8747
+</span>
+			</a>
+		</li>
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://www.linkedin.com/in/stephenmoreira" target="_blank" class="astro-TL4TIEEL">
+				<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024" class="astro-TL4TIEEL">
+					<path fill="currentColor" d="M928 161H699.2c-49.1 0-97.1 14.1-138.4 40.7L512 233l-48.8-31.3A255.2 255.2 0 0 0 324.8 161H96c-17.7 0-32 14.3-32 32v568c0 17.7 14.3 32 32 32h228.8c49.1 0 97.1 14.1 138.4 40.7l44.4 28.6c1.3.8 2.8 1.3 4.3 1.3s3-.4 4.3-1.3l44.4-28.6C602 807.1 650.1 793 699.2 793H928c17.7 0 32-14.3 32-32V193c0-17.7-14.3-32-32-32zM404 553.5c0 4.1-3.2 7.5-7.1 7.5H211.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45zm0-140c0 4.1-3.2 7.5-7.1 7.5H211.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45zm416 140c0 4.1-3.2 7.5-7.1 7.5H627.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45zm0-140c0 4.1-3.2 7.5-7.1 7.5H627.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45z" class="astro-TL4TIEEL"></path>
+				</svg>
+				<span class="astro-TL4TIEEL">LinkedIn
+</span>
+			</a>
+		</li>
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://twitter.com/stephendmoreira" target="_blank" class="astro-TL4TIEEL">
+				<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256" class="astro-TL4TIEEL">
+					<path fill="currentColor" d="M209.765 128.15c0 16.013-4.9 31.34-13.266 44.575l33.447 33.447a128.918 128.918 0 0 0 25.783-77.35c0-29.265-9.754-55.751-26.47-77.336l-32.776 32.729a79.442 79.442 0 0 1 13.267 43.888l.015.047Z" class="astro-TL4TIEEL"></path>
+					<path fill="currentColor" d="M127.513 210.355c-45.367-.086-82.125-36.838-82.22-82.205c.069-45.386 36.835-82.166 82.22-82.252c16.732 0 32.058 4.901 44.607 13.267l32.744-32.776A128.965 128.965 0 0 0 127.514.636C57.123.636 0 57.76 0 128.15c0 70.359 57.124 127.513 127.513 127.513a125.126 125.126 0 0 0 77.351-26.501l-33.447-33.431c-11.861 9.754-27.157 14.624-43.904 14.624Z" class="astro-TL4TIEEL"></path>
+				</svg>
+				<span class="astro-TL4TIEEL">Twitter
+</span>
+			</a>
+		</li>
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://github.com/withastro/docs" target="_blank" class="astro-TL4TIEEL">
+				<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="github" class="svg-inline--fa fa-brands fa-github fa-w-16 astro-TL4TIEEL" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+					<path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" class="astro-TL4TIEEL"></path>
+				</svg>
+				<span class="astro-TL4TIEEL">GitHub 上的 Astro 文档
+</span>
+			</a>
+		</li>
+	</ul></details open>
+
+
+		<li style="text-align: center;" class="astro-M2FRLZWK">
+			<script>(self.Astro=self.Astro||{}).visible=(i,c,n)=>{const r=async()=>{await(await i())()};let s=new IntersectionObserver(e=>{for(const t of e)if(!!t.isIntersecting){s.disconnect(),r();break}});for(let e=0;e<n.children.length;e++){const t=n.children[e];s.observe(t)}};</script><astro-island uid="Z2pP2YL" component-url="/ThemeToggleButton.b38468b8.js" component-export="default" renderer-url="/client.f1d83173.js" props="{&quot;labels&quot;:[0,{&quot;useLight&quot;:[0,&quot;使用浅色主题&quot;],&quot;useDark&quot;:[0,&quot;使用深色主题&quot;]}],&quot;class&quot;:[0,&quot;astro-M2FRLZWK&quot;]}" ssr="" client="visible" before-hydration-url="data:text/javascript;charset=utf-8,//[no before-hydration script]" opts="{&quot;name&quot;:&quot;ThemeToggleButton&quot;,&quot;value&quot;:true}" await-children=""><div class="theme-toggle "><label title="使用浅色主题" class><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path></svg><input type="radio" name="theme-toggle" value="light" aria-label="使用浅色主题" /></label><label title="使用深色主题" class><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg><input type="radio" name="theme-toggle" value="dark" aria-label="使用深色主题" /></label></div></astro-island>
+		</li>
+		<li class="astro-M2FRLZWK">
+			<!-- <div dir="ltr" lang="en" class="sponsors">
+	<h2 class="sponsors-title">Sponsored by</h2>
+	<div class="sponsor">
+		<a href="https://www.netlify.com/" aria-label="Go to Netlify website">
+			<svg class="sponsor-logo__netlify" viewBox="0 0 147 40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+				><radialGradient
+					id="netlify-gradient"
+					cx="-779.0521"
+					cy="1839.7205"
+					gradientTransform="matrix(0 38.301 44.1228 0 -81154.2578 29839.2441)"
+					gradientUnits="userSpaceOnUse"
+					r="1.0011"><stop offset="0" stop-color="#20c6b7"></stop><stop offset="1" stop-color="#4d9abf"></stop></radialGradient
+				><path
+					clip-rule="evenodd"
+					d="m53.37 12.98.12 2.2c1.4-1.7 3.24-2.55 5.53-2.55 3.95 0 5.96 2.27 6.03 6.8v12.57h-4.26v-12.32c0-1.21-.26-2.1-.78-2.68s-1.37-.87-2.55-.87c-1.72 0-3 .78-3.84 2.34v13.53h-4.26v-19.02zm24.38 19.37c-2.7 0-4.89-.85-6.57-2.56-1.68-1.7-2.52-3.98-2.52-6.81v-.53c0-1.9.36-3.59 1.1-5.09.73-1.49 1.76-2.66 3.08-3.49s2.79-1.25 4.42-1.25c2.58 0 4.58.83 5.99 2.48s2.11 3.99 2.11 7.01v1.72h-12.4c.13 1.57.65 2.81 1.57 3.73s2.07 1.37 3.46 1.37c1.95 0 3.54-.79 4.77-2.37l2.3 2.2c-.76 1.14-1.77 2.02-3.04 2.65s-2.69.94-4.27.94zm-.51-16.29c-1.17 0-2.11.41-2.83 1.23s-1.18 1.96-1.38 3.43h8.12v-.32c-.09-1.43-.47-2.51-1.14-3.24-.67-.74-1.59-1.1-2.77-1.1zm16.76-7.7v4.62h3.35v3.16h-3.35v10.62c0 .73.14 1.25.43 1.57s.8.48 1.54.48c.5 0 1-.06 1.49-.18v3.31c-.97.27-1.9.4-2.81.4-3.27 0-4.91-1.81-4.91-5.43v-10.77h-3.12v-3.16h3.12v-4.63zm11.14 23.64h-4.26v-27h4.26zm9.17 0h-4.26v-19.02h4.26zm-4.52-23.96c0-.65.21-1.2.62-1.63.42-.43 1.01-.65 1.78-.65s1.37.22 1.79.65.63.98.63 1.64c0 .64-.21 1.18-.63 1.61s-1.02.64-1.79.64-1.36-.21-1.78-.64c-.41-.44-.62-.98-.62-1.62zm10.66 23.96v-15.86h-2.89v-3.16h2.89v-1.74c0-2.11.58-3.74 1.75-4.89s2.81-1.72 4.91-1.72c.75 0 1.54.11 2.39.32l-.1 3.34c-.54-.1-1.08-.15-1.63-.14-2.04 0-3.05 1.05-3.05 3.15v1.69h3.86v3.16h-3.86v15.85zm17.87-6.12 3.86-12.9h4.54l-7.54 21.9c-1.16 3.2-3.12 4.8-5.89 4.8-.62 0-1.3-.11-2.05-.32v-3.31l.81.05c1.07 0 1.88-.2 2.43-.59.54-.39.97-1.05 1.29-1.98l.61-1.64-6.66-18.93h4.6z"
+					fill-rule="evenodd"></path><path
+					d="m27.89 14.14-.01-.01c-.01 0-.02-.01-.02-.01-.02-.02-.03-.06-.03-.09l.77-4.73 3.62 3.63-3.77 1.6c-.01 0-.02.01-.03.01h-.02s-.01-.01-.02-.02c-.14-.16-.31-.29-.49-.38zm5.26-.29 3.88 3.88c.81.81 1.21 1.21 1.35 1.67.02.07.04.14.05.21l-9.26-3.92s-.01 0-.01-.01c-.04-.02-.08-.03-.08-.07s.04-.06.08-.07l.01-.01zm5.12 7c-.2.38-.59.77-1.25 1.43l-4.37 4.37-5.65-1.18-.03-.01c-.05-.01-.1-.02-.1-.06-.04-.47-.28-.9-.66-1.19-.02-.02-.02-.06-.01-.09v-.01l1.06-6.53v-.02c.01-.05.01-.11.06-.11.46-.06.88-.3 1.16-.67.01-.01.01-.02.03-.03.03-.01.07 0 .1.01zm-6.62 6.8-7.19 7.19 1.23-7.56v-.01c0-.01 0-.02.01-.03.01-.02.04-.03.06-.04h.01c.27-.11.51-.29.69-.52.02-.03.05-.06.09-.06h.03zm-8.71 8.71-.81.81-8.95-12.94s-.01-.01-.01-.01c-.01-.02-.03-.04-.03-.06s.01-.03.02-.04l.01-.01c.03-.04.05-.08.07-.12l.02-.03c.01-.02.03-.05.05-.06s.05-.01.07 0l9.92 2.05c.03 0 .05.02.08.03.01.01.02.03.02.04.14.53.52.97 1.03 1.17.03.01.02.05 0 .08-.01.01-.01.03-.01.05-.12.74-1.19 7.27-1.48 9.04zm-1.69 1.69c-.6.59-.95.9-1.35 1.03-.39.12-.81.12-1.21 0-.47-.15-.87-.55-1.67-1.36l-8.99-8.99 2.35-3.64c.01-.02.02-.03.04-.05s.06-.01.09 0c.54.16 1.12.13 1.64-.08.03-.01.05-.02.07 0l.03.03zm-14.09-10.19-2.06-2.06 4.07-1.74c.01 0 .02-.01.03-.01.03 0 .05.03.07.07.04.06.08.12.13.18l.01.02c.01.02 0 .03-.01.05zm-2.98-2.97-2.61-2.61c-.44-.44-.77-.77-.99-1.04l7.94 1.65h.03c.05.01.1.02.1.06 0 .05-.06.07-.11.09l-.02.01zm-4.05-5c.01-.17.04-.33.09-.5.15-.47.55-.87 1.36-1.67l3.34-3.34c1.54 2.23 3.08 4.46 4.63 6.69.03.04.06.08.03.11-.15.16-.29.34-.4.53-.01.02-.03.05-.05.06-.01.01-.03 0-.04 0zm5.68-6.4 4.49-4.49c.42.19 1.96.83 3.33 1.41 1.04.44 1.99.84 2.29.97.03.01.06.02.07.05.01.02 0 .04 0 .06-.14.66.05 1.35.52 1.83.03.03 0 .07-.03.11l-.01.02-4.56 7.06c-.01.02-.02.04-.04.05s-.06.01-.09 0c-.18-.05-.36-.07-.54-.07-.16 0-.34.03-.52.06-.02 0-.04.01-.05 0-.02-.01-.03-.03-.05-.05zm5.4-5.4 5.81-5.81c.81-.81 1.21-1.21 1.67-1.36.39-.12.81-.12 1.21 0 .47.15.87.55 1.67 1.36l1.26 1.26-4.14 6.4c-.01.02-.02.03-.04.05s-.06.01-.09 0c-.66-.2-1.38-.06-1.92.37-.03.03-.07.01-.1 0-.53-.24-4.73-2.01-5.33-2.27zm12.5-3.67 3.82 3.82-.92 5.7v.02c0 .01 0 .03-.01.04-.01.02-.03.02-.05.03-.2.06-.38.15-.55.27-.01.01-.01.01-.02.02s-.02.02-.04.02c-.01 0-.03 0-.04-.01l-5.82-2.47-.01-.01c-.04-.02-.08-.03-.08-.07-.03-.32-.14-.64-.31-.91-.03-.05-.06-.09-.03-.14zm-3.93 8.6 5.45 2.31c.03.01.06.03.08.06.01.02.01.04 0 .06-.02.08-.03.17-.03.26v.15c0 .04-.04.05-.08.07h-.01c-.86.37-12.13 5.17-12.15 5.17s-.03 0-.05-.02c-.03-.03 0-.07.03-.11 0-.01.01-.01.01-.02l4.48-6.94.01-.01c.03-.04.06-.09.1-.09l.05.01c.1.01.19.03.28.03.68 0 1.31-.33 1.69-.9.01-.02.02-.03.03-.04.04-.01.08 0 .11.01zm-6.25 9.19 12.28-5.24s.02 0 .03.02c.07.07.12.11.18.15l.03.02c.02.01.05.03.05.06v.02l-1.05 6.46v.03c-.01.05-.01.11-.06.11-.57.04-1.08.36-1.37.85v.01c-.01.02-.03.05-.05.06s-.05.01-.07 0l-9.79-2.02c-.02-.02-.16-.53-.18-.53z"
+					fill="url(#netlify-gradient)"></path></svg
+			>
+		</a>
+	</div>
+</div> -->
+
+		</li>
+	</ul>
+</nav>
+
+
+
+
+			</aside>
+			<aside id="right-sidebar" class="sidebar astro-6SNADQYA">
+				<nav aria-label="目录" class="astro-7RGIIGOJ">
+	<script>(self.Astro=self.Astro||{}).media=(s,a)=>{const t=async()=>{await(await s())()};if(a.value){const e=matchMedia(a.value);e.matches?t():e.addEventListener("change",t,{once:!0})}};</script><astro-island uid="wosMJ" component-url="/TableOfContents.109662f0.js" component-export="default" renderer-url="/client.f1d83173.js" props="{&quot;headings&quot;:[1,&quot;[[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;markdown-页面\&quot;],\&quot;text\&quot;:[0,\&quot;Markdown 页面\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;基本示例\&quot;],\&quot;text\&quot;:[0,\&quot;基本示例\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;markdown-布局\&quot;],\&quot;text\&quot;:[0,\&quot;Markdown 布局\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;使用-frontmatter-属性\&quot;],\&quot;text\&quot;:[0,\&quot;使用 Frontmatter 属性\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;标题-id\&quot;],\&quot;text\&quot;:[0,\&quot;标题 ID\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;markdown-草稿\&quot;],\&quot;text\&quot;:[0,\&quot;Markdown 草稿\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;增强-markdown\&quot;],\&quot;text\&quot;:[0,\&quot;增强 Markdown\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;在-markdown-中使用变量\&quot;],\&quot;text\&quot;:[0,\&quot;在 Markdown 中使用变量\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;在-markdown-中使用组件\&quot;],\&quot;text\&quot;:[0,\&quot;在 Markdown 中使用组件\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;导入-markdown\&quot;],\&quot;text\&quot;:[0,\&quot;导入 Markdown\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;markdown-组件\&quot;],\&quot;text\&quot;:[0,\&quot;Markdown 组件\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;远程-markdown\&quot;],\&quot;text\&quot;:[0,\&quot;远程 Markdown\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;嵌套-markdown\&quot;],\&quot;text\&quot;:[0,\&quot;嵌套 Markdown\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;配置-markdown\&quot;],\&quot;text\&quot;:[0,\&quot;配置 Markdown\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;markdown-插件\&quot;],\&quot;text\&quot;:[0,\&quot;Markdown 插件\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;如何在-astro-中添加-markdown-插件\&quot;],\&quot;text\&quot;:[0,\&quot;如何在 Astro 中添加 Markdown 插件\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;语法高亮\&quot;],\&quot;text\&quot;:[0,\&quot;语法高亮\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;选择语法高亮器\&quot;],\&quot;text\&quot;:[0,\&quot;选择语法高亮器\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;shiki-配置\&quot;],\&quot;text\&quot;:[0,\&quot;Shiki 配置\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;prism-配置\&quot;],\&quot;text\&quot;:[0,\&quot;Prism 配置\&quot;]}]]&quot;],&quot;labels&quot;:[0,{&quot;onThisPage&quot;:[0,&quot;在本页内&quot;],&quot;overview&quot;:[0,&quot;概述&quot;]}],&quot;isMobile&quot;:[0,false],&quot;class&quot;:[0,&quot;astro-7RGIIGOJ&quot;]}" ssr="" client="media" before-hydration-url="data:text/javascript;charset=utf-8,//[no before-hydration script]" opts="{&quot;name&quot;:&quot;TableOfContents&quot;,&quot;value&quot;:&quot;(min-width: 50em)&quot;}" await-children=""><h2 class="heading" id="on-this-page-heading">在本页内</h2><ul><li class="header-link depth-2 current-header-link"><a href="#overview">概述</a></li><li class="header-link depth-2"><a href="#markdown-页面">Markdown 页面</a></li><li class="header-link depth-3"><a href="#基本示例">基本示例</a></li><li class="header-link depth-3"><a href="#markdown-布局">Markdown 布局</a></li><li class="header-link depth-3"><a href="#使用-frontmatter-属性">使用 Frontmatter 属性</a></li><li class="header-link depth-3"><a href="#标题-id">标题 ID</a></li><li class="header-link depth-3"><a href="#markdown-草稿">Markdown 草稿</a></li><li class="header-link depth-2"><a href="#增强-markdown">增强 Markdown</a></li><li class="header-link depth-3"><a href="#在-markdown-中使用变量">在 Markdown 中使用变量</a></li><li class="header-link depth-3"><a href="#在-markdown-中使用组件">在 Markdown 中使用组件</a></li><li class="header-link depth-2"><a href="#导入-markdown">导入 Markdown</a></li><li class="header-link depth-2"><a href="#markdown-组件">Markdown 组件</a></li><li class="header-link depth-3"><a href="#远程-markdown">远程 Markdown</a></li><li class="header-link depth-3"><a href="#嵌套-markdown">嵌套 Markdown</a></li><li class="header-link depth-2"><a href="#配置-markdown">配置 Markdown</a></li><li class="header-link depth-3"><a href="#markdown-插件">Markdown 插件</a></li><li class="header-link depth-3"><a href="#语法高亮">语法高亮</a></li></ul></astro-island>
+	<!-- <h2 class="heading"><UIString key="rightSidebar.contribute" /></h2>
+<ul>
+	<li class={`header-link depth-2`}>
+		<a class="edit-on-github" href={editHref} target="_blank">
+			<svg
+				aria-hidden="true"
+				focusable="false"
+				data-prefix="fas"
+				data-icon="pen"
+				class="svg-inline--fa fa-pen fa-w-16"
+				role="img"
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512"
+				height="1em"
+				width="1em"
+			>
+				<path
+					fill="currentColor"
+					d="M290.74 93.24l128.02 128.02-277.99 277.99-114.14 12.6C11.35 513.54-1.56 500.62.14 485.34l12.7-114.22 277.9-277.88zm207.2-19.06l-60.11-60.11c-18.75-18.75-49.16-18.75-67.91 0l-56.55 56.55 128.02 128.02 56.55-56.55c18.75-18.76 18.75-49.16 0-67.91z"
+				></path>
+			</svg>
+			<span><UIString key="rightSidebar.editPage" /></span>
+		</a>
+	</li>
+	{isTranslatable &&
+		<li class={`header-link depth-2`}>
+			<a href="https://github.com/withastro/docs/blob/main/TRANSLATING.md" target="_blank">
+				<svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88.6 77.3" height="1.24em" width="1.24em" style="margin: -2px;">
+					<path fill="currentColor" d="M61,24.6h7.9l18.7,51.6h-7.7l-5.4-15.5H54.3l-5.6,15.5h-7.2L61,24.6z M72.6,55l-8-22.8L56.3,55H72.6z"></path>
+					<path
+						fill="currentColor"
+						d="M53.6,60.6c-10-4-16-9-22-14c0,0,1.3,1.3,0,0c-6,5-20,13-20,13l-4-6c8-5,10-6,19-13c-2.1-1.9-12-13-13-19h8          c4,9,10,14,10,14c10-8,10-19,10-19h8c0,0-1,13-12,24l0,0c5,5,10,9,19,13L53.6,60.6z M1.6,16.6h56v-8h-23v-7h-9v7h-24V16.6z"
+					></path>
+				</svg>
+				<span><UIString key="rightSidebar.translatePage" /></span>
+			</a>
+		</li>
+	}
+</ul> -->
+
+	<div class="astro-TL4TIEEL"><div class="astro-TL4TIEEL"><h2 class="heading astro-TL4TIEEL">Socials
+</h2></div><ul class="astro-TL4TIEEL">
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://astro.build/chat" target="_blank" class="astro-TL4TIEEL">
+				<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="comment-alt" class="svg-inline--fa fa-comment-alt fa-w-16 astro-TL4TIEEL" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" height="1em" width="1em">
+					<path fill="currentColor" d="M448 0H64C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h96v84c0 9.8 11.2 15.5 19.1 9.7L304 416h144c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64z" class="astro-TL4TIEEL">
+					</path>
+				</svg>
+				<span class="astro-TL4TIEEL">407-310-8747
+</span>
+			</a>
+		</li>
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://www.linkedin.com/in/stephenmoreira" target="_blank" class="astro-TL4TIEEL">
+				<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024" class="astro-TL4TIEEL">
+					<path fill="currentColor" d="M928 161H699.2c-49.1 0-97.1 14.1-138.4 40.7L512 233l-48.8-31.3A255.2 255.2 0 0 0 324.8 161H96c-17.7 0-32 14.3-32 32v568c0 17.7 14.3 32 32 32h228.8c49.1 0 97.1 14.1 138.4 40.7l44.4 28.6c1.3.8 2.8 1.3 4.3 1.3s3-.4 4.3-1.3l44.4-28.6C602 807.1 650.1 793 699.2 793H928c17.7 0 32-14.3 32-32V193c0-17.7-14.3-32-32-32zM404 553.5c0 4.1-3.2 7.5-7.1 7.5H211.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45zm0-140c0 4.1-3.2 7.5-7.1 7.5H211.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45zm416 140c0 4.1-3.2 7.5-7.1 7.5H627.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45zm0-140c0 4.1-3.2 7.5-7.1 7.5H627.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45z" class="astro-TL4TIEEL"></path>
+				</svg>
+				<span class="astro-TL4TIEEL">LinkedIn
+</span>
+			</a>
+		</li>
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://twitter.com/stephendmoreira" target="_blank" class="astro-TL4TIEEL">
+				<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256" class="astro-TL4TIEEL">
+					<path fill="currentColor" d="M209.765 128.15c0 16.013-4.9 31.34-13.266 44.575l33.447 33.447a128.918 128.918 0 0 0 25.783-77.35c0-29.265-9.754-55.751-26.47-77.336l-32.776 32.729a79.442 79.442 0 0 1 13.267 43.888l.015.047Z" class="astro-TL4TIEEL"></path>
+					<path fill="currentColor" d="M127.513 210.355c-45.367-.086-82.125-36.838-82.22-82.205c.069-45.386 36.835-82.166 82.22-82.252c16.732 0 32.058 4.901 44.607 13.267l32.744-32.776A128.965 128.965 0 0 0 127.514.636C57.123.636 0 57.76 0 128.15c0 70.359 57.124 127.513 127.513 127.513a125.126 125.126 0 0 0 77.351-26.501l-33.447-33.431c-11.861 9.754-27.157 14.624-43.904 14.624Z" class="astro-TL4TIEEL"></path>
+				</svg>
+				<span class="astro-TL4TIEEL">Twitter
+</span>
+			</a>
+		</li>
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://github.com/withastro/docs" target="_blank" class="astro-TL4TIEEL">
+				<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="github" class="svg-inline--fa fa-brands fa-github fa-w-16 astro-TL4TIEEL" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+					<path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" class="astro-TL4TIEEL"></path>
+				</svg>
+				<span class="astro-TL4TIEEL">GitHub 上的 Astro 文档
+</span>
+			</a>
+		</li>
+	</ul></div>
+
+
+</nav>
+
+
+			</aside>
+			<div id="main-content" class="astro-6SNADQYA">
+				<nav class="mobile-toc astro-CCFK4WYY">
+			<astro-island uid="1VeCVv" component-url="/TableOfContents.109662f0.js" component-export="default" renderer-url="/client.f1d83173.js" props="{&quot;headings&quot;:[1,&quot;[[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;markdown-页面\&quot;],\&quot;text\&quot;:[0,\&quot;Markdown 页面\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;基本示例\&quot;],\&quot;text\&quot;:[0,\&quot;基本示例\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;markdown-布局\&quot;],\&quot;text\&quot;:[0,\&quot;Markdown 布局\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;使用-frontmatter-属性\&quot;],\&quot;text\&quot;:[0,\&quot;使用 Frontmatter 属性\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;标题-id\&quot;],\&quot;text\&quot;:[0,\&quot;标题 ID\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;markdown-草稿\&quot;],\&quot;text\&quot;:[0,\&quot;Markdown 草稿\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;增强-markdown\&quot;],\&quot;text\&quot;:[0,\&quot;增强 Markdown\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;在-markdown-中使用变量\&quot;],\&quot;text\&quot;:[0,\&quot;在 Markdown 中使用变量\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;在-markdown-中使用组件\&quot;],\&quot;text\&quot;:[0,\&quot;在 Markdown 中使用组件\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;导入-markdown\&quot;],\&quot;text\&quot;:[0,\&quot;导入 Markdown\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;markdown-组件\&quot;],\&quot;text\&quot;:[0,\&quot;Markdown 组件\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;远程-markdown\&quot;],\&quot;text\&quot;:[0,\&quot;远程 Markdown\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;嵌套-markdown\&quot;],\&quot;text\&quot;:[0,\&quot;嵌套 Markdown\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;配置-markdown\&quot;],\&quot;text\&quot;:[0,\&quot;配置 Markdown\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;markdown-插件\&quot;],\&quot;text\&quot;:[0,\&quot;Markdown 插件\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;如何在-astro-中添加-markdown-插件\&quot;],\&quot;text\&quot;:[0,\&quot;如何在 Astro 中添加 Markdown 插件\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;语法高亮\&quot;],\&quot;text\&quot;:[0,\&quot;语法高亮\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;选择语法高亮器\&quot;],\&quot;text\&quot;:[0,\&quot;选择语法高亮器\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;shiki-配置\&quot;],\&quot;text\&quot;:[0,\&quot;Shiki 配置\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;prism-配置\&quot;],\&quot;text\&quot;:[0,\&quot;Prism 配置\&quot;]}]]&quot;],&quot;labels&quot;:[0,{&quot;onThisPage&quot;:[0,&quot;在本页内&quot;],&quot;overview&quot;:[0,&quot;概述&quot;]}],&quot;isMobile&quot;:[0,true],&quot;class&quot;:[0,&quot;astro-CCFK4WYY&quot;]}" ssr="" client="media" before-hydration-url="data:text/javascript;charset=utf-8,//[no before-hydration script]" opts="{&quot;name&quot;:&quot;TableOfContents&quot;,&quot;value&quot;:&quot;(max-width: 72em)&quot;}" await-children=""><details class="toc-mobile-container"><summary class="toc-mobile-header"><div class="toc-mobile-header-content"><div class="toc-toggle"><h2 class="heading" id="on-this-page-heading">在本页内</h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z"></path></svg></div></div></summary><ul><li class="header-link depth-2 current-header-link"><a href="#overview">概述</a></li><li class="header-link depth-2"><a href="#markdown-页面">Markdown 页面</a></li><li class="header-link depth-3"><a href="#基本示例">基本示例</a></li><li class="header-link depth-3"><a href="#markdown-布局">Markdown 布局</a></li><li class="header-link depth-3"><a href="#使用-frontmatter-属性">使用 Frontmatter 属性</a></li><li class="header-link depth-3"><a href="#标题-id">标题 ID</a></li><li class="header-link depth-3"><a href="#markdown-草稿">Markdown 草稿</a></li><li class="header-link depth-2"><a href="#增强-markdown">增强 Markdown</a></li><li class="header-link depth-3"><a href="#在-markdown-中使用变量">在 Markdown 中使用变量</a></li><li class="header-link depth-3"><a href="#在-markdown-中使用组件">在 Markdown 中使用组件</a></li><li class="header-link depth-2"><a href="#导入-markdown">导入 Markdown</a></li><li class="header-link depth-2"><a href="#markdown-组件">Markdown 组件</a></li><li class="header-link depth-3"><a href="#远程-markdown">远程 Markdown</a></li><li class="header-link depth-3"><a href="#嵌套-markdown">嵌套 Markdown</a></li><li class="header-link depth-2"><a href="#配置-markdown">配置 Markdown</a></li><li class="header-link depth-3"><a href="#markdown-插件">Markdown 插件</a></li><li class="header-link depth-3"><a href="#语法高亮">语法高亮</a></li></ul></details></astro-island>
+		</nav>
+
+<article id="article" class="content astro-CCFK4WYY">
+	<section class="main-section astro-CCFK4WYY">
+		<h1 class="content-title astro-CCFK4WYY" id="overview">Markdown</h1>
+		<p>Markdown 内容通常用于创作长文本内容，例如博客文章和文档。Astro 内置了 Markdown 支持并增加了一些功能，例如在 Markdown 中支持 JavaScript 表达式和 Astro 组件。</p><div class="heading-wrapper level-h2" tabindex="-1"><h2 id="markdown-页面">Markdown 页面</h2><a class="anchor-link" href="#markdown-页面"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Markdown 页面</span></a></div><p>Astro 将 <code>/src/pages</code> 目录中的任一 <code>.md</code> 文件视为一个页面。将文件放在此目录或其的任何一个子目录中，则将用文件的路径名自动构建页面路由。</p><p>📚 阅读更多关于 Astro 的<a href="/zh-cn/core-concepts/routing/">基于文件的路由</a>。</p><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="基本示例">基本示例</h3><a class="anchor-link" href="#基本示例"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled 基本示例</span></a></div><p>在 Astro 中使用 Markdown 的最简单方法就是在项目中创建一个 <code>src/pages/index.md</code> 主页路由。然后再将下面的基本模板复制到你的项目中，这样你就可以在项目主页路径中查看渲染后的 HTML。通常是 <a href="http://localhost:3000/">http://localhost:3000/</a>。</p>
+<figure class="code-snippet has-title lang-markdown">
+	<figcaption class="header"><span class="title">src/<wbr/>pages/<wbr/>index.md</span></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#D8DEE9">---</span></span>
+<span class="line"><span style="color:#FF657C">title</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">Hello, World</span></span>
+<span class="line"><span style="color:#D8DEE9">---</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF657C">#</span><span style="color:#66ADFF"> Hi there!</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D8DEE9">This is your first markdown page. It probably isn&#39;t styled much, although</span></span>
+<span class="line"><span style="color:#D8DEE9">Markdown does support </span><span style="color:#C7C5D3; font-weight: bold">**</span><span style="color:#D8DEE9; font-weight: bold">bold</span><span style="color:#C7C5D3; font-weight: bold">**</span><span style="color:#D8DEE9"> and </span><span style="color:#C7C5D3; font-style: italic">_</span><span style="color:#D8DEE9; font-style: italic">italics.</span><span style="color:#C7C5D3; font-style: italic">_</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D8DEE9">To learn more about adding a layout to your page, read the next section on </span><span style="color:#C7C5D3; font-weight: bold">**</span><span style="color:#D8DEE9; font-weight: bold">Markdown Layouts.</span><span style="color:#C7C5D3; font-weight: bold">**</span></span></code></pre>
+</figure><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="markdown-布局">Markdown 布局</h3><a class="anchor-link" href="#markdown-布局"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Markdown 布局</span></a></div><p>Markdown 页面有一个用于指定 <code>layout</code> 的特殊 frontmatter 属性，它定义了 Astro <a href="/zh-cn/core-concepts/layouts/">布局组件</a>的相对路径。该组件将包装你的 Markdown 内容，提供页面骨架和任何其他包含的页面模板元素。</p>
+<figure class="code-snippet lang-markdown">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#D8DEE9">---</span></span>
+<span class="line"><span style="color:#FF657C">layout</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">../layouts/BaseLayout.astro</span></span>
+<span class="line"><span style="color:#D8DEE9">---</span></span></code></pre>
+</figure><p>Markdown 页面指定布局的方式有：</p><ol>
+<li>通过 content 属性访问 Markdown 页面的 frontmatter 数据。</li>
+<li><a href="/zh-cn/core-concepts/astro-components/#%E6%8F%92%E6%A7%BD"><code>&lt;slot /&gt;</code></a> 将指定 Markdown 内容的默认显示位置。</li>
+</ol>
+<figure class="code-snippet has-title lang-astro">
+	<figcaption class="header"><span class="title">src/<wbr/>layouts/<wbr/>BaseLayout.astro</span></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#ABA8BD">// 1. The content prop gives access to frontmatter data</span></span>
+<span class="line"><span style="color:#FF657C">const</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> content </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> Astro</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">props</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">html</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">head</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#ABA8BD">&lt;!-- Add other Head elements here, like styles and meta tags. --&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">title</span><span style="color:#C7C5D3">&gt;{</span><span style="color:#D8DEE9">content</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">title</span><span style="color:#C7C5D3">}&lt;/</span><span style="color:#FF657C">title</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">head</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">body</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#ABA8BD">&lt;!-- Add other UI components here, like common headers and footers. --&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">h1</span><span style="color:#C7C5D3">&gt;{</span><span style="color:#D8DEE9">content</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">title</span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> by </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9">content</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">author</span><span style="color:#C7C5D3">}&lt;/</span><span style="color:#FF657C">h1</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#ABA8BD">&lt;!-- 2. Rendered HTML will be passed into the default slot. --&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">slot</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">/&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">p</span><span style="color:#C7C5D3">&gt;</span><span style="color:#D8DEE9">Written on: </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9">content</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">date</span><span style="color:#C7C5D3">}&lt;/</span><span style="color:#FF657C">p</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">body</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">html</span><span style="color:#C7C5D3">&gt;</span></span></code></pre>
+</figure><p><code>content</code> 属性还包含一个 <code>astro</code> 属性，其中包含有关页面的其他元数据，例如完整的 Markdown <code>source</code> 和 <code>headers</code> 对象。</p><p>一个示例博客文章 <code>content</code> 对象，类似于下方示例：</p>
+<figure class="code-snippet lang-json">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#ABA8BD">/** Frontmatter from a blog post</span></span>
+<span class="line"><span style="color:#ABA8BD">  &quot;title&quot;: &quot;Astro 0.18 Release&quot;,</span></span>
+<span class="line"><span style="color:#ABA8BD">  &quot;date&quot;: &quot;Tuesday, July 27 2021&quot;,</span></span>
+<span class="line"><span style="color:#ABA8BD">  &quot;author&quot;: &quot;Matthew Phillips&quot;,</span></span>
+<span class="line"><span style="color:#ABA8BD">  &quot;description&quot;: &quot;Astro 0.18 is our biggest release since Astro launch.&quot;,</span></span>
+<span class="line"><span style="color:#ABA8BD">  &quot;draft&quot;: false,</span></span>
+<span class="line"><span style="color:#ABA8BD">  &quot;keywords&quot;: [&quot;astro&quot;, &quot;release&quot;, &quot;announcement&quot;]</span></span>
+<span class="line"><span style="color:#ABA8BD">  **/</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&quot;</span><span style="color:#FFBD2E">astro</span><span style="color:#C7C5D3">&quot;</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">&quot;</span><span style="color:#FFBD2E">headers</span><span style="color:#C7C5D3">&quot;</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">[</span></span>
+<span class="line"><span style="color:#D8DEE9">      </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">        </span><span style="color:#C7C5D3">&quot;</span><span style="color:#FFBD2E">depth</span><span style="color:#C7C5D3">&quot;</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#EBCB8B">1</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#D8DEE9">        </span><span style="color:#C7C5D3">&quot;</span><span style="color:#FFBD2E">text</span><span style="color:#C7C5D3">&quot;</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&quot;Astro 0.18 Release&quot;</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#D8DEE9">        </span><span style="color:#C7C5D3">&quot;</span><span style="color:#FFBD2E">slug</span><span style="color:#C7C5D3">&quot;</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&quot;astro-018-release&quot;</span></span>
+<span class="line"><span style="color:#D8DEE9">      </span><span style="color:#C7C5D3">},</span></span>
+<span class="line"><span style="color:#D8DEE9">      </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">        </span><span style="color:#C7C5D3">&quot;</span><span style="color:#FFBD2E">depth</span><span style="color:#C7C5D3">&quot;</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#EBCB8B">2</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#D8DEE9">        </span><span style="color:#C7C5D3">&quot;</span><span style="color:#FFBD2E">text</span><span style="color:#C7C5D3">&quot;</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&quot;Responsive partial hydration&quot;</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#D8DEE9">        </span><span style="color:#C7C5D3">&quot;</span><span style="color:#FFBD2E">slug</span><span style="color:#C7C5D3">&quot;</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&quot;responsive-partial-hydration&quot;</span></span>
+<span class="line"><span style="color:#D8DEE9">      </span><span style="color:#C7C5D3">}</span></span>
+<span class="line"><span style="color:#D8DEE9">      </span><span style="color:#ABA8BD">/* ... */</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">],</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">&quot;</span><span style="color:#FFBD2E">source</span><span style="color:#C7C5D3">&quot;</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&quot;# Astro 0.18 Release</span><span style="color:#EBCB8B">\n</span><span style="color:#16C082">A little over a month ago, the first public beta [...]&quot;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">},</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&quot;</span><span style="color:#FFBD2E">url</span><span style="color:#C7C5D3">&quot;</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&quot;&quot;</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span></span></code></pre>
+</figure><blockquote>
+<p>💡 <code>content</code> 属性中的 <code>astro</code> 和 <code>url</code> 是唯一受到 Astro 保护的属性。对象的其余部分则由你的 frontmatter 变量定义。</p>
+</blockquote><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="使用-frontmatter-属性">使用 Frontmatter 属性</h3><a class="anchor-link" href="#使用-frontmatter-属性"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled 使用 Frontmatter 属性</span></a></div><p>任何 Astro 组件（不仅仅是布局！）都可以将 Markdown frontmatter 中定义的值作为属性。你可以使用 YAML frontmatter 指定各种类型的数据，并从每篇博客文章中获取整个 Astro 网站中使用的更丰富的元信息。</p><p>如上所述，就像在布局中一样，在任何 <code>.astro</code> 文件中都可以使用它们。</p><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="标题-id">标题 ID</h3><a class="anchor-link" href="#标题-id"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled 标题 ID</span></a></div><p>Astro 将使用 <a href="https://github.com/Flet/github-slugger">github-slugger</a> 为 Markdown 文件中的所有标题自动生成 id。但是如果指定了自定义 id 不会被覆盖。</p><p>这些 id 会在所有其他插件执行后添加，因此如果你有像 <code>rehype-toc</code> 这样需要用到 id 的插件，你应该自行添加 slugging 插件（例如 <code>rehype-slug</code>）。</p><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="markdown-草稿">Markdown 草稿</h3><a class="anchor-link" href="#markdown-草稿"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Markdown 草稿</span></a></div><p><code>draft: true</code> 是一个可选的 frontmatter 值，它将标记单个 <code>.md</code> 页面或发布为“未发布”。默认情况下，站点构建时会排除该页面。</p><p>没有 <code>draft</code> 属性或带有 <code>draft: false</code> 的 Markdown 页面不受影响，将包含在最终构建中。</p>
+<figure class="code-snippet has-title lang-markdown">
+	<figcaption class="header"><span class="title">src/<wbr/>pages/<wbr/>post/<wbr/>blog-post.md</span></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#D8DEE9">---</span></span>
+<span class="line"><span style="color:#FF657C">layout</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">../../layouts/BaseLayout.astro</span></span>
+<span class="line"><span style="color:#FF657C">title</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">My Blog Post</span></span>
+<span class="line"><span style="color:#FF657C">draft</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">true</span></span>
+<span class="line"><span style="color:#D8DEE9">---</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D8DEE9">This is my in-progress blog post.</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D8DEE9">No page will be built for this post.</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D8DEE9">To build and publish this post:</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C7C5D3">-</span><span style="color:#D8DEE9"> update the frontmatter to </span><span style="color:#FFBD2E">`draft: false`</span><span style="color:#D8DEE9"> or</span></span>
+<span class="line"><span style="color:#C7C5D3">-</span><span style="color:#D8DEE9"> remove the </span><span style="color:#FFBD2E">`draft`</span><span style="color:#D8DEE9"> property entirely.</span></span></code></pre>
+</figure><blockquote>
+<p>⚠️ 虽然设置了 <code>draft: true</code>，你的站点就不会生成该页面路由，但 <code>Astro.glob()</code> 仍会返回<strong>你所有的 Markdown 文件</strong>。</p>
+</blockquote><p>不想在帖子存档或最新帖子列表中显示，则要在数据（例如标题、链接、描述）中排除草稿，所以请确保你的 <code>Astro.glob()</code> 函数也<strong>过滤了全部草稿</strong>。</p><p>⚙️ 如果想要在构建时生成草稿页面：</p><p>在 <code>astro.config.mjs</code> 中的 <code>markdown</code> 添加 <code>drafts: true</code></p>
+<figure class="code-snippet has-title lang-js">
+	<figcaption class="header"><span class="title">astro.config.mjs</span></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#FF657C">export</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">default</span><span style="color:#D8DEE9"> </span><span style="color:#66ADFF">defineConfig</span><span style="color:#D8DEE9">(</span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#66ADFF">markdown</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#66ADFF">drafts</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">true</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">},</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">)</span><span style="color:#C7C5D3">;</span></span></code></pre>
+</figure><p>💡 你还可以给 <code>astro build</code> 传递 <code>--drafts</code> 标志来构建草稿页面！</p><div class="heading-wrapper level-h2" tabindex="-1"><h2 id="增强-markdown">增强 Markdown</h2><a class="anchor-link" href="#增强-markdown"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled 增强 Markdown</span></a></div><p>除了支持标准 Markdown 语法外，Astro 对其进行了扩展以使你的内容更具表现力。以下是一些仅限于 Astro 中的 Markdown 功能。</p><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="在-markdown-中使用变量">在 Markdown 中使用变量</h3><a class="anchor-link" href="#在-markdown-中使用变量"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled 在 Markdown 中使用变量</span></a></div><p>frontmatter 变量可以直接在 Markdown 中用 <code>frontmatter</code> 对象属性使用。</p>
+<figure class="code-snippet lang-markdown">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#D8DEE9">---</span></span>
+<span class="line"><span style="color:#FF657C">author</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">Leon</span></span>
+<span class="line"><span style="color:#FF657C">age</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#EBCB8B">42</span></span>
+<span class="line"><span style="color:#D8DEE9">---</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF657C">#</span><span style="color:#66ADFF"> About the Author</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D8DEE9">{frontmatter.author} is {frontmatter.age} and lives in Toronto, Canada.</span></span></code></pre>
+</figure><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="在-markdown-中使用组件">在 Markdown 中使用组件</h3><a class="anchor-link" href="#在-markdown-中使用组件"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled 在 Markdown 中使用组件</span></a></div><p>你可以在 Markdown 文件使用 <code>setup</code> 导入组件并一起使用。<code>frontmatter</code> 对象也可用于导入的组件。</p>
+<figure class="code-snippet lang-markdown">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#D8DEE9">---</span></span>
+<span class="line"><span style="color:#FF657C">layout</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">../layouts/BaseLayout.astro</span></span>
+<span class="line"><span style="color:#FF657C">setup</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">|</span></span>
+<span class="line"><span style="color:#16C082">  import Author from &#39;../../components/Author.astro&#39;</span></span>
+<span class="line"><span style="color:#16C082">  import Biography from &#39;../components/Biography.jsx&#39;</span></span>
+<span class="line"><span style="color:#FF657C">author</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">Leon</span></span>
+<span class="line"><span style="color:#D8DEE9">---</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D8DEE9">&lt;Author name={frontmatter.author}/&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">&lt;Biography client:visible&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  {frontmatter.author} lives in Toronto, Canada and enjoys photography.</span></span>
+<span class="line"><span style="color:#D8DEE9">&lt;/Biography&gt;</span></span></code></pre>
+</figure><div class="heading-wrapper level-h2" tabindex="-1"><h2 id="导入-markdown">导入 Markdown</h2><a class="anchor-link" href="#导入-markdown"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled 导入 Markdown</span></a></div><p>你可以将 Markdown 文件直接导入到你的 Astro 文件中！你可以用 <code>import</code> 导入单个指定页面，也可以使用 <code>Astro.glob()</code> 导入多个指定页面。</p>
+<figure class="code-snippet lang-astro">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#ABA8BD">// Import some markdown. Dynamic import() is also supported!</span></span>
+<span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">*</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">as</span><span style="color:#D8DEE9"> greatPost </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;../pages/post/great-post.md&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#ABA8BD">// Also, you can import multiple files with Astro.glob</span></span>
+<span class="line"><span style="color:#FF657C">const</span><span style="color:#D8DEE9"> posts </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">await</span><span style="color:#D8DEE9"> Astro</span><span style="color:#C7C5D3">.</span><span style="color:#66ADFF">glob</span><span style="color:#D8DEE9">(</span><span style="color:#16C082">&#39;../pages/post/*.md&#39;</span><span style="color:#D8DEE9">)</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D8DEE9">Great post: </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">a</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">href</span><span style="color:#C7C5D3">={</span><span style="color:#D8DEE9">greatPost</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">url</span><span style="color:#C7C5D3">}&gt;{</span><span style="color:#D8DEE9">greatPost</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">frontmatter</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">title</span><span style="color:#C7C5D3">}&lt;/</span><span style="color:#FF657C">a</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">ul</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9">posts</span><span style="color:#C7C5D3">.</span><span style="color:#66ADFF">map</span><span style="color:#C7C5D3">(</span><span style="color:#D8DEE9">post</span><span style="color:#FF657C"> =&gt; </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">li</span><span style="color:#C7C5D3">&gt;</span><span style="color:#FF657C">{</span><span style="color:#D8DEE9">post</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">frontmatter</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">title</span><span style="color:#FF657C">}</span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">li</span><span style="color:#C7C5D3">&gt;)}</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">ul</span><span style="color:#C7C5D3">&gt;</span></span></code></pre>
+</figure><p>每个 Markdown 文件都导出以下属性：</p><ul>
+<li>
+<p><code>frontmatter</code>：此文件的 YAML frontmatter 中指定的任何数据。</p>
+</li>
+<li>
+<p><code>file</code>：此文件的绝对路径（例如 <code>/home/user/projects/.../file.md</code>）。</p>
+</li>
+<li>
+<p><code>url</code>：如果是页面，则为页面的 URL（例如 <code>/en/guides/markdown-content</code>）。</p>
+</li>
+<li>
+<p><code>getHeaders()</code>：返回 Markdown 文件标题的异步函数。 响应遵循这种类型：<code>{ depth: number; 蛞蝓：字符串； 文本：字符串}[]</code>。</p>
+</li>
+<li>
+<p><code>Content</code>：渲染 Markdown 文件内容的组件。以下是个示例：</p>
+
+<figure class="code-snippet lang-astro">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9">Content </span><span style="color:#FF657C">as</span><span style="color:#D8DEE9"> PromoBanner</span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;../components/promoBanner.md&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">h2</span><span style="color:#C7C5D3">&gt;</span><span style="color:#D8DEE9">Today&#39;s promo</span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">h2</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">PromoBanner</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">/&gt;</span></span></code></pre>
+</figure>
+</li>
+</ul><p>你可以选用 TypeScript 泛型为 <code>frontmatter</code> 变量提供类型：</p>
+<figure class="code-snippet lang-astro">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#FF657C">interface</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">Frontmatter</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  title</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">string</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#D8DEE9">  description</span><span style="color:#FF657C">?:</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">string</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span></span>
+<span class="line"><span style="color:#FF657C">const</span><span style="color:#D8DEE9"> posts </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">await</span><span style="color:#D8DEE9"> Astro</span><span style="color:#C7C5D3">.</span><span style="color:#66ADFF">glob</span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">Frontmatter</span><span style="color:#C7C5D3">&gt;</span><span style="color:#D8DEE9">(</span><span style="color:#16C082">&#39;../pages/post/*.md&#39;</span><span style="color:#D8DEE9">)</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">ul</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9">posts</span><span style="color:#C7C5D3">.</span><span style="color:#66ADFF">map</span><span style="color:#C7C5D3">(</span><span style="color:#D8DEE9">post</span><span style="color:#FF657C"> =&gt; </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">li</span><span style="color:#C7C5D3">&gt;</span><span style="color:#FF657C">{</span><span style="color:#D8DEE9">post</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">title</span><span style="color:#FF657C">}</span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">li</span><span style="color:#C7C5D3">&gt;)}</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#ABA8BD">&lt;!-- post.title will be `string`! --&gt;</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">ul</span><span style="color:#C7C5D3">&gt;</span></span></code></pre>
+</figure><div class="heading-wrapper level-h2" tabindex="-1"><h2 id="markdown-组件">Markdown 组件</h2><a class="anchor-link" href="#markdown-组件"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Markdown 组件</span></a></div><blockquote>
+<p>注意：<code>&lt;Markdown /&gt;</code> 组件在 SSR 中没有，且可能会在 v1.0 中被删除。尽可能避免使用它。要在模板中使用 Markdown，请使用单独的 <code>.md</code> 文件，然后用 <a href="/zh-cn/guides/markdown-content/#%E5%AF%BC%E5%85%A5-markdown"><code>import</code> Markdown</a> 将其作为组件添加到模板中。</p>
+</blockquote><p>你可以在你的组件脚本中导入<a href="/zh-cn/reference/api-reference/#markdown-">内置 Astro Markdown 组件</a>，然后在 <code>&lt;Markdown&gt;&lt;/Markdown&gt;</code> 标签之间写下你想要的 Markdown 内容。</p>
+<figure class="code-snippet lang-astro">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> Markdown </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;astro/components&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> Layout </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;../layouts/Layout.astro&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF657C">const</span><span style="color:#D8DEE9"> expressions </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;Lorem ipsum&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">Layout</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">Markdown</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">    # Hello world!</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D8DEE9">    **Everything** supported in a `.md` file is also supported here!</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D8DEE9">    There is _zero_ runtime overhead.</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D8DEE9">    In addition, Astro supports:</span></span>
+<span class="line"><span style="color:#D8DEE9">    - Astro </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9">expressions</span><span style="color:#C7C5D3">}</span></span>
+<span class="line"><span style="color:#D8DEE9">    - Automatic indentation normalization</span></span>
+<span class="line"><span style="color:#D8DEE9">    - Automatic escaping of expressions inside code blocks</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D8DEE9">    ```js</span></span>
+<span class="line"><span style="color:#D8DEE9">      // This content is not transformed!</span></span>
+<span class="line"><span style="color:#D8DEE9">      const object = </span><span style="color:#C7C5D3">{</span><span style="color:#FF657C"> </span><span style="color:#D8DEE9">someOtherValue</span><span style="color:#FF657C"> </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">;</span></span>
+<span class="line"><span style="color:#D8DEE9">    ```</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D8DEE9">    - Rich component support like any `.astro` file!</span></span>
+<span class="line"><span style="color:#D8DEE9">    - Recursive Markdown support (Component children are also processed as Markdown)</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FFBD2E">Markdown</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;/</span><span style="color:#FFBD2E">Layout</span><span style="color:#C7C5D3">&gt;</span></span></code></pre>
+</figure><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="远程-markdown">远程 Markdown</h3><a class="anchor-link" href="#远程-markdown"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled 远程 Markdown</span></a></div><blockquote>
+<p>注意：<code>&lt;Markdown /&gt;</code> 组件在 SSR 中没有，且可能会在 v1.0 中被删除。尽可能避免使用它。要在模板中使用 Markdown，请使用单独的 <code>.md</code> 文件，然后用 <a href="/zh-cn/guides/markdown-content/#%E5%AF%BC%E5%85%A5-markdown"><code>import</code> Markdown</a> 将其作为组件添加到模板中。阅读此 <a href="https://github.com/withastro/rfcs/discussions/179">RFC 讨论</a>以了解更多信息。</p>
+</blockquote><p>如果你在远程中有 Markdown，你可以写入 <code>content</code> 属性将其直接传递给 Markdown 组件。</p>
+<figure class="code-snippet lang-astro">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> Markdown </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;astro/components&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF657C">const</span><span style="color:#D8DEE9"> content </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">await</span><span style="color:#D8DEE9"> </span><span style="color:#66ADFF">fetch</span><span style="color:#D8DEE9">(</span><span style="color:#16C082">&#39;https://raw.githubusercontent.com/withastro/docs/main/README.md&#39;</span><span style="color:#D8DEE9">)</span><span style="color:#C7C5D3">.</span><span style="color:#66ADFF">then</span><span style="color:#D8DEE9">(res </span><span style="color:#FF657C">=&gt;</span><span style="color:#D8DEE9"> res</span><span style="color:#C7C5D3">.</span><span style="color:#66ADFF">text</span><span style="color:#D8DEE9">())</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">Layout</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">Markdown</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">content</span><span style="color:#C7C5D3">={</span><span style="color:#D8DEE9">content</span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">/&gt;</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;/</span><span style="color:#FFBD2E">Layout</span><span style="color:#C7C5D3">&gt;</span></span></code></pre>
+</figure><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="嵌套-markdown">嵌套 Markdown</h3><a class="anchor-link" href="#嵌套-markdown"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled 嵌套 Markdown</span></a></div><blockquote>
+<p>注意：<code>&lt;Markdown /&gt;</code> 组件在 SSR 中没有，且可能会在 v1.0 中被删除。尽可能避免使用它。要在模板中使用 Markdown，请使用单独的 <code>.md</code> 文件，然后用 <a href="/zh-cn/guides/markdown-content/#%E5%AF%BC%E5%85%A5-markdown"><code>import</code> Markdown</a> 将其作为组件添加到模板中。阅读此 <a href="https://github.com/withastro/rfcs/discussions/179">RFC 讨论</a>以了解更多信息。</p>
+</blockquote><p><code>&lt;Markdown /&gt;</code> 组件可以嵌套使用。</p>
+<figure class="code-snippet lang-astro">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> Markdown </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;astro/components&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF657C">const</span><span style="color:#D8DEE9"> content </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">await</span><span style="color:#D8DEE9"> </span><span style="color:#66ADFF">fetch</span><span style="color:#D8DEE9">(</span><span style="color:#16C082">&#39;https://raw.githubusercontent.com/withastro/docs/main/README.md&#39;</span><span style="color:#D8DEE9">)</span><span style="color:#C7C5D3">.</span><span style="color:#66ADFF">then</span><span style="color:#D8DEE9">(res </span><span style="color:#FF657C">=&gt;</span><span style="color:#D8DEE9"> res</span><span style="color:#C7C5D3">.</span><span style="color:#66ADFF">text</span><span style="color:#D8DEE9">())</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">Layout</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">Markdown</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">    ## Markdown example</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D8DEE9">    Here we have some __Markdown__ code. We can also dynamically render remote content.</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">Markdown</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">content</span><span style="color:#C7C5D3">={</span><span style="color:#D8DEE9">content</span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">/&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FFBD2E">Markdown</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;/</span><span style="color:#FFBD2E">Layout</span><span style="color:#C7C5D3">&gt;</span></span></code></pre>
+</figure><p>⚠️ 使用 <code>Markdown</code> 组件来渲染远程 Markdown 可能会使你面临 <a href="https://en.wikipedia.org/wiki/Cross-site_scripting">cross-site scripting (XSS)</a> 攻击。如果你正在渲染不受信任的内容，比如在渲染前对内容进行无害化处理。</p><div class="heading-wrapper level-h2" tabindex="-1"><h2 id="配置-markdown">配置 Markdown</h2><a class="anchor-link" href="#配置-markdown"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled 配置 Markdown</span></a></div><p>你可以通过修改 <code>astro.config.mjs</code> 来自定义 Markdown 解析。<a href="/zh-cn/reference/configuration-reference/#markdown-%E9%80%89%E9%A1%B9">你在这里可以阅读完整的相关内容</a>。</p><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="markdown-插件">Markdown 插件</h3><a class="anchor-link" href="#markdown-插件"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Markdown 插件</span></a></div><p>Astro 支持 第三方 <a href="https://github.com/remarkjs/remark">remark</a> 和 <a href="https://github.com/rehypejs/rehype">rehype</a> 插件以增强 Markdown。你可以在 <code>astro.config.mjs</code> 中添加插件。</p><blockquote>
+<p>**注：**Astro 默认自带 <a href="https://github.com/remarkjs/remark-gfm">GitHub-flavored Markdown</a> 支持并预启用 <a href="https://github.com/silvenon/remark-smartypants">remark-smartypants</a>。如果启用自定义 <code>remarkPlugins</code> 或 <code>rehypePlugins</code> 将移除这些内置插件，如果还要用就需要显式添加这些插件。</p>
+</blockquote><div class="heading-wrapper level-h4" tabindex="-1"><h4 id="如何在-astro-中添加-markdown-插件">如何在 Astro 中添加 Markdown 插件</h4><a class="anchor-link" href="#如何在-astro-中添加-markdown-插件"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled 如何在 Astro 中添加 Markdown 插件</span></a></div><ol>
+<li>
+<p>在你的项目中安装 npm 包。</p>
+</li>
+<li>
+<p>更新 <code>markdown</code> 选项中的 <code>remarkPlugins</code> 或 <code>rehypePlugins</code>：</p>
+
+<figure class="code-snippet has-title lang-js">
+	<figcaption class="header"><span class="title">astro.config.mjs</span></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#FF657C">export</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">default</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#66ADFF">markdown</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#66ADFF">remarkPlugins</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> [</span></span>
+<span class="line"><span style="color:#C7C5D3">      </span><span style="color:#ABA8BD">// Add a Remark plugin that you want to enable for your project.</span></span>
+<span class="line"><span style="color:#C7C5D3">      </span><span style="color:#ABA8BD">// If you need to provide options for the plugin, you can use an array and put the options as the second item.</span></span>
+<span class="line"><span style="color:#C7C5D3">      </span><span style="color:#ABA8BD">// [&#39;remark-autolink-headings&#39;, { behavior: &#39;prepend&#39;}],</span></span>
+<span class="line"><span style="color:#D8DEE9">    ]</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#66ADFF">rehypePlugins</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> [</span></span>
+<span class="line"><span style="color:#C7C5D3">      </span><span style="color:#ABA8BD">// Add a Rehype plugin that you want to enable for your project.</span></span>
+<span class="line"><span style="color:#C7C5D3">      </span><span style="color:#ABA8BD">// If you need to provide options for the plugin, you can use an array and put the options as the second item.</span></span>
+<span class="line"><span style="color:#C7C5D3">      </span><span style="color:#ABA8BD">// &#39;rehype-slug&#39;,</span></span>
+<span class="line"><span style="color:#C7C5D3">      </span><span style="color:#ABA8BD">// [&#39;rehype-autolink-headings&#39;, { behavior: &#39;prepend&#39;}],</span></span>
+<span class="line"><span style="color:#D8DEE9">    ]</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">},</span></span>
+<span class="line"><span style="color:#C7C5D3">};</span></span></code></pre>
+</figure>
+<p>你也可以使用插件名并导入它们：</p>
+
+<figure class="code-snippet has-title lang-js">
+	<figcaption class="header"><span class="title">astro.config.mjs</span></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">autolinkHeadings</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;remark-autolink-headings&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF657C">export</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">default</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#66ADFF">markdown</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#66ADFF">remarkPlugins</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> [[autolinkHeadings</span><span style="color:#C7C5D3">,</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> </span><span style="color:#66ADFF">behavior</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;prepend&#39;</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">]]</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">},</span></span>
+<span class="line"><span style="color:#C7C5D3">};</span></span></code></pre>
+</figure>
+</li>
+</ol><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="语法高亮">语法高亮</h3><a class="anchor-link" href="#语法高亮"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled 语法高亮</span></a></div><p>Astro 内置了对 <a href="https://shiki.matsu.io/">Shiki</a> 和 <a href="https://prismjs.com/">Prism</a> 的支持。这为以下内容提供了即时语法高亮支持：</p><ul>
+<li>在 markdown（<code>.md</code>）文件和<a href="#markdown-%E7%BB%84%E4%BB%B6">内置的 <code>&lt;Markdown /&gt;</code> 组件</a> 中使用的所有代码块（```）。</li>
+<li><a href="/zh-cn/reference/api-reference/#code-">内置的 <code>&lt;Code /&gt;</code> 组件</a>(由 Shiki 提供支持))或 <a href="/zh-cn/reference/api-reference/#prism-"><code>&lt;Prism /&gt;</code> 组件</a> 中的内容（由 Prism 提供支持）。</li>
+</ul><p>Shiki 默认启用，预配置了 <code>github-dark</code> 主题。 编译后的输出将被限制为内联样式，没有任何无关的 CSS 类、样式表或客户端 JS。</p><p>如果你选择使用 Prism，我们将改为应用 Prism 的 CSS 类。 请注意，<strong>你需要带上自己的 CSS 样式表</strong>才能显示语法高亮！ 有关详细信息，请参阅 <a href="#prism-%E9%85%8D%E7%BD%AE">Prism 配置部分</a>。</p><div class="heading-wrapper level-h4" tabindex="-1"><h4 id="选择语法高亮器">选择语法高亮器</h4><a class="anchor-link" href="#选择语法高亮器"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled 选择语法高亮器</span></a></div><p>我们的默认语法高亮器是 Shiki。如果你想改用 <code>'prism'</code> 或禁用语法高亮。你可以配置 <code>markdown</code> 对象：</p>
+<figure class="code-snippet has-title lang-js">
+	<figcaption class="header"><span class="title">astro.config.mjs</span></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#FF657C">export</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">default</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#66ADFF">markdown</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#C7C5D3">    </span><span style="color:#ABA8BD">// Can be &#39;shiki&#39; (default), &#39;prism&#39; or false to disable highlighting</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#66ADFF">syntaxHighlight</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;prism&#39;</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">},</span></span>
+<span class="line"><span style="color:#C7C5D3">};</span></span></code></pre>
+</figure><div class="heading-wrapper level-h4" tabindex="-1"><h4 id="shiki-配置">Shiki 配置</h4><a class="anchor-link" href="#shiki-配置"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Shiki 配置</span></a></div><p>要使用 Shiki，你需要在 <code>shikiConfig</code> 配置所有选项，像是这样：</p>
+<figure class="code-snippet has-title lang-js">
+	<figcaption class="header"><span class="title">astro.config.mjs</span></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#FF657C">export</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">default</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#66ADFF">markdown</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#66ADFF">shikiConfig</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#C7C5D3">      </span><span style="color:#ABA8BD">// Choose from Shiki&#39;s built-in themes (or add your own)</span></span>
+<span class="line"><span style="color:#C7C5D3">      </span><span style="color:#ABA8BD">// https://github.com/shikijs/shiki/blob/main/docs/themes.md</span></span>
+<span class="line"><span style="color:#D8DEE9">      </span><span style="color:#66ADFF">theme</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;dracula&#39;</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#C7C5D3">      </span><span style="color:#ABA8BD">// Add custom languages</span></span>
+<span class="line"><span style="color:#C7C5D3">      </span><span style="color:#ABA8BD">// Note: Shiki has countless langs built-in, including .astro!</span></span>
+<span class="line"><span style="color:#C7C5D3">      </span><span style="color:#ABA8BD">// https://github.com/shikijs/shiki/blob/main/docs/languages.md</span></span>
+<span class="line"><span style="color:#D8DEE9">      </span><span style="color:#66ADFF">langs</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> []</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#C7C5D3">      </span><span style="color:#ABA8BD">// Enable word wrap to prevent horizontal scrolling</span></span>
+<span class="line"><span style="color:#D8DEE9">      </span><span style="color:#66ADFF">wrap</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">true</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">},</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">},</span></span>
+<span class="line"><span style="color:#C7C5D3">};</span></span></code></pre>
+</figure><p>我们还建议<a href="https://github.com/shikijs/shiki/blob/main/docs/themes.md#loading-theme">进一步研究他们的主题文档</a>，探索加载自定义主题、浅色与深色模式切换，或通过 CSS 变量进行自定义样式。</p><div class="heading-wrapper level-h4" tabindex="-1"><h4 id="prism-配置">Prism 配置</h4><a class="anchor-link" href="#prism-配置"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Prism 配置</span></a></div><p>要使用 Prism，你需要在先在你的项目中添加一个样式表以实现语法高亮。如果你刚开始使用且喜欢使用 Prism 而不是 Shiki，我们建议：</p><ol>
+<li>在你的 <code>@astrojs/markdown-remark</code> 配置中<a href="#%E9%80%89%E6%8B%A9%E8%AF%AD%E6%B3%95%E9%AB%98%E4%BA%AE%E5%99%A8">设置 <code>syntaxHighlight: 'prism'</code></a>。</li>
+<li>从可供挑选的 <a href="https://github.com/PrismJS/prism-themes">Prism 主题</a>中选择一个预设好的样式表。</li>
+<li>将此样式表添加到<a href="/zh-cn/core-concepts/project-structure/#public">你项目的 <code>public/</code> 目录</a>。</li>
+<li>通过 <code>&lt;link&gt;</code> 标签将其添加到<a href="/zh-cn/core-concepts/astro-pages/#%E9%A1%B5%E9%9D%A2-html">你的页面的 <code>&lt;head&gt;</code> 中</a>。</li>
+</ol><p>你也可以访问 <a href="https://prismjs.com/#supported-languages">Prism 支持的语言列表</a>了解相关的选项和用法。</p>
+	</section>
+	
+</article>
+
+
+			</div>
+		</main>
+	</body></html>

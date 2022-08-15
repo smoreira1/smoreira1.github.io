@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="es" class="initial astro-6SNADQYA">
+	<head>
+		<!-- Global Metadata --><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="hsl(256, 44%, 15%)" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="hsl(273, 37%, 93%)" media="(prefers-color-scheme: light)">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate icon" type="image/x-icon" href="/favicon.ico">
+<link rel="sitemap" href="/sitemap-index.xml">
+
+<!-- Global CSS -->
+<link rel="stylesheet" href="/theme.css">
+<link rel="stylesheet" href="/index.css">
+
+<!-- Scrollable a11y code helper -->
+<script type="module" src="/make-scrollable-code-focusable.js"></script>
+
+<!-- This is intentionally inlined to avoid FOUC -->
+
+
+<!-- Double-click to highlight code blocks (inline only). -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-130280175-15"></script>
+
+
+		<!-- Page Metadata --><link rel="canonical" href="https://docs.astro.build/es/reference/api-reference/">
+
+
+<link rel="alternate" href="https://docs.astro.build/en/reference/api-reference/" hreflang="en"><link rel="alternate" href="https://docs.astro.build/de/reference/api-reference/" hreflang="de"><link rel="alternate" href="https://docs.astro.build/nl/reference/api-reference/" hreflang="nl"><link rel="alternate" href="https://docs.astro.build/pt-br/reference/api-reference/" hreflang="pt-BR"><link rel="alternate" href="https://docs.astro.build/fi/reference/api-reference/" hreflang="fi"><link rel="alternate" href="https://docs.astro.build/es/reference/api-reference/" hreflang="es"><link rel="alternate" href="https://docs.astro.build/zh-cn/reference/api-reference/" hreflang="zh-CN"><link rel="alternate" href="https://docs.astro.build/zh-tw/reference/api-reference/" hreflang="zh-TW"><link rel="alternate" href="https://docs.astro.build/bg/reference/api-reference/" hreflang="bg"><link rel="alternate" href="https://docs.astro.build/fr/reference/api-reference/" hreflang="fr"><link rel="alternate" href="https://docs.astro.build/bn/reference/api-reference/" hreflang="bn"><link rel="alternate" href="https://docs.astro.build/kr/reference/api-reference/" hreflang="kr"><link rel="alternate" href="https://docs.astro.build/ar/reference/api-reference/" hreflang="ar"><link rel="alternate" href="https://docs.astro.build/da/reference/api-reference/" hreflang="da"><link rel="alternate" href="https://docs.astro.build/ja/reference/api-reference/" hreflang="ja"><link rel="alternate" href="https://docs.astro.build/ru/reference/api-reference/" hreflang="ru"><link rel="alternate" href="https://docs.astro.build/it/reference/api-reference/" hreflang="it"><link rel="alternate" href="https://docs.astro.build/pl/reference/api-reference/" hreflang="pl"><link rel="alternate" href="https://docs.astro.build/hu/reference/api-reference/" hreflang="hu">
+
+<!-- Algolia docsearch language facet -->
+<meta name="docsearch:language" content="es">
+
+<!-- OpenGraph Tags -->
+<meta property="og:title" content="Referencia de la API">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://docs.astro.build/es/reference/api-reference/">
+<meta property="og:locale" content="es">
+<meta property="og:image" content="https://docs.astro.build/default-og-image.png?v=1">
+<meta property="og:image:alt" content="Logo de Astro en el espacio estrellado, con un planeta púrpura parecido a Saturno flotando en el fondo a la derecha.">
+<meta name="description" property="og:description" content="Construye páginas web más rápidas con menos Javascript en el lado del cliente.">
+<meta property="og:site_name" content="Documentación de Astro">
+
+<!-- Twitter Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="astrodotbuild">
+<meta name="twitter:title" content="Referencia de la API">
+<meta name="twitter:description" content="Construye páginas web más rápidas con menos Javascript en el lado del cliente.">
+<meta name="twitter:image" content="https://docs.astro.build/default-og-image.png?v=1">
+<meta name="twitter:image:alt" content="Logo de Astro en el espacio estrellado, con un planeta púrpura parecido a Saturno flotando en el fondo a la derecha.">
+
+<!--
+  TODO: Add json+ld data, maybe https://schema.org/APIReference makes sense?
+  Docs: https://developers.google.com/search/docs/advanced/structured-data/intro-structured-data
+  https://www.npmjs.com/package/schema-dts seems like a great resource for implementing this.
+  Even better, there’s a React component that integrates with `schema-dts`: https://github.com/google/react-schemaorg
+-->
+
+		<title>Referencia de la API 🚀 Documentación de Astro</title>
+		
+		<script>
+			// This code was migrated/copied from ThemToggleBotton to make the
+			// dark mode toggle instant, vs. hidden inside of a Preact useEffect() call.
+			const theme = (() => {
+				if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+					return localStorage.getItem('theme');
+				}
+				if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+					return 'dark';
+				}
+				return 'light';
+			})();
+			if (theme === 'light') {
+				document.documentElement.classList.remove('theme-dark');
+			} else {
+				document.documentElement.classList.add('theme-dark');
+			}
+		</script>
+	<link rel="stylesheet" href="/assets/f542069c.c28a3eae.css" />
+<link rel="stylesheet" href="/assets/e2317e16.36ca0ba9.css" />
+<link rel="stylesheet" href="/assets/d262d885.28dd6693.css" />
+<link rel="stylesheet" href="/assets/ac92a3ed.788e7765.css" />
+<link rel="stylesheet" href="/assets/9cf9e8db.97bfbd59.css" />
+<link rel="stylesheet" href="/assets/7b344959.9c17731f.css" />
+<link rel="stylesheet" href="/assets/6b9ff114.c5aa952c.css" /><script type="module" src="/hoisted.6f80f745.js"></script></head>
+
+	<body class="astro-6SNADQYA">
+		<header class="astro-OWYKDMOT">
+	<a href="#article" class="sr-only focus:not-sr-only skiplink astro-D5GPSQS7">
+	<span class="astro-D5GPSQS7">Saltearse al contenido
+</span>
+</a>
+
+
+	<nav class="nav-wrapper astro-OWYKDMOT" aria-label="Superior">
+		<div dir="ltr" lang="en" class="logo flex astro-OWYKDMOT">
+			<ul class="astro-OWYKDMOT">
+				<li class="astro-OWYKDMOT">
+					<a class="astro astro-OWYKDMOT" href="https://smoreira1.github.io">
+						<span class="sr-only astro-OWYKDMOT">Astrso</span>
+						Stephen D. M.
+					</a>
+					<a class="astro-OWYKDMOT">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="astro-OWYKDMOT">
+							<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" class="astro-OWYKDMOT"></path>
+						</svg>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- <ThemeToggleButton 
+				client:visible 
+				labels={{  useLight: t('themeToggle.useLight'), useDark: t('themeToggle.useDark')  }}
+				isInsideHeader={true} 
+			/> -->
+		<!-- {lang && <LanguageSelect lang={lang} client:idle />}
+		<Search {lang} labels={docsearchStrings} />
+		<SidebarToggle client:idle /> -->
+	</nav>
+</header>
+		<main class="layout astro-6SNADQYA">
+			<aside id="left-sidebar" class="sidebar astro-6SNADQYA">
+				<nav aria-label="Primario" class="astro-M2FRLZWK">
+	<style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).load=a=>{(async()=>await(await a())())()};var a;{const l={0:t=>t,1:t=>JSON.parse(t,n),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,n)),5:t=>new Set(JSON.parse(t,n)),6:t=>BigInt(t),7:t=>new URL(t)},n=(t,r)=>{if(t===""||!Array.isArray(r))return r;const[e,i]=r;return e in l?l[e](i):void 0};customElements.get("astro-island")||customElements.define("astro-island",(a=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement?.closest("astro-island[ssr]"))return;const r=this.querySelectorAll("astro-slot"),e={},i=this.querySelectorAll("template[data-astro-template]");for(const s of i)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("data-astro-template")||"default"]=s.innerHTML,s.remove());for(const s of r)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("name")||"default"]=s.innerHTML);const o=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),n):{};this.hydrator(this)(this.Component,o,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((r,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate),await import(this.getAttribute("before-hydration-url"));const r=JSON.parse(this.getAttribute("opts"));Astro[this.getAttribute("client")](async()=>{const e=this.getAttribute("renderer-url"),[i,{default:o}]=await Promise.all([import(this.getAttribute("component-url")),e?import(e):()=>()=>{}]);return this.Component=i[this.getAttribute("component-export")||"default"],this.hydrator=o,this.hydrate},r,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},a.observedAttributes=["props"],a))}</script><astro-island uid="1TFLk5" component-url="/SidebarToggleTabGroup.053ded21.js" component-export="default" renderer-url="/client.f1d83173.js" props="{&quot;defaultActiveTab&quot;:[0,&quot;api&quot;],&quot;labels&quot;:[0,{&quot;learn&quot;:[0,&quot;Aprenda&quot;],&quot;api&quot;:[0,&quot;Referencias&quot;]}],&quot;class&quot;:[0,&quot;astro-M2FRLZWK&quot;]}" ssr="" client="load" before-hydration-url="data:text/javascript;charset=utf-8,//[no before-hydration script]" opts="{&quot;name&quot;:&quot;SidebarToggleTabGroup&quot;,&quot;value&quot;:true}" await-children=""><div class="TabGroup"><button class>Aprenda</button><button class="active">Referencias</button></div></astro-island>
+	<ul class="nav-groups astro-M2FRLZWK">
+		
+<li class="nav-group learn  astro-VB2AOOVT">
+		<details open class="astro-VB2AOOVT">
+			<summary class="nav-group-title astro-VB2AOOVT">
+				<h2 class="astro-VB2AOOVT">
+					Configuración
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true" class="astro-VB2AOOVT">
+						<path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z" class="astro-VB2AOOVT"></path>
+					</svg>
+				</h2>
+			</summary>
+			<ul class="astro-VB2AOOVT">
+				<li class="nav-link astro-VB2AOOVT">
+						<a href="/es/getting-started/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Empezando </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/es/install/auto/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Instalación </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/es/editor-setup/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Configuración del editor de código </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/es/migrate/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Technology Stack <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/es/migrate/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Technology History <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/es/migrate/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Design Patterns <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li>
+			</ul>
+		</details>
+	</li><li class="nav-group learn  astro-VB2AOOVT">
+		<details open class="astro-VB2AOOVT">
+			<summary class="nav-group-title astro-VB2AOOVT">
+				<h2 class="astro-VB2AOOVT">
+					Fundamentos
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true" class="astro-VB2AOOVT">
+						<path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z" class="astro-VB2AOOVT"></path>
+					</svg>
+				</h2>
+			</summary>
+			<ul class="astro-VB2AOOVT">
+				<li class="nav-link astro-VB2AOOVT">
+						<a href="/es/guides/deploy/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Desplegar </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/es/guides/deploy/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Desplegar </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/es/core-concepts/project-structure/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Estructura de proyecto </a>
+					</li>
+			</ul>
+		</details>
+	</li><li class="nav-group learn  astro-VB2AOOVT">
+		<details open class="astro-VB2AOOVT">
+			<summary class="nav-group-title astro-VB2AOOVT">
+				<h2 class="astro-VB2AOOVT">
+					Características
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true" class="astro-VB2AOOVT">
+						<path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z" class="astro-VB2AOOVT"></path>
+					</svg>
+				</h2>
+			</summary>
+			<ul class="astro-VB2AOOVT">
+				<li class="nav-link astro-VB2AOOVT">
+						<a href="/es/guides/configuring-astro/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Configuración de Astro </a>
+					</li>
+			</ul>
+		</details>
+	</li><li class="nav-group learn  astro-VB2AOOVT">
+		<details open class="astro-VB2AOOVT">
+			<summary class="nav-group-title astro-VB2AOOVT">
+				<h2 class="astro-VB2AOOVT">
+					Conceptos básicos
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true" class="astro-VB2AOOVT">
+						<path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z" class="astro-VB2AOOVT"></path>
+					</svg>
+				</h2>
+			</summary>
+			<ul class="astro-VB2AOOVT">
+				<li class="nav-link astro-VB2AOOVT">
+						<a href="/es/concepts/why-astro/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Angular <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/es/concepts/why-astro/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">TypeScript <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/es/concepts/why-astro/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">CSS <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/es/concepts/why-astro/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">HTML <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/es/concepts/why-astro/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">GIT <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li>
+			</ul>
+		</details>
+	</li>
+
+
+		
+<li class="nav-group api active astro-VB2AOOVT">
+		<details open class="astro-VB2AOOVT">
+			<summary class="nav-group-title astro-VB2AOOVT">
+				<h2 class="astro-VB2AOOVT">
+					Referencia
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true" class="astro-VB2AOOVT">
+						<path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z" class="astro-VB2AOOVT"></path>
+					</svg>
+				</h2>
+			</summary>
+			<ul class="astro-VB2AOOVT">
+				<li class="nav-link astro-VB2AOOVT">
+						<a href="/es/reference/configuration-reference/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Configuración </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/es/reference/cli-reference/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">CLI </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/es/reference/api-reference/" aria-current="page" data-current-parent="true" class="astro-VB2AOOVT">API </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/es/reference/integrations-reference/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">API de Integraciones </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/es/reference/adapter-reference/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">API de adaptadores </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/es/reference/directives-reference/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Directivas en maquetado </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/es/guides/publish-to-npm/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Publica en NPM </a>
+					</li>
+			</ul>
+		</details>
+	</li>
+
+
+		<details open class="hide-on-large-screens astro-TL4TIEEL"><summary class="astro-TL4TIEEL"><h2 class="heading astro-TL4TIEEL">Comunidad
+</h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true" class="astro-TL4TIEEL">
+			<path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z" class="astro-TL4TIEEL">
+			</path>
+		</svg></summary><ul class="astro-TL4TIEEL">
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://astro.build/chat" target="_blank" class="astro-TL4TIEEL">
+				<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="comment-alt" class="svg-inline--fa fa-comment-alt fa-w-16 astro-TL4TIEEL" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" height="1em" width="1em">
+					<path fill="currentColor" d="M448 0H64C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h96v84c0 9.8 11.2 15.5 19.1 9.7L304 416h144c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64z" class="astro-TL4TIEEL">
+					</path>
+				</svg>
+				<span class="astro-TL4TIEEL">Únete al Discord
+</span>
+			</a>
+		</li>
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://www.linkedin.com/in/stephenmoreira" target="_blank" class="astro-TL4TIEEL">
+				<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024" class="astro-TL4TIEEL">
+					<path fill="currentColor" d="M928 161H699.2c-49.1 0-97.1 14.1-138.4 40.7L512 233l-48.8-31.3A255.2 255.2 0 0 0 324.8 161H96c-17.7 0-32 14.3-32 32v568c0 17.7 14.3 32 32 32h228.8c49.1 0 97.1 14.1 138.4 40.7l44.4 28.6c1.3.8 2.8 1.3 4.3 1.3s3-.4 4.3-1.3l44.4-28.6C602 807.1 650.1 793 699.2 793H928c17.7 0 32-14.3 32-32V193c0-17.7-14.3-32-32-32zM404 553.5c0 4.1-3.2 7.5-7.1 7.5H211.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45zm0-140c0 4.1-3.2 7.5-7.1 7.5H211.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45zm416 140c0 4.1-3.2 7.5-7.1 7.5H627.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45zm0-140c0 4.1-3.2 7.5-7.1 7.5H627.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45z" class="astro-TL4TIEEL"></path>
+				</svg>
+				<span class="astro-TL4TIEEL">Lee nuestro blog
+</span>
+			</a>
+		</li>
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://twitter.com/stephendmoreira" target="_blank" class="astro-TL4TIEEL">
+				<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256" class="astro-TL4TIEEL">
+					<path fill="currentColor" d="M209.765 128.15c0 16.013-4.9 31.34-13.266 44.575l33.447 33.447a128.918 128.918 0 0 0 25.783-77.35c0-29.265-9.754-55.751-26.47-77.336l-32.776 32.729a79.442 79.442 0 0 1 13.267 43.888l.015.047Z" class="astro-TL4TIEEL"></path>
+					<path fill="currentColor" d="M127.513 210.355c-45.367-.086-82.125-36.838-82.22-82.205c.069-45.386 36.835-82.166 82.22-82.252c16.732 0 32.058 4.901 44.607 13.267l32.744-32.776A128.965 128.965 0 0 0 127.514.636C57.123.636 0 57.76 0 128.15c0 70.359 57.124 127.513 127.513 127.513a125.126 125.126 0 0 0 77.351-26.501l-33.447-33.431c-11.861 9.754-27.157 14.624-43.904 14.624Z" class="astro-TL4TIEEL"></path>
+				</svg>
+				<span class="astro-TL4TIEEL">Twitter
+</span>
+			</a>
+		</li>
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://github.com/withastro/docs" target="_blank" class="astro-TL4TIEEL">
+				<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="github" class="svg-inline--fa fa-brands fa-github fa-w-16 astro-TL4TIEEL" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+					<path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" class="astro-TL4TIEEL"></path>
+				</svg>
+				<span class="astro-TL4TIEEL">Documentación de Astro en GitHub
+</span>
+			</a>
+		</li>
+	</ul></details open>
+
+
+		<li style="text-align: center;" class="astro-M2FRLZWK">
+			<script>(self.Astro=self.Astro||{}).visible=(i,c,n)=>{const r=async()=>{await(await i())()};let s=new IntersectionObserver(e=>{for(const t of e)if(!!t.isIntersecting){s.disconnect(),r();break}});for(let e=0;e<n.children.length;e++){const t=n.children[e];s.observe(t)}};</script><astro-island uid="19JeU6" component-url="/ThemeToggleButton.b38468b8.js" component-export="default" renderer-url="/client.f1d83173.js" props="{&quot;labels&quot;:[0,{&quot;useLight&quot;:[0,&quot;Usar tema claro&quot;],&quot;useDark&quot;:[0,&quot;Usar tema oscuro&quot;]}],&quot;class&quot;:[0,&quot;astro-M2FRLZWK&quot;]}" ssr="" client="visible" before-hydration-url="data:text/javascript;charset=utf-8,//[no before-hydration script]" opts="{&quot;name&quot;:&quot;ThemeToggleButton&quot;,&quot;value&quot;:true}" await-children=""><div class="theme-toggle "><label title="Usar tema claro" class><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path></svg><input type="radio" name="theme-toggle" value="light" aria-label="Usar tema claro" /></label><label title="Usar tema oscuro" class><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg><input type="radio" name="theme-toggle" value="dark" aria-label="Usar tema oscuro" /></label></div></astro-island>
+		</li>
+		<li class="astro-M2FRLZWK">
+			<!-- <div dir="ltr" lang="en" class="sponsors">
+	<h2 class="sponsors-title">Sponsored by</h2>
+	<div class="sponsor">
+		<a href="https://www.netlify.com/" aria-label="Go to Netlify website">
+			<svg class="sponsor-logo__netlify" viewBox="0 0 147 40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+				><radialGradient
+					id="netlify-gradient"
+					cx="-779.0521"
+					cy="1839.7205"
+					gradientTransform="matrix(0 38.301 44.1228 0 -81154.2578 29839.2441)"
+					gradientUnits="userSpaceOnUse"
+					r="1.0011"><stop offset="0" stop-color="#20c6b7"></stop><stop offset="1" stop-color="#4d9abf"></stop></radialGradient
+				><path
+					clip-rule="evenodd"
+					d="m53.37 12.98.12 2.2c1.4-1.7 3.24-2.55 5.53-2.55 3.95 0 5.96 2.27 6.03 6.8v12.57h-4.26v-12.32c0-1.21-.26-2.1-.78-2.68s-1.37-.87-2.55-.87c-1.72 0-3 .78-3.84 2.34v13.53h-4.26v-19.02zm24.38 19.37c-2.7 0-4.89-.85-6.57-2.56-1.68-1.7-2.52-3.98-2.52-6.81v-.53c0-1.9.36-3.59 1.1-5.09.73-1.49 1.76-2.66 3.08-3.49s2.79-1.25 4.42-1.25c2.58 0 4.58.83 5.99 2.48s2.11 3.99 2.11 7.01v1.72h-12.4c.13 1.57.65 2.81 1.57 3.73s2.07 1.37 3.46 1.37c1.95 0 3.54-.79 4.77-2.37l2.3 2.2c-.76 1.14-1.77 2.02-3.04 2.65s-2.69.94-4.27.94zm-.51-16.29c-1.17 0-2.11.41-2.83 1.23s-1.18 1.96-1.38 3.43h8.12v-.32c-.09-1.43-.47-2.51-1.14-3.24-.67-.74-1.59-1.1-2.77-1.1zm16.76-7.7v4.62h3.35v3.16h-3.35v10.62c0 .73.14 1.25.43 1.57s.8.48 1.54.48c.5 0 1-.06 1.49-.18v3.31c-.97.27-1.9.4-2.81.4-3.27 0-4.91-1.81-4.91-5.43v-10.77h-3.12v-3.16h3.12v-4.63zm11.14 23.64h-4.26v-27h4.26zm9.17 0h-4.26v-19.02h4.26zm-4.52-23.96c0-.65.21-1.2.62-1.63.42-.43 1.01-.65 1.78-.65s1.37.22 1.79.65.63.98.63 1.64c0 .64-.21 1.18-.63 1.61s-1.02.64-1.79.64-1.36-.21-1.78-.64c-.41-.44-.62-.98-.62-1.62zm10.66 23.96v-15.86h-2.89v-3.16h2.89v-1.74c0-2.11.58-3.74 1.75-4.89s2.81-1.72 4.91-1.72c.75 0 1.54.11 2.39.32l-.1 3.34c-.54-.1-1.08-.15-1.63-.14-2.04 0-3.05 1.05-3.05 3.15v1.69h3.86v3.16h-3.86v15.85zm17.87-6.12 3.86-12.9h4.54l-7.54 21.9c-1.16 3.2-3.12 4.8-5.89 4.8-.62 0-1.3-.11-2.05-.32v-3.31l.81.05c1.07 0 1.88-.2 2.43-.59.54-.39.97-1.05 1.29-1.98l.61-1.64-6.66-18.93h4.6z"
+					fill-rule="evenodd"></path><path
+					d="m27.89 14.14-.01-.01c-.01 0-.02-.01-.02-.01-.02-.02-.03-.06-.03-.09l.77-4.73 3.62 3.63-3.77 1.6c-.01 0-.02.01-.03.01h-.02s-.01-.01-.02-.02c-.14-.16-.31-.29-.49-.38zm5.26-.29 3.88 3.88c.81.81 1.21 1.21 1.35 1.67.02.07.04.14.05.21l-9.26-3.92s-.01 0-.01-.01c-.04-.02-.08-.03-.08-.07s.04-.06.08-.07l.01-.01zm5.12 7c-.2.38-.59.77-1.25 1.43l-4.37 4.37-5.65-1.18-.03-.01c-.05-.01-.1-.02-.1-.06-.04-.47-.28-.9-.66-1.19-.02-.02-.02-.06-.01-.09v-.01l1.06-6.53v-.02c.01-.05.01-.11.06-.11.46-.06.88-.3 1.16-.67.01-.01.01-.02.03-.03.03-.01.07 0 .1.01zm-6.62 6.8-7.19 7.19 1.23-7.56v-.01c0-.01 0-.02.01-.03.01-.02.04-.03.06-.04h.01c.27-.11.51-.29.69-.52.02-.03.05-.06.09-.06h.03zm-8.71 8.71-.81.81-8.95-12.94s-.01-.01-.01-.01c-.01-.02-.03-.04-.03-.06s.01-.03.02-.04l.01-.01c.03-.04.05-.08.07-.12l.02-.03c.01-.02.03-.05.05-.06s.05-.01.07 0l9.92 2.05c.03 0 .05.02.08.03.01.01.02.03.02.04.14.53.52.97 1.03 1.17.03.01.02.05 0 .08-.01.01-.01.03-.01.05-.12.74-1.19 7.27-1.48 9.04zm-1.69 1.69c-.6.59-.95.9-1.35 1.03-.39.12-.81.12-1.21 0-.47-.15-.87-.55-1.67-1.36l-8.99-8.99 2.35-3.64c.01-.02.02-.03.04-.05s.06-.01.09 0c.54.16 1.12.13 1.64-.08.03-.01.05-.02.07 0l.03.03zm-14.09-10.19-2.06-2.06 4.07-1.74c.01 0 .02-.01.03-.01.03 0 .05.03.07.07.04.06.08.12.13.18l.01.02c.01.02 0 .03-.01.05zm-2.98-2.97-2.61-2.61c-.44-.44-.77-.77-.99-1.04l7.94 1.65h.03c.05.01.1.02.1.06 0 .05-.06.07-.11.09l-.02.01zm-4.05-5c.01-.17.04-.33.09-.5.15-.47.55-.87 1.36-1.67l3.34-3.34c1.54 2.23 3.08 4.46 4.63 6.69.03.04.06.08.03.11-.15.16-.29.34-.4.53-.01.02-.03.05-.05.06-.01.01-.03 0-.04 0zm5.68-6.4 4.49-4.49c.42.19 1.96.83 3.33 1.41 1.04.44 1.99.84 2.29.97.03.01.06.02.07.05.01.02 0 .04 0 .06-.14.66.05 1.35.52 1.83.03.03 0 .07-.03.11l-.01.02-4.56 7.06c-.01.02-.02.04-.04.05s-.06.01-.09 0c-.18-.05-.36-.07-.54-.07-.16 0-.34.03-.52.06-.02 0-.04.01-.05 0-.02-.01-.03-.03-.05-.05zm5.4-5.4 5.81-5.81c.81-.81 1.21-1.21 1.67-1.36.39-.12.81-.12 1.21 0 .47.15.87.55 1.67 1.36l1.26 1.26-4.14 6.4c-.01.02-.02.03-.04.05s-.06.01-.09 0c-.66-.2-1.38-.06-1.92.37-.03.03-.07.01-.1 0-.53-.24-4.73-2.01-5.33-2.27zm12.5-3.67 3.82 3.82-.92 5.7v.02c0 .01 0 .03-.01.04-.01.02-.03.02-.05.03-.2.06-.38.15-.55.27-.01.01-.01.01-.02.02s-.02.02-.04.02c-.01 0-.03 0-.04-.01l-5.82-2.47-.01-.01c-.04-.02-.08-.03-.08-.07-.03-.32-.14-.64-.31-.91-.03-.05-.06-.09-.03-.14zm-3.93 8.6 5.45 2.31c.03.01.06.03.08.06.01.02.01.04 0 .06-.02.08-.03.17-.03.26v.15c0 .04-.04.05-.08.07h-.01c-.86.37-12.13 5.17-12.15 5.17s-.03 0-.05-.02c-.03-.03 0-.07.03-.11 0-.01.01-.01.01-.02l4.48-6.94.01-.01c.03-.04.06-.09.1-.09l.05.01c.1.01.19.03.28.03.68 0 1.31-.33 1.69-.9.01-.02.02-.03.03-.04.04-.01.08 0 .11.01zm-6.25 9.19 12.28-5.24s.02 0 .03.02c.07.07.12.11.18.15l.03.02c.02.01.05.03.05.06v.02l-1.05 6.46v.03c-.01.05-.01.11-.06.11-.57.04-1.08.36-1.37.85v.01c-.01.02-.03.05-.05.06s-.05.01-.07 0l-9.79-2.02c-.02-.02-.16-.53-.18-.53z"
+					fill="url(#netlify-gradient)"></path></svg
+			>
+		</a>
+	</div>
+</div> -->
+
+		</li>
+	</ul>
+</nav>
+
+
+
+
+			</aside>
+			<aside id="right-sidebar" class="sidebar astro-6SNADQYA">
+				<nav aria-label="Secundario" class="astro-7RGIIGOJ">
+	<script>(self.Astro=self.Astro||{}).media=(s,a)=>{const t=async()=>{await(await s())()};if(a.value){const e=matchMedia(a.value);e.matches?t():e.addEventListener("change",t,{once:!0})}};</script><astro-island uid="Z1HXud2" component-url="/TableOfContents.109662f0.js" component-export="default" renderer-url="/client.f1d83173.js" props="{&quot;headings&quot;:[1,&quot;[[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;astro-global\&quot;],\&quot;text\&quot;:[0,\&quot;Astro global\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;astroglob\&quot;],\&quot;text\&quot;:[0,\&quot;Astro.glob()\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;archivos-markdown\&quot;],\&quot;text\&quot;:[0,\&quot;Archivos Markdown\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;archivos-astro\&quot;],\&quot;text\&quot;:[0,\&quot;Archivos Astro\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;otros-archivos\&quot;],\&quot;text\&quot;:[0,\&quot;Otros archivos\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;astrorequest\&quot;],\&quot;text\&quot;:[0,\&quot;Astro.request\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;astroresponse\&quot;],\&quot;text\&quot;:[0,\&quot;Astro.response\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;astrocanonicalurl\&quot;],\&quot;text\&quot;:[0,\&quot;Astro.canonicalURL\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;astrourl\&quot;],\&quot;text\&quot;:[0,\&quot;Astro.url\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;astroclientaddress\&quot;],\&quot;text\&quot;:[0,\&quot;Astro.clientAddress\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;astrosite\&quot;],\&quot;text\&quot;:[0,\&quot;Astro.site\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;astroslots\&quot;],\&quot;text\&quot;:[0,\&quot;Astro.slots\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;astroself\&quot;],\&quot;text\&quot;:[0,\&quot;Astro.self\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;getstaticpaths\&quot;],\&quot;text\&quot;:[0,\&quot;getStaticPaths()\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;params\&quot;],\&quot;text\&quot;:[0,\&quot;params\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;transferencia-de-datos-con-props\&quot;],\&quot;text\&quot;:[0,\&quot;Transferencia de datos con props\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;paginate\&quot;],\&quot;text\&quot;:[0,\&quot;paginate()\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;la-prop-de-paginación-page\&quot;],\&quot;text\&quot;:[0,\&quot;La prop de paginación page\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;importmeta\&quot;],\&quot;text\&quot;:[0,\&quot;import.meta\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;componentes-incorporados\&quot;],\&quot;text\&quot;:[0,\&quot;Componentes incorporados\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;markdown-\&quot;],\&quot;text\&quot;:[0,\&quot;&amp;lt;Markdown /&amp;gt;\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;code-\&quot;],\&quot;text\&quot;:[0,\&quot;&amp;lt;Code /&amp;gt;\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;prism-\&quot;],\&quot;text\&quot;:[0,\&quot;&amp;lt;Prism /&amp;gt;\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;debug-\&quot;],\&quot;text\&quot;:[0,\&quot;&amp;lt;Debug /&amp;gt;\&quot;]}]]&quot;],&quot;labels&quot;:[0,{&quot;onThisPage&quot;:[0,&quot;En esta página&quot;],&quot;overview&quot;:[0,&quot;Sinopsis&quot;]}],&quot;isMobile&quot;:[0,false],&quot;class&quot;:[0,&quot;astro-7RGIIGOJ&quot;]}" ssr="" client="media" before-hydration-url="data:text/javascript;charset=utf-8,//[no before-hydration script]" opts="{&quot;name&quot;:&quot;TableOfContents&quot;,&quot;value&quot;:&quot;(min-width: 50em)&quot;}" await-children=""><h2 class="heading" id="on-this-page-heading">En esta página</h2><ul><li class="header-link depth-2 current-header-link"><a href="#overview">Sinopsis</a></li><li class="header-link depth-2"><a href="#astro-global">Astro global</a></li><li class="header-link depth-3"><a href="#astroglob">Astro.glob()</a></li><li class="header-link depth-3"><a href="#astrorequest">Astro.request</a></li><li class="header-link depth-3"><a href="#astroresponse">Astro.response</a></li><li class="header-link depth-3"><a href="#astrocanonicalurl">Astro.canonicalURL</a></li><li class="header-link depth-3"><a href="#astrourl">Astro.url</a></li><li class="header-link depth-3"><a href="#astroclientaddress">Astro.clientAddress</a></li><li class="header-link depth-3"><a href="#astrosite">Astro.site</a></li><li class="header-link depth-3"><a href="#astroslots">Astro.slots</a></li><li class="header-link depth-3"><a href="#astroself">Astro.self</a></li><li class="header-link depth-2"><a href="#getstaticpaths">getStaticPaths()</a></li><li class="header-link depth-3"><a href="#params">params</a></li><li class="header-link depth-3"><a href="#transferencia-de-datos-con-props">Transferencia de datos con props</a></li><li class="header-link depth-3"><a href="#paginate">paginate()</a></li><li class="header-link depth-2"><a href="#importmeta">import.meta</a></li><li class="header-link depth-2"><a href="#componentes-incorporados">Componentes incorporados</a></li><li class="header-link depth-3"><a href="#markdown-">&lt;Markdown /&gt;</a></li><li class="header-link depth-3"><a href="#code-">&lt;Code /&gt;</a></li><li class="header-link depth-3"><a href="#prism-">&lt;Prism /&gt;</a></li><li class="header-link depth-3"><a href="#debug-">&lt;Debug /&gt;</a></li></ul></astro-island>
+	<!-- <h2 class="heading"><UIString key="rightSidebar.contribute" /></h2>
+<ul>
+	<li class={`header-link depth-2`}>
+		<a class="edit-on-github" href={editHref} target="_blank">
+			<svg
+				aria-hidden="true"
+				focusable="false"
+				data-prefix="fas"
+				data-icon="pen"
+				class="svg-inline--fa fa-pen fa-w-16"
+				role="img"
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512"
+				height="1em"
+				width="1em"
+			>
+				<path
+					fill="currentColor"
+					d="M290.74 93.24l128.02 128.02-277.99 277.99-114.14 12.6C11.35 513.54-1.56 500.62.14 485.34l12.7-114.22 277.9-277.88zm207.2-19.06l-60.11-60.11c-18.75-18.75-49.16-18.75-67.91 0l-56.55 56.55 128.02 128.02 56.55-56.55c18.75-18.76 18.75-49.16 0-67.91z"
+				></path>
+			</svg>
+			<span><UIString key="rightSidebar.editPage" /></span>
+		</a>
+	</li>
+	{isTranslatable &&
+		<li class={`header-link depth-2`}>
+			<a href="https://github.com/withastro/docs/blob/main/TRANSLATING.md" target="_blank">
+				<svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88.6 77.3" height="1.24em" width="1.24em" style="margin: -2px;">
+					<path fill="currentColor" d="M61,24.6h7.9l18.7,51.6h-7.7l-5.4-15.5H54.3l-5.6,15.5h-7.2L61,24.6z M72.6,55l-8-22.8L56.3,55H72.6z"></path>
+					<path
+						fill="currentColor"
+						d="M53.6,60.6c-10-4-16-9-22-14c0,0,1.3,1.3,0,0c-6,5-20,13-20,13l-4-6c8-5,10-6,19-13c-2.1-1.9-12-13-13-19h8          c4,9,10,14,10,14c10-8,10-19,10-19h8c0,0-1,13-12,24l0,0c5,5,10,9,19,13L53.6,60.6z M1.6,16.6h56v-8h-23v-7h-9v7h-24V16.6z"
+					></path>
+				</svg>
+				<span><UIString key="rightSidebar.translatePage" /></span>
+			</a>
+		</li>
+	}
+</ul> -->
+
+	<div class="astro-TL4TIEEL"><div class="astro-TL4TIEEL"><h2 class="heading astro-TL4TIEEL">Comunidad
+</h2></div><ul class="astro-TL4TIEEL">
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://astro.build/chat" target="_blank" class="astro-TL4TIEEL">
+				<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="comment-alt" class="svg-inline--fa fa-comment-alt fa-w-16 astro-TL4TIEEL" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" height="1em" width="1em">
+					<path fill="currentColor" d="M448 0H64C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h96v84c0 9.8 11.2 15.5 19.1 9.7L304 416h144c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64z" class="astro-TL4TIEEL">
+					</path>
+				</svg>
+				<span class="astro-TL4TIEEL">Únete al Discord
+</span>
+			</a>
+		</li>
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://www.linkedin.com/in/stephenmoreira" target="_blank" class="astro-TL4TIEEL">
+				<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024" class="astro-TL4TIEEL">
+					<path fill="currentColor" d="M928 161H699.2c-49.1 0-97.1 14.1-138.4 40.7L512 233l-48.8-31.3A255.2 255.2 0 0 0 324.8 161H96c-17.7 0-32 14.3-32 32v568c0 17.7 14.3 32 32 32h228.8c49.1 0 97.1 14.1 138.4 40.7l44.4 28.6c1.3.8 2.8 1.3 4.3 1.3s3-.4 4.3-1.3l44.4-28.6C602 807.1 650.1 793 699.2 793H928c17.7 0 32-14.3 32-32V193c0-17.7-14.3-32-32-32zM404 553.5c0 4.1-3.2 7.5-7.1 7.5H211.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45zm0-140c0 4.1-3.2 7.5-7.1 7.5H211.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45zm416 140c0 4.1-3.2 7.5-7.1 7.5H627.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45zm0-140c0 4.1-3.2 7.5-7.1 7.5H627.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45z" class="astro-TL4TIEEL"></path>
+				</svg>
+				<span class="astro-TL4TIEEL">Lee nuestro blog
+</span>
+			</a>
+		</li>
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://twitter.com/stephendmoreira" target="_blank" class="astro-TL4TIEEL">
+				<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256" class="astro-TL4TIEEL">
+					<path fill="currentColor" d="M209.765 128.15c0 16.013-4.9 31.34-13.266 44.575l33.447 33.447a128.918 128.918 0 0 0 25.783-77.35c0-29.265-9.754-55.751-26.47-77.336l-32.776 32.729a79.442 79.442 0 0 1 13.267 43.888l.015.047Z" class="astro-TL4TIEEL"></path>
+					<path fill="currentColor" d="M127.513 210.355c-45.367-.086-82.125-36.838-82.22-82.205c.069-45.386 36.835-82.166 82.22-82.252c16.732 0 32.058 4.901 44.607 13.267l32.744-32.776A128.965 128.965 0 0 0 127.514.636C57.123.636 0 57.76 0 128.15c0 70.359 57.124 127.513 127.513 127.513a125.126 125.126 0 0 0 77.351-26.501l-33.447-33.431c-11.861 9.754-27.157 14.624-43.904 14.624Z" class="astro-TL4TIEEL"></path>
+				</svg>
+				<span class="astro-TL4TIEEL">Twitter
+</span>
+			</a>
+		</li>
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://github.com/withastro/docs" target="_blank" class="astro-TL4TIEEL">
+				<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="github" class="svg-inline--fa fa-brands fa-github fa-w-16 astro-TL4TIEEL" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+					<path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" class="astro-TL4TIEEL"></path>
+				</svg>
+				<span class="astro-TL4TIEEL">Documentación de Astro en GitHub
+</span>
+			</a>
+		</li>
+	</ul></div>
+
+
+</nav>
+
+
+			</aside>
+			<div id="main-content" class="astro-6SNADQYA">
+				<nav class="mobile-toc astro-CCFK4WYY">
+			<astro-island uid="Z1flQwE" component-url="/TableOfContents.109662f0.js" component-export="default" renderer-url="/client.f1d83173.js" props="{&quot;headings&quot;:[1,&quot;[[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;astro-global\&quot;],\&quot;text\&quot;:[0,\&quot;Astro global\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;astroglob\&quot;],\&quot;text\&quot;:[0,\&quot;Astro.glob()\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;archivos-markdown\&quot;],\&quot;text\&quot;:[0,\&quot;Archivos Markdown\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;archivos-astro\&quot;],\&quot;text\&quot;:[0,\&quot;Archivos Astro\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;otros-archivos\&quot;],\&quot;text\&quot;:[0,\&quot;Otros archivos\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;astrorequest\&quot;],\&quot;text\&quot;:[0,\&quot;Astro.request\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;astroresponse\&quot;],\&quot;text\&quot;:[0,\&quot;Astro.response\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;astrocanonicalurl\&quot;],\&quot;text\&quot;:[0,\&quot;Astro.canonicalURL\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;astrourl\&quot;],\&quot;text\&quot;:[0,\&quot;Astro.url\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;astroclientaddress\&quot;],\&quot;text\&quot;:[0,\&quot;Astro.clientAddress\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;astrosite\&quot;],\&quot;text\&quot;:[0,\&quot;Astro.site\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;astroslots\&quot;],\&quot;text\&quot;:[0,\&quot;Astro.slots\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;astroself\&quot;],\&quot;text\&quot;:[0,\&quot;Astro.self\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;getstaticpaths\&quot;],\&quot;text\&quot;:[0,\&quot;getStaticPaths()\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;params\&quot;],\&quot;text\&quot;:[0,\&quot;params\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;transferencia-de-datos-con-props\&quot;],\&quot;text\&quot;:[0,\&quot;Transferencia de datos con props\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;paginate\&quot;],\&quot;text\&quot;:[0,\&quot;paginate()\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;la-prop-de-paginación-page\&quot;],\&quot;text\&quot;:[0,\&quot;La prop de paginación page\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;importmeta\&quot;],\&quot;text\&quot;:[0,\&quot;import.meta\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;componentes-incorporados\&quot;],\&quot;text\&quot;:[0,\&quot;Componentes incorporados\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;markdown-\&quot;],\&quot;text\&quot;:[0,\&quot;&amp;lt;Markdown /&amp;gt;\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;code-\&quot;],\&quot;text\&quot;:[0,\&quot;&amp;lt;Code /&amp;gt;\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;prism-\&quot;],\&quot;text\&quot;:[0,\&quot;&amp;lt;Prism /&amp;gt;\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;debug-\&quot;],\&quot;text\&quot;:[0,\&quot;&amp;lt;Debug /&amp;gt;\&quot;]}]]&quot;],&quot;labels&quot;:[0,{&quot;onThisPage&quot;:[0,&quot;En esta página&quot;],&quot;overview&quot;:[0,&quot;Sinopsis&quot;]}],&quot;isMobile&quot;:[0,true],&quot;class&quot;:[0,&quot;astro-CCFK4WYY&quot;]}" ssr="" client="media" before-hydration-url="data:text/javascript;charset=utf-8,//[no before-hydration script]" opts="{&quot;name&quot;:&quot;TableOfContents&quot;,&quot;value&quot;:&quot;(max-width: 72em)&quot;}" await-children=""><details class="toc-mobile-container"><summary class="toc-mobile-header"><div class="toc-mobile-header-content"><div class="toc-toggle"><h2 class="heading" id="on-this-page-heading">En esta página</h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z"></path></svg></div></div></summary><ul><li class="header-link depth-2 current-header-link"><a href="#overview">Sinopsis</a></li><li class="header-link depth-2"><a href="#astro-global">Astro global</a></li><li class="header-link depth-3"><a href="#astroglob">Astro.glob()</a></li><li class="header-link depth-3"><a href="#astrorequest">Astro.request</a></li><li class="header-link depth-3"><a href="#astroresponse">Astro.response</a></li><li class="header-link depth-3"><a href="#astrocanonicalurl">Astro.canonicalURL</a></li><li class="header-link depth-3"><a href="#astrourl">Astro.url</a></li><li class="header-link depth-3"><a href="#astroclientaddress">Astro.clientAddress</a></li><li class="header-link depth-3"><a href="#astrosite">Astro.site</a></li><li class="header-link depth-3"><a href="#astroslots">Astro.slots</a></li><li class="header-link depth-3"><a href="#astroself">Astro.self</a></li><li class="header-link depth-2"><a href="#getstaticpaths">getStaticPaths()</a></li><li class="header-link depth-3"><a href="#params">params</a></li><li class="header-link depth-3"><a href="#transferencia-de-datos-con-props">Transferencia de datos con props</a></li><li class="header-link depth-3"><a href="#paginate">paginate()</a></li><li class="header-link depth-2"><a href="#importmeta">import.meta</a></li><li class="header-link depth-2"><a href="#componentes-incorporados">Componentes incorporados</a></li><li class="header-link depth-3"><a href="#markdown-">&lt;Markdown /&gt;</a></li><li class="header-link depth-3"><a href="#code-">&lt;Code /&gt;</a></li><li class="header-link depth-3"><a href="#prism-">&lt;Prism /&gt;</a></li><li class="header-link depth-3"><a href="#debug-">&lt;Debug /&gt;</a></li></ul></details></astro-island>
+		</nav>
+
+<article id="article" class="content astro-CCFK4WYY">
+	<section class="main-section astro-CCFK4WYY">
+		<h1 class="content-title astro-CCFK4WYY" id="overview">Referencia de la API</h1>
+		<div class="heading-wrapper level-h2" tabindex="-1"><h2 id="astro-global"><code>Astro</code> global</h2><a class="anchor-link" href="#astro-global"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Astro global</span></a></div><p>El objeto global <code>Astro</code> está disponible en todos los contextos en los archivos <code>.astro</code>. Tiene las siguientes funciones:</p><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="astroglob"><code>Astro.glob()</code></h3><a class="anchor-link" href="#astroglob"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Astro.glob()</span></a></div><p><code>Astro.glob()</code> es una forma de cargar archivos locales en la configuración de su página estática.</p>
+<figure class="code-snippet has-title lang-astro">
+	<figcaption class="header"><span class="title">./<wbr/>src/<wbr/>components/<wbr/>my-component.astro</span></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#FF657C">const</span><span style="color:#D8DEE9"> posts </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">await</span><span style="color:#D8DEE9"> Astro</span><span style="color:#C7C5D3">.</span><span style="color:#66ADFF">glob</span><span style="color:#D8DEE9">(</span><span style="color:#16C082">&#39;../pages/post/*.md&#39;</span><span style="color:#D8DEE9">)</span><span style="color:#C7C5D3">;</span><span style="color:#D8DEE9"> </span><span style="color:#ABA8BD">// devuelve un array de artículos encontrados en ./src/pages/post/*.md</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">div</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9">posts</span><span style="color:#C7C5D3">.</span><span style="color:#66ADFF">slice</span><span style="color:#C7C5D3">(</span><span style="color:#EBCB8B">0</span><span style="color:#C7C5D3">,</span><span style="color:#FF657C"> </span><span style="color:#EBCB8B">3</span><span style="color:#C7C5D3">).</span><span style="color:#66ADFF">map</span><span style="color:#C7C5D3">(</span><span style="color:#D8DEE9">(post)</span><span style="color:#FF657C"> =&gt; </span><span style="color:#C7C5D3">(</span></span>
+<span class="line"><span style="color:#FF657C">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">article</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#FF657C">    </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">h1</span><span style="color:#C7C5D3">&gt;</span><span style="color:#FF657C">{</span><span style="color:#D8DEE9">post</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">frontmatter</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">title</span><span style="color:#FF657C">}</span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">h1</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#FF657C">    </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">p</span><span style="color:#C7C5D3">&gt;</span><span style="color:#FF657C">{</span><span style="color:#D8DEE9">post</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">frontmatter</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">description</span><span style="color:#FF657C">}</span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">p</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#FF657C">    </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">a </span><span style="color:#FFBD2E">href</span><span style="color:#FF657C">={</span><span style="color:#D8DEE9">post</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">frontmatter</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">url</span><span style="color:#FF657C">}</span><span style="color:#C7C5D3">&gt;</span><span style="color:#FF657C">Read more</span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">a</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#FF657C">  </span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">article</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#C7C5D3">))}</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">div</span><span style="color:#C7C5D3">&gt;</span></span></code></pre>
+</figure><p><code>.glob()</code> solo toma un parámetro: la URL relativa de los archivos locales que te gustaría importar. Es asíncrono y devuelve un array con las exportaciones de los archivos coincidentes.</p><aside class="content note astro-6BEKRN6C" aria-label="Nota">
+	<p class="title astro-6BEKRN6C" aria-hidden="true">
+		<span class="icon astro-6BEKRN6C">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" width="16" height="16" class="astro-6BEKRN6C">
+				<path fill-rule="evenodd" d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0114.25 14H1.75A1.75 1.75 0 010 12.25v-8.5zm1.75-.25a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25v-8.5a.25.25 0 00-.25-.25H1.75zM3.5 6.25a.75.75 0 01.75-.75h7a.75.75 0 010 1.5h-7a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5h4a.75.75 0 000-1.5h-4z" class="astro-6BEKRN6C"></path>
+			</svg>
+		</span>
+		Nota
+	</p>
+	<section class="astro-6BEKRN6C">
+		<p><code>Astro.glob()</code> es un wrapper de <a href="https://vitejs.dev/guide/features.html#glob-import"><code>import.meta.glob()</code></a> de Vite, por lo que no puede aceptar variables que no sean estáticas. Consulte <a href="/es/guides/troubleshooting/#valores-compatibles">la guía de solución de problemas</a> para obtener una solución alternativa.</p>
+	</section>
+</aside>
+
+<div class="heading-wrapper level-h4" tabindex="-1"><h4 id="archivos-markdown">Archivos Markdown</h4><a class="anchor-link" href="#archivos-markdown"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Archivos Markdown</span></a></div><p>Los archivos Markdown tienen la siguiente interfaz:</p>
+<figure class="code-snippet lang-ts">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#FF657C">export</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">interface</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">MarkdownInstance</span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">T</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">extends</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">Record</span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">string</span><span style="color:#C7C5D3">,</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">any</span><span style="color:#C7C5D3">&gt;&gt;</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#ABA8BD">/* Cualquier dato especificado en el frontmatter de YAML del archivo */</span></span>
+<span class="line"><span style="color:#D8DEE9">  frontmatter</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">T</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#ABA8BD">/* La ruta del archivo */</span></span>
+<span class="line"><span style="color:#D8DEE9">  file</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">string</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#ABA8BD">/* La ruta en donde se renderizará este archivo */</span></span>
+<span class="line"><span style="color:#D8DEE9">  url</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">string</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">|</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">undefined</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#ABA8BD">/* Componente de Astro que renderizará el contenido del archivo */</span></span>
+<span class="line"><span style="color:#D8DEE9">  Content</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">AstroComponent</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#ABA8BD">/* Función que devuelve un array de elementos h1...h6 del archivo */</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#66ADFF">getHeaders</span><span style="color:#D8DEE9">()</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">Promise</span><span style="color:#C7C5D3">&lt;{</span><span style="color:#D8DEE9"> depth</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">number</span><span style="color:#C7C5D3">;</span><span style="color:#D8DEE9"> slug</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">string</span><span style="color:#C7C5D3">;</span><span style="color:#D8DEE9"> text</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">string</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">[]</span><span style="color:#C7C5D3">&gt;;</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span></span></code></pre>
+</figure><p>Opcionalmente, puedes proporcionar un tipo para la variable de <code>frontmatter</code> usando un tipo genérico de TypeScript.</p>
+<figure class="code-snippet lang-astro">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#FF657C">interface</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">Frontmatter</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  title</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">string</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#D8DEE9">  description</span><span style="color:#FF657C">?:</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">string</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span></span>
+<span class="line"><span style="color:#FF657C">const</span><span style="color:#D8DEE9"> posts </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">await</span><span style="color:#D8DEE9"> Astro</span><span style="color:#C7C5D3">.</span><span style="color:#66ADFF">glob</span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">Frontmatter</span><span style="color:#C7C5D3">&gt;</span><span style="color:#D8DEE9">(</span><span style="color:#16C082">&#39;../pages/post/*.md&#39;</span><span style="color:#D8DEE9">)</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">ul</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9">posts</span><span style="color:#C7C5D3">.</span><span style="color:#66ADFF">map</span><span style="color:#C7C5D3">(</span><span style="color:#D8DEE9">post</span><span style="color:#FF657C"> =&gt; </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">li</span><span style="color:#C7C5D3">&gt;</span><span style="color:#FF657C">{</span><span style="color:#D8DEE9">post</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">title</span><span style="color:#FF657C">}</span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">li</span><span style="color:#C7C5D3">&gt;)}</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">ul</span><span style="color:#C7C5D3">&gt;</span></span></code></pre>
+</figure><div class="heading-wrapper level-h4" tabindex="-1"><h4 id="archivos-astro">Archivos Astro</h4><a class="anchor-link" href="#archivos-astro"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Archivos Astro</span></a></div><p>Los archivos Astro tienen la siguiente interfaz:</p>
+<figure class="code-snippet lang-ts">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#FF657C">export</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">interface</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">AstroInstance</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  default</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">AstroComponent</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span></span></code></pre>
+</figure><div class="heading-wrapper level-h4" tabindex="-1"><h4 id="otros-archivos">Otros archivos</h4><a class="anchor-link" href="#otros-archivos"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Otros archivos</span></a></div><p>Otros archivos pueden tener varias interfaces diferentes, pero <code>Astro.glob()</code> acepta un genérico de TypeScript si sabes exactamente qué tipo contiene un archivo no reconocido.</p>
+<figure class="code-snippet lang-ts">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#FF657C">---</span></span>
+<span class="line"><span style="color:#FF657C">interface</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">CustomDataFile</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  default</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">Record</span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">string</span><span style="color:#C7C5D3">,</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">any</span><span style="color:#C7C5D3">&gt;;</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span></span>
+<span class="line"><span style="color:#FF657C">const</span><span style="color:#D8DEE9"> data </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">await</span><span style="color:#D8DEE9"> Astro</span><span style="color:#C7C5D3">.</span><span style="color:#66ADFF">glob</span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">CustomDataFile</span><span style="color:#C7C5D3">&gt;</span><span style="color:#D8DEE9">(</span><span style="color:#16C082">&#39;../data/**/*.js&#39;</span><span style="color:#D8DEE9">)</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#FF657C">---</span></span></code></pre>
+</figure><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="astrorequest"><code>Astro.request</code></h3><a class="anchor-link" href="#astrorequest"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Astro.request</span></a></div><p><code>Astro.request</code> es un objeto <a href="https://developer.mozilla.org/es/docs/Web/API/Request">Request</a> estándar. Se puede utilizar para obtener la <code>url</code>, <code>headers</code>, <code>method</code> e incluso el cuerpo de la solicitud.</p>
+<figure class="code-snippet lang-astro">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">p</span><span style="color:#C7C5D3">&gt;</span><span style="color:#D8DEE9">Recibí una solicitud </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9">Astro</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">request</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">method</span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> en &quot;</span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9">Astro</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">request</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">url</span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">&quot;.</span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">p</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">p</span><span style="color:#C7C5D3">&gt;</span><span style="color:#D8DEE9">Encabezados de solicitud recibidos:</span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">code</span><span style="color:#C7C5D3">&gt;{</span><span style="color:#FFBD2E">JSON</span><span style="color:#C7C5D3">.</span><span style="color:#66ADFF">stringify</span><span style="color:#C7C5D3">(</span><span style="color:#FFBD2E">Object</span><span style="color:#C7C5D3">.</span><span style="color:#66ADFF">fromEntries</span><span style="color:#C7C5D3">(</span><span style="color:#D8DEE9">Astro</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">request</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">headers</span><span style="color:#C7C5D3">))}&lt;/</span><span style="color:#FF657C">code</span><span style="color:#C7C5D3">&gt;</span></span></code></pre>
+</figure><p>Ver también: <a href="#astrourl"><code>Astro.url</code></a></p><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="astroresponse"><code>Astro.response</code></h3><a class="anchor-link" href="#astroresponse"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Astro.response</span></a></div><p><code>Astro.response</code> es un objeto <a href="https://developer.mozilla.org/es/docs/Web/API/Response/Response">ResponseInit</a> estándar. Se utiliza para establecer el <code>status</code>, <code>statusText</code> y <code>headers</code> para la respuesta de una página.</p>
+<figure class="code-snippet lang-astro">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#FF657C">if</span><span style="color:#D8DEE9">(condition) </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  Astro</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">response</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">status </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> </span><span style="color:#EBCB8B">404</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#D8DEE9">  Astro</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">response</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">statusText </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;Not found&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span></code></pre>
+</figure><p>O para establecer un header:</p>
+<figure class="code-snippet lang-astro">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#D8DEE9">Astro</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">response</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">headers</span><span style="color:#C7C5D3">.</span><span style="color:#66ADFF">set</span><span style="color:#D8DEE9">(</span><span style="color:#16C082">&#39;Set-Cookie&#39;</span><span style="color:#C7C5D3">,</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;a=b; Path=/;&#39;</span><span style="color:#D8DEE9">)</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span></code></pre>
+</figure><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="astrocanonicalurl"><code>Astro.canonicalURL</code></h3><a class="anchor-link" href="#astrocanonicalurl"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Astro.canonicalURL</span></a></div><aside class="content caution astro-6BEKRN6C" aria-label="Obsoleto">
+	<p class="title astro-6BEKRN6C" aria-hidden="true">
+		<span class="icon astro-6BEKRN6C">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 1 18 18" width="16" height="16" class="astro-6BEKRN6C">
+				<path fill-rule="evenodd" d="M8.9 1.5C8.7 1.2 8.4 1 8 1s-.7.2-.9.5l-7 12a1 1 0 0 0 0 1c.2.3.6.5 1 .5H15c.4 0 .7-.2.9-.5a1 1 0 0 0 0-1l-7-12zM9 13H7v-2h2v2zm0-3H7V6h2v4z" class="astro-6BEKRN6C"></path>
+			</svg>
+		</span>
+		Obsoleto
+	</p>
+	<section class="astro-6BEKRN6C">
+		<p>Utiliza <a href="#astrourl"><code>Astro.url</code></a> para construir tu propia URL canónica.</p>
+	</section>
+</aside>
+
+<p>La <a href="https://en.wikipedia.org/wiki/Canonical_link_element">URL canónica</a> de la página actual.</p><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="astrourl"><code>Astro.url</code></h3><a class="anchor-link" href="#astrourl"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Astro.url</span></a></div><span>
+  <strong>Agregado en:
+</strong> v1.0.0-rc
+  <span class="badge accent astro-WV4FPCFU">Nuevo
+</span>
+</span><p>Un objeto <a href="https://developer.mozilla.org/es/docs/Web/API/URL">URL</a> construido a partir del valor actual de la string URL <code>Astro.request.url</code>. Útil para interactuar con propiedades individuales de la URL de la solicitud, como la ruta o el origen.</p><p>Equivalente a hacer <code>new URL (Astro.request.url)</code>.</p>
+<figure class="code-snippet lang-astro">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">h1</span><span style="color:#C7C5D3">&gt;</span><span style="color:#D8DEE9">La URL actual es: </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9">Astro</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">url</span><span style="color:#C7C5D3">}&lt;/</span><span style="color:#FF657C">h1</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">h1</span><span style="color:#C7C5D3">&gt;</span><span style="color:#D8DEE9">El nombre de la ruta URL actual es: </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9">Astro</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">url</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">pathname</span><span style="color:#C7C5D3">}&lt;/</span><span style="color:#FF657C">h1</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">h1</span><span style="color:#C7C5D3">&gt;</span><span style="color:#D8DEE9">El origen de la URL actual es: </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9">Astro</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">url</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">origin</span><span style="color:#C7C5D3">}&lt;/</span><span style="color:#FF657C">h1</span><span style="color:#C7C5D3">&gt;</span></span></code></pre>
+</figure><p>También puedes usar <code>Astro.url</code> para crear nuevas URL pasándola como argumento a <a href="https://developer.mozilla.org/es/docs/Web/API/URL/URL"><code>new URL()</code></a>.</p>
+<figure class="code-snippet lang-astro">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#ABA8BD">// Ejemplo: construye una URL canónica usando tu dominio de producción</span></span>
+<span class="line"><span style="color:#FF657C">const</span><span style="color:#D8DEE9"> canonicalURL </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> nueva </span><span style="color:#66ADFF">URL</span><span style="color:#D8DEE9"> (Astro</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">url</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">pathname</span><span style="color:#C7C5D3">,</span><span style="color:#D8DEE9"> Astro</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">site)</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#ABA8BD">// Ejemplo: construye una URL para metaetiquetas SEO usando tu dominio actual</span></span>
+<span class="line"><span style="color:#FF657C">const</span><span style="color:#D8DEE9"> socialImageURL </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> nueva </span><span style="color:#66ADFF">URL</span><span style="color:#D8DEE9">(</span><span style="color:#16C082">&#39;/images/preview.png&#39;</span><span style="color:#C7C5D3">,</span><span style="color:#D8DEE9"> Astro</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">url)</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">link</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">rel</span><span style="color:#C7C5D3">=</span><span style="color:#16C082">&quot;canonical&quot;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">href</span><span style="color:#C7C5D3">={</span><span style="color:#D8DEE9">canonicalURL</span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">/&gt;</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">meta</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">property</span><span style="color:#C7C5D3">=</span><span style="color:#16C082">&quot;og:image&quot;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">content</span><span style="color:#C7C5D3">={</span><span style="color:#D8DEE9">socialImageURL</span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">/&gt;</span></span></code></pre>
+</figure><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="astroclientaddress"><code>Astro.clientAddress</code></h3><a class="anchor-link" href="#astroclientaddress"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Astro.clientAddress</span></a></div><span>
+  <strong>Agregado en:
+</strong> v1.0.0-rc
+  <span class="badge accent astro-WV4FPCFU">Nuevo
+</span>
+</span><p>Especifica la <a href="https://es.wikipedia.org/wiki/Direcci%C3%B3n_IP">dirección IP</a> de la solicitud. Esta propiedad solo está disponible cuando se compila para SSR (renderizado en el servidor) y no debe usarse para sitios estáticos.</p>
+<figure class="code-snippet lang-astro">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#FF657C">const</span><span style="color:#D8DEE9"> ip </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> Astro</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">clientAddress</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">div</span><span style="color:#C7C5D3">&gt;</span><span style="color:#D8DEE9">Tu dirección IP es: </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">span</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">class</span><span style="color:#C7C5D3">=</span><span style="color:#16C082">&quot;address&quot;</span><span style="color:#C7C5D3">&gt;{</span><span style="color:#FF657C"> </span><span style="color:#D8DEE9">ip</span><span style="color:#FF657C"> </span><span style="color:#C7C5D3">}&lt;/</span><span style="color:#FF657C">span</span><span style="color:#C7C5D3">&gt;&lt;/</span><span style="color:#FF657C">div</span><span style="color:#C7C5D3">&gt;</span></span></code></pre>
+</figure><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="astrosite"><code>Astro.site</code></h3><a class="anchor-link" href="#astrosite"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Astro.site</span></a></div><p><code>Astro.site</code> devuelve una <code>URL</code> generada desde <code>site</code> en su configuración de Astro. Si no está definido, devolverá una URL generada desde <code>localhost</code>.</p><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="astroslots"><code>Astro.slots</code></h3><a class="anchor-link" href="#astroslots"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Astro.slots</span></a></div><p><code>Astro.slots</code> contiene funciones de utilidad para modificar los hijos en slots de un componente Astro.</p><table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>has</code></td>
+<td align="left"><code>(name: string) =&gt; boolean</code></td>
+<td align="left">Si existe contenido para el nombre del slot</td>
+</tr>
+<tr>
+<td align="left"><code>render</code></td>
+<td align="left"><code>(name: string, args?: any[]) =&gt; Promise&lt;string&gt;</code></td>
+<td align="left">Representa de forma asíncrona este slot y devuelve HTML</td>
+</tr>
+</tbody>
+</table>
+<figure class="code-snippet lang-astro">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#FF657C">let</span><span style="color:#D8DEE9"> html</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">string</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#FF657C">if</span><span style="color:#D8DEE9"> (Astro</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">slots</span><span style="color:#C7C5D3">.</span><span style="color:#66ADFF">has</span><span style="color:#D8DEE9">(</span><span style="color:#16C082">&#39;default&#39;</span><span style="color:#D8DEE9">)) </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  html </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">await</span><span style="color:#D8DEE9"> Astro</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">slots</span><span style="color:#C7C5D3">.</span><span style="color:#66ADFF">render</span><span style="color:#D8DEE9">(</span><span style="color:#16C082">&#39;default&#39;</span><span style="color:#D8DEE9">)</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">Fragment</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">set:html</span><span style="color:#C7C5D3">={</span><span style="color:#D8DEE9">html</span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">/&gt;</span></span></code></pre>
+</figure><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="astroself"><code>Astro.self</code></h3><a class="anchor-link" href="#astroself"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Astro.self</span></a></div><p><code>Astro.self</code> permite llamar recursivamente a los componentes de Astro. Este comportamiento te permite renderizar un componente de Astro desde dentro de sí mismo utilizando <code>&lt;Astro.self&gt;</code> en la plantilla del componente. Esto puede ser útil para iterar sobre grandes data stores y estructuras de datos anidadas.</p>
+<figure class="code-snippet has-title lang-astro">
+	<figcaption class="header"><span class="title">NestedList.astro</span></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#FF657C">const</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> items </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> Astro</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">props</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">ul</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">class</span><span style="color:#C7C5D3">=</span><span style="color:#16C082">&quot;nested-list&quot;</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9">items</span><span style="color:#C7C5D3">.</span><span style="color:#66ADFF">map</span><span style="color:#C7C5D3">(</span><span style="color:#D8DEE9">(item)</span><span style="color:#FF657C"> =&gt; </span><span style="color:#C7C5D3">(</span></span>
+<span class="line"><span style="color:#FF657C">    </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">li</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#FF657C">      &lt;!-- Si hay una estructura de datos anidada renderizamos `</span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">Astro.self</span><span style="color:#C7C5D3">&gt;</span><span style="color:#FF657C">` --&gt;</span></span>
+<span class="line"><span style="color:#FF657C">      &lt;!-- y podemos pasar props a través de la llamada recursiva --&gt;</span></span>
+<span class="line"><span style="color:#FF657C">      {</span><span style="color:#FFBD2E">Array</span><span style="color:#C7C5D3">.</span><span style="color:#66ADFF">isArray</span><span style="color:#C7C5D3">(</span><span style="color:#D8DEE9">item</span><span style="color:#C7C5D3">)</span><span style="color:#FF657C"> ? </span><span style="color:#C7C5D3">(</span></span>
+<span class="line"><span style="color:#FF657C">        </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">Astro.self</span><span style="color:#FF657C"> </span><span style="color:#FFBD2E">items</span><span style="color:#FF657C">={</span><span style="color:#D8DEE9">item</span><span style="color:#FF657C">} </span><span style="color:#C7C5D3">/&gt;</span></span>
+<span class="line"><span style="color:#FF657C">      </span><span style="color:#C7C5D3">)</span><span style="color:#FF657C"> : </span><span style="color:#C7C5D3">(</span></span>
+<span class="line"><span style="color:#FF657C">        </span><span style="color:#D8DEE9">item</span></span>
+<span class="line"><span style="color:#FF657C">      </span><span style="color:#C7C5D3">)</span><span style="color:#FF657C">}</span></span>
+<span class="line"><span style="color:#FF657C">    </span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">li</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#FF657C">  ))}</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">ul</span><span style="color:#C7C5D3">&gt;</span></span></code></pre>
+</figure><p>Este componente podría usarse así:</p>
+<figure class="code-snippet lang-astro">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> NestedList </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;./NestedList.astro&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">NestedList</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">items</span><span style="color:#C7C5D3">={[</span><span style="color:#16C082">&#39;A&#39;</span><span style="color:#C7C5D3">,</span><span style="color:#FF657C"> </span><span style="color:#C7C5D3">[</span><span style="color:#16C082">&#39;B&#39;</span><span style="color:#C7C5D3">,</span><span style="color:#FF657C"> </span><span style="color:#16C082">&#39;C&#39;</span><span style="color:#C7C5D3">],</span><span style="color:#FF657C"> </span><span style="color:#16C082">&#39;D&#39;</span><span style="color:#C7C5D3">]}</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">/&gt;</span></span></code></pre>
+</figure><p>Y renderizaría este HTML:</p>
+<figure class="code-snippet lang-html">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">ul</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">class</span><span style="color:#C7C5D3">=</span><span style="color:#16C082">&quot;nested-list&quot;</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">li</span><span style="color:#C7C5D3">&gt;</span><span style="color:#D8DEE9">A</span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">li</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">li</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">ul</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">class</span><span style="color:#C7C5D3">=</span><span style="color:#16C082">&quot;nested-list&quot;</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">      </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">li</span><span style="color:#C7C5D3">&gt;</span><span style="color:#D8DEE9">B</span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">li</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">      </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">li</span><span style="color:#C7C5D3">&gt;</span><span style="color:#D8DEE9">C</span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">li</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">ul</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">li</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">li</span><span style="color:#C7C5D3">&gt;</span><span style="color:#D8DEE9">D</span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">li</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">ul</span><span style="color:#C7C5D3">&gt;</span></span></code></pre>
+</figure><div class="heading-wrapper level-h2" tabindex="-1"><h2 id="getstaticpaths"><code>getStaticPaths()</code></h2><a class="anchor-link" href="#getstaticpaths"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled getStaticPaths()</span></a></div><p>Si una página usa parámetros dinámicos en el nombre del archivo, ese componente necesitará exportar una función <code>getStaticPaths()</code>.</p><p>Esta función es necesaria porque Astro es un creador de sitios estáticos. Eso significa que todo su sitio se construye con anticipación. Si Astro no sabe generar una página en el momento de la creación, sus usuarios no la verán cuando visiten tu sitio.</p>
+<figure class="code-snippet lang-astro">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#FF657C">export</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">async</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">function</span><span style="color:#D8DEE9"> </span><span style="color:#66ADFF">getStaticPaths</span><span style="color:#D8DEE9">() </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#FF657C">return</span><span style="color:#D8DEE9"> [</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> params</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> </span><span style="color:#ABA8BD">/* requerido */</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">},</span><span style="color:#D8DEE9"> props</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> </span><span style="color:#ABA8BD">/* opcional */</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">},</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> params</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">...</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">},</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> params</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">...</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">},</span></span>
+<span class="line"><span style="color:#C7C5D3">    </span><span style="color:#ABA8BD">// ...</span></span>
+<span class="line"><span style="color:#D8DEE9">  ]</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#ABA8BD">&lt;!-- Tu maquetado HTML aquí. --&gt;</span></span></code></pre>
+</figure><p>La función <code>getStaticPaths()</code> debe devolver un array de objetos para determinar qué rutas serán pre-renderizadas por Astro.</p><aside class="content caution astro-6BEKRN6C" aria-label="Precaución">
+	<p class="title astro-6BEKRN6C" aria-hidden="true">
+		<span class="icon astro-6BEKRN6C">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 1 18 18" width="16" height="16" class="astro-6BEKRN6C">
+				<path fill-rule="evenodd" d="M8.9 1.5C8.7 1.2 8.4 1 8 1s-.7.2-.9.5l-7 12a1 1 0 0 0 0 1c.2.3.6.5 1 .5H15c.4 0 .7-.2.9-.5a1 1 0 0 0 0-1l-7-12zM9 13H7v-2h2v2zm0-3H7V6h2v4z" class="astro-6BEKRN6C"></path>
+			</svg>
+		</span>
+		Precaución
+	</p>
+	<section class="astro-6BEKRN6C">
+		<p>La función <code>getStaticPaths()</code> se ejecuta en su propio ámbito aislado una vez, antes de que se cargue cualquier página. Por lo tanto, no puede hacer referencia a nada desde el ámbito principal, aparte de las importaciones de archivos. El compilador le advertirá si incumple este requisito.</p>
+	</section>
+</aside>
+
+<div class="heading-wrapper level-h3" tabindex="-1"><h3 id="params"><code>params</code></h3><a class="anchor-link" href="#params"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled params</span></a></div><p>La key <code>params</code> de cada objeto devuelto le dice a Astro qué rutas construir. Los parámetros devueltos deben corresponder con los parámetros dinámicos y los parámetros comodín definidos en la ruta de archivo de su componente.</p><p>Los <code>params</code> están codificados en la URL, por lo que solo se admiten strings y números como valores. El valor de cada objeto <code>params</code> debe coincidir con los parámetros utilizados en el nombre de la página.</p><p>Por ejemplo, supongamos que tienes una página en <code>src/pages/posts/[id].astro</code>. Si exportas <code>getStaticPaths</code> desde esta página y devuelves lo siguiente para las rutas:</p>
+<figure class="code-snippet lang-astro">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#FF657C">export</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">async</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">function</span><span style="color:#D8DEE9"> </span><span style="color:#66ADFF">getStaticPaths</span><span style="color:#D8DEE9">() </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#FF657C">return</span><span style="color:#D8DEE9"> [</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> params</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> id</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;1&#39;</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">},</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> params</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> id</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;2&#39;</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">},</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> params</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> id</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9">  </span><span style="color:#EBCB8B">3</span><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">  </span><span style="color:#ABA8BD">// Can be a number too!</span></span>
+<span class="line"><span style="color:#D8DEE9">  ]</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF657C">const</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> id </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> Astro</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">params</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">h1</span><span style="color:#C7C5D3">&gt;{</span><span style="color:#D8DEE9">id</span><span style="color:#C7C5D3">}&lt;/</span><span style="color:#FF657C">h1</span><span style="color:#C7C5D3">&gt;</span></span></code></pre>
+</figure><p>Luego, Astro generará estáticamente <code>posts/1</code>, <code>posts/2</code> y <code>posts/3</code> en el momento de la compilación.</p><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="transferencia-de-datos-con-props">Transferencia de datos con <code>props</code></h3><a class="anchor-link" href="#transferencia-de-datos-con-props"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Transferencia de datos con props</span></a></div><p>Para pasar datos adicionales a cada página generada, también puedes establecer un valor <code>props</code> en cada objeto de ruta devuelto. A diferencia de <code>params</code>, <code>props</code> no están codificados en la URL y, por lo tanto, no están limitados a solamente strings.</p><p>Por ejemplo, suponiendo que generas páginas basadas en datos obtenidos de una API remota. Puedes pasar el objeto de datos completo al componente de página dentro de <code>getStaticPaths</code>:</p>
+<figure class="code-snippet lang-astro">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#FF657C">export</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">async</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">function</span><span style="color:#D8DEE9"> </span><span style="color:#66ADFF">getStaticPaths</span><span style="color:#D8DEE9">() </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#FF657C">const</span><span style="color:#D8DEE9"> data </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">await</span><span style="color:#D8DEE9"> </span><span style="color:#66ADFF">fetch</span><span style="color:#D8DEE9">(</span><span style="color:#16C082">&#39;...&#39;</span><span style="color:#D8DEE9">)</span><span style="color:#C7C5D3">.</span><span style="color:#66ADFF">then</span><span style="color:#D8DEE9">(response </span><span style="color:#FF657C">=&gt;</span><span style="color:#D8DEE9"> response</span><span style="color:#C7C5D3">.</span><span style="color:#66ADFF">json</span><span style="color:#D8DEE9">())</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#FF657C">return</span><span style="color:#D8DEE9"> data</span><span style="color:#C7C5D3">.</span><span style="color:#66ADFF">map</span><span style="color:#D8DEE9">((post) </span><span style="color:#FF657C">=&gt;</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#FF657C">return</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">      params</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> id</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> post</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">id </span><span style="color:#C7C5D3">},</span></span>
+<span class="line"><span style="color:#D8DEE9">      props</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> post </span><span style="color:#C7C5D3">},</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">};</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">)</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF657C">const</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> id </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> Astro</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">params</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#FF657C">const</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> post </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> Astro</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">props</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">h1</span><span style="color:#C7C5D3">&gt;{</span><span style="color:#D8DEE9">id</span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">: </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9">post</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">name</span><span style="color:#C7C5D3">}&lt;/</span><span style="color:#FF657C">h1</span><span style="color:#C7C5D3">&gt;</span></span></code></pre>
+</figure><p>También puedes pasar un array regular, que puede ser útil al generar o agregar una lista conocida de rutas.</p>
+<figure class="code-snippet lang-astro">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#FF657C">export</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">async</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">function</span><span style="color:#D8DEE9"> </span><span style="color:#66ADFF">getStaticPaths</span><span style="color:#D8DEE9">() </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#FF657C">const</span><span style="color:#D8DEE9"> posts </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> [</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9">id</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;1&#39;</span><span style="color:#C7C5D3">,</span><span style="color:#D8DEE9"> category</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&quot;astro&quot;</span><span style="color:#C7C5D3">,</span><span style="color:#D8DEE9"> title</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&quot;API Reference&quot;</span><span style="color:#C7C5D3">},</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9">id</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;2&#39;</span><span style="color:#C7C5D3">,</span><span style="color:#D8DEE9"> category</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&quot;react&quot;</span><span style="color:#C7C5D3">,</span><span style="color:#D8DEE9"> title</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&quot;Creating a React Counter!&quot;</span><span style="color:#C7C5D3">}</span></span>
+<span class="line"><span style="color:#D8DEE9">  ]</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#FF657C">return</span><span style="color:#D8DEE9"> posts</span><span style="color:#C7C5D3">.</span><span style="color:#66ADFF">map</span><span style="color:#D8DEE9">((post) </span><span style="color:#FF657C">=&gt;</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#FF657C">return</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">      params</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> id</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> post</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">id </span><span style="color:#C7C5D3">},</span></span>
+<span class="line"><span style="color:#D8DEE9">      props</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> post </span><span style="color:#C7C5D3">}</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">};</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">)</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span></span>
+<span class="line"><span style="color:#FF657C">const</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9">id</span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> Astro</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">params</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#FF657C">const</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9">post</span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> Astro</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">props</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">body</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">h1</span><span style="color:#C7C5D3">&gt;{</span><span style="color:#D8DEE9">id</span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">: </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9">post</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">title</span><span style="color:#C7C5D3">}&lt;/</span><span style="color:#FF657C">h1</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">h2</span><span style="color:#C7C5D3">&gt;</span><span style="color:#D8DEE9">Categoría: </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9">post</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">category</span><span style="color:#C7C5D3">}&lt;/</span><span style="color:#FF657C">h2</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">body</span><span style="color:#C7C5D3">&gt;</span></span></code></pre>
+</figure><p>Luego, Astro generará estáticamente <code>posts/1</code> y <code>posts/2</code> en el momento de la compilación usando el componente de página en <code>pages/posts/[id].astro</code>. La página puede hacer referencia a estos datos usando <code>Astro.props</code>:</p><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="paginate"><code>paginate()</code></h3><a class="anchor-link" href="#paginate"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled paginate()</span></a></div><p>La paginación es un caso de uso común para los sitios web que Astro admite de forma nativa a través de la función <code>paginate()</code>. <code>paginate()</code> generará automáticamente un array para devolver desde <code>getStaticPaths()</code> que creará una URL para cada página de la colección paginada. El número de página se pasará como un parámetro, y los datos de la página se pasarán como una prop <code>page</code>.</p>
+<figure class="code-snippet lang-js">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#FF657C">export</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">async</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">function</span><span style="color:#D8DEE9"> </span><span style="color:#66ADFF">getStaticPaths</span><span style="color:#D8DEE9">(</span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> paginate </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">) </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#C7C5D3">  </span><span style="color:#ABA8BD">// Carga tus datos con fetch(), Astro.glob(), etc.</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#FF657C">const</span><span style="color:#D8DEE9"> response </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">await</span><span style="color:#D8DEE9"> </span><span style="color:#66ADFF">fetch</span><span style="color:#D8DEE9">(</span><span style="color:#C7C5D3">`</span><span style="color:#16C082">https://pokeapi.co/api/v2/pokemon?limit=150</span><span style="color:#C7C5D3">`</span><span style="color:#D8DEE9">)</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#FF657C">const</span><span style="color:#D8DEE9"> result </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">await</span><span style="color:#D8DEE9"> response</span><span style="color:#C7C5D3">.</span><span style="color:#66ADFF">json</span><span style="color:#D8DEE9">()</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#FF657C">const</span><span style="color:#D8DEE9"> allPokemon </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> result</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">results</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C7C5D3">  </span><span style="color:#ABA8BD">// Devuelve una colección paginada de rutas para todas los artículos.</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#FF657C">return</span><span style="color:#D8DEE9"> </span><span style="color:#66ADFF">paginate</span><span style="color:#D8DEE9">(allPokemon</span><span style="color:#C7C5D3">,</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> </span><span style="color:#66ADFF">pageSize</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#EBCB8B">10</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">)</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#ABA8BD">// Si se configuró correctamente, La prop de la página ahora tiene todo lo que</span></span>
+<span class="line"><span style="color:#ABA8BD">// necesita para renderizar una página (vea la siguiente sección).</span></span>
+<span class="line"><span style="color:#FF657C">const</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> page </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> Astro</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">props</span><span style="color:#C7C5D3">;</span></span></code></pre>
+</figure><p><code>paginate()</code> asume un nombre de archivo <code>[page].astro</code> o <code>[...page].astro</code>. El parámetro <code>page</code> se convierte en el número de página en la URL:</p><ul>
+<li><code>/posts/[page].astro</code> generaría las URL <code>/posts/1</code>, <code>/posts/2</code>, <code>/posts/3</code>, etc.</li>
+<li><code>/posts/[...page].astro</code> generaría las URL <code>/posts</code>, <code>/posts/2</code>, <code>/posts/3</code>, etc.</li>
+</ul><div class="heading-wrapper level-h4" tabindex="-1"><h4 id="la-prop-de-paginación-page">La prop de paginación <code>page</code></h4><a class="anchor-link" href="#la-prop-de-paginación-page"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled La prop de paginación page</span></a></div><p>La paginación pasará una prop <code>page</code> a cada página renderizada que represente una sola página de datos en la colección paginada. Esto incluye los datos que ha paginado (<code>page.data</code>), así como los metadatos de la página (<code>page.url</code>, <code>page.start</code>, <code>page.end</code>, <code>page.total</code>, etc.) . Estos metadatos son útiles para cosas como un botón “Página siguiente” o un mensaje “Mostrando 1-10 de 100”.</p><table>
+<thead>
+<tr>
+<th align="left">Nombre</th>
+<th align="center">Tipo</th>
+<th align="left">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>page.data</code></td>
+<td align="center"><code>Array</code></td>
+<td align="left">Array de datos devueltos desde <code>data()</code> para la página actual.</td>
+</tr>
+<tr>
+<td align="left"><code>page.start</code></td>
+<td align="center"><code>number</code></td>
+<td align="left">Índice del primer elemento en la página actual, comenzando en <code>0</code> (por ejemplo, si <code>pageSize: 25</code>, sería <code>0</code> en la página 1, <code>25</code> en la página 2, etc.).</td>
+</tr>
+<tr>
+<td align="left"><code>page.end</code></td>
+<td align="center"><code>number</code></td>
+<td align="left">Índice del último elemento de la página actual.</td>
+</tr>
+<tr>
+<td align="left"><code>page.size</code></td>
+<td align="center"><code>number</code></td>
+<td align="left">Cantidad de artículos por página.</td>
+</tr>
+<tr>
+<td align="left"><code>page.total</code></td>
+<td align="center"><code>number</code></td>
+<td align="left">El número total de elementos en todas las páginas.</td>
+</tr>
+<tr>
+<td align="left"><code>page.currentPage</code></td>
+<td align="center"><code>number</code></td>
+<td align="left">El número de página actual, comenzando con <code>1</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>page.lastPage</code></td>
+<td align="center"><code>number</code></td>
+<td align="left">El número total de páginas.</td>
+</tr>
+<tr>
+<td align="left"><code>page.url.current</code></td>
+<td align="center"><code>string</code></td>
+<td align="left">La URL de la página actual (útil para URL canónicas)</td>
+</tr>
+<tr>
+<td align="left"><code>page.url.prev</code></td>
+<td align="center"><code>string | undefined</code></td>
+<td align="left">La URL de la página anterior (será <code>undefined</code> si está en la página 1).</td>
+</tr>
+<tr>
+<td align="left"><code>page.url.next</code></td>
+<td align="center"><code>string | undefined</code></td>
+<td align="left">La URL de la siguiente página (será <code>undefined</code> si no hay más páginas).</td>
+</tr>
+</tbody>
+</table><div class="heading-wrapper level-h2" tabindex="-1"><h2 id="importmeta"><code>import.meta</code></h2><a class="anchor-link" href="#importmeta"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled import.meta</span></a></div><p>Todos los módulos ESM incluyen una propiedad <code>import.meta</code>. Astro agrega <code>import.meta.env</code> a través de <a href="https://vitejs.dev/guide/env-and-mode.html">Vite</a>.</p><p><strong><code>import.meta.env.SSR</code></strong> se puede usar para saber cuándo se renderiza en el servidor. A veces, es posible que desees una lógica diferente, por ejemplo, un componente que solo debe representarse en el cliente:</p>
+<figure class="code-snippet lang-jsx">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">h</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;preact&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF657C">export</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">default</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">function</span><span style="color:#D8DEE9"> () </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#FF657C">return</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">import</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">meta</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">env</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">SSR </span><span style="color:#FF657C">?</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">div</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">class</span><span style="color:#FF657C">=</span><span style="color:#16C082">&quot;spinner&quot;</span><span style="color:#C7C5D3">&gt;&lt;/</span><span style="color:#FF657C">div</span><span style="color:#C7C5D3">&gt;</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">FancyComponent</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">/&gt;;</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span></span></code></pre>
+</figure><div class="heading-wrapper level-h2" tabindex="-1"><h2 id="componentes-incorporados">Componentes incorporados</h2><a class="anchor-link" href="#componentes-incorporados"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Componentes incorporados</span></a></div><p>Astro incluye varios componentes incorporados para que los uses en tus proyectos. Todos los componentes incorporados están disponibles en archivos <code>.astro</code> a través de <code>import {} from 'astro/components';</code>.</p><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="markdown-"><code>&lt;Markdown /&gt;</code></h3><a class="anchor-link" href="#markdown-"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled &lt;Markdown /&gt;</span></a></div><p>El componente Markdown ya no está integrado en Astro.</p><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="code-"><code>&lt;Code /&gt;</code></h3><a class="anchor-link" href="#code-"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled &lt;Code /&gt;</span></a></div>
+<figure class="code-snippet lang-astro">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> Code </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;astro/components&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#ABA8BD">&lt;!-- Resaltado de sintaxis de algún código JavaScript. --&gt;</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">Code</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">code</span><span style="color:#C7C5D3">={</span><span style="color:#C7C5D3">`</span><span style="color:#16C082">const foo = &#39;bar&#39;;</span><span style="color:#C7C5D3">`</span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">lang</span><span style="color:#C7C5D3">=</span><span style="color:#16C082">&quot;js&quot;</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">/&gt;</span></span>
+<span class="line"><span style="color:#ABA8BD">&lt;!-- Opcional: personaliza tu tema. --&gt;</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">Code</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">code</span><span style="color:#C7C5D3">={</span><span style="color:#C7C5D3">`</span><span style="color:#16C082">const foo = &#39;bar&#39;;</span><span style="color:#C7C5D3">`</span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">lang</span><span style="color:#C7C5D3">=</span><span style="color:#16C082">&quot;js&quot;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">theme</span><span style="color:#C7C5D3">=</span><span style="color:#16C082">&quot;dark-plus&quot;</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">/&gt;</span></span>
+<span class="line"><span style="color:#ABA8BD">&lt;!-- Opcional: habilita css wrap --&gt;</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">Code</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">code</span><span style="color:#C7C5D3">={</span><span style="color:#C7C5D3">`</span><span style="color:#16C082">const foo = &#39;bar&#39;;</span><span style="color:#C7C5D3">`</span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">lang</span><span style="color:#C7C5D3">=</span><span style="color:#16C082">&quot;js&quot;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">wrap</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">/&gt;</span></span></code></pre>
+</figure><p>Este componente proporciona resaltado de sintaxis para bloques de código en el momento de la compilación (no incluye JavaScript del lado del cliente). El componente funciona internamente con Shiki y es compatible con todos los <a href="https://github.com/shikijs/shiki/blob/main/docs/themes.md">temas populares</a> y <a href="https://github.com/shikijs/shiki/blob/main/docs/languages.md">lenguajes de programación</a>. Además, puedes agregar temas y lenguajes de programación personalizados modificando <code>theme</code> y <code>lang</code> respectivamente.</p><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="prism-"><code>&lt;Prism /&gt;</code></h3><a class="anchor-link" href="#prism-"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled &lt;Prism /&gt;</span></a></div><aside class="content note astro-6BEKRN6C" aria-label="Instalación">
+	<p class="title astro-6BEKRN6C" aria-hidden="true">
+		<span class="icon astro-6BEKRN6C">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" width="16" height="16" class="astro-6BEKRN6C">
+				<path fill-rule="evenodd" d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0114.25 14H1.75A1.75 1.75 0 010 12.25v-8.5zm1.75-.25a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25v-8.5a.25.25 0 00-.25-.25H1.75zM3.5 6.25a.75.75 0 01.75-.75h7a.75.75 0 010 1.5h-7a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5h4a.75.75 0 000-1.5h-4z" class="astro-6BEKRN6C"></path>
+			</svg>
+		</span>
+		Instalación
+	</p>
+	<section class="astro-6BEKRN6C">
+		<p>Para usar el componente resaltador <code>Prism</code>, primero <strong>instala</strong> el paquete <code>@astrojs/prism</code>:</p><astro-island uid="1qjcxs" component-url="/Tabs.b29cc10d.js" component-export="default" renderer-url="/client.f1d83173.js" props="{}" ssr="" client="visible" before-hydration-url="data:text/javascript;charset=utf-8,//[no before-hydration script]" opts="{&quot;name&quot;:&quot;Tabs&quot;,&quot;value&quot;:true}" await-children=""><div class="_container_1drua_1"><div class="_tab-scroll-overflow_1drua_6"><div class="undefined TabGroup no-flex" role="tablist"><button aria-selected="true" tabIndex="0" role="tab" type="button" class="_tab_1drua_6" id="10-tab.1.npm"><astro-slot name="tab.1.npm">npm</astro-slot></button><button aria-selected="false" tabIndex="-1" role="tab" type="button" class="_tab_1drua_6" id="10-tab.2.yarn"><astro-slot name="tab.2.yarn">yarn</astro-slot></button><button aria-selected="false" tabIndex="-1" role="tab" type="button" class="_tab_1drua_6" id="10-tab.3.pnpm"><astro-slot name="tab.3.pnpm">pnpm</astro-slot></button></div></div><div role="tabpanel" aria-labelledby="10-tab.1.npm" class="_tabpanel_1drua_23"><astro-slot name="panel.1.npm">
+<figure class="code-snippet is-terminal lang-shell">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#D8DEE9">npm i @astrojs/prism</span></span></code></pre>
+</figure></astro-slot></div><div hidden role="tabpanel" aria-labelledby="10-tab.2.yarn" class="_tabpanel_1drua_23"><astro-slot name="panel.2.yarn">
+<figure class="code-snippet is-terminal lang-shell">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#D8DEE9">yarn add @astrojs/prism</span></span></code></pre>
+</figure></astro-slot></div><div hidden role="tabpanel" aria-labelledby="10-tab.3.pnpm" class="_tabpanel_1drua_23"><astro-slot name="panel.3.pnpm">
+<figure class="code-snippet is-terminal lang-shell">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#D8DEE9">pnpm i @astrojs/prism</span></span></code></pre>
+</figure></astro-slot></div></div></astro-island>
+	</section>
+</aside>
+
+
+<figure class="code-snippet lang-astro">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> Prism </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;@astrojs/prism&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">Prism</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">lang</span><span style="color:#C7C5D3">=</span><span style="color:#16C082">&quot;js&quot;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">code</span><span style="color:#C7C5D3">={</span><span style="color:#C7C5D3">`</span><span style="color:#16C082">const foo = &#39;bar&#39;;</span><span style="color:#C7C5D3">`</span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">/&gt;</span></span></code></pre>
+</figure><p>Este componente proporciona resaltado de sintaxis específico con el lenguaje de programación para bloques de código al aplicar las clases CSS de Prism. Ten en cuenta que <strong>debes proporcionar una hoja de estilo Prism CSS</strong> (o traer la tuya propia) para que aparezca el resaltado de sintaxis. Consulta la <a href="/es/guides/markdown-content/#configuraci%C3%B3n-de-prism">sección de configuración de Prism</a> para obtener más detalles.</p><p>Consulta la <a href="https://prismjs.com/#supported-languages">lista de idiomas admitidos por Prism</a> donde puedes encontrar el alias correspondiente de un idioma. ¡Y también puedes mostrar tus bloques de código Astro con <code>lang="astro"</code>!</p><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="debug-"><code>&lt;Debug /&gt;</code></h3><a class="anchor-link" href="#debug-"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled &lt;Debug /&gt;</span></a></div>
+<figure class="code-snippet lang-astro">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> Debug </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;astro/components&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#FF657C">const</span><span style="color:#D8DEE9"> serverObject </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  a</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#EBCB8B">0</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#D8DEE9">  b</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&quot;string&quot;</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#D8DEE9">  c</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">    nested</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&quot;object&quot;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">}</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">Debug</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9">serverObject</span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">/&gt;</span></span></code></pre>
+</figure><p>Este componente proporciona una forma de inspeccionar valores en el lado del cliente, sin JavaScript.</p>
+	</section>
+	<aside class="next-previous-nav astro-CCFK4WYY">
+			<a class="ltr astro-2WJE3NNX" rel="prev" href="/es/reference/cli-reference/">
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="32" width="32" fill="currentColor" class="astro-2WJE3NNX">
+			<path d="M447.1 256C447.1 273.7 433.7 288 416 288H109.3l105.4 105.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448s-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L109.3 224H416C433.7 224 447.1 238.3 447.1 256z" class="astro-2WJE3NNX"></path>
+		</svg>
+	
+	<div class="copy astro-2WJE3NNX">
+		<div class="heading astro-2WJE3NNX">Página anterior
+</div>
+		<div class="name astro-2WJE3NNX">CLI</div>
+	</div>
+</a>
+
+
+			<a class="rtl astro-2WJE3NNX" rel="next" href="/es/reference/integrations-reference/">
+	
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="32" width="32" fill="currentColor" class="astro-2WJE3NNX">
+			<path d="M438.6 278.6l-160 160C272.4 444.9 264.2 448 256 448s-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L338.8 288H32C14.33 288 .0016 273.7 .0016 256S14.33 224 32 224h306.8l-105.4-105.4c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160C451.1 245.9 451.1 266.1 438.6 278.6z" class="astro-2WJE3NNX"></path>
+		</svg>
+	<div class="copy astro-2WJE3NNX">
+		<div class="heading astro-2WJE3NNX">Siguiente página
+</div>
+		<div class="name astro-2WJE3NNX">API de Integraciones</div>
+	</div>
+</a>
+
+
+		</aside>
+</article>
+
+
+			</div>
+		</main>
+	</body></html>

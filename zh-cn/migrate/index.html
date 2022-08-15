@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="zh-CN" class="initial astro-6SNADQYA">
+	<head>
+		<!-- Global Metadata --><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="hsl(256, 44%, 15%)" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="hsl(273, 37%, 93%)" media="(prefers-color-scheme: light)">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate icon" type="image/x-icon" href="/favicon.ico">
+<link rel="sitemap" href="/sitemap-index.xml">
+
+<!-- Global CSS -->
+<link rel="stylesheet" href="/theme.css">
+<link rel="stylesheet" href="/index.css">
+
+<!-- Scrollable a11y code helper -->
+<script type="module" src="/make-scrollable-code-focusable.js"></script>
+
+<!-- This is intentionally inlined to avoid FOUC -->
+
+
+<!-- Double-click to highlight code blocks (inline only). -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-130280175-15"></script>
+
+
+		<!-- Page Metadata --><link rel="canonical" href="https://docs.astro.build/zh-cn/migrate/">
+
+
+<link rel="alternate" href="https://docs.astro.build/en/migrate/" hreflang="en"><link rel="alternate" href="https://docs.astro.build/de/migrate/" hreflang="de"><link rel="alternate" href="https://docs.astro.build/nl/migrate/" hreflang="nl"><link rel="alternate" href="https://docs.astro.build/pt-br/migrate/" hreflang="pt-BR"><link rel="alternate" href="https://docs.astro.build/fi/migrate/" hreflang="fi"><link rel="alternate" href="https://docs.astro.build/es/migrate/" hreflang="es"><link rel="alternate" href="https://docs.astro.build/zh-cn/migrate/" hreflang="zh-CN"><link rel="alternate" href="https://docs.astro.build/zh-tw/migrate/" hreflang="zh-TW"><link rel="alternate" href="https://docs.astro.build/bg/migrate/" hreflang="bg"><link rel="alternate" href="https://docs.astro.build/fr/migrate/" hreflang="fr"><link rel="alternate" href="https://docs.astro.build/bn/migrate/" hreflang="bn"><link rel="alternate" href="https://docs.astro.build/kr/migrate/" hreflang="kr"><link rel="alternate" href="https://docs.astro.build/ar/migrate/" hreflang="ar"><link rel="alternate" href="https://docs.astro.build/da/migrate/" hreflang="da"><link rel="alternate" href="https://docs.astro.build/ja/migrate/" hreflang="ja"><link rel="alternate" href="https://docs.astro.build/ru/migrate/" hreflang="ru"><link rel="alternate" href="https://docs.astro.build/it/migrate/" hreflang="it"><link rel="alternate" href="https://docs.astro.build/pl/migrate/" hreflang="pl"><link rel="alternate" href="https://docs.astro.build/hu/migrate/" hreflang="hu">
+
+<!-- Algolia docsearch language facet -->
+<meta name="docsearch:language" content="zh-CN">
+
+<!-- OpenGraph Tags -->
+<meta property="og:title" content="迁移指南">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://docs.astro.build/zh-cn/migrate/">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://docs.astro.build/default-og-image.png?v=1">
+<meta property="og:image:alt" content="星辰浩瀚的太空中的 astro 标志，右侧前景中漂浮着一颗紫色的土星状行星。">
+<meta name="description" property="og:description" content="如何将你的项目迁移至最新的 Astro 版本。">
+<meta property="og:site_name" content="Astro 文档">
+
+<!-- Twitter Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="astrodotbuild">
+<meta name="twitter:title" content="迁移指南">
+<meta name="twitter:description" content="如何将你的项目迁移至最新的 Astro 版本。">
+<meta name="twitter:image" content="https://docs.astro.build/default-og-image.png?v=1">
+<meta name="twitter:image:alt" content="星辰浩瀚的太空中的 astro 标志，右侧前景中漂浮着一颗紫色的土星状行星。">
+
+<!--
+  TODO: Add json+ld data, maybe https://schema.org/APIReference makes sense?
+  Docs: https://developers.google.com/search/docs/advanced/structured-data/intro-structured-data
+  https://www.npmjs.com/package/schema-dts seems like a great resource for implementing this.
+  Even better, there’s a React component that integrates with `schema-dts`: https://github.com/google/react-schemaorg
+-->
+
+		<title>迁移指南 🚀 Astro 文档</title>
+		
+		<script>
+			// This code was migrated/copied from ThemToggleBotton to make the
+			// dark mode toggle instant, vs. hidden inside of a Preact useEffect() call.
+			const theme = (() => {
+				if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+					return localStorage.getItem('theme');
+				}
+				if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+					return 'dark';
+				}
+				return 'light';
+			})();
+			if (theme === 'light') {
+				document.documentElement.classList.remove('theme-dark');
+			} else {
+				document.documentElement.classList.add('theme-dark');
+			}
+		</script>
+	<link rel="stylesheet" href="/assets/f542069c.c28a3eae.css" />
+<link rel="stylesheet" href="/assets/e2317e16.36ca0ba9.css" />
+<link rel="stylesheet" href="/assets/9cf9e8db.97bfbd59.css" />
+<link rel="stylesheet" href="/assets/7b344959.9c17731f.css" />
+<link rel="stylesheet" href="/assets/6b9ff114.c5aa952c.css" /><script type="module" src="/hoisted.6f80f745.js"></script></head>
+
+	<body class="astro-6SNADQYA">
+		<header class="astro-OWYKDMOT">
+	<a href="#article" class="sr-only focus:not-sr-only skiplink astro-D5GPSQS7">
+	<span class="astro-D5GPSQS7">跳转到内容
+</span>
+</a>
+
+
+	<nav class="nav-wrapper astro-OWYKDMOT" aria-label="导航顶部">
+		<div dir="ltr" lang="en" class="logo flex astro-OWYKDMOT">
+			<ul class="astro-OWYKDMOT">
+				<li class="astro-OWYKDMOT">
+					<a class="astro astro-OWYKDMOT" href="https://smoreira1.github.io">
+						<span class="sr-only astro-OWYKDMOT">Astrso</span>
+						Stephen D. M.
+					</a>
+					<a class="astro-OWYKDMOT">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="astro-OWYKDMOT">
+							<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" class="astro-OWYKDMOT"></path>
+						</svg>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- <ThemeToggleButton 
+				client:visible 
+				labels={{  useLight: t('themeToggle.useLight'), useDark: t('themeToggle.useDark')  }}
+				isInsideHeader={true} 
+			/> -->
+		<!-- {lang && <LanguageSelect lang={lang} client:idle />}
+		<Search {lang} labels={docsearchStrings} />
+		<SidebarToggle client:idle /> -->
+	</nav>
+</header>
+		<main class="layout astro-6SNADQYA">
+			<aside id="left-sidebar" class="sidebar astro-6SNADQYA">
+				<nav aria-label="站点导航" class="astro-M2FRLZWK">
+	<style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).load=a=>{(async()=>await(await a())())()};var a;{const l={0:t=>t,1:t=>JSON.parse(t,n),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,n)),5:t=>new Set(JSON.parse(t,n)),6:t=>BigInt(t),7:t=>new URL(t)},n=(t,r)=>{if(t===""||!Array.isArray(r))return r;const[e,i]=r;return e in l?l[e](i):void 0};customElements.get("astro-island")||customElements.define("astro-island",(a=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement?.closest("astro-island[ssr]"))return;const r=this.querySelectorAll("astro-slot"),e={},i=this.querySelectorAll("template[data-astro-template]");for(const s of i)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("data-astro-template")||"default"]=s.innerHTML,s.remove());for(const s of r)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("name")||"default"]=s.innerHTML);const o=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),n):{};this.hydrator(this)(this.Component,o,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((r,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate),await import(this.getAttribute("before-hydration-url"));const r=JSON.parse(this.getAttribute("opts"));Astro[this.getAttribute("client")](async()=>{const e=this.getAttribute("renderer-url"),[i,{default:o}]=await Promise.all([import(this.getAttribute("component-url")),e?import(e):()=>()=>{}]);return this.Component=i[this.getAttribute("component-export")||"default"],this.hydrator=o,this.hydrate},r,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},a.observedAttributes=["props"],a))}</script><astro-island uid="BTT5z" component-url="/SidebarToggleTabGroup.053ded21.js" component-export="default" renderer-url="/client.f1d83173.js" props="{&quot;defaultActiveTab&quot;:[0,&quot;learn&quot;],&quot;labels&quot;:[0,{&quot;learn&quot;:[0,&quot;学习&quot;],&quot;api&quot;:[0,&quot;参考&quot;]}],&quot;class&quot;:[0,&quot;astro-M2FRLZWK&quot;]}" ssr="" client="load" before-hydration-url="data:text/javascript;charset=utf-8,//[no before-hydration script]" opts="{&quot;name&quot;:&quot;SidebarToggleTabGroup&quot;,&quot;value&quot;:true}" await-children=""><div class="TabGroup"><button class="active">学习</button><button class>参考</button></div></astro-island>
+	<ul class="nav-groups astro-M2FRLZWK">
+		
+<li class="nav-group learn active astro-VB2AOOVT">
+		<details open class="astro-VB2AOOVT">
+			<summary class="nav-group-title astro-VB2AOOVT">
+				<h2 class="astro-VB2AOOVT">
+					起步
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true" class="astro-VB2AOOVT">
+						<path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z" class="astro-VB2AOOVT"></path>
+					</svg>
+				</h2>
+			</summary>
+			<ul class="astro-VB2AOOVT">
+				<li class="nav-link astro-VB2AOOVT">
+						<a href="/zh-cn/getting-started/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">入门指南 </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/zh-cn/install/auto/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">安装 </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/zh-cn/editor-setup/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">编辑器设置 </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/zh-cn/migrate/" aria-current="page" data-current-parent="true" class="astro-VB2AOOVT">迁移指南 </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/zh-cn/migrate/" aria-current="page" data-current-parent="true" class="astro-VB2AOOVT">迁移指南 </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/zh-cn/migrate/" aria-current="page" data-current-parent="true" class="astro-VB2AOOVT">迁移指南 </a>
+					</li>
+			</ul>
+		</details>
+	</li><li class="nav-group learn active astro-VB2AOOVT">
+		<details open class="astro-VB2AOOVT">
+			<summary class="nav-group-title astro-VB2AOOVT">
+				<h2 class="astro-VB2AOOVT">
+					基础内容
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true" class="astro-VB2AOOVT">
+						<path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z" class="astro-VB2AOOVT"></path>
+					</svg>
+				</h2>
+			</summary>
+			<ul class="astro-VB2AOOVT">
+				<li class="nav-link astro-VB2AOOVT">
+						<a href="/zh-cn/guides/deploy/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">部署 </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/zh-cn/guides/deploy/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">部署 </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/zh-cn/core-concepts/project-structure/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">项目结构 </a>
+					</li>
+			</ul>
+		</details>
+	</li><li class="nav-group learn active astro-VB2AOOVT">
+		<details open class="astro-VB2AOOVT">
+			<summary class="nav-group-title astro-VB2AOOVT">
+				<h2 class="astro-VB2AOOVT">
+					特点
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true" class="astro-VB2AOOVT">
+						<path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z" class="astro-VB2AOOVT"></path>
+					</svg>
+				</h2>
+			</summary>
+			<ul class="astro-VB2AOOVT">
+				<li class="nav-link astro-VB2AOOVT">
+						<a href="/zh-cn/guides/configuring-astro/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">配置 Astro </a>
+					</li>
+			</ul>
+		</details>
+	</li><li class="nav-group learn active astro-VB2AOOVT">
+		<details open class="astro-VB2AOOVT">
+			<summary class="nav-group-title astro-VB2AOOVT">
+				<h2 class="astro-VB2AOOVT">
+					核心理念
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true" class="astro-VB2AOOVT">
+						<path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z" class="astro-VB2AOOVT"></path>
+					</svg>
+				</h2>
+			</summary>
+			<ul class="astro-VB2AOOVT">
+				<li class="nav-link astro-VB2AOOVT">
+						<a href="/zh-cn/concepts/why-astro/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Angular <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/zh-cn/concepts/why-astro/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">TypeScript <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/zh-cn/concepts/why-astro/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">CSS <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/zh-cn/concepts/why-astro/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">HTML <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/zh-cn/concepts/why-astro/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">GIT <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li>
+			</ul>
+		</details>
+	</li>
+
+
+		
+<li class="nav-group api  astro-VB2AOOVT">
+		<details open class="astro-VB2AOOVT">
+			<summary class="nav-group-title astro-VB2AOOVT">
+				<h2 class="astro-VB2AOOVT">
+					参考
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true" class="astro-VB2AOOVT">
+						<path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z" class="astro-VB2AOOVT"></path>
+					</svg>
+				</h2>
+			</summary>
+			<ul class="astro-VB2AOOVT">
+				<li class="nav-link astro-VB2AOOVT">
+						<a href="/zh-cn/reference/configuration-reference/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">配置 </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/zh-cn/reference/cli-reference/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">命令行 </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/zh-cn/reference/api-reference/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">运行时 API </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/zh-cn/reference/integrations-reference/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">集成 API </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/zh-cn/reference/adapter-reference/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">适配器 API（实验） </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/zh-cn/reference/directives-reference/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">模板指令 </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/zh-cn/guides/publish-to-npm/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">NPM 包格式 </a>
+					</li>
+			</ul>
+		</details>
+	</li>
+
+
+		<details open class="hide-on-large-screens astro-TL4TIEEL"><summary class="astro-TL4TIEEL"><h2 class="heading astro-TL4TIEEL">Socials
+</h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true" class="astro-TL4TIEEL">
+			<path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z" class="astro-TL4TIEEL">
+			</path>
+		</svg></summary><ul class="astro-TL4TIEEL">
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://astro.build/chat" target="_blank" class="astro-TL4TIEEL">
+				<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="comment-alt" class="svg-inline--fa fa-comment-alt fa-w-16 astro-TL4TIEEL" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" height="1em" width="1em">
+					<path fill="currentColor" d="M448 0H64C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h96v84c0 9.8 11.2 15.5 19.1 9.7L304 416h144c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64z" class="astro-TL4TIEEL">
+					</path>
+				</svg>
+				<span class="astro-TL4TIEEL">407-310-8747
+</span>
+			</a>
+		</li>
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://www.linkedin.com/in/stephenmoreira" target="_blank" class="astro-TL4TIEEL">
+				<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024" class="astro-TL4TIEEL">
+					<path fill="currentColor" d="M928 161H699.2c-49.1 0-97.1 14.1-138.4 40.7L512 233l-48.8-31.3A255.2 255.2 0 0 0 324.8 161H96c-17.7 0-32 14.3-32 32v568c0 17.7 14.3 32 32 32h228.8c49.1 0 97.1 14.1 138.4 40.7l44.4 28.6c1.3.8 2.8 1.3 4.3 1.3s3-.4 4.3-1.3l44.4-28.6C602 807.1 650.1 793 699.2 793H928c17.7 0 32-14.3 32-32V193c0-17.7-14.3-32-32-32zM404 553.5c0 4.1-3.2 7.5-7.1 7.5H211.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45zm0-140c0 4.1-3.2 7.5-7.1 7.5H211.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45zm416 140c0 4.1-3.2 7.5-7.1 7.5H627.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45zm0-140c0 4.1-3.2 7.5-7.1 7.5H627.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45z" class="astro-TL4TIEEL"></path>
+				</svg>
+				<span class="astro-TL4TIEEL">LinkedIn
+</span>
+			</a>
+		</li>
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://twitter.com/stephendmoreira" target="_blank" class="astro-TL4TIEEL">
+				<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256" class="astro-TL4TIEEL">
+					<path fill="currentColor" d="M209.765 128.15c0 16.013-4.9 31.34-13.266 44.575l33.447 33.447a128.918 128.918 0 0 0 25.783-77.35c0-29.265-9.754-55.751-26.47-77.336l-32.776 32.729a79.442 79.442 0 0 1 13.267 43.888l.015.047Z" class="astro-TL4TIEEL"></path>
+					<path fill="currentColor" d="M127.513 210.355c-45.367-.086-82.125-36.838-82.22-82.205c.069-45.386 36.835-82.166 82.22-82.252c16.732 0 32.058 4.901 44.607 13.267l32.744-32.776A128.965 128.965 0 0 0 127.514.636C57.123.636 0 57.76 0 128.15c0 70.359 57.124 127.513 127.513 127.513a125.126 125.126 0 0 0 77.351-26.501l-33.447-33.431c-11.861 9.754-27.157 14.624-43.904 14.624Z" class="astro-TL4TIEEL"></path>
+				</svg>
+				<span class="astro-TL4TIEEL">Twitter
+</span>
+			</a>
+		</li>
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://github.com/withastro/docs" target="_blank" class="astro-TL4TIEEL">
+				<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="github" class="svg-inline--fa fa-brands fa-github fa-w-16 astro-TL4TIEEL" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+					<path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" class="astro-TL4TIEEL"></path>
+				</svg>
+				<span class="astro-TL4TIEEL">GitHub 上的 Astro 文档
+</span>
+			</a>
+		</li>
+	</ul></details open>
+
+
+		<li style="text-align: center;" class="astro-M2FRLZWK">
+			<script>(self.Astro=self.Astro||{}).visible=(i,c,n)=>{const r=async()=>{await(await i())()};let s=new IntersectionObserver(e=>{for(const t of e)if(!!t.isIntersecting){s.disconnect(),r();break}});for(let e=0;e<n.children.length;e++){const t=n.children[e];s.observe(t)}};</script><astro-island uid="Z2pP2YL" component-url="/ThemeToggleButton.b38468b8.js" component-export="default" renderer-url="/client.f1d83173.js" props="{&quot;labels&quot;:[0,{&quot;useLight&quot;:[0,&quot;使用浅色主题&quot;],&quot;useDark&quot;:[0,&quot;使用深色主题&quot;]}],&quot;class&quot;:[0,&quot;astro-M2FRLZWK&quot;]}" ssr="" client="visible" before-hydration-url="data:text/javascript;charset=utf-8,//[no before-hydration script]" opts="{&quot;name&quot;:&quot;ThemeToggleButton&quot;,&quot;value&quot;:true}" await-children=""><div class="theme-toggle "><label title="使用浅色主题" class><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path></svg><input type="radio" name="theme-toggle" value="light" aria-label="使用浅色主题" /></label><label title="使用深色主题" class><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg><input type="radio" name="theme-toggle" value="dark" aria-label="使用深色主题" /></label></div></astro-island>
+		</li>
+		<li class="astro-M2FRLZWK">
+			<!-- <div dir="ltr" lang="en" class="sponsors">
+	<h2 class="sponsors-title">Sponsored by</h2>
+	<div class="sponsor">
+		<a href="https://www.netlify.com/" aria-label="Go to Netlify website">
+			<svg class="sponsor-logo__netlify" viewBox="0 0 147 40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+				><radialGradient
+					id="netlify-gradient"
+					cx="-779.0521"
+					cy="1839.7205"
+					gradientTransform="matrix(0 38.301 44.1228 0 -81154.2578 29839.2441)"
+					gradientUnits="userSpaceOnUse"
+					r="1.0011"><stop offset="0" stop-color="#20c6b7"></stop><stop offset="1" stop-color="#4d9abf"></stop></radialGradient
+				><path
+					clip-rule="evenodd"
+					d="m53.37 12.98.12 2.2c1.4-1.7 3.24-2.55 5.53-2.55 3.95 0 5.96 2.27 6.03 6.8v12.57h-4.26v-12.32c0-1.21-.26-2.1-.78-2.68s-1.37-.87-2.55-.87c-1.72 0-3 .78-3.84 2.34v13.53h-4.26v-19.02zm24.38 19.37c-2.7 0-4.89-.85-6.57-2.56-1.68-1.7-2.52-3.98-2.52-6.81v-.53c0-1.9.36-3.59 1.1-5.09.73-1.49 1.76-2.66 3.08-3.49s2.79-1.25 4.42-1.25c2.58 0 4.58.83 5.99 2.48s2.11 3.99 2.11 7.01v1.72h-12.4c.13 1.57.65 2.81 1.57 3.73s2.07 1.37 3.46 1.37c1.95 0 3.54-.79 4.77-2.37l2.3 2.2c-.76 1.14-1.77 2.02-3.04 2.65s-2.69.94-4.27.94zm-.51-16.29c-1.17 0-2.11.41-2.83 1.23s-1.18 1.96-1.38 3.43h8.12v-.32c-.09-1.43-.47-2.51-1.14-3.24-.67-.74-1.59-1.1-2.77-1.1zm16.76-7.7v4.62h3.35v3.16h-3.35v10.62c0 .73.14 1.25.43 1.57s.8.48 1.54.48c.5 0 1-.06 1.49-.18v3.31c-.97.27-1.9.4-2.81.4-3.27 0-4.91-1.81-4.91-5.43v-10.77h-3.12v-3.16h3.12v-4.63zm11.14 23.64h-4.26v-27h4.26zm9.17 0h-4.26v-19.02h4.26zm-4.52-23.96c0-.65.21-1.2.62-1.63.42-.43 1.01-.65 1.78-.65s1.37.22 1.79.65.63.98.63 1.64c0 .64-.21 1.18-.63 1.61s-1.02.64-1.79.64-1.36-.21-1.78-.64c-.41-.44-.62-.98-.62-1.62zm10.66 23.96v-15.86h-2.89v-3.16h2.89v-1.74c0-2.11.58-3.74 1.75-4.89s2.81-1.72 4.91-1.72c.75 0 1.54.11 2.39.32l-.1 3.34c-.54-.1-1.08-.15-1.63-.14-2.04 0-3.05 1.05-3.05 3.15v1.69h3.86v3.16h-3.86v15.85zm17.87-6.12 3.86-12.9h4.54l-7.54 21.9c-1.16 3.2-3.12 4.8-5.89 4.8-.62 0-1.3-.11-2.05-.32v-3.31l.81.05c1.07 0 1.88-.2 2.43-.59.54-.39.97-1.05 1.29-1.98l.61-1.64-6.66-18.93h4.6z"
+					fill-rule="evenodd"></path><path
+					d="m27.89 14.14-.01-.01c-.01 0-.02-.01-.02-.01-.02-.02-.03-.06-.03-.09l.77-4.73 3.62 3.63-3.77 1.6c-.01 0-.02.01-.03.01h-.02s-.01-.01-.02-.02c-.14-.16-.31-.29-.49-.38zm5.26-.29 3.88 3.88c.81.81 1.21 1.21 1.35 1.67.02.07.04.14.05.21l-9.26-3.92s-.01 0-.01-.01c-.04-.02-.08-.03-.08-.07s.04-.06.08-.07l.01-.01zm5.12 7c-.2.38-.59.77-1.25 1.43l-4.37 4.37-5.65-1.18-.03-.01c-.05-.01-.1-.02-.1-.06-.04-.47-.28-.9-.66-1.19-.02-.02-.02-.06-.01-.09v-.01l1.06-6.53v-.02c.01-.05.01-.11.06-.11.46-.06.88-.3 1.16-.67.01-.01.01-.02.03-.03.03-.01.07 0 .1.01zm-6.62 6.8-7.19 7.19 1.23-7.56v-.01c0-.01 0-.02.01-.03.01-.02.04-.03.06-.04h.01c.27-.11.51-.29.69-.52.02-.03.05-.06.09-.06h.03zm-8.71 8.71-.81.81-8.95-12.94s-.01-.01-.01-.01c-.01-.02-.03-.04-.03-.06s.01-.03.02-.04l.01-.01c.03-.04.05-.08.07-.12l.02-.03c.01-.02.03-.05.05-.06s.05-.01.07 0l9.92 2.05c.03 0 .05.02.08.03.01.01.02.03.02.04.14.53.52.97 1.03 1.17.03.01.02.05 0 .08-.01.01-.01.03-.01.05-.12.74-1.19 7.27-1.48 9.04zm-1.69 1.69c-.6.59-.95.9-1.35 1.03-.39.12-.81.12-1.21 0-.47-.15-.87-.55-1.67-1.36l-8.99-8.99 2.35-3.64c.01-.02.02-.03.04-.05s.06-.01.09 0c.54.16 1.12.13 1.64-.08.03-.01.05-.02.07 0l.03.03zm-14.09-10.19-2.06-2.06 4.07-1.74c.01 0 .02-.01.03-.01.03 0 .05.03.07.07.04.06.08.12.13.18l.01.02c.01.02 0 .03-.01.05zm-2.98-2.97-2.61-2.61c-.44-.44-.77-.77-.99-1.04l7.94 1.65h.03c.05.01.1.02.1.06 0 .05-.06.07-.11.09l-.02.01zm-4.05-5c.01-.17.04-.33.09-.5.15-.47.55-.87 1.36-1.67l3.34-3.34c1.54 2.23 3.08 4.46 4.63 6.69.03.04.06.08.03.11-.15.16-.29.34-.4.53-.01.02-.03.05-.05.06-.01.01-.03 0-.04 0zm5.68-6.4 4.49-4.49c.42.19 1.96.83 3.33 1.41 1.04.44 1.99.84 2.29.97.03.01.06.02.07.05.01.02 0 .04 0 .06-.14.66.05 1.35.52 1.83.03.03 0 .07-.03.11l-.01.02-4.56 7.06c-.01.02-.02.04-.04.05s-.06.01-.09 0c-.18-.05-.36-.07-.54-.07-.16 0-.34.03-.52.06-.02 0-.04.01-.05 0-.02-.01-.03-.03-.05-.05zm5.4-5.4 5.81-5.81c.81-.81 1.21-1.21 1.67-1.36.39-.12.81-.12 1.21 0 .47.15.87.55 1.67 1.36l1.26 1.26-4.14 6.4c-.01.02-.02.03-.04.05s-.06.01-.09 0c-.66-.2-1.38-.06-1.92.37-.03.03-.07.01-.1 0-.53-.24-4.73-2.01-5.33-2.27zm12.5-3.67 3.82 3.82-.92 5.7v.02c0 .01 0 .03-.01.04-.01.02-.03.02-.05.03-.2.06-.38.15-.55.27-.01.01-.01.01-.02.02s-.02.02-.04.02c-.01 0-.03 0-.04-.01l-5.82-2.47-.01-.01c-.04-.02-.08-.03-.08-.07-.03-.32-.14-.64-.31-.91-.03-.05-.06-.09-.03-.14zm-3.93 8.6 5.45 2.31c.03.01.06.03.08.06.01.02.01.04 0 .06-.02.08-.03.17-.03.26v.15c0 .04-.04.05-.08.07h-.01c-.86.37-12.13 5.17-12.15 5.17s-.03 0-.05-.02c-.03-.03 0-.07.03-.11 0-.01.01-.01.01-.02l4.48-6.94.01-.01c.03-.04.06-.09.1-.09l.05.01c.1.01.19.03.28.03.68 0 1.31-.33 1.69-.9.01-.02.02-.03.03-.04.04-.01.08 0 .11.01zm-6.25 9.19 12.28-5.24s.02 0 .03.02c.07.07.12.11.18.15l.03.02c.02.01.05.03.05.06v.02l-1.05 6.46v.03c-.01.05-.01.11-.06.11-.57.04-1.08.36-1.37.85v.01c-.01.02-.03.05-.05.06s-.05.01-.07 0l-9.79-2.02c-.02-.02-.16-.53-.18-.53z"
+					fill="url(#netlify-gradient)"></path></svg
+			>
+		</a>
+	</div>
+</div> -->
+
+		</li>
+	</ul>
+</nav>
+
+
+
+
+			</aside>
+			<aside id="right-sidebar" class="sidebar astro-6SNADQYA">
+				<nav aria-label="目录" class="astro-7RGIIGOJ">
+	<script>(self.Astro=self.Astro||{}).media=(s,a)=>{const t=async()=>{await(await s())()};if(a.value){const e=matchMedia(a.value);e.matches?t():e.addEventListener("change",t,{once:!0})}};</script><astro-island uid="1I9nB5" component-url="/TableOfContents.109662f0.js" component-export="default" renderer-url="/client.f1d83173.js" props="{&quot;headings&quot;:[1,&quot;[[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;astro-10-beta\&quot;],\&quot;text\&quot;:[0,\&quot;Astro 1.0 Beta\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;迁移至-v026\&quot;],\&quot;text\&quot;:[0,\&quot;迁移至 v0.26\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;全新的配置-api\&quot;],\&quot;text\&quot;:[0,\&quot;全新的配置 API\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;全新的-markdown-api\&quot;],\&quot;text\&quot;:[0,\&quot;全新的 Markdown API\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;全新的默认-script-行为\&quot;],\&quot;text\&quot;:[0,\&quot;全新的默认 Script 行为\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;迁移至-v100-beta0\&quot;],\&quot;text\&quot;:[0,\&quot;迁移至 v1.0.0-beta.0\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;更新-astrorequest-api\&quot;],\&quot;text\&quot;:[0,\&quot;更新 Astro.request API\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;其他变更\&quot;],\&quot;text\&quot;:[0,\&quot;其他变更\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;迁移至-v025\&quot;],\&quot;text\&quot;:[0,\&quot;迁移至 v0.25\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;astro-集成\&quot;],\&quot;text\&quot;:[0,\&quot;Astro 集成\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;移除内嵌框架支持\&quot;],\&quot;text\&quot;:[0,\&quot;移除内嵌框架支持\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;废弃渲染器\&quot;],\&quot;text\&quot;:[0,\&quot;废弃渲染器\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;处理同伴的依赖关系\&quot;],\&quot;text\&quot;:[0,\&quot;处理同伴的依赖关系\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;更新语法高亮\&quot;],\&quot;text\&quot;:[0,\&quot;更新语法高亮\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;prism--组件有了一个新家\&quot;],\&quot;text\&quot;:[0,\&quot;&amp;lt;Prism /&amp;gt; 组件有了一个新家\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;css-解析器更新\&quot;],\&quot;text\&quot;:[0,\&quot;CSS 解析器更新\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;迁移至-v024\&quot;],\&quot;text\&quot;:[0,\&quot;迁移至 v0.24\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;废弃-astroresolve\&quot;],\&quot;text\&quot;:[0,\&quot;废弃 Astro.resolve()\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;如何解析-css-文件\&quot;],\&quot;text\&quot;:[0,\&quot;如何解析 CSS 文件\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;如何解析-javascript-文件\&quot;],\&quot;text\&quot;:[0,\&quot;如何解析 JavaScript 文件\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;如何解析图像和其他资源\&quot;],\&quot;text\&quot;:[0,\&quot;如何解析图像和其他资源\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;废弃-script-默认处理\&quot;],\&quot;text\&quot;:[0,\&quot;废弃 &amp;lt;script&amp;gt; 默认处理\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;迁移至-v023\&quot;],\&quot;text\&quot;:[0,\&quot;迁移至 v0.23\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;丢失-sass-错误\&quot;],\&quot;text\&quot;:[0,\&quot;丢失 Sass 错误\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;废弃未转义的-html\&quot;],\&quot;text\&quot;:[0,\&quot;废弃未转义的 HTML\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;迁移至-v021\&quot;],\&quot;text\&quot;:[0,\&quot;迁移至 v0.21\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;vite\&quot;],\&quot;text\&quot;:[0,\&quot;Vite\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;vite-插件\&quot;],\&quot;text\&quot;:[0,\&quot;Vite 插件\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;渲染器改用-vite\&quot;],\&quot;text\&quot;:[0,\&quot;渲染器改用 Vite\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;别名\&quot;],\&quot;text\&quot;:[0,\&quot;别名\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;导入中使用文件扩展名\&quot;],\&quot;text\&quot;:[0,\&quot;导入中使用文件扩展名\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;移除-frontmatter-中的组件\&quot;],\&quot;text\&quot;:[0,\&quot;移除 Frontmatter 中的组件\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;样式更改\&quot;],\&quot;text\&quot;:[0,\&quot;样式更改\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;autoprefixer\&quot;],\&quot;text\&quot;:[0,\&quot;Autoprefixer\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;tailwind-css\&quot;],\&quot;text\&quot;:[0,\&quot;Tailwind CSS\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;已知问题\&quot;],\&quot;text\&quot;:[0,\&quot;已知问题\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;顶部导入\&quot;],\&quot;text\&quot;:[0,\&quot;顶部导入\&quot;]}]]&quot;],&quot;labels&quot;:[0,{&quot;onThisPage&quot;:[0,&quot;在本页内&quot;],&quot;overview&quot;:[0,&quot;概述&quot;]}],&quot;isMobile&quot;:[0,false],&quot;class&quot;:[0,&quot;astro-7RGIIGOJ&quot;]}" ssr="" client="media" before-hydration-url="data:text/javascript;charset=utf-8,//[no before-hydration script]" opts="{&quot;name&quot;:&quot;TableOfContents&quot;,&quot;value&quot;:&quot;(min-width: 50em)&quot;}" await-children=""><h2 class="heading" id="on-this-page-heading">在本页内</h2><ul><li class="header-link depth-2 current-header-link"><a href="#overview">概述</a></li><li class="header-link depth-2"><a href="#astro-10-beta">Astro 1.0 Beta</a></li><li class="header-link depth-2"><a href="#迁移至-v026">迁移至 v0.26</a></li><li class="header-link depth-3"><a href="#全新的配置-api">全新的配置 API</a></li><li class="header-link depth-3"><a href="#全新的-markdown-api">全新的 Markdown API</a></li><li class="header-link depth-3"><a href="#全新的默认-script-行为">全新的默认 Script 行为</a></li><li class="header-link depth-2"><a href="#迁移至-v100-beta0">迁移至 v1.0.0-beta.0</a></li><li class="header-link depth-3"><a href="#更新-astrorequest-api">更新 Astro.request API</a></li><li class="header-link depth-3"><a href="#其他变更">其他变更</a></li><li class="header-link depth-2"><a href="#迁移至-v025">迁移至 v0.25</a></li><li class="header-link depth-3"><a href="#astro-集成">Astro 集成</a></li><li class="header-link depth-3"><a href="#更新语法高亮">更新语法高亮</a></li><li class="header-link depth-3"><a href="#css-解析器更新">CSS 解析器更新</a></li><li class="header-link depth-2"><a href="#迁移至-v024">迁移至 v0.24</a></li><li class="header-link depth-3"><a href="#废弃-astroresolve">废弃 Astro.resolve()</a></li><li class="header-link depth-3"><a href="#废弃-script-默认处理">废弃 &lt;script&gt; 默认处理</a></li><li class="header-link depth-2"><a href="#迁移至-v023">迁移至 v0.23</a></li><li class="header-link depth-3"><a href="#丢失-sass-错误">丢失 Sass 错误</a></li><li class="header-link depth-3"><a href="#废弃未转义的-html">废弃未转义的 HTML</a></li><li class="header-link depth-2"><a href="#迁移至-v021">迁移至 v0.21</a></li><li class="header-link depth-3"><a href="#vite">Vite</a></li><li class="header-link depth-3"><a href="#别名">别名</a></li><li class="header-link depth-3"><a href="#导入中使用文件扩展名">导入中使用文件扩展名</a></li><li class="header-link depth-3"><a href="#移除-frontmatter-中的组件">移除 Frontmatter 中的组件</a></li><li class="header-link depth-3"><a href="#样式更改">样式更改</a></li><li class="header-link depth-3"><a href="#已知问题">已知问题</a></li></ul></astro-island>
+	<!-- <h2 class="heading"><UIString key="rightSidebar.contribute" /></h2>
+<ul>
+	<li class={`header-link depth-2`}>
+		<a class="edit-on-github" href={editHref} target="_blank">
+			<svg
+				aria-hidden="true"
+				focusable="false"
+				data-prefix="fas"
+				data-icon="pen"
+				class="svg-inline--fa fa-pen fa-w-16"
+				role="img"
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512"
+				height="1em"
+				width="1em"
+			>
+				<path
+					fill="currentColor"
+					d="M290.74 93.24l128.02 128.02-277.99 277.99-114.14 12.6C11.35 513.54-1.56 500.62.14 485.34l12.7-114.22 277.9-277.88zm207.2-19.06l-60.11-60.11c-18.75-18.75-49.16-18.75-67.91 0l-56.55 56.55 128.02 128.02 56.55-56.55c18.75-18.76 18.75-49.16 0-67.91z"
+				></path>
+			</svg>
+			<span><UIString key="rightSidebar.editPage" /></span>
+		</a>
+	</li>
+	{isTranslatable &&
+		<li class={`header-link depth-2`}>
+			<a href="https://github.com/withastro/docs/blob/main/TRANSLATING.md" target="_blank">
+				<svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88.6 77.3" height="1.24em" width="1.24em" style="margin: -2px;">
+					<path fill="currentColor" d="M61,24.6h7.9l18.7,51.6h-7.7l-5.4-15.5H54.3l-5.6,15.5h-7.2L61,24.6z M72.6,55l-8-22.8L56.3,55H72.6z"></path>
+					<path
+						fill="currentColor"
+						d="M53.6,60.6c-10-4-16-9-22-14c0,0,1.3,1.3,0,0c-6,5-20,13-20,13l-4-6c8-5,10-6,19-13c-2.1-1.9-12-13-13-19h8          c4,9,10,14,10,14c10-8,10-19,10-19h8c0,0-1,13-12,24l0,0c5,5,10,9,19,13L53.6,60.6z M1.6,16.6h56v-8h-23v-7h-9v7h-24V16.6z"
+					></path>
+				</svg>
+				<span><UIString key="rightSidebar.translatePage" /></span>
+			</a>
+		</li>
+	}
+</ul> -->
+
+	<div class="astro-TL4TIEEL"><div class="astro-TL4TIEEL"><h2 class="heading astro-TL4TIEEL">Socials
+</h2></div><ul class="astro-TL4TIEEL">
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://astro.build/chat" target="_blank" class="astro-TL4TIEEL">
+				<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="comment-alt" class="svg-inline--fa fa-comment-alt fa-w-16 astro-TL4TIEEL" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" height="1em" width="1em">
+					<path fill="currentColor" d="M448 0H64C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h96v84c0 9.8 11.2 15.5 19.1 9.7L304 416h144c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64z" class="astro-TL4TIEEL">
+					</path>
+				</svg>
+				<span class="astro-TL4TIEEL">407-310-8747
+</span>
+			</a>
+		</li>
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://www.linkedin.com/in/stephenmoreira" target="_blank" class="astro-TL4TIEEL">
+				<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024" class="astro-TL4TIEEL">
+					<path fill="currentColor" d="M928 161H699.2c-49.1 0-97.1 14.1-138.4 40.7L512 233l-48.8-31.3A255.2 255.2 0 0 0 324.8 161H96c-17.7 0-32 14.3-32 32v568c0 17.7 14.3 32 32 32h228.8c49.1 0 97.1 14.1 138.4 40.7l44.4 28.6c1.3.8 2.8 1.3 4.3 1.3s3-.4 4.3-1.3l44.4-28.6C602 807.1 650.1 793 699.2 793H928c17.7 0 32-14.3 32-32V193c0-17.7-14.3-32-32-32zM404 553.5c0 4.1-3.2 7.5-7.1 7.5H211.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45zm0-140c0 4.1-3.2 7.5-7.1 7.5H211.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45zm416 140c0 4.1-3.2 7.5-7.1 7.5H627.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45zm0-140c0 4.1-3.2 7.5-7.1 7.5H627.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45z" class="astro-TL4TIEEL"></path>
+				</svg>
+				<span class="astro-TL4TIEEL">LinkedIn
+</span>
+			</a>
+		</li>
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://twitter.com/stephendmoreira" target="_blank" class="astro-TL4TIEEL">
+				<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256" class="astro-TL4TIEEL">
+					<path fill="currentColor" d="M209.765 128.15c0 16.013-4.9 31.34-13.266 44.575l33.447 33.447a128.918 128.918 0 0 0 25.783-77.35c0-29.265-9.754-55.751-26.47-77.336l-32.776 32.729a79.442 79.442 0 0 1 13.267 43.888l.015.047Z" class="astro-TL4TIEEL"></path>
+					<path fill="currentColor" d="M127.513 210.355c-45.367-.086-82.125-36.838-82.22-82.205c.069-45.386 36.835-82.166 82.22-82.252c16.732 0 32.058 4.901 44.607 13.267l32.744-32.776A128.965 128.965 0 0 0 127.514.636C57.123.636 0 57.76 0 128.15c0 70.359 57.124 127.513 127.513 127.513a125.126 125.126 0 0 0 77.351-26.501l-33.447-33.431c-11.861 9.754-27.157 14.624-43.904 14.624Z" class="astro-TL4TIEEL"></path>
+				</svg>
+				<span class="astro-TL4TIEEL">Twitter
+</span>
+			</a>
+		</li>
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://github.com/withastro/docs" target="_blank" class="astro-TL4TIEEL">
+				<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="github" class="svg-inline--fa fa-brands fa-github fa-w-16 astro-TL4TIEEL" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+					<path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" class="astro-TL4TIEEL"></path>
+				</svg>
+				<span class="astro-TL4TIEEL">GitHub 上的 Astro 文档
+</span>
+			</a>
+		</li>
+	</ul></div>
+
+
+</nav>
+
+
+			</aside>
+			<div id="main-content" class="astro-6SNADQYA">
+				<nav class="mobile-toc astro-CCFK4WYY">
+			<astro-island uid="Z1lygJL" component-url="/TableOfContents.109662f0.js" component-export="default" renderer-url="/client.f1d83173.js" props="{&quot;headings&quot;:[1,&quot;[[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;astro-10-beta\&quot;],\&quot;text\&quot;:[0,\&quot;Astro 1.0 Beta\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;迁移至-v026\&quot;],\&quot;text\&quot;:[0,\&quot;迁移至 v0.26\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;全新的配置-api\&quot;],\&quot;text\&quot;:[0,\&quot;全新的配置 API\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;全新的-markdown-api\&quot;],\&quot;text\&quot;:[0,\&quot;全新的 Markdown API\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;全新的默认-script-行为\&quot;],\&quot;text\&quot;:[0,\&quot;全新的默认 Script 行为\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;迁移至-v100-beta0\&quot;],\&quot;text\&quot;:[0,\&quot;迁移至 v1.0.0-beta.0\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;更新-astrorequest-api\&quot;],\&quot;text\&quot;:[0,\&quot;更新 Astro.request API\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;其他变更\&quot;],\&quot;text\&quot;:[0,\&quot;其他变更\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;迁移至-v025\&quot;],\&quot;text\&quot;:[0,\&quot;迁移至 v0.25\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;astro-集成\&quot;],\&quot;text\&quot;:[0,\&quot;Astro 集成\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;移除内嵌框架支持\&quot;],\&quot;text\&quot;:[0,\&quot;移除内嵌框架支持\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;废弃渲染器\&quot;],\&quot;text\&quot;:[0,\&quot;废弃渲染器\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;处理同伴的依赖关系\&quot;],\&quot;text\&quot;:[0,\&quot;处理同伴的依赖关系\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;更新语法高亮\&quot;],\&quot;text\&quot;:[0,\&quot;更新语法高亮\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;prism--组件有了一个新家\&quot;],\&quot;text\&quot;:[0,\&quot;&amp;lt;Prism /&amp;gt; 组件有了一个新家\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;css-解析器更新\&quot;],\&quot;text\&quot;:[0,\&quot;CSS 解析器更新\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;迁移至-v024\&quot;],\&quot;text\&quot;:[0,\&quot;迁移至 v0.24\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;废弃-astroresolve\&quot;],\&quot;text\&quot;:[0,\&quot;废弃 Astro.resolve()\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;如何解析-css-文件\&quot;],\&quot;text\&quot;:[0,\&quot;如何解析 CSS 文件\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;如何解析-javascript-文件\&quot;],\&quot;text\&quot;:[0,\&quot;如何解析 JavaScript 文件\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;如何解析图像和其他资源\&quot;],\&quot;text\&quot;:[0,\&quot;如何解析图像和其他资源\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;废弃-script-默认处理\&quot;],\&quot;text\&quot;:[0,\&quot;废弃 &amp;lt;script&amp;gt; 默认处理\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;迁移至-v023\&quot;],\&quot;text\&quot;:[0,\&quot;迁移至 v0.23\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;丢失-sass-错误\&quot;],\&quot;text\&quot;:[0,\&quot;丢失 Sass 错误\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;废弃未转义的-html\&quot;],\&quot;text\&quot;:[0,\&quot;废弃未转义的 HTML\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;迁移至-v021\&quot;],\&quot;text\&quot;:[0,\&quot;迁移至 v0.21\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;vite\&quot;],\&quot;text\&quot;:[0,\&quot;Vite\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;vite-插件\&quot;],\&quot;text\&quot;:[0,\&quot;Vite 插件\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;渲染器改用-vite\&quot;],\&quot;text\&quot;:[0,\&quot;渲染器改用 Vite\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;别名\&quot;],\&quot;text\&quot;:[0,\&quot;别名\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;导入中使用文件扩展名\&quot;],\&quot;text\&quot;:[0,\&quot;导入中使用文件扩展名\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;移除-frontmatter-中的组件\&quot;],\&quot;text\&quot;:[0,\&quot;移除 Frontmatter 中的组件\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;样式更改\&quot;],\&quot;text\&quot;:[0,\&quot;样式更改\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;autoprefixer\&quot;],\&quot;text\&quot;:[0,\&quot;Autoprefixer\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;tailwind-css\&quot;],\&quot;text\&quot;:[0,\&quot;Tailwind CSS\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;已知问题\&quot;],\&quot;text\&quot;:[0,\&quot;已知问题\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;顶部导入\&quot;],\&quot;text\&quot;:[0,\&quot;顶部导入\&quot;]}]]&quot;],&quot;labels&quot;:[0,{&quot;onThisPage&quot;:[0,&quot;在本页内&quot;],&quot;overview&quot;:[0,&quot;概述&quot;]}],&quot;isMobile&quot;:[0,true],&quot;class&quot;:[0,&quot;astro-CCFK4WYY&quot;]}" ssr="" client="media" before-hydration-url="data:text/javascript;charset=utf-8,//[no before-hydration script]" opts="{&quot;name&quot;:&quot;TableOfContents&quot;,&quot;value&quot;:&quot;(max-width: 72em)&quot;}" await-children=""><details class="toc-mobile-container"><summary class="toc-mobile-header"><div class="toc-mobile-header-content"><div class="toc-toggle"><h2 class="heading" id="on-this-page-heading">在本页内</h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z"></path></svg></div></div></summary><ul><li class="header-link depth-2 current-header-link"><a href="#overview">概述</a></li><li class="header-link depth-2"><a href="#astro-10-beta">Astro 1.0 Beta</a></li><li class="header-link depth-2"><a href="#迁移至-v026">迁移至 v0.26</a></li><li class="header-link depth-3"><a href="#全新的配置-api">全新的配置 API</a></li><li class="header-link depth-3"><a href="#全新的-markdown-api">全新的 Markdown API</a></li><li class="header-link depth-3"><a href="#全新的默认-script-行为">全新的默认 Script 行为</a></li><li class="header-link depth-2"><a href="#迁移至-v100-beta0">迁移至 v1.0.0-beta.0</a></li><li class="header-link depth-3"><a href="#更新-astrorequest-api">更新 Astro.request API</a></li><li class="header-link depth-3"><a href="#其他变更">其他变更</a></li><li class="header-link depth-2"><a href="#迁移至-v025">迁移至 v0.25</a></li><li class="header-link depth-3"><a href="#astro-集成">Astro 集成</a></li><li class="header-link depth-3"><a href="#更新语法高亮">更新语法高亮</a></li><li class="header-link depth-3"><a href="#css-解析器更新">CSS 解析器更新</a></li><li class="header-link depth-2"><a href="#迁移至-v024">迁移至 v0.24</a></li><li class="header-link depth-3"><a href="#废弃-astroresolve">废弃 Astro.resolve()</a></li><li class="header-link depth-3"><a href="#废弃-script-默认处理">废弃 &lt;script&gt; 默认处理</a></li><li class="header-link depth-2"><a href="#迁移至-v023">迁移至 v0.23</a></li><li class="header-link depth-3"><a href="#丢失-sass-错误">丢失 Sass 错误</a></li><li class="header-link depth-3"><a href="#废弃未转义的-html">废弃未转义的 HTML</a></li><li class="header-link depth-2"><a href="#迁移至-v021">迁移至 v0.21</a></li><li class="header-link depth-3"><a href="#vite">Vite</a></li><li class="header-link depth-3"><a href="#别名">别名</a></li><li class="header-link depth-3"><a href="#导入中使用文件扩展名">导入中使用文件扩展名</a></li><li class="header-link depth-3"><a href="#移除-frontmatter-中的组件">移除 Frontmatter 中的组件</a></li><li class="header-link depth-3"><a href="#样式更改">样式更改</a></li><li class="header-link depth-3"><a href="#已知问题">已知问题</a></li></ul></details></astro-island>
+		</nav>
+
+<article id="article" class="content astro-CCFK4WYY">
+	<section class="main-section astro-CCFK4WYY">
+		<h1 class="content-title astro-CCFK4WYY" id="overview">迁移指南</h1>
+		<p>该指南将帮助你迁移到从旧版迁移到最新的 Astro 版本。</p><p>阅读下面的指南，了解主要的亮点和如何处理破坏性变更的说明。</p><div class="heading-wrapper level-h2" tabindex="-1"><h2 id="astro-10-beta">Astro 1.0 Beta</h2><a class="anchor-link" href="#astro-10-beta"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Astro 1.0 Beta</span></a></div><p>在 2022 年 4 月 4 日，我们发布了 Astro 1.0 Beta！🎉</p><p><strong>在测试期间，我们不打算再做任何破坏性变更，直到正式的 v1.0.0 版本发布（计划于 2022 年 6 月 8 日）。</strong></p><p>如果不得不做出破坏性变更，我们将在本节中指出。</p><p>Astro 的 <code>v1.0.0-beta.0</code> 版本不包含任何破坏性变化。</p><p>如果你是从 v0.25 或更早的版本来的，请确保你已经阅读并遵循下面的 <a href="#%E8%BF%81%E7%A7%BB%E8%87%B3-v026">v0.26 迁移指南</a>，其中包含了几个主要的破坏性变化。</p><div class="heading-wrapper level-h2" tabindex="-1"><h2 id="迁移至-v026">迁移至 v0.26</h2><a class="anchor-link" href="#迁移至-v026"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled 迁移至 v0.26</span></a></div><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="全新的配置-api">全新的配置 API</h3><a class="anchor-link" href="#全新的配置-api"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled 全新的配置 API</span></a></div><p>我们已经重新设计配置 API，以解决去年积累的一些明显的混乱点。大多数配置只是被移动或重新命名，希望这对大多数用户来说是一个快速更新。有几个选项被重构得比较严重，可能需要一些额外的改变。</p><ul>
+<li><code>.buildOptions.site</code> 已经被 <code>.site</code>（你部署的域）和一个新的 <code>.base</code>（你部署的子路径）选项所取代。</li>
+<li><code>.markdownOptions</code> 已被 <code>.markdown</code> 取代，这是一个基本相似的配置项，有一些小的变化，以简化 Markdown 配置。</li>
+<li><code>.sitemap</code> 已经被移至 <a href="https://www.npmjs.com/package/@astrojs/sitemap">@astrojs/sitemap</a> 整合中。</li>
+</ul><p>如果你用传统的配置运行 Astro，你会看到一个警告，并说明如何更新。请参阅我们更新的<a href="/zh-cn/reference/configuration-reference/">配置参考</a>以获得更多关于升级的信息。</p><p>阅读 <a href="https://github.com/withastro/rfcs/blob/main/proposals/0019-config-finalization.md">RFC0019</a> 了解更多关于这些变化的背景。</p><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="全新的-markdown-api">全新的 Markdown API</h3><a class="anchor-link" href="#全新的-markdown-api"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled 全新的 Markdown API</span></a></div><p>Astro v0.26 为你的内容发布提供了全新的 Markdown API。这包括三个主要面向用户的变化。</p><ul>
+<li>你现在可以直接使用 ESM <code>import()</code> 导入 markdown 内容。</li>
+<li>一个新的 <code>Astro.glob()</code> API，以便更容易使用全局导入（特别是对于 Markdown 而言）。</li>
+<li><strong>破坏性变更：</strong> <code>Astro.fetchContent()</code> 已经被移除并被 <code>Astro.glob()</code> 取代。</li>
+<li><strong>破坏性变更：</strong> Markdown 对象有个用于更新的 API。</li>
+</ul>
+<figure class="code-snippet lang-diff">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#D8DEE9">// v0.25</span></span>
+<span class="line"><span style="color:#C7C5D3"><span style="user-select: none;">-</span><span style="color:#FF657C"> let allPosts = Astro.fetchContent(&#39;./posts/*.md&#39;);</span></span>
+<span class="line"><span style="color:#D8DEE9">// v0.26+</span></span>
+<span class="line"><span style="color:#C7C5D3"><span style="user-select: none;">+</span><span style="color:#16C082"> let allPosts = await Astro.glob(&#39;./posts/*.md&#39;);</span></span></code></pre>
+</figure><p>在迁移的时候，要注意新的 Markdown 对象接口。例如，Frontmatter 已经被移到了 <code>.frontmatter</code> 属性中，所以像 <code>post.title</code> 这样的引用应该改变为 <code>post.frontmatter.title</code>。</p><p>这应该能解决 Markdown 用户的许多问题，包括对大型网站的性能改进。</p><p>阅读 <a href="https://github.com/withastro/rfcs/blob/main/proposals/0017-markdown-content-redesign.md">RFC0017</a> 了解更多关于这些变化的背景。</p><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="全新的默认-script-行为">全新的默认 Script 行为</h3><a class="anchor-link" href="#全新的默认-script-行为"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled 全新的默认 Script 行为</span></a></div><p>Astro 组件中的 <code>&lt;script&gt;</code>标签现在已经被默认建立、捆绑和优化。这完成了使我们的 Astro 组件语法更加一致的长期行动，与我们今天的 <code>&lt;style&gt;</code> 标签的默认优化行为相匹配。</p><p>这包括一些需要注意的变化。</p><ul>
+<li><strong>破坏性：</strong> <code>&lt;script hoist&gt;</code> 是新的默认 <code>&lt;script&gt;</code> 行为。<code>hoist</code> 属性已被删除。</li>
+<li>新的 <code>&lt;script is:inline&gt;</code> 指令，可以将 <code>&lt;script&gt;</code> 标签恢复到以前的默认行为（未构建、未捆绑、不受 Astro 影响）。</li>
+<li>新的 <code>&lt;style is:inline&gt;</code> 指令将在在页面模板中留下一个样式标签（类似于以前的 <code>&lt;script&gt;</code> 行为）。</li>
+<li>新的 <code>&lt;style is:global&gt;</code> 指令将在在未来的版本中取代 <code>&lt;style global&gt;</code>。</li>
+</ul><div class="heading-wrapper level-h2" tabindex="-1"><h2 id="迁移至-v100-beta0">迁移至 v1.0.0-beta.0</h2><a class="anchor-link" href="#迁移至-v100-beta0"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled 迁移至 v1.0.0-beta.0</span></a></div>
+<figure class="code-snippet lang-diff">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#D8DEE9">// v0.25</span></span>
+<span class="line"><span style="color:#C7C5D3"><span style="user-select: none;">-</span><span style="color:#FF657C"> &lt;script hoist&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">// v0.26+</span></span>
+<span class="line"><span style="color:#C7C5D3"><span style="user-select: none;">+</span><span style="color:#16C082"> &lt;script&gt;</span></span></code></pre>
+</figure><p>阅读 <a href="https://github.com/withastro/rfcs/blob/main/proposals/0016-style-script-defaults.md">RFC0016</a> 了解更多关于这些变化的背景。</p><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="更新-astrorequest-api">更新 Astro.request API</h3><a class="anchor-link" href="#更新-astrorequest-api"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled 更新 Astro.request API</span></a></div><p><code>Astro.request</code> 已经从自定义对象变成了标准的 <code>Request</code> 对象。这是使用更多网络标准 API 的项目的一部分，特别是在涉及 SSR 的地方。</p><p>这包括一些需要注意的变化。</p><ul>
+<li><code>Astro.request</code> 改用 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Request">Request</a> 对象。</li>
+<li>将 <code>Astro.request.params</code> 移至 <code>Astro.params</code>。</li>
+<li>将 <code>Astro.request.canonicalURL</code> 移到 <code>Astro.canonicalURL</code>。</li>
+</ul><p>阅读 <a href="https://github.com/withastro/rfcs/blob/main/proposals/0018-astro-request.md">RFC0018</a> 了解更多关于这些变更的背景。</p><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="其他变更">其他变更</h3><a class="anchor-link" href="#其他变更"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled 其他变更</span></a></div><ul>
+<li>改进 <code>Astro.slots</code> API，支持向基于函数插槽传递参数。这使得接受回调函数作为子函数的实用组件更加符合人体工程学。</li>
+<li>更新 CLI 输出格式，特别是针对错误报告。</li>
+<li>更新 <code>@astrojs/compiler</code>，修复了一些与在 frontmatter 中使用 RegExp 相关的错误。</li>
+</ul><div class="heading-wrapper level-h2" tabindex="-1"><h2 id="迁移至-v025">迁移至 v0.25</h2><a class="anchor-link" href="#迁移至-v025"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled 迁移至 v0.25</span></a></div><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="astro-集成">Astro 集成</h3><a class="anchor-link" href="#astro-集成"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Astro 集成</span></a></div><p><code>renderers</code> 配置已被全新的、官方集成系统所取代！这将释出一些令人兴奋的新功能。你可以阅读我们的<a href="/zh-cn/guides/integrations-guide/">使用集成</a>指南，了解更多关于如何使用这个新系统的细节。</p><p>整合取代了我们原来的 <code>renderers</code> 概念，并伴随着一些破坏性变更和对现有用户的新默认值。这些变化将在下面介绍。</p><div class="heading-wrapper level-h4" tabindex="-1"><h4 id="移除内嵌框架支持">移除内嵌框架支持</h4><a class="anchor-link" href="#移除内嵌框架支持"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled 移除内嵌框架支持</span></a></div><p>以前，React、Preact、Svelte 和 Vue 都默认包含在 Astro 中。从 0.25.0 版本开始，Astro 不再附带任何内置的渲染器。如果你没有为你的项目定义 <code>renderers</code> 配置项，你现在需要自己安装这些框架。</p><p>请阅读我们的<a href="/zh-cn/guides/integrations-guide/">逐步演示</a>，了解如何为你目前使用的框架添加新的 Astro 集成。</p><div class="heading-wrapper level-h4" tabindex="-1"><h4 id="废弃渲染器">废弃渲染器</h4><a class="anchor-link" href="#废弃渲染器"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled 废弃渲染器</span></a></div><blockquote>
+<p>如果你的配置文件中自定义了 renderers，请阅读本节。</p>
+</blockquote><p>新的集成系统取代了之前的 <code>renderers</code> 系统，包括 npm 上发布的 <code>@astrojs/renderer-*</code> 包。今后，<code>@astrojs/renderer-react</code> 会变成 <code>@astrojs/react</code>，<code>@astrojs/renderer-vue</code> 会变成 <code>@astrojs/vue</code>，以此类推。</p><p>**迁移：**更新 Astro 到 <code>v0.25.0</code>，然后运行 <code>astro dev</code> 或 <code>astro build</code>，其中包含过时的 <code>"renderers"</code> 配置的旧配置文件。你会立即看到提醒，告诉你需要根据你当前的配置对你的 <code>astro.config.mjs</code> 文件进行的确切修改。你也可以自己更新你的软件包，使用下面的表格。</p><p>要想获得更深入的演示，请阅读我们的<a href="/zh-cn/guides/integrations-guide/">分步指南</a>，了解如何用新的 Astro 框架集成替换现有的渲染器。</p>
+<figure class="code-snippet lang-diff">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD"># 安装你的新集成和框架</span></span>
+<span class="line"><span style="color:#ABA8BD"># （阅读完整的演示：https://docs.astro.build/zh-cn/guides/integrations-guide）</span></span>
+<span class="line"><span style="color:#C7C5D3"><span style="user-select: none;">+</span><span style="color:#16C082"> npm install @astrojs/lit lit</span></span>
+<span class="line"><span style="color:#C7C5D3"><span style="user-select: none;">+</span><span style="color:#16C082"> npm install @astrojs/react react react-dom</span></span></code></pre>
+</figure>
+<figure class="code-snippet lang-diff">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD"># 然后更新你的 `astro.config.mjs` 文件：</span></span>
+<span class="line"><span style="color:#ABA8BD"># （阅读完整的演示：https://docs.astro.build/zh-cn/guides/integrations-guide）</span></span>
+<span class="line"><span style="color:#C7C5D3"><span style="user-select: none;">+</span><span style="color:#16C082"> import lit from &#39;@astrojs/lit&#39;;</span></span>
+<span class="line"><span style="color:#C7C5D3"><span style="user-select: none;">+</span><span style="color:#16C082"> import react from &#39;@astrojs/react&#39;;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D8DEE9">export default {</span></span>
+<span class="line"><span style="color:#C7C5D3"><span style="user-select: none;">-</span><span style="color:#FF657C">   renderers: [&#39;@astrojs/renderer-lit&#39;, &#39;@astrojs/renderer-react&#39;],</span></span>
+<span class="line"><span style="color:#C7C5D3"><span style="user-select: none;">+</span><span style="color:#16C082">   integrations: [lit(), react()],</span></span>
+<span class="line"><span style="color:#D8DEE9">}</span></span></code></pre>
+</figure><table>
+<thead>
+<tr>
+<th>npm 中废弃的渲染器</th>
+<th>npm 中的 v0.25+ 集成</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>@astrojs/renderer-react</td>
+<td>@astrojs/react</td>
+</tr>
+<tr>
+<td>@astrojs/renderer-preact</td>
+<td>@astrojs/preact</td>
+</tr>
+<tr>
+<td>@astrojs/renderer-solid</td>
+<td>@astrojs/solid-js</td>
+</tr>
+<tr>
+<td>@astrojs/renderer-vue</td>
+<td>@astrojs/vue</td>
+</tr>
+<tr>
+<td>@astrojs/renderer-svelte</td>
+<td>@astrojs/svelte</td>
+</tr>
+</tbody>
+</table><div class="heading-wrapper level-h4" tabindex="-1"><h4 id="处理同伴的依赖关系">处理同伴的依赖关系</h4><a class="anchor-link" href="#处理同伴的依赖关系"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled 处理同伴的依赖关系</span></a></div><blockquote>
+<p>请阅读本节，如果。你使用 Node v14 <strong>或</strong>如果你使用 npm 以外的任何包管理器。</p>
+</blockquote><p>与旧的渲染器不同，集成不再将框架本身（<code>react</code>、<code>svelte</code>、<code>vue</code> 等）标记为集成的直接依赖项。取而代之的是，你现在需要<strong>在集成的基础之上</strong>再安装你的框架包。</p>
+<figure class="code-snippet lang-diff">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD"># 示例：同时安装集成和框架</span></span>
+<span class="line"><span style="color:#C7C5D3"><span style="user-select: none;">-</span><span style="color:#FF657C"> npm install @astrojs/react</span></span>
+<span class="line"><span style="color:#C7C5D3"><span style="user-select: none;">+</span><span style="color:#16C082"> npm install @astrojs/react react react-dom</span></span></code></pre>
+</figure><p>如果你在启动 Astro 时看到 <code>"Cannot find package 'react'"</code>（或类似的）警告，这意味着你需要将该包安装到你的项目中。更多信息请参见我们在集成指南中的<a href="/zh-cn/guides/integrations-guide/#%E5%A4%84%E7%90%86%E9%9B%86%E6%88%90%E4%BE%9D%E8%B5%96">关于对等依赖关系说明</a>。</p><p>如果你使用的是 <code>npm</code> 和 Node v16+，那么 <code>npm</code> 可能为你自动处理，因为最新版本的 <code>npm</code>（v7+）会自动为你安装类似的对等依赖关系。这种情况下，在项目中安装像 <code>react</code> 这样的框架是可选步骤，但仍然推荐。</p><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="更新语法高亮">更新语法高亮</h3><a class="anchor-link" href="#更新语法高亮"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled 更新语法高亮</span></a></div><p>我们喜欢找到合理的默认值，即开即用。作为其中的一部分，我们决定让 <a href="https://github.com/shikijs/shiki">Shiki</a> 成为我们新的默认语法高亮渲染器。它预设使用 <code>github-dark</code> 主题，可以在零配置的情况下，为你的代码块提供高亮，没有多余的 CSS 类、样式表或客户端 JS。</p><p>请查看我们新的<a href="/zh-cn/guides/markdown-content/#%E8%AF%AD%E6%B3%95%E9%AB%98%E4%BA%AE">语法高亮文档</a>以了解全部细节。<strong>如果你想继续 Prism 作为你的语法高亮器</strong>，在你项目的 markdown 配置中<a href="/zh-cn/guides/markdown-content/#prism-%E9%85%8D%E7%BD%AE">将 <code>syntaxHighlight</code> 选项设置为 <code>prism</code></a>。</p><div class="heading-wrapper level-h4" tabindex="-1"><h4 id="prism--组件有了一个新家"><code>&lt;Prism /&gt;</code> 组件有了一个新家</h4><a class="anchor-link" href="#prism--组件有了一个新家"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled &lt;Prism /&gt; 组件有了一个新家</span></a></div><p>作为我们保持 Astro 核心尽可能精简目标的一部分，我们已经将内置的 <code>Prism</code> 组件从 <code>astro/components</code> 移动到 <code>@astrojs/prism</code> 包中。现在你可以从 <code>@astrojs/prism</code> 中导入这个组件，像是这样。</p>
+<figure class="code-snippet lang-astro">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> Prism </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;@astrojs/prism&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span></code></pre>
+</figure><p>由于 <code>@astrojs/prism</code> 包仍然与 <code>astro</code> 核心捆绑在一起，你不需要安装任何新的东西，也不需要添加 Prism 作为一个集成！然而，请注意，我们计划在未来将 <code>@astrojs/prism</code>（以及一般的 Prism 语法高亮）分离到一个单独的、可安装的包中。更多信息请参见 <a href="/zh-cn/reference/api-reference/#prism-"><code>&lt;Prism /&gt;</code> 组件 API 参考</a> 。</p><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="css-解析器更新">CSS 解析器更新</h3><a class="anchor-link" href="#css-解析器更新"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled CSS 解析器更新</span></a></div><p>我们的内嵌 CSS 解析器已经更新，并且对高级 CSS 语法（如容器查询）有了更好的支持。对于大多数用户来说，这应该是一个不可见的变化，但希望进阶级用户会喜欢新的 CSS 功能支持。</p><div class="heading-wrapper level-h2" tabindex="-1"><h2 id="迁移至-v024">迁移至 v0.24</h2><a class="anchor-link" href="#迁移至-v024"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled 迁移至 v0.24</span></a></div><blockquote>
+<p>新的构建策略在 0.24 上默认开启。如果你遇到问题，你可以通过传递 <code>--legacy-build</code> 标志继续使用旧的构建策略。请<a href="https://github.com/withastro/astro/issues/new/choose">创建 issue</a> 以便我们解决新构建策略的问题。</p>
+</blockquote><p>0.24 引入了全新的<strong>静态生成</strong>策略，它改变了一些特性的行为。在以前的 Astro 版本中，这是可用行为选择加入标志：<code>--experimental-static-build</code>。</p><p>要在迁移前进行过渡，请注意迁移到此新构建引擎所需的以下更改。你可以随时对代码库进行这些更改，以便提前做好准备。</p><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="废弃-astroresolve">废弃 Astro.resolve()</h3><a class="anchor-link" href="#废弃-astroresolve"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled 废弃 Astro.resolve()</span></a></div><p><code>Astro.resolve()</code> 允许你获取可能希望在浏览器中引用的资源的解析链接。这通常是在 <code>&lt;link&gt;</code> 和 <code>&lt;img&gt;</code> 标签中根据需要选择性进行加载的 CSS 文件和图像。不幸的是，由于 Astro 现在在<strong>构建时</strong>而不是在<strong>渲染时</strong>中构建资源，这将不再有效。你需要将引用资源升级到以下几个未来可用项之一：</p><div class="heading-wrapper level-h4" tabindex="-1"><h4 id="如何解析-css-文件">如何解析 CSS 文件</h4><a class="anchor-link" href="#如何解析-css-文件"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled 如何解析 CSS 文件</span></a></div><p><strong>1. ESM 导入（推荐）</strong></p><p><strong>示例：</strong> <code>import './style.css';</code>
+<strong>适用于：</strong> 如果你的 CSS 文件位于 <code>src/</code> 目录中，并且你需要自动 CSS 构建和优化功能。</p><p>用 ESM 导入将将 CSS 添加到页面上。Astro 检测这些 CSS 导入，然后自动构建、优化和添加 CSS 到页面。这是从 <code>Astro.resolve()</code> 迁移的最简单方法，同时保持 Astro 提供的自动构建/捆绑。</p>
+<figure class="code-snippet lang-astro">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#ABA8BD">// 示例： Astro 会自动为你包括并优化该 CSS</span></span>
+<span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;./style.css&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">html</span><span style="color:#C7C5D3">&gt;</span><span style="color:#ABA8BD">&lt;!-- Your page here --&gt;</span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">html</span><span style="color:#C7C5D3">&gt;</span></span></code></pre>
+</figure><p>在任何支持 ESM 导入的地方都可以导入 CSS，包括：</p><ul>
+<li>JavaScript 文件</li>
+<li>TypeScript 文件</li>
+<li>Astro 组件前端</li>
+<li>非 Astro 组件，如 React、Svelte 等</li>
+</ul><p>当使用此方法导入 CSS 文件时，任何 <code>@import</code> 语句也会被解析并内联到导入的 CSS 文件中。所有 <code>url()</code> 引用也相对于源文件进行解析，并且任何 <code>url()</code> 引用的资源都将包含在最终构建中。</p><p><strong>2. 绝对路径</strong></p><p><strong>示例：</strong> <code>&lt;link href="/style.css"&gt;</code>
+<strong>适用于：</strong> 如果你的 CSS 文件位于 <code>public/</code> 中，并且你更喜欢自己创建 HTML <code>link</code> 元素。</p><p>你可以通过组件模板中的绝对路径路径引用 <code>public/</code> 目录中的任何文件。如果你想自己控制页面上的 <code>&lt;link&gt;</code> 标记，这是一个不错的选择。但是，当你使用上述 <code>import</code> 方法时，这种方法也会跳过由 Astro 提供的 CSS 处理、捆绑和优化。</p><p>我们建议使用 <code>import</code> 方法而非绝对路径方法，因为它在默认情况下提供了最佳的 CSS 性能和功能。</p><div class="heading-wrapper level-h4" tabindex="-1"><h4 id="如何解析-javascript-文件">如何解析 JavaScript 文件</h4><a class="anchor-link" href="#如何解析-javascript-文件"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled 如何解析 JavaScript 文件</span></a></div><p><strong>1. 绝对 URL 路径</strong></p><p><strong>示例：</strong> <code>&lt;script src="/some-external-script.js" /&gt;</code>
+<strong>适用于：</strong> 如果你的 JavaScript 文件位于 <code>public/</code> 中。</p><p>你可以通过 Astro 组件模板中的绝对路径引用 <code>public/</code> 目录中的任何文件。对于外部脚本来说，这是一个很好的默认选项，因为它可以让你自己控制页面上的 <code>&lt;script&gt;</code> 标记。</p><p>请注意，当你使用下面描述的 <code>import</code> 方法时，这种方法会跳过由 Astro 提供的 JavaScript 处理、捆绑和优化。但是，这对于已经发布并与 Astro 分开压缩的任何外部脚本而言可能是首选项。如果你的脚本是从外部源下载的，那么这种方法可能是首选。</p><p><strong>2. 通过<code>&lt;script hoist&gt;</code>进行 ESM 导入</strong></p><p><strong>示例：</strong> <code>&lt;script lift&gt;import './some-external-script.js';&lt;/script&gt;</code>
+<strong>适用于：</strong> 如果你的外部脚本位于 <code>src/</code> 内，并且_它支持 ESM 模块类型。</p><p>在你的 Astro 模板中的 <code>&lt;script lift&gt;</code> 元素内使用 ESM 导入，Astro 将在你的最终构建中包含 JavaScript 文件。 Astro 会检测这些 JavaScript 客户端导入，然后自动构建、优化 JavaScript 并将其添加到页面中。这是从 <code>Astro.resolve()</code> 迁移的最简单方法，同时保持 Astro 提供的自动构建/捆绑。</p>
+<figure class="code-snippet lang-astro">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">script</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">hoist</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;./some-external-script.js&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">script</span><span style="color:#C7C5D3">&gt;</span></span></code></pre>
+</figure><p>请注意，Astro 会将此外部脚本与你的客户端 JavaScript 的其余部分捆绑在一起，并将其加载到 <code>type="module"</code> 脚本上下文中。一些较旧的 JavaScript 文件可能不是用 <code>module</code> 上下文编写的，在这种情况下，可能需要更新它们以使用此方法。</p><div class="heading-wrapper level-h4" tabindex="-1"><h4 id="如何解析图像和其他资源">如何解析图像和其他资源</h4><a class="anchor-link" href="#如何解析图像和其他资源"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled 如何解析图像和其他资源</span></a></div><p><strong>1. 绝对路径（推荐）</strong></p><p><strong>示例：</strong> <code>&lt;img src="/penguin.png"&gt;</code>
+**适用于：**如果你想将资源存储于 <code>public/</code>。</p><p>如果你把图像放置于 <code>public/</code> 中，你可以直接在组件模板中通过绝对路径安全地引用它们。这是目前最简单的引用资源的方法，建议大多数用户在开始使用 Astro 时使用。</p><p><strong>2. ESM 导入</strong></p><p><strong>示例：</strong> <code>import imgUrl from './penguin.png'</code>
+<strong>适用于：</strong> 如果你想将资源存储与 <code>src/</code> 目录，并想要自动优化功能，如文件名加密。</p><p>这可以在任何 JavaScript 或 Astro 组件中使用，并返回一个最终图像的解析链接。一旦你有了解析链接，你就可以在组件模板的任何地方使用它。</p>
+<figure class="code-snippet lang-astro">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#ABA8BD">// 示例：Astro 将在最终构建中包含此图像文件</span></span>
+<span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> imgUrl </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;./penguin.png&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">img</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">src</span><span style="color:#C7C5D3">={</span><span style="color:#D8DEE9">imgUrl</span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">/&gt;</span></span></code></pre>
+</figure><p>与 Astro 处理 CSS 的方式类似，ESM 导入允许 Astro 自动为你执行一些简单的构建优化。例如，任何使用 ESM 导入 <code>src/</code>内资源（如 <code>import imgUrl from './penguin.png'</code>）将自动对其文件名进行加密。这可以让你在服务器上更积极地缓存文件，提高用户性能。在未来，Astro 可能会添加更多像这样的优化。</p><p><strong>提示：</strong> 如果你不喜欢静态 ESM 导入，Astro 也支持动态 ESM 导入。如果你喜欢这种语法，我们推荐使用这个选项。<code>&lt;img src={(await import('./penguin.png')).default}. /&gt;</code>。</p><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="废弃-script-默认处理">废弃 <code>&lt;script&gt;</code> 默认处理</h3><a class="anchor-link" href="#废弃-script-默认处理"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled 废弃 &lt;script&gt; 默认处理</span></a></div><p>以前, 所有的 <code>&lt;script&gt;</code> 元素都会自动写入最终的 HTML 输出、处理和捆绑中。这将不再是默认行为。从 0.24 起，你必须在选择要处理的 <code>&lt;script&gt;</code> 元素上加上 <code>hoist</code> 属性。Hoist 模块同样需要使用 <code>type="module"</code>。</p>
+<figure class="code-snippet lang-astro">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">script</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#C7C5D3">  </span><span style="color:#ABA8BD">// Will be rendered into the HTML exactly as written!</span></span>
+<span class="line"><span style="color:#C7C5D3">  </span><span style="color:#ABA8BD">// ESM imports will not be resolved relative to the file.</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">script</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">script</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">type</span><span style="color:#C7C5D3">=</span><span style="color:#16C082">&quot;module&quot;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">hoist</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#C7C5D3">  </span><span style="color:#ABA8BD">// Processed! Bundled! ESM imports work, even to npm packages.</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">script</span><span style="color:#C7C5D3">&gt;</span></span></code></pre>
+</figure><div class="heading-wrapper level-h2" tabindex="-1"><h2 id="迁移至-v023">迁移至 v0.23</h2><a class="anchor-link" href="#迁移至-v023"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled 迁移至 v0.23</span></a></div><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="丢失-sass-错误">丢失 Sass 错误</h3><a class="anchor-link" href="#丢失-sass-错误"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled 丢失 Sass 错误</span></a></div>
+<figure class="code-snippet lang-">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#d8dee9">Preprocessor dependency &quot;sass&quot; not found. Did you install it?</span></span></code></pre>
+</figure><p>我们在探索减小 npm 安装大小，我们将 <a href="https://sass-lang.com/">Sass</a> 移动到外部作为一个可选依赖。如果你在项目中使用 Sass，你可以通过运行 <code>npm install sass --save-dev</code>  将其作为依赖。</p><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="废弃未转义的-html">废弃未转义的 HTML</h3><a class="anchor-link" href="#废弃未转义的-html"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled 废弃未转义的 HTML</span></a></div><p>在 Astro v0.23+ 中，现在表达式中的未转义的 HTML 内容被废弃了。
+在未来的版本，表达式中的内容将提供字符串转义以防御意外的 HTML 注入。</p>
+<figure class="code-snippet lang-diff">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#C7C5D3"><span style="user-select: none;">-</span><span style="color:#FF657C"> &lt;h1&gt;{title}&lt;/h1&gt; &lt;!-- &lt;h1&gt;Hello &lt;strong&gt;World&lt;/strong&gt;&lt;/h1&gt; --&gt;</span></span>
+<span class="line"><span style="color:#C7C5D3"><span style="user-select: none;">+</span><span style="color:#16C082"> &lt;h1&gt;{title}&lt;/h1&gt; &lt;!-- &lt;h1&gt;Hello &amp;lt;strong&amp;gt;World&amp;lt;/strong&amp;gt;&lt;/h1&gt; --&gt;</span></span></code></pre>
+</figure><p>要继续注入未转义的 HTML，你现在可以使用 <code>set:html</code>。</p>
+<figure class="code-snippet lang-diff">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#C7C5D3"><span style="user-select: none;">-</span><span style="color:#FF657C"> &lt;h1&gt;{title}&lt;/h1&gt;</span></span>
+<span class="line"><span style="color:#C7C5D3"><span style="user-select: none;">+</span><span style="color:#16C082"> &lt;h1 set:html={title} /&gt;</span></span></code></pre>
+</figure><p>要避免使用嵌套元素，可以将 <code>set:html</code> 和 <code>&lt;Fragment&gt;</code> 一起使用。</p>
+<figure class="code-snippet lang-diff">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#C7C5D3"><span style="user-select: none;">-</span><span style="color:#FF657C"> &lt;h1&gt;{title}!&lt;/h1&gt;</span></span>
+<span class="line"><span style="color:#C7C5D3"><span style="user-select: none;">+</span><span style="color:#16C082"> &lt;h1&gt;&lt;Fragment set:html={title}&gt;!&lt;/h1&gt;</span></span></code></pre>
+</figure><p>你也可以使用 <code>set:text</code> 防御意外的 HTML 注入。</p>
+<figure class="code-snippet lang-astro">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">h1</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">set:text</span><span style="color:#C7C5D3">={</span><span style="color:#D8DEE9">title</span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">/&gt;</span><span style="color:#D8DEE9"> </span><span style="color:#ABA8BD">&lt;!-- &lt;h1&gt;Hello &amp;lt;strong&amp;gt;World&amp;lt;/strong&amp;gt;&lt;/h1&gt; --&gt;</span></span></code></pre>
+</figure><div class="heading-wrapper level-h2" tabindex="-1"><h2 id="迁移至-v021">迁移至 v0.21</h2><a class="anchor-link" href="#迁移至-v021"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled 迁移至 v0.21</span></a></div><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="vite">Vite</h3><a class="anchor-link" href="#vite"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Vite</span></a></div><p>从 v0.21 开始，Astro 将使用 <a href="https://vitejs.dev">Vite</a> 进行构建。
+因此写在 <code>snowpack.config.mjs</code> 中的配置需要移动到 <code>astro.config.mjs</code>。</p>
+<figure class="code-snippet lang-js">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">// @ts-check</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#ABA8BD">/** </span><span style="color:#C7C5D3">@</span><span style="color:#FFBD2E">type</span><span style="color:#ABA8BD"> </span><span style="color:#C7C5D3">{</span><span style="color:#ABA8BD">import(&#39;astro&#39;).AstroUserConfig</span><span style="color:#C7C5D3">}</span><span style="color:#ABA8BD"> */</span></span>
+<span class="line"><span style="color:#FF657C">export</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">default</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#66ADFF">renderers</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> []</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#66ADFF">vite</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#66ADFF">plugins</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> []</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">},</span></span>
+<span class="line"><span style="color:#C7C5D3">};</span></span></code></pre>
+</figure><p>了解更多配置 Vite，的信息，请访问它们的<a href="https://vitejs.dev/config/">配置指南</a>。</p><div class="heading-wrapper level-h4" tabindex="-1"><h4 id="vite-插件">Vite 插件</h4><a class="anchor-link" href="#vite-插件"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Vite 插件</span></a></div><p>在 Astro v0.21+ 中，可以 <code>astro.config.mjs</code> 在中配置 Vite 插件。</p>
+<figure class="code-snippet lang-js">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">imagetools</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;vite-imagetools&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF657C">export</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">default</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#66ADFF">vite</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#66ADFF">plugins</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> [</span><span style="color:#66ADFF">imagetools</span><span style="color:#D8DEE9">()]</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">},</span></span>
+<span class="line"><span style="color:#C7C5D3">};</span></span></code></pre>
+</figure><p>了解更多 Vite 插件信息，请访问它们的<a href="https://vitejs.dev/guide/using-plugins.html">插件指南</a>。</p><div class="heading-wrapper level-h4" tabindex="-1"><h4 id="渲染器改用-vite">渲染器改用 Vite</h4><a class="anchor-link" href="#渲染器改用-vite"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled 渲染器改用 Vite</span></a></div><p>在 Astro v0.21+ 插件现在需要使用 <code>viteConfig()</code>。</p>
+<figure class="code-snippet has-title lang-diff">
+	<figcaption class="header"><span class="title">renderer-svelte/<wbr/>index.js</span></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#C7C5D3"><span style="user-select: none;">+</span><span style="color:#16C082"> import { svelte } from &#39;@sveltejs/vite-plugin-svelte&#39;;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D8DEE9">export default {</span></span>
+<span class="line"><span style="color:#D8DEE9">  name: &#39;@astrojs/renderer-svelte&#39;,</span></span>
+<span class="line"><span style="color:#D8DEE9">  client: &#39;./client.js&#39;,</span></span>
+<span class="line"><span style="color:#D8DEE9">  server: &#39;./server.js&#39;,</span></span>
+<span class="line"><span style="color:#C7C5D3"><span style="user-select: none;">-</span><span style="color:#FF657C">  snowpackPlugin: &#39;@snowpack/plugin-svelte&#39;,</span></span>
+<span class="line"><span style="color:#C7C5D3"><span style="user-select: none;">-</span><span style="color:#FF657C">  snowpackPluginOptions: { compilerOptions: { hydratable: true } },</span></span>
+<span class="line"><span style="color:#C7C5D3"><span style="user-select: none;">+</span><span style="color:#16C082">  viteConfig() {</span></span>
+<span class="line"><span style="color:#C7C5D3"><span style="user-select: none;">+</span><span style="color:#16C082">    return {</span></span>
+<span class="line"><span style="color:#C7C5D3"><span style="user-select: none;">+</span><span style="color:#16C082">      optimizeDeps: {</span></span>
+<span class="line"><span style="color:#C7C5D3"><span style="user-select: none;">+</span><span style="color:#16C082">        include: [&#39;@astrojs/renderer-svelte/client.js&#39;, &#39;svelte&#39;, &#39;svelte/internal&#39;],</span></span>
+<span class="line"><span style="color:#C7C5D3"><span style="user-select: none;">+</span><span style="color:#16C082">        exclude: [&#39;@astrojs/renderer-svelte/server.js&#39;],</span></span>
+<span class="line"><span style="color:#C7C5D3"><span style="user-select: none;">+</span><span style="color:#16C082">      },</span></span>
+<span class="line"><span style="color:#C7C5D3"><span style="user-select: none;">+</span><span style="color:#16C082">      plugins: [</span></span>
+<span class="line"><span style="color:#C7C5D3"><span style="user-select: none;">+</span><span style="color:#16C082">        svelte({</span></span>
+<span class="line"><span style="color:#C7C5D3"><span style="user-select: none;">+</span><span style="color:#16C082">          emitCss: true,</span></span>
+<span class="line"><span style="color:#C7C5D3"><span style="user-select: none;">+</span><span style="color:#16C082">          compilerOptions: { hydratable: true },</span></span>
+<span class="line"><span style="color:#C7C5D3"><span style="user-select: none;">+</span><span style="color:#16C082">        }),</span></span>
+<span class="line"><span style="color:#C7C5D3"><span style="user-select: none;">+</span><span style="color:#16C082">      ],</span></span>
+<span class="line"><span style="color:#C7C5D3"><span style="user-select: none;">+</span><span style="color:#16C082">    };</span></span>
+<span class="line"><span style="color:#C7C5D3"><span style="user-select: none;">+</span><span style="color:#16C082">  },</span></span>
+<span class="line"><span style="color:#D8DEE9">}</span></span></code></pre>
+</figure><p>了解更多 Vite 插件信息，请访问它们的<a href="https://vitejs.dev/guide/using-plugins.html">插件指南</a>。</p><blockquote>
+<p>在之前的版本中，它们使用 <code>snowpackPlugin</code> 或 <code>snowpackPluginOptions</code> 进行配置。</p>
+</blockquote><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="别名">别名</h3><a class="anchor-link" href="#别名"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled 别名</span></a></div><p>在 v0.21+ 中，可以在 <code>tsconfig.json</code> 或 <code>jsconfig.json</code> 中添加导入别名。</p>
+<figure class="code-snippet lang-json">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&quot;</span><span style="color:#FFBD2E">compilerOptions</span><span style="color:#C7C5D3">&quot;</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">&quot;</span><span style="color:#FFBD2E">baseUrl</span><span style="color:#C7C5D3">&quot;</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&quot;.&quot;</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">&quot;</span><span style="color:#FFBD2E">paths</span><span style="color:#C7C5D3">&quot;</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">      </span><span style="color:#C7C5D3">&quot;</span><span style="color:#FFBD2E">@/components/*</span><span style="color:#C7C5D3">&quot;</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">[</span><span style="color:#16C082">&quot;src/components/*&quot;</span><span style="color:#C7C5D3">]</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">}</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">}</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span></span></code></pre>
+</figure><p><em><a href="https://code.visualstudio.com/docs/languages/jsconfig">VSCode</a> 和其他编辑器将自动集成这些别名.</em></p><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="导入中使用文件扩展名">导入中使用文件扩展名</h3><a class="anchor-link" href="#导入中使用文件扩展名"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled 导入中使用文件扩展名</span></a></div><p>在 Astro v0.21+ 中，需要附带文件在磁盘上真实的扩展名。如 <code>Div.tsx</code> 需要用 <code>Div.tsx</code>，而不能是 <code>Div.jsx</code>。</p>
+<figure class="code-snippet lang-diff">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#C7C5D3"><span style="user-select: none;">-</span><span style="color:#FF657C"> import Div from &#39;./Div.jsx&#39; // Astro v0.20</span></span>
+<span class="line"><span style="color:#C7C5D3"><span style="user-select: none;">+</span><span style="color:#16C082"> import Div from &#39;./Div.tsx&#39; // Astro v0.21</span></span></code></pre>
+</figure><p>这个更改同样适用于需要通过编译转换为 css 的文件 如 <code>Div.scss</code>：</p>
+<figure class="code-snippet lang-diff">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#C7C5D3"><span style="user-select: none;">-</span><span style="color:#FF657C"> &lt;link rel=&quot;stylesheet&quot; href={Astro.resolve(&#39;./Div.css&#39;)}&gt;</span></span>
+<span class="line"><span style="color:#C7C5D3"><span style="user-select: none;">+</span><span style="color:#16C082"> &lt;link rel=&quot;stylesheet&quot; href={Astro.resolve(&#39;./Div.scss&#39;)}&gt;</span></span></code></pre>
+</figure><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="移除-frontmatter-中的组件">移除 Frontmatter 中的组件</h3><a class="anchor-link" href="#移除-frontmatter-中的组件"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled 移除 Frontmatter 中的组件</span></a></div><p>以前你可以在 Astro Frontmatter 中使用 JSX 语法替代 Astro 组件语法来创建小型 它很酷，但最新的编译器不再支持。我们希望在未来的 Astro 版本中使用不同的、非 JSX API 的方式重新引入这个特性。</p><p>要迁移至 v0.21+，请将所有 JSX Astro 组件（也就所有在其他组件 frontmatter 中创建的 Astro 组件）转换成独立组件。</p><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="样式更改">样式更改</h3><a class="anchor-link" href="#样式更改"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled 样式更改</span></a></div><div class="heading-wrapper level-h4" tabindex="-1"><h4 id="autoprefixer">Autoprefixer</h4><a class="anchor-link" href="#autoprefixer"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Autoprefixer</span></a></div><p>Autoprefixer 不再默认运行，要启用需要：</p><ol>
+<li>
+<p>安装最新版本 (<code>npm i autoprefixer</code>)</p>
+</li>
+<li>
+<p>在项目根目录创建 <code>postcss.config.cjs</code> 文件并输入：</p>
+
+<figure class="code-snippet lang-js">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#FFBD2E">module</span><span style="color:#C7C5D3">.</span><span style="color:#FFBD2E">exports</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#66ADFF">plugins</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#66ADFF">autoprefixer</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{},</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">},</span></span>
+<span class="line"><span style="color:#C7C5D3">};</span></span></code></pre>
+</figure>
+</li>
+</ol><div class="heading-wrapper level-h4" tabindex="-1"><h4 id="tailwind-css">Tailwind CSS</h4><a class="anchor-link" href="#tailwind-css"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Tailwind CSS</span></a></div><p>确保你安装了 PostCSS 。它在上一个版本中是可选的，但现在必须要安装了：</p><ol>
+<li>
+<p>安装最新版本的 postcss (<code>npm i -D postcss</code>)</p>
+</li>
+<li>
+<p>在项目根目录创建 <code>postcss.config.cjs</code> 文件并输入：</p>
+
+<figure class="code-snippet lang-js">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#FFBD2E">module</span><span style="color:#C7C5D3">.</span><span style="color:#FFBD2E">exports</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#66ADFF">plugins</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#66ADFF">tailwindcss</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{},</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">},</span></span>
+<span class="line"><span style="color:#C7C5D3">};</span></span></code></pre>
+</figure>
+<p>阅读 <a href="https://tailwindcss.com/docs/installation#add-tailwind-as-a-post-css-plugin">Tailwind CSS 文档</a>了解更多信息</p>
+</li>
+</ol><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="已知问题">已知问题</h3><a class="anchor-link" href="#已知问题"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled 已知问题</span></a></div><div class="heading-wrapper level-h4" tabindex="-1"><h4 id="顶部导入">顶部导入</h4><a class="anchor-link" href="#顶部导入"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled 顶部导入</span></a></div><p>在 Astro v0.21+ 中引入了一个 bug，内部导入必须处于顶部。</p>
+<figure class="code-snippet lang-astro">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> Component </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;../components/Component.astro&#39;</span></span>
+<span class="line"><span style="color:#FF657C">const</span><span style="color:#D8DEE9"> whereShouldIPutMyImports </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&quot;on top!&quot;</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span></code></pre>
+</figure>
+	</section>
+	<aside class="next-previous-nav astro-CCFK4WYY">
+			<a class="ltr astro-2WJE3NNX" rel="prev" href="/zh-cn/editor-setup/">
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="32" width="32" fill="currentColor" class="astro-2WJE3NNX">
+			<path d="M447.1 256C447.1 273.7 433.7 288 416 288H109.3l105.4 105.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448s-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L109.3 224H416C433.7 224 447.1 238.3 447.1 256z" class="astro-2WJE3NNX"></path>
+		</svg>
+	
+	<div class="copy astro-2WJE3NNX">
+		<div class="heading astro-2WJE3NNX">返回
+</div>
+		<div class="name astro-2WJE3NNX">编辑器设置</div>
+	</div>
+</a>
+
+
+			<a class="rtl astro-2WJE3NNX" rel="next" href="/zh-cn/migrate/">
+	
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="32" width="32" fill="currentColor" class="astro-2WJE3NNX">
+			<path d="M438.6 278.6l-160 160C272.4 444.9 264.2 448 256 448s-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L338.8 288H32C14.33 288 .0016 273.7 .0016 256S14.33 224 32 224h306.8l-105.4-105.4c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160C451.1 245.9 451.1 266.1 438.6 278.6z" class="astro-2WJE3NNX"></path>
+		</svg>
+	<div class="copy astro-2WJE3NNX">
+		<div class="heading astro-2WJE3NNX">下一页
+</div>
+		<div class="name astro-2WJE3NNX">迁移指南</div>
+	</div>
+</a>
+
+
+		</aside>
+</article>
+
+
+			</div>
+		</main>
+	</body></html>

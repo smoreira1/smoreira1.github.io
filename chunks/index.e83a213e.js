@@ -1,0 +1,1 @@
+typeof process=="object"&&Object.prototype.toString.call(process);const t=Symbol.for("astro:renderer");function o(e,r){!e||typeof e=="function"&&Object.defineProperty(e,t,{value:r,enumerable:!1,writable:!1})}new TextEncoder;export{o as _};

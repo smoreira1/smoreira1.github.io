@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="es" class="initial astro-6SNADQYA">
+	<head>
+		<!-- Global Metadata --><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="hsl(256, 44%, 15%)" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="hsl(273, 37%, 93%)" media="(prefers-color-scheme: light)">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate icon" type="image/x-icon" href="/favicon.ico">
+<link rel="sitemap" href="/sitemap-index.xml">
+
+<!-- Global CSS -->
+<link rel="stylesheet" href="/theme.css">
+<link rel="stylesheet" href="/index.css">
+
+<!-- Scrollable a11y code helper -->
+<script type="module" src="/make-scrollable-code-focusable.js"></script>
+
+<!-- This is intentionally inlined to avoid FOUC -->
+
+
+<!-- Double-click to highlight code blocks (inline only). -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-130280175-15"></script>
+
+
+		<!-- Page Metadata --><link rel="canonical" href="https://docs.astro.build/es/core-concepts/astro-components/">
+
+
+<link rel="alternate" href="https://docs.astro.build/en/core-concepts/astro-components/" hreflang="en"><link rel="alternate" href="https://docs.astro.build/de/core-concepts/astro-components/" hreflang="de"><link rel="alternate" href="https://docs.astro.build/nl/core-concepts/astro-components/" hreflang="nl"><link rel="alternate" href="https://docs.astro.build/pt-br/core-concepts/astro-components/" hreflang="pt-BR"><link rel="alternate" href="https://docs.astro.build/fi/core-concepts/astro-components/" hreflang="fi"><link rel="alternate" href="https://docs.astro.build/es/core-concepts/astro-components/" hreflang="es"><link rel="alternate" href="https://docs.astro.build/zh-cn/core-concepts/astro-components/" hreflang="zh-CN"><link rel="alternate" href="https://docs.astro.build/zh-tw/core-concepts/astro-components/" hreflang="zh-TW"><link rel="alternate" href="https://docs.astro.build/bg/core-concepts/astro-components/" hreflang="bg"><link rel="alternate" href="https://docs.astro.build/fr/core-concepts/astro-components/" hreflang="fr"><link rel="alternate" href="https://docs.astro.build/bn/core-concepts/astro-components/" hreflang="bn"><link rel="alternate" href="https://docs.astro.build/kr/core-concepts/astro-components/" hreflang="kr"><link rel="alternate" href="https://docs.astro.build/ar/core-concepts/astro-components/" hreflang="ar"><link rel="alternate" href="https://docs.astro.build/da/core-concepts/astro-components/" hreflang="da"><link rel="alternate" href="https://docs.astro.build/ja/core-concepts/astro-components/" hreflang="ja"><link rel="alternate" href="https://docs.astro.build/ru/core-concepts/astro-components/" hreflang="ru"><link rel="alternate" href="https://docs.astro.build/it/core-concepts/astro-components/" hreflang="it"><link rel="alternate" href="https://docs.astro.build/pl/core-concepts/astro-components/" hreflang="pl"><link rel="alternate" href="https://docs.astro.build/hu/core-concepts/astro-components/" hreflang="hu">
+
+<!-- Algolia docsearch language facet -->
+<meta name="docsearch:language" content="es">
+
+<!-- OpenGraph Tags -->
+<meta property="og:title" content="Componentes">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://docs.astro.build/es/core-concepts/astro-components/">
+<meta property="og:locale" content="es">
+<meta property="og:image" content="https://docs.astro.build/default-og-image.png?v=1">
+<meta property="og:image:alt" content="Logo de Astro en el espacio estrellado, con un planeta púrpura parecido a Saturno flotando en el fondo a la derecha.">
+<meta name="description" property="og:description" content="Una introducción a la sintaxis de los componentes .astro.">
+<meta property="og:site_name" content="Documentación de Astro">
+
+<!-- Twitter Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="astrodotbuild">
+<meta name="twitter:title" content="Componentes">
+<meta name="twitter:description" content="Una introducción a la sintaxis de los componentes .astro.">
+<meta name="twitter:image" content="https://docs.astro.build/default-og-image.png?v=1">
+<meta name="twitter:image:alt" content="Logo de Astro en el espacio estrellado, con un planeta púrpura parecido a Saturno flotando en el fondo a la derecha.">
+
+<!--
+  TODO: Add json+ld data, maybe https://schema.org/APIReference makes sense?
+  Docs: https://developers.google.com/search/docs/advanced/structured-data/intro-structured-data
+  https://www.npmjs.com/package/schema-dts seems like a great resource for implementing this.
+  Even better, there’s a React component that integrates with `schema-dts`: https://github.com/google/react-schemaorg
+-->
+
+		<title>Componentes 🚀 Documentación de Astro</title>
+		
+		<script>
+			// This code was migrated/copied from ThemToggleBotton to make the
+			// dark mode toggle instant, vs. hidden inside of a Preact useEffect() call.
+			const theme = (() => {
+				if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+					return localStorage.getItem('theme');
+				}
+				if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+					return 'dark';
+				}
+				return 'light';
+			})();
+			if (theme === 'light') {
+				document.documentElement.classList.remove('theme-dark');
+			} else {
+				document.documentElement.classList.add('theme-dark');
+			}
+		</script>
+	<link rel="stylesheet" href="/assets/f542069c.c28a3eae.css" />
+<link rel="stylesheet" href="/assets/e2317e16.36ca0ba9.css" />
+<link rel="stylesheet" href="/assets/9cf9e8db.97bfbd59.css" />
+<link rel="stylesheet" href="/assets/7b344959.9c17731f.css" />
+<link rel="stylesheet" href="/assets/6b9ff114.c5aa952c.css" /><script type="module" src="/hoisted.6f80f745.js"></script></head>
+
+	<body class="astro-6SNADQYA">
+		<header class="astro-OWYKDMOT">
+	<a href="#article" class="sr-only focus:not-sr-only skiplink astro-D5GPSQS7">
+	<span class="astro-D5GPSQS7">Saltearse al contenido
+</span>
+</a>
+
+
+	<nav class="nav-wrapper astro-OWYKDMOT" aria-label="Superior">
+		<div dir="ltr" lang="en" class="logo flex astro-OWYKDMOT">
+			<ul class="astro-OWYKDMOT">
+				<li class="astro-OWYKDMOT">
+					<a class="astro astro-OWYKDMOT" href="https://smoreira1.github.io">
+						<span class="sr-only astro-OWYKDMOT">Astrso</span>
+						Stephen D. M.
+					</a>
+					<a class="astro-OWYKDMOT">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="astro-OWYKDMOT">
+							<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" class="astro-OWYKDMOT"></path>
+						</svg>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- <ThemeToggleButton 
+				client:visible 
+				labels={{  useLight: t('themeToggle.useLight'), useDark: t('themeToggle.useDark')  }}
+				isInsideHeader={true} 
+			/> -->
+		<!-- {lang && <LanguageSelect lang={lang} client:idle />}
+		<Search {lang} labels={docsearchStrings} />
+		<SidebarToggle client:idle /> -->
+	</nav>
+</header>
+		<main class="layout astro-6SNADQYA">
+			<aside id="left-sidebar" class="sidebar astro-6SNADQYA">
+				<nav aria-label="Primario" class="astro-M2FRLZWK">
+	<style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).load=a=>{(async()=>await(await a())())()};var a;{const l={0:t=>t,1:t=>JSON.parse(t,n),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,n)),5:t=>new Set(JSON.parse(t,n)),6:t=>BigInt(t),7:t=>new URL(t)},n=(t,r)=>{if(t===""||!Array.isArray(r))return r;const[e,i]=r;return e in l?l[e](i):void 0};customElements.get("astro-island")||customElements.define("astro-island",(a=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement?.closest("astro-island[ssr]"))return;const r=this.querySelectorAll("astro-slot"),e={},i=this.querySelectorAll("template[data-astro-template]");for(const s of i)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("data-astro-template")||"default"]=s.innerHTML,s.remove());for(const s of r)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("name")||"default"]=s.innerHTML);const o=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),n):{};this.hydrator(this)(this.Component,o,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((r,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate),await import(this.getAttribute("before-hydration-url"));const r=JSON.parse(this.getAttribute("opts"));Astro[this.getAttribute("client")](async()=>{const e=this.getAttribute("renderer-url"),[i,{default:o}]=await Promise.all([import(this.getAttribute("component-url")),e?import(e):()=>()=>{}]);return this.Component=i[this.getAttribute("component-export")||"default"],this.hydrator=o,this.hydrate},r,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},a.observedAttributes=["props"],a))}</script><astro-island uid="Z1zirGW" component-url="/SidebarToggleTabGroup.053ded21.js" component-export="default" renderer-url="/client.f1d83173.js" props="{&quot;defaultActiveTab&quot;:[0,&quot;learn&quot;],&quot;labels&quot;:[0,{&quot;learn&quot;:[0,&quot;Aprenda&quot;],&quot;api&quot;:[0,&quot;Referencias&quot;]}],&quot;class&quot;:[0,&quot;astro-M2FRLZWK&quot;]}" ssr="" client="load" before-hydration-url="data:text/javascript;charset=utf-8,//[no before-hydration script]" opts="{&quot;name&quot;:&quot;SidebarToggleTabGroup&quot;,&quot;value&quot;:true}" await-children=""><div class="TabGroup"><button class="active">Aprenda</button><button class>Referencias</button></div></astro-island>
+	<ul class="nav-groups astro-M2FRLZWK">
+		
+<li class="nav-group learn active astro-VB2AOOVT">
+		<details open class="astro-VB2AOOVT">
+			<summary class="nav-group-title astro-VB2AOOVT">
+				<h2 class="astro-VB2AOOVT">
+					Configuración
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true" class="astro-VB2AOOVT">
+						<path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z" class="astro-VB2AOOVT"></path>
+					</svg>
+				</h2>
+			</summary>
+			<ul class="astro-VB2AOOVT">
+				<li class="nav-link astro-VB2AOOVT">
+						<a href="/es/getting-started/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Empezando </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/es/install/auto/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Instalación </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/es/editor-setup/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Configuración del editor de código </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/es/migrate/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Technology Stack <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/es/migrate/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Technology History <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/es/migrate/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Design Patterns <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li>
+			</ul>
+		</details>
+	</li><li class="nav-group learn active astro-VB2AOOVT">
+		<details open class="astro-VB2AOOVT">
+			<summary class="nav-group-title astro-VB2AOOVT">
+				<h2 class="astro-VB2AOOVT">
+					Fundamentos
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true" class="astro-VB2AOOVT">
+						<path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z" class="astro-VB2AOOVT"></path>
+					</svg>
+				</h2>
+			</summary>
+			<ul class="astro-VB2AOOVT">
+				<li class="nav-link astro-VB2AOOVT">
+						<a href="/es/guides/deploy/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Desplegar </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/es/guides/deploy/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Desplegar </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/es/core-concepts/project-structure/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Estructura de proyecto </a>
+					</li>
+			</ul>
+		</details>
+	</li><li class="nav-group learn active astro-VB2AOOVT">
+		<details open class="astro-VB2AOOVT">
+			<summary class="nav-group-title astro-VB2AOOVT">
+				<h2 class="astro-VB2AOOVT">
+					Características
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true" class="astro-VB2AOOVT">
+						<path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z" class="astro-VB2AOOVT"></path>
+					</svg>
+				</h2>
+			</summary>
+			<ul class="astro-VB2AOOVT">
+				<li class="nav-link astro-VB2AOOVT">
+						<a href="/es/guides/configuring-astro/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Configuración de Astro </a>
+					</li>
+			</ul>
+		</details>
+	</li><li class="nav-group learn active astro-VB2AOOVT">
+		<details open class="astro-VB2AOOVT">
+			<summary class="nav-group-title astro-VB2AOOVT">
+				<h2 class="astro-VB2AOOVT">
+					Conceptos básicos
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true" class="astro-VB2AOOVT">
+						<path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z" class="astro-VB2AOOVT"></path>
+					</svg>
+				</h2>
+			</summary>
+			<ul class="astro-VB2AOOVT">
+				<li class="nav-link astro-VB2AOOVT">
+						<a href="/es/concepts/why-astro/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Angular <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/es/concepts/why-astro/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">TypeScript <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/es/concepts/why-astro/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">CSS <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/es/concepts/why-astro/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">HTML <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/es/concepts/why-astro/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">GIT <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li>
+			</ul>
+		</details>
+	</li>
+
+
+		
+<li class="nav-group api  astro-VB2AOOVT">
+		<details open class="astro-VB2AOOVT">
+			<summary class="nav-group-title astro-VB2AOOVT">
+				<h2 class="astro-VB2AOOVT">
+					Referencia
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true" class="astro-VB2AOOVT">
+						<path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z" class="astro-VB2AOOVT"></path>
+					</svg>
+				</h2>
+			</summary>
+			<ul class="astro-VB2AOOVT">
+				<li class="nav-link astro-VB2AOOVT">
+						<a href="/es/reference/configuration-reference/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Configuración </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/es/reference/cli-reference/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">CLI </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/es/reference/api-reference/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">API </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/es/reference/integrations-reference/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">API de Integraciones </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/es/reference/adapter-reference/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">API de adaptadores </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/es/reference/directives-reference/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Directivas en maquetado </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/es/guides/publish-to-npm/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Publica en NPM </a>
+					</li>
+			</ul>
+		</details>
+	</li>
+
+
+		<details open class="hide-on-large-screens astro-TL4TIEEL"><summary class="astro-TL4TIEEL"><h2 class="heading astro-TL4TIEEL">Comunidad
+</h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true" class="astro-TL4TIEEL">
+			<path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z" class="astro-TL4TIEEL">
+			</path>
+		</svg></summary><ul class="astro-TL4TIEEL">
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://astro.build/chat" target="_blank" class="astro-TL4TIEEL">
+				<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="comment-alt" class="svg-inline--fa fa-comment-alt fa-w-16 astro-TL4TIEEL" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" height="1em" width="1em">
+					<path fill="currentColor" d="M448 0H64C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h96v84c0 9.8 11.2 15.5 19.1 9.7L304 416h144c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64z" class="astro-TL4TIEEL">
+					</path>
+				</svg>
+				<span class="astro-TL4TIEEL">Únete al Discord
+</span>
+			</a>
+		</li>
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://www.linkedin.com/in/stephenmoreira" target="_blank" class="astro-TL4TIEEL">
+				<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024" class="astro-TL4TIEEL">
+					<path fill="currentColor" d="M928 161H699.2c-49.1 0-97.1 14.1-138.4 40.7L512 233l-48.8-31.3A255.2 255.2 0 0 0 324.8 161H96c-17.7 0-32 14.3-32 32v568c0 17.7 14.3 32 32 32h228.8c49.1 0 97.1 14.1 138.4 40.7l44.4 28.6c1.3.8 2.8 1.3 4.3 1.3s3-.4 4.3-1.3l44.4-28.6C602 807.1 650.1 793 699.2 793H928c17.7 0 32-14.3 32-32V193c0-17.7-14.3-32-32-32zM404 553.5c0 4.1-3.2 7.5-7.1 7.5H211.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45zm0-140c0 4.1-3.2 7.5-7.1 7.5H211.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45zm416 140c0 4.1-3.2 7.5-7.1 7.5H627.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45zm0-140c0 4.1-3.2 7.5-7.1 7.5H627.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45z" class="astro-TL4TIEEL"></path>
+				</svg>
+				<span class="astro-TL4TIEEL">Lee nuestro blog
+</span>
+			</a>
+		</li>
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://twitter.com/stephendmoreira" target="_blank" class="astro-TL4TIEEL">
+				<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256" class="astro-TL4TIEEL">
+					<path fill="currentColor" d="M209.765 128.15c0 16.013-4.9 31.34-13.266 44.575l33.447 33.447a128.918 128.918 0 0 0 25.783-77.35c0-29.265-9.754-55.751-26.47-77.336l-32.776 32.729a79.442 79.442 0 0 1 13.267 43.888l.015.047Z" class="astro-TL4TIEEL"></path>
+					<path fill="currentColor" d="M127.513 210.355c-45.367-.086-82.125-36.838-82.22-82.205c.069-45.386 36.835-82.166 82.22-82.252c16.732 0 32.058 4.901 44.607 13.267l32.744-32.776A128.965 128.965 0 0 0 127.514.636C57.123.636 0 57.76 0 128.15c0 70.359 57.124 127.513 127.513 127.513a125.126 125.126 0 0 0 77.351-26.501l-33.447-33.431c-11.861 9.754-27.157 14.624-43.904 14.624Z" class="astro-TL4TIEEL"></path>
+				</svg>
+				<span class="astro-TL4TIEEL">Twitter
+</span>
+			</a>
+		</li>
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://github.com/withastro/docs" target="_blank" class="astro-TL4TIEEL">
+				<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="github" class="svg-inline--fa fa-brands fa-github fa-w-16 astro-TL4TIEEL" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+					<path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" class="astro-TL4TIEEL"></path>
+				</svg>
+				<span class="astro-TL4TIEEL">Documentación de Astro en GitHub
+</span>
+			</a>
+		</li>
+	</ul></details open>
+
+
+		<li style="text-align: center;" class="astro-M2FRLZWK">
+			<script>(self.Astro=self.Astro||{}).visible=(i,c,n)=>{const r=async()=>{await(await i())()};let s=new IntersectionObserver(e=>{for(const t of e)if(!!t.isIntersecting){s.disconnect(),r();break}});for(let e=0;e<n.children.length;e++){const t=n.children[e];s.observe(t)}};</script><astro-island uid="19JeU6" component-url="/ThemeToggleButton.b38468b8.js" component-export="default" renderer-url="/client.f1d83173.js" props="{&quot;labels&quot;:[0,{&quot;useLight&quot;:[0,&quot;Usar tema claro&quot;],&quot;useDark&quot;:[0,&quot;Usar tema oscuro&quot;]}],&quot;class&quot;:[0,&quot;astro-M2FRLZWK&quot;]}" ssr="" client="visible" before-hydration-url="data:text/javascript;charset=utf-8,//[no before-hydration script]" opts="{&quot;name&quot;:&quot;ThemeToggleButton&quot;,&quot;value&quot;:true}" await-children=""><div class="theme-toggle "><label title="Usar tema claro" class><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path></svg><input type="radio" name="theme-toggle" value="light" aria-label="Usar tema claro" /></label><label title="Usar tema oscuro" class><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg><input type="radio" name="theme-toggle" value="dark" aria-label="Usar tema oscuro" /></label></div></astro-island>
+		</li>
+		<li class="astro-M2FRLZWK">
+			<!-- <div dir="ltr" lang="en" class="sponsors">
+	<h2 class="sponsors-title">Sponsored by</h2>
+	<div class="sponsor">
+		<a href="https://www.netlify.com/" aria-label="Go to Netlify website">
+			<svg class="sponsor-logo__netlify" viewBox="0 0 147 40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+				><radialGradient
+					id="netlify-gradient"
+					cx="-779.0521"
+					cy="1839.7205"
+					gradientTransform="matrix(0 38.301 44.1228 0 -81154.2578 29839.2441)"
+					gradientUnits="userSpaceOnUse"
+					r="1.0011"><stop offset="0" stop-color="#20c6b7"></stop><stop offset="1" stop-color="#4d9abf"></stop></radialGradient
+				><path
+					clip-rule="evenodd"
+					d="m53.37 12.98.12 2.2c1.4-1.7 3.24-2.55 5.53-2.55 3.95 0 5.96 2.27 6.03 6.8v12.57h-4.26v-12.32c0-1.21-.26-2.1-.78-2.68s-1.37-.87-2.55-.87c-1.72 0-3 .78-3.84 2.34v13.53h-4.26v-19.02zm24.38 19.37c-2.7 0-4.89-.85-6.57-2.56-1.68-1.7-2.52-3.98-2.52-6.81v-.53c0-1.9.36-3.59 1.1-5.09.73-1.49 1.76-2.66 3.08-3.49s2.79-1.25 4.42-1.25c2.58 0 4.58.83 5.99 2.48s2.11 3.99 2.11 7.01v1.72h-12.4c.13 1.57.65 2.81 1.57 3.73s2.07 1.37 3.46 1.37c1.95 0 3.54-.79 4.77-2.37l2.3 2.2c-.76 1.14-1.77 2.02-3.04 2.65s-2.69.94-4.27.94zm-.51-16.29c-1.17 0-2.11.41-2.83 1.23s-1.18 1.96-1.38 3.43h8.12v-.32c-.09-1.43-.47-2.51-1.14-3.24-.67-.74-1.59-1.1-2.77-1.1zm16.76-7.7v4.62h3.35v3.16h-3.35v10.62c0 .73.14 1.25.43 1.57s.8.48 1.54.48c.5 0 1-.06 1.49-.18v3.31c-.97.27-1.9.4-2.81.4-3.27 0-4.91-1.81-4.91-5.43v-10.77h-3.12v-3.16h3.12v-4.63zm11.14 23.64h-4.26v-27h4.26zm9.17 0h-4.26v-19.02h4.26zm-4.52-23.96c0-.65.21-1.2.62-1.63.42-.43 1.01-.65 1.78-.65s1.37.22 1.79.65.63.98.63 1.64c0 .64-.21 1.18-.63 1.61s-1.02.64-1.79.64-1.36-.21-1.78-.64c-.41-.44-.62-.98-.62-1.62zm10.66 23.96v-15.86h-2.89v-3.16h2.89v-1.74c0-2.11.58-3.74 1.75-4.89s2.81-1.72 4.91-1.72c.75 0 1.54.11 2.39.32l-.1 3.34c-.54-.1-1.08-.15-1.63-.14-2.04 0-3.05 1.05-3.05 3.15v1.69h3.86v3.16h-3.86v15.85zm17.87-6.12 3.86-12.9h4.54l-7.54 21.9c-1.16 3.2-3.12 4.8-5.89 4.8-.62 0-1.3-.11-2.05-.32v-3.31l.81.05c1.07 0 1.88-.2 2.43-.59.54-.39.97-1.05 1.29-1.98l.61-1.64-6.66-18.93h4.6z"
+					fill-rule="evenodd"></path><path
+					d="m27.89 14.14-.01-.01c-.01 0-.02-.01-.02-.01-.02-.02-.03-.06-.03-.09l.77-4.73 3.62 3.63-3.77 1.6c-.01 0-.02.01-.03.01h-.02s-.01-.01-.02-.02c-.14-.16-.31-.29-.49-.38zm5.26-.29 3.88 3.88c.81.81 1.21 1.21 1.35 1.67.02.07.04.14.05.21l-9.26-3.92s-.01 0-.01-.01c-.04-.02-.08-.03-.08-.07s.04-.06.08-.07l.01-.01zm5.12 7c-.2.38-.59.77-1.25 1.43l-4.37 4.37-5.65-1.18-.03-.01c-.05-.01-.1-.02-.1-.06-.04-.47-.28-.9-.66-1.19-.02-.02-.02-.06-.01-.09v-.01l1.06-6.53v-.02c.01-.05.01-.11.06-.11.46-.06.88-.3 1.16-.67.01-.01.01-.02.03-.03.03-.01.07 0 .1.01zm-6.62 6.8-7.19 7.19 1.23-7.56v-.01c0-.01 0-.02.01-.03.01-.02.04-.03.06-.04h.01c.27-.11.51-.29.69-.52.02-.03.05-.06.09-.06h.03zm-8.71 8.71-.81.81-8.95-12.94s-.01-.01-.01-.01c-.01-.02-.03-.04-.03-.06s.01-.03.02-.04l.01-.01c.03-.04.05-.08.07-.12l.02-.03c.01-.02.03-.05.05-.06s.05-.01.07 0l9.92 2.05c.03 0 .05.02.08.03.01.01.02.03.02.04.14.53.52.97 1.03 1.17.03.01.02.05 0 .08-.01.01-.01.03-.01.05-.12.74-1.19 7.27-1.48 9.04zm-1.69 1.69c-.6.59-.95.9-1.35 1.03-.39.12-.81.12-1.21 0-.47-.15-.87-.55-1.67-1.36l-8.99-8.99 2.35-3.64c.01-.02.02-.03.04-.05s.06-.01.09 0c.54.16 1.12.13 1.64-.08.03-.01.05-.02.07 0l.03.03zm-14.09-10.19-2.06-2.06 4.07-1.74c.01 0 .02-.01.03-.01.03 0 .05.03.07.07.04.06.08.12.13.18l.01.02c.01.02 0 .03-.01.05zm-2.98-2.97-2.61-2.61c-.44-.44-.77-.77-.99-1.04l7.94 1.65h.03c.05.01.1.02.1.06 0 .05-.06.07-.11.09l-.02.01zm-4.05-5c.01-.17.04-.33.09-.5.15-.47.55-.87 1.36-1.67l3.34-3.34c1.54 2.23 3.08 4.46 4.63 6.69.03.04.06.08.03.11-.15.16-.29.34-.4.53-.01.02-.03.05-.05.06-.01.01-.03 0-.04 0zm5.68-6.4 4.49-4.49c.42.19 1.96.83 3.33 1.41 1.04.44 1.99.84 2.29.97.03.01.06.02.07.05.01.02 0 .04 0 .06-.14.66.05 1.35.52 1.83.03.03 0 .07-.03.11l-.01.02-4.56 7.06c-.01.02-.02.04-.04.05s-.06.01-.09 0c-.18-.05-.36-.07-.54-.07-.16 0-.34.03-.52.06-.02 0-.04.01-.05 0-.02-.01-.03-.03-.05-.05zm5.4-5.4 5.81-5.81c.81-.81 1.21-1.21 1.67-1.36.39-.12.81-.12 1.21 0 .47.15.87.55 1.67 1.36l1.26 1.26-4.14 6.4c-.01.02-.02.03-.04.05s-.06.01-.09 0c-.66-.2-1.38-.06-1.92.37-.03.03-.07.01-.1 0-.53-.24-4.73-2.01-5.33-2.27zm12.5-3.67 3.82 3.82-.92 5.7v.02c0 .01 0 .03-.01.04-.01.02-.03.02-.05.03-.2.06-.38.15-.55.27-.01.01-.01.01-.02.02s-.02.02-.04.02c-.01 0-.03 0-.04-.01l-5.82-2.47-.01-.01c-.04-.02-.08-.03-.08-.07-.03-.32-.14-.64-.31-.91-.03-.05-.06-.09-.03-.14zm-3.93 8.6 5.45 2.31c.03.01.06.03.08.06.01.02.01.04 0 .06-.02.08-.03.17-.03.26v.15c0 .04-.04.05-.08.07h-.01c-.86.37-12.13 5.17-12.15 5.17s-.03 0-.05-.02c-.03-.03 0-.07.03-.11 0-.01.01-.01.01-.02l4.48-6.94.01-.01c.03-.04.06-.09.1-.09l.05.01c.1.01.19.03.28.03.68 0 1.31-.33 1.69-.9.01-.02.02-.03.03-.04.04-.01.08 0 .11.01zm-6.25 9.19 12.28-5.24s.02 0 .03.02c.07.07.12.11.18.15l.03.02c.02.01.05.03.05.06v.02l-1.05 6.46v.03c-.01.05-.01.11-.06.11-.57.04-1.08.36-1.37.85v.01c-.01.02-.03.05-.05.06s-.05.01-.07 0l-9.79-2.02c-.02-.02-.16-.53-.18-.53z"
+					fill="url(#netlify-gradient)"></path></svg
+			>
+		</a>
+	</div>
+</div> -->
+
+		</li>
+	</ul>
+</nav>
+
+
+
+
+			</aside>
+			<aside id="right-sidebar" class="sidebar astro-6SNADQYA">
+				<nav aria-label="Secundario" class="astro-7RGIIGOJ">
+	<script>(self.Astro=self.Astro||{}).media=(s,a)=>{const t=async()=>{await(await s())()};if(a.value){const e=matchMedia(a.value);e.matches?t():e.addEventListener("change",t,{once:!0})}};</script><astro-island uid="Z1a6FM0" component-url="/TableOfContents.109662f0.js" component-export="default" renderer-url="/client.f1d83173.js" props="{&quot;headings&quot;:[1,&quot;[[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;vista-general-de-un-componente\&quot;],\&quot;text\&quot;:[0,\&quot;Vista general de un componente\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;script-del-componente\&quot;],\&quot;text\&quot;:[0,\&quot;Script del componente\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;maquetado-del-componente\&quot;],\&quot;text\&quot;:[0,\&quot;Maquetado del componente\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;expresiones-jsx\&quot;],\&quot;text\&quot;:[0,\&quot;Expresiones JSX\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;variables\&quot;],\&quot;text\&quot;:[0,\&quot;Variables\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;atributos-dinámicos\&quot;],\&quot;text\&quot;:[0,\&quot;Atributos dinámicos\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;html-dinámico\&quot;],\&quot;text\&quot;:[0,\&quot;HTML dinámico\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;fragmentos-y-elementos-múltiples\&quot;],\&quot;text\&quot;:[0,\&quot;Fragmentos y elementos múltiples\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;props-de-componentes\&quot;],\&quot;text\&quot;:[0,\&quot;Props de componentes\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;slots\&quot;],\&quot;text\&quot;:[0,\&quot;Slots\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;slots-con-nombre\&quot;],\&quot;text\&quot;:[0,\&quot;Slots con nombre\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;contenido-alternativo-para-slots\&quot;],\&quot;text\&quot;:[0,\&quot;Contenido alternativo para slots\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;estilos-css\&quot;],\&quot;text\&quot;:[0,\&quot;Estilos CSS\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;scripts-del-lado-del-cliente\&quot;],\&quot;text\&quot;:[0,\&quot;Scripts del lado del cliente\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;utilizando-scripts-externos\&quot;],\&quot;text\&quot;:[0,\&quot;Utilizando Scripts Externos\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;utilizando-scripts-hoisted\&quot;],\&quot;text\&quot;:[0,\&quot;Utilizando Scripts Hoisted\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;próximos-pasos\&quot;],\&quot;text\&quot;:[0,\&quot;Próximos Pasos\&quot;]}]]&quot;],&quot;labels&quot;:[0,{&quot;onThisPage&quot;:[0,&quot;En esta página&quot;],&quot;overview&quot;:[0,&quot;Sinopsis&quot;]}],&quot;isMobile&quot;:[0,false],&quot;class&quot;:[0,&quot;astro-7RGIIGOJ&quot;]}" ssr="" client="media" before-hydration-url="data:text/javascript;charset=utf-8,//[no before-hydration script]" opts="{&quot;name&quot;:&quot;TableOfContents&quot;,&quot;value&quot;:&quot;(min-width: 50em)&quot;}" await-children=""><h2 class="heading" id="on-this-page-heading">En esta página</h2><ul><li class="header-link depth-2 current-header-link"><a href="#overview">Sinopsis</a></li><li class="header-link depth-2"><a href="#vista-general-de-un-componente">Vista general de un componente</a></li><li class="header-link depth-3"><a href="#script-del-componente">Script del componente</a></li><li class="header-link depth-3"><a href="#maquetado-del-componente">Maquetado del componente</a></li><li class="header-link depth-3"><a href="#expresiones-jsx">Expresiones JSX</a></li><li class="header-link depth-3"><a href="#props-de-componentes">Props de componentes</a></li><li class="header-link depth-3"><a href="#slots">Slots</a></li><li class="header-link depth-3"><a href="#estilos-css">Estilos CSS</a></li><li class="header-link depth-3"><a href="#scripts-del-lado-del-cliente">Scripts del lado del cliente</a></li><li class="header-link depth-2"><a href="#próximos-pasos">Próximos Pasos</a></li></ul></astro-island>
+	<!-- <h2 class="heading"><UIString key="rightSidebar.contribute" /></h2>
+<ul>
+	<li class={`header-link depth-2`}>
+		<a class="edit-on-github" href={editHref} target="_blank">
+			<svg
+				aria-hidden="true"
+				focusable="false"
+				data-prefix="fas"
+				data-icon="pen"
+				class="svg-inline--fa fa-pen fa-w-16"
+				role="img"
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512"
+				height="1em"
+				width="1em"
+			>
+				<path
+					fill="currentColor"
+					d="M290.74 93.24l128.02 128.02-277.99 277.99-114.14 12.6C11.35 513.54-1.56 500.62.14 485.34l12.7-114.22 277.9-277.88zm207.2-19.06l-60.11-60.11c-18.75-18.75-49.16-18.75-67.91 0l-56.55 56.55 128.02 128.02 56.55-56.55c18.75-18.76 18.75-49.16 0-67.91z"
+				></path>
+			</svg>
+			<span><UIString key="rightSidebar.editPage" /></span>
+		</a>
+	</li>
+	{isTranslatable &&
+		<li class={`header-link depth-2`}>
+			<a href="https://github.com/withastro/docs/blob/main/TRANSLATING.md" target="_blank">
+				<svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88.6 77.3" height="1.24em" width="1.24em" style="margin: -2px;">
+					<path fill="currentColor" d="M61,24.6h7.9l18.7,51.6h-7.7l-5.4-15.5H54.3l-5.6,15.5h-7.2L61,24.6z M72.6,55l-8-22.8L56.3,55H72.6z"></path>
+					<path
+						fill="currentColor"
+						d="M53.6,60.6c-10-4-16-9-22-14c0,0,1.3,1.3,0,0c-6,5-20,13-20,13l-4-6c8-5,10-6,19-13c-2.1-1.9-12-13-13-19h8          c4,9,10,14,10,14c10-8,10-19,10-19h8c0,0-1,13-12,24l0,0c5,5,10,9,19,13L53.6,60.6z M1.6,16.6h56v-8h-23v-7h-9v7h-24V16.6z"
+					></path>
+				</svg>
+				<span><UIString key="rightSidebar.translatePage" /></span>
+			</a>
+		</li>
+	}
+</ul> -->
+
+	<div class="astro-TL4TIEEL"><div class="astro-TL4TIEEL"><h2 class="heading astro-TL4TIEEL">Comunidad
+</h2></div><ul class="astro-TL4TIEEL">
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://astro.build/chat" target="_blank" class="astro-TL4TIEEL">
+				<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="comment-alt" class="svg-inline--fa fa-comment-alt fa-w-16 astro-TL4TIEEL" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" height="1em" width="1em">
+					<path fill="currentColor" d="M448 0H64C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h96v84c0 9.8 11.2 15.5 19.1 9.7L304 416h144c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64z" class="astro-TL4TIEEL">
+					</path>
+				</svg>
+				<span class="astro-TL4TIEEL">Únete al Discord
+</span>
+			</a>
+		</li>
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://www.linkedin.com/in/stephenmoreira" target="_blank" class="astro-TL4TIEEL">
+				<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024" class="astro-TL4TIEEL">
+					<path fill="currentColor" d="M928 161H699.2c-49.1 0-97.1 14.1-138.4 40.7L512 233l-48.8-31.3A255.2 255.2 0 0 0 324.8 161H96c-17.7 0-32 14.3-32 32v568c0 17.7 14.3 32 32 32h228.8c49.1 0 97.1 14.1 138.4 40.7l44.4 28.6c1.3.8 2.8 1.3 4.3 1.3s3-.4 4.3-1.3l44.4-28.6C602 807.1 650.1 793 699.2 793H928c17.7 0 32-14.3 32-32V193c0-17.7-14.3-32-32-32zM404 553.5c0 4.1-3.2 7.5-7.1 7.5H211.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45zm0-140c0 4.1-3.2 7.5-7.1 7.5H211.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45zm416 140c0 4.1-3.2 7.5-7.1 7.5H627.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45zm0-140c0 4.1-3.2 7.5-7.1 7.5H627.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45z" class="astro-TL4TIEEL"></path>
+				</svg>
+				<span class="astro-TL4TIEEL">Lee nuestro blog
+</span>
+			</a>
+		</li>
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://twitter.com/stephendmoreira" target="_blank" class="astro-TL4TIEEL">
+				<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256" class="astro-TL4TIEEL">
+					<path fill="currentColor" d="M209.765 128.15c0 16.013-4.9 31.34-13.266 44.575l33.447 33.447a128.918 128.918 0 0 0 25.783-77.35c0-29.265-9.754-55.751-26.47-77.336l-32.776 32.729a79.442 79.442 0 0 1 13.267 43.888l.015.047Z" class="astro-TL4TIEEL"></path>
+					<path fill="currentColor" d="M127.513 210.355c-45.367-.086-82.125-36.838-82.22-82.205c.069-45.386 36.835-82.166 82.22-82.252c16.732 0 32.058 4.901 44.607 13.267l32.744-32.776A128.965 128.965 0 0 0 127.514.636C57.123.636 0 57.76 0 128.15c0 70.359 57.124 127.513 127.513 127.513a125.126 125.126 0 0 0 77.351-26.501l-33.447-33.431c-11.861 9.754-27.157 14.624-43.904 14.624Z" class="astro-TL4TIEEL"></path>
+				</svg>
+				<span class="astro-TL4TIEEL">Twitter
+</span>
+			</a>
+		</li>
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://github.com/withastro/docs" target="_blank" class="astro-TL4TIEEL">
+				<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="github" class="svg-inline--fa fa-brands fa-github fa-w-16 astro-TL4TIEEL" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+					<path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" class="astro-TL4TIEEL"></path>
+				</svg>
+				<span class="astro-TL4TIEEL">Documentación de Astro en GitHub
+</span>
+			</a>
+		</li>
+	</ul></div>
+
+
+</nav>
+
+
+			</aside>
+			<div id="main-content" class="astro-6SNADQYA">
+				<nav class="mobile-toc astro-CCFK4WYY">
+			<astro-island uid="Z1j16oa" component-url="/TableOfContents.109662f0.js" component-export="default" renderer-url="/client.f1d83173.js" props="{&quot;headings&quot;:[1,&quot;[[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;vista-general-de-un-componente\&quot;],\&quot;text\&quot;:[0,\&quot;Vista general de un componente\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;script-del-componente\&quot;],\&quot;text\&quot;:[0,\&quot;Script del componente\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;maquetado-del-componente\&quot;],\&quot;text\&quot;:[0,\&quot;Maquetado del componente\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;expresiones-jsx\&quot;],\&quot;text\&quot;:[0,\&quot;Expresiones JSX\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;variables\&quot;],\&quot;text\&quot;:[0,\&quot;Variables\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;atributos-dinámicos\&quot;],\&quot;text\&quot;:[0,\&quot;Atributos dinámicos\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;html-dinámico\&quot;],\&quot;text\&quot;:[0,\&quot;HTML dinámico\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;fragmentos-y-elementos-múltiples\&quot;],\&quot;text\&quot;:[0,\&quot;Fragmentos y elementos múltiples\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;props-de-componentes\&quot;],\&quot;text\&quot;:[0,\&quot;Props de componentes\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;slots\&quot;],\&quot;text\&quot;:[0,\&quot;Slots\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;slots-con-nombre\&quot;],\&quot;text\&quot;:[0,\&quot;Slots con nombre\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;contenido-alternativo-para-slots\&quot;],\&quot;text\&quot;:[0,\&quot;Contenido alternativo para slots\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;estilos-css\&quot;],\&quot;text\&quot;:[0,\&quot;Estilos CSS\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;scripts-del-lado-del-cliente\&quot;],\&quot;text\&quot;:[0,\&quot;Scripts del lado del cliente\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;utilizando-scripts-externos\&quot;],\&quot;text\&quot;:[0,\&quot;Utilizando Scripts Externos\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;utilizando-scripts-hoisted\&quot;],\&quot;text\&quot;:[0,\&quot;Utilizando Scripts Hoisted\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;próximos-pasos\&quot;],\&quot;text\&quot;:[0,\&quot;Próximos Pasos\&quot;]}]]&quot;],&quot;labels&quot;:[0,{&quot;onThisPage&quot;:[0,&quot;En esta página&quot;],&quot;overview&quot;:[0,&quot;Sinopsis&quot;]}],&quot;isMobile&quot;:[0,true],&quot;class&quot;:[0,&quot;astro-CCFK4WYY&quot;]}" ssr="" client="media" before-hydration-url="data:text/javascript;charset=utf-8,//[no before-hydration script]" opts="{&quot;name&quot;:&quot;TableOfContents&quot;,&quot;value&quot;:&quot;(max-width: 72em)&quot;}" await-children=""><details class="toc-mobile-container"><summary class="toc-mobile-header"><div class="toc-mobile-header-content"><div class="toc-toggle"><h2 class="heading" id="on-this-page-heading">En esta página</h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z"></path></svg></div></div></summary><ul><li class="header-link depth-2 current-header-link"><a href="#overview">Sinopsis</a></li><li class="header-link depth-2"><a href="#vista-general-de-un-componente">Vista general de un componente</a></li><li class="header-link depth-3"><a href="#script-del-componente">Script del componente</a></li><li class="header-link depth-3"><a href="#maquetado-del-componente">Maquetado del componente</a></li><li class="header-link depth-3"><a href="#expresiones-jsx">Expresiones JSX</a></li><li class="header-link depth-3"><a href="#props-de-componentes">Props de componentes</a></li><li class="header-link depth-3"><a href="#slots">Slots</a></li><li class="header-link depth-3"><a href="#estilos-css">Estilos CSS</a></li><li class="header-link depth-3"><a href="#scripts-del-lado-del-cliente">Scripts del lado del cliente</a></li><li class="header-link depth-2"><a href="#próximos-pasos">Próximos Pasos</a></li></ul></details></astro-island>
+		</nav>
+
+<article id="article" class="content astro-CCFK4WYY">
+	<section class="main-section astro-CCFK4WYY">
+		<h1 class="content-title astro-CCFK4WYY" id="overview">Componentes</h1>
+		<p><strong>Los componentes de Astro</strong> son los bloques fundamentales para cualquier proyecto de Astro. Están compuestos únicamente por HTML y no poseen ejecución del lado del cliente.</p><p>La sintaxis del componente de Astro es un superconjunto de HTML. La sintaxis se <a href="/es/comparing-astro-vs-other-tools/#astro-vs-jsx">diseñó para que resulte familiar para cualquier persona con experiencia en HTML o JSX&nbsp;(EN)</a>, además es compatible con componentes y expresiones de Javascript. Puedes identificar los componentes Astro por su extensión: <code>.astro</code>.</p><p>Los componentes de Astro son extremadamente flexibles. Un componente de Astro puede contener <strong>UI reutilizable</strong>, tal como encabezados o una tarjeta de perfil. También puede contener un fragmento pequeño de HTML, o una colección de etiquetas <code>&lt;meta&gt;</code> para facilitar nuestro trabajo con el SEO. Los componentes de Astro también pueden contener una plantilla de página.</p><p>Lo más importante acerca de los componentes de Astro es que <strong>se renderizan a HTML durante la compilación final</strong>. Aún si posees código Javascript dentro de tus componentes, este código solo se ejecuta al compilar tu projecto, siendo removido de la página final que se envía al usuario. El resultado es un sitio web más rápido y sin rastros de Javascript.</p><div class="heading-wrapper level-h2" tabindex="-1"><h2 id="vista-general-de-un-componente">Vista general de un componente</h2><a class="anchor-link" href="#vista-general-de-un-componente"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Vista general de un componente</span></a></div><p>Un componente de Astro se compone de dos partes principales: el <strong>script del componente</strong> y el <strong>maquetado del componente</strong>. Cada parte cumple una función diferente, pero juntas proveen un marco de trabajo que es fácil de utilizar y lo suficientemente expresivo para manejar cualquier cosa que desees construir.</p>
+<figure class="code-snippet lang-astro">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#ABA8BD">// Script del componente (JavaScript)</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#ABA8BD">&lt;!-- Maquetado del componente (HTML + Expresiones JS) --&gt;</span></span></code></pre>
+</figure><p>Puedes utilizar componentes dentro de otros componentes para construir una UI más avanzada y compleja. Por ejemplo, el componente <code>Button</code> puede ser utilizado para crear un componente <code>ButtonGroup</code> de la siguiente manera:</p>
+<figure class="code-snippet has-title lang-astro">
+	<figcaption class="header"><span class="title">ButtonGroup.astro</span></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> Button </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;./Button.astro&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">div</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">Button</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">title</span><span style="color:#C7C5D3">=</span><span style="color:#16C082">&quot;Boton 1&quot;</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">/&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">Button</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">title</span><span style="color:#C7C5D3">=</span><span style="color:#16C082">&quot;Boton 2&quot;</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">/&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">Button</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">title</span><span style="color:#C7C5D3">=</span><span style="color:#16C082">&quot;Boton 3&quot;</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">/&gt;</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">div</span><span style="color:#C7C5D3">&gt;</span></span></code></pre>
+</figure><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="script-del-componente">Script del componente</h3><a class="anchor-link" href="#script-del-componente"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Script del componente</span></a></div><p>Astro utiliza una valla de código (<code>---</code>) para identificar el script del componente Astro. Si has escrito Markdown anteriormente deberías estar familiarizado con un concepto similar llamado <em>frontmatter</em>. El script del componente de Astro fue inspirado por este concepto.</p><p>Puedes utilizar el script del componente para escribir cualquier código de Javascript que necesites para renderizar tu maquetado. Esto puede incluir:</p><ul>
+<li>Importar otros componentes Astro</li>
+<li>Importar componentes de otros frameworks, por ejemplo React</li>
+<li>Importar data, tal como un archivo JSON</li>
+<li>Consultar contenido de una API o base de datos</li>
+<li>Crear variables que luego puedes referenciar en tu maquetado</li>
+</ul>
+<figure class="code-snippet lang-astro">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#ABA8BD">// Nota: La importación debe realizarse en la parte superior del archivo.</span></span>
+<span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> UnComponenteAstro </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;../components/UnComponenteAstro.astro&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> UnComponenteReact </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;../components/UnComponenteReact.jsx&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> algunosDatos </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;../data/pokemon.json&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#ABA8BD">// Acceder a props recibidas, por ejemplo `&lt;X title=&quot;Hola Mundo&quot; /&gt;`</span></span>
+<span class="line"><span style="color:#FF657C">const</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9">title</span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> Astro</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">props</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#ABA8BD">// Consultar datos externos, de una API privada o base de datos</span></span>
+<span class="line"><span style="color:#FF657C">const</span><span style="color:#D8DEE9"> data </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">await</span><span style="color:#D8DEE9"> </span><span style="color:#66ADFF">fetch</span><span style="color:#D8DEE9">(</span><span style="color:#16C082">&#39;API_URL_SECRETA/users&#39;</span><span style="color:#D8DEE9">)</span><span style="color:#C7C5D3">.</span><span style="color:#66ADFF">then</span><span style="color:#D8DEE9">(r </span><span style="color:#FF657C">=&gt;</span><span style="color:#D8DEE9"> r</span><span style="color:#C7C5D3">.</span><span style="color:#66ADFF">json</span><span style="color:#D8DEE9">())</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#ABA8BD">&lt;!-- ¡Tu maquetado va aquí! --&gt;</span></span></code></pre>
+</figure><p>La valla de código está diseñada para garantizar que el código Javascript que escribes adentro se encuentre “encapsulado”. Este código no va a filtrarse a tu aplicación de frontend, o caer en las manos del usuario. Puedes escribir código que sea costoso o sensible (como una llamada a tu base de datos privada) sin preocuparte por que estos datos sensibles lleguen al navegador del usuario.</p><aside class="content tip astro-6BEKRN6C" aria-label="Sugerencia">
+	<p class="title astro-6BEKRN6C" aria-hidden="true">
+		<span class="icon astro-6BEKRN6C">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" width="16" height="16" class="astro-6BEKRN6C">
+				<path fill-rule="evenodd" d="M14 0a8.8 8.8 0 0 0-6 2.6l-.5.4-.9 1H3.3a1.8 1.8 0 0 0-1.5.8L.1 7.6a.8.8 0 0 0 .4 1.1l3.1 1 .2.1 2.4 2.4.1.2 1 3a.8.8 0 0 0 1 .5l2.9-1.7a1.8 1.8 0 0 0 .8-1.5V9.5l1-1 .4-.4A8.8 8.8 0 0 0 16 2v-.1A1.8 1.8 0 0 0 14.2 0h-.1zm-3.5 10.6-.3.2L8 12.3l.5 1.8 2-1.2a.3.3 0 0 0 .1-.2v-2zM3.7 8.1l1.5-2.3.2-.3h-2a.3.3 0 0 0-.3.1l-1.2 2 1.8.5zm5.2-4.5a7.3 7.3 0 0 1 5.2-2.1h.1a.3.3 0 0 1 .3.3v.1a7.3 7.3 0 0 1-2.1 5.2l-.5.4a15.2 15.2 0 0 1-2.5 2L7.1 11 5 9l1.5-2.3a15.3 15.3 0 0 1 2-2.5l.4-.5zM12 5a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-8.4 9.6a1.5 1.5 0 1 0-2.2-2.2 7 7 0 0 0-1.1 3 .2.2 0 0 0 .3.3c.6 0 2.2-.4 3-1.1z" class="astro-6BEKRN6C"></path>
+			</svg>
+		</span>
+		Sugerencia
+	</p>
+	<section class="astro-6BEKRN6C">
+		<p>Puedes utilizar Typescript en el script de tu componente!</p>
+	</section>
+</aside>
+
+<div class="heading-wrapper level-h3" tabindex="-1"><h3 id="maquetado-del-componente">Maquetado del componente</h3><a class="anchor-link" href="#maquetado-del-componente"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Maquetado del componente</span></a></div><p>Debajo del script del componente vive el maquetado. El maquetado del componente define el HTML que va a generar tu componente.</p><p>Si escribes solo HTML en esta sección, tu componente va a renderizar este HTML en cualquier página Astro donde sea importado y utilizado.</p><p>Sin embargo, la sintaxis del maquetado del componente de Astro también soporta <strong>expresiones de JavaScript</strong>, <strong>componentes importados</strong> y <a href="/es/reference/directives-reference/"><strong>directivas especiales de Astro</strong></a>. Los datos y valores definidos (en la compilación final de la página) en el script del componente pueden ser utilizados en el maquetado del componente para producir HTML creado dinámicamente.</p>
+<figure class="code-snippet lang-astro">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#ABA8BD">// El script de tu componente va aquí!</span></span>
+<span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> ReactPokemonComponent </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;../components/ReactPokemonComponent.jsx&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#FF657C">const</span><span style="color:#D8DEE9"> misPokemonesFavoritos </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> [</span><span style="color:#ABA8BD">/* ... */</span><span style="color:#D8DEE9">]</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#ABA8BD">&lt;!-- Soporta comentarios HTML! --&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">h1</span><span style="color:#C7C5D3">&gt;</span><span style="color:#D8DEE9">Hola mundo!</span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">h1</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#ABA8BD">&lt;!-- Utiliza props y otras variables definidas en el script del componente: --&gt;</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">p</span><span style="color:#C7C5D3">&gt;</span><span style="color:#D8DEE9">Mi pokemon favorito es: </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9">Astro</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">props</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">title</span><span style="color:#C7C5D3">}&lt;/</span><span style="color:#FF657C">p</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#ABA8BD">&lt;!-- Incluye otros componentes con la directiva de hidratación `client:`: --&gt;</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">ReactPokemonComponent</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">client:visible</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">/&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#ABA8BD">&lt;!-- Puedes mezclar HTML con expresiones de JavaScript, similar a JSX: --&gt;</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">ul</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9">misPokemonesFavoritos</span><span style="color:#C7C5D3">.</span><span style="color:#66ADFF">map</span><span style="color:#C7C5D3">(</span><span style="color:#D8DEE9">(data)</span><span style="color:#FF657C"> =&gt; </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">li</span><span style="color:#C7C5D3">&gt;</span><span style="color:#FF657C">{</span><span style="color:#D8DEE9">data</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">name</span><span style="color:#FF657C">}</span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">li</span><span style="color:#C7C5D3">&gt;)}</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">ul</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#ABA8BD">&lt;!-- Puedes utilizar una directiva de maquetado para inyectar un string HTML dentro de un elemento: --&gt;</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">p</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">set:html</span><span style="color:#C7C5D3">={</span><span style="color:#D8DEE9">rawHTMLString</span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">/&gt;</span></span></code></pre>
+</figure><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="expresiones-jsx">Expresiones JSX</h3><a class="anchor-link" href="#expresiones-jsx"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Expresiones JSX</span></a></div><p>Puedes definir variables locales de JavaScript dentro del script del componente de Astro. ¡Luego puedes inyectar estas variables en el maquetado del componente usando expresiones JSX!</p><div class="heading-wrapper level-h4" tabindex="-1"><h4 id="variables">Variables</h4><a class="anchor-link" href="#variables"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Variables</span></a></div><p>Las variables locales pueden ser agregadas al maquetado usando la sintaxis de llaves:</p>
+<figure class="code-snippet lang-astro">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#FF657C">const</span><span style="color:#D8DEE9"> nombre </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&quot;Astro&quot;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">div</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">h1</span><span style="color:#C7C5D3">&gt;</span><span style="color:#D8DEE9">Hola </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9">nombre</span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">!</span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">h1</span><span style="color:#C7C5D3">&gt;</span><span style="color:#D8DEE9"> </span><span style="color:#ABA8BD">&lt;!-- &lt;h1&gt;Hola Astro!&lt;/h1&gt; --&gt;</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">div</span><span style="color:#C7C5D3">&gt;</span></span></code></pre>
+</figure><div class="heading-wrapper level-h4" tabindex="-1"><h4 id="atributos-dinámicos">Atributos dinámicos</h4><a class="anchor-link" href="#atributos-dinámicos"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Atributos dinámicos</span></a></div><p>Las variables locales pueden ser utilizadas entre llaves para pasar valores a atributos de componentes y elementos HTML:</p>
+<figure class="code-snippet lang-astro">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#FF657C">const</span><span style="color:#D8DEE9"> nombre </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&quot;Astro&quot;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">h1</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">class</span><span style="color:#C7C5D3">={</span><span style="color:#D8DEE9">nombre</span><span style="color:#C7C5D3">}&gt;</span><span style="color:#D8DEE9">Soporta expresiones en atributos</span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">h1</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">MiComponente</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">nombreDeAtributo</span><span style="color:#C7C5D3">={</span><span style="color:#C7C5D3">`</span><span style="color:#16C082">MiNombreEs</span><span style="color:#C7C5D3">${</span><span style="color:#D8DEE9">nombre</span><span style="color:#C7C5D3">}`</span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">/&gt;</span></span></code></pre>
+</figure><div class="heading-wrapper level-h4" tabindex="-1"><h4 id="html-dinámico">HTML dinámico</h4><a class="anchor-link" href="#html-dinámico"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled HTML dinámico</span></a></div><p>Las variables locales pueden ser utilizadas en funciones parecidas a JSX para producir elementos HTML generados dinámicamente:</p>
+<figure class="code-snippet lang-astro">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#FF657C">const</span><span style="color:#D8DEE9"> items </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> [</span><span style="color:#16C082">&quot;Perro&quot;</span><span style="color:#C7C5D3">,</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&quot;Gato&quot;</span><span style="color:#C7C5D3">,</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&quot;Mono&quot;</span><span style="color:#D8DEE9">]</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">ul</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9">items</span><span style="color:#C7C5D3">.</span><span style="color:#66ADFF">map</span><span style="color:#C7C5D3">(</span><span style="color:#D8DEE9">(item)</span><span style="color:#FF657C"> =&gt; </span><span style="color:#C7C5D3">(</span></span>
+<span class="line"><span style="color:#FF657C">    </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">li</span><span style="color:#C7C5D3">&gt;</span><span style="color:#FF657C">{</span><span style="color:#D8DEE9">item</span><span style="color:#FF657C">}</span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">li</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#FF657C">  </span><span style="color:#C7C5D3">))}</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">ul</span><span style="color:#C7C5D3">&gt;</span></span></code></pre>
+</figure><div class="heading-wrapper level-h4" tabindex="-1"><h4 id="fragmentos-y-elementos-múltiples">Fragmentos y elementos múltiples</h4><a class="anchor-link" href="#fragmentos-y-elementos-múltiples"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Fragmentos y elementos múltiples</span></a></div><p>A diferencia de JavaScript o JSX, un componente de Astro es capaz de renderizar múltiples elementos sin necesidad de envolver todo en un <code>&lt;div&gt;</code> o <code>&lt;&gt;</code>.</p>
+<figure class="code-snippet lang-astro">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#ABA8BD">// Maquetado con múltiples elementos</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">p</span><span style="color:#C7C5D3">&gt;</span><span style="color:#D8DEE9">No es necesario envolver elementos en un solo elemento contenedor.</span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">p</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">p</span><span style="color:#C7C5D3">&gt;</span><span style="color:#D8DEE9">Astro es compatible con el uso de múltiples elementos en la raíz del maquetado</span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">p</span><span style="color:#C7C5D3">&gt;</span></span></code></pre>
+</figure><p>Sin embargo, al utilizar las expresiones para crear elementos dinámicamente, debes envolver estos elementos dentro de un <strong>Fragment</strong> de la misma forma que lo harías utilizando JavaScript o JSX. Astro es compatible con el uso de <code>&lt;Fragment&gt; &lt;/Fragment&gt;</code> o su abreviación <code>&lt;&gt; &lt;/&gt;</code>.</p>
+<figure class="code-snippet lang-astro">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#FF657C">const</span><span style="color:#D8DEE9"> items </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> [</span><span style="color:#16C082">&quot;Perro&quot;</span><span style="color:#C7C5D3">,</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&quot;Gato&quot;</span><span style="color:#C7C5D3">,</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&quot;Mono&quot;</span><span style="color:#D8DEE9">]</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">ul</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9">items</span><span style="color:#C7C5D3">.</span><span style="color:#66ADFF">map</span><span style="color:#C7C5D3">(</span><span style="color:#D8DEE9">(item)</span><span style="color:#FF657C"> =&gt; </span><span style="color:#C7C5D3">(</span></span>
+<span class="line"><span style="color:#FF657C">    </span><span style="color:#C7C5D3">&lt;&gt;</span></span>
+<span class="line"><span style="color:#FF657C">      </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">li</span><span style="color:#C7C5D3">&gt;</span><span style="color:#FF657C">{</span><span style="color:#D8DEE9">item</span><span style="color:#FF657C">} Rojo</span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">li</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#FF657C">      </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">li</span><span style="color:#C7C5D3">&gt;</span><span style="color:#FF657C">{</span><span style="color:#D8DEE9">item</span><span style="color:#FF657C">} Azul</span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">li</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#FF657C">      </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">li</span><span style="color:#C7C5D3">&gt;</span><span style="color:#FF657C">{</span><span style="color:#D8DEE9">item</span><span style="color:#FF657C">} Verde</span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">li</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#FF657C">    </span><span style="color:#C7C5D3">&lt;/&gt;</span></span>
+<span class="line"><span style="color:#FF657C">  </span><span style="color:#C7C5D3">))}</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">ul</span><span style="color:#C7C5D3">&gt;</span></span></code></pre>
+</figure><p>Los Fragments también pueden ser útiles para evitar envolver componentes al usar las directivas <a href="/es/reference/directives-reference/#sethtml"><code>set:*</code></a>, como en el siguiente ejemplo:</p>
+<figure class="code-snippet lang-astro">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#FF657C">const</span><span style="color:#D8DEE9"> htmlString </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;&lt;p&gt;Contenido HTML sin procesar&lt;/p&gt;&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">Fragment</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">set:html</span><span style="color:#C7C5D3">={</span><span style="color:#D8DEE9">htmlString</span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">/&gt;</span></span></code></pre>
+</figure><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="props-de-componentes">Props de componentes</h3><a class="anchor-link" href="#props-de-componentes"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Props de componentes</span></a></div><p>Un componente de Astro puede definir y aceptar props. Estas props estarán disponibles para ser utilizadas en el renderizado del maquetado HTML y además estarán disponibles en el script del componente de manera global dentro del objeto <code>Astro.props</code>.</p><p>Aquí vemos un ejemplo de un componente que recibe una prop <code>saludo</code> y otra <code>nombre</code>. Puede verse que las props a recibir están desestructuradas del objeto global <code>Astro.props</code>.</p>
+<figure class="code-snippet has-title lang-astro">
+	<figcaption class="header"><span class="title">GreetingHeadline.astro</span></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#ABA8BD">// Utilización: &lt;GreetingHeadline saludo=&quot;Qué tal&quot; nombre=&quot;Amiga&quot; /&gt;</span></span>
+<span class="line"><span style="color:#FF657C">const</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> saludo</span><span style="color:#C7C5D3">,</span><span style="color:#D8DEE9"> nombre </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> Astro</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">props</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">h2</span><span style="color:#C7C5D3">&gt;{</span><span style="color:#D8DEE9">saludo</span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">, </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9">nombre</span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">!</span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">h2</span><span style="color:#C7C5D3">&gt;</span></span></code></pre>
+</figure><p>También puedes definir tus props utilizando Typescript exportando una intefaz de tipo <code>Props</code>. Astro recolectará automáticamente cualquier interfaz de tipo <code>Props</code> y mostrará advertencias/errores en tu proyecto. A estas props también se le pueden definir valores por defecto cuando son desestructuradas de <code>Astro.props</code>.</p>
+<figure class="code-snippet has-title lang-astro">
+	<figcaption class="header"><span class="title">src/<wbr/>components/<wbr/>GreetingHeadline.astro</span></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#FF657C">export</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">interface</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">Props</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  nombre</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">string</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#D8DEE9">  saludo</span><span style="color:#FF657C">?:</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">string</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF657C">const</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> saludo </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&quot;Hola&quot;</span><span style="color:#C7C5D3">,</span><span style="color:#D8DEE9"> nombre </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> Astro</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">props </span><span style="color:#FF657C">as</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">Props</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">h2</span><span style="color:#C7C5D3">&gt;{</span><span style="color:#D8DEE9">saludo</span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">, </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9">nombre</span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">!</span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">h2</span><span style="color:#C7C5D3">&gt;</span></span></code></pre>
+</figure><p>Este componente, al importarlo y renderizarlo en otros componentes de Astro, sean plantillas de páginas o páginas, reciben estas props como atributos:</p>
+<figure class="code-snippet has-title lang-astro">
+	<figcaption class="header"><span class="title">src/<wbr/>components/<wbr/>GreetingCard.astro</span></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> GreetingHeadline </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;./GreetingHeadline.astro&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#FF657C">const</span><span style="color:#D8DEE9"> nombre </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&quot;Astro&quot;</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">h1</span><span style="color:#C7C5D3">&gt;</span><span style="color:#D8DEE9">Carta de saludo</span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">h1</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">GreetingHeadline</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">saludo</span><span style="color:#C7C5D3">=</span><span style="color:#16C082">&quot;Hi&quot;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">nombre</span><span style="color:#C7C5D3">={</span><span style="color:#D8DEE9">nombre</span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">/&gt;</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">p</span><span style="color:#C7C5D3">&gt;</span><span style="color:#D8DEE9">Espero que hayas tenido un día maravilloso!</span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">p</span><span style="color:#C7C5D3">&gt;</span></span></code></pre>
+</figure><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="slots">Slots</h3><a class="anchor-link" href="#slots"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Slots</span></a></div><p>El elemento <code>&lt;slot /&gt;</code> es un espacio reservado para contenido HTML externo, permitiéndote inyectar (o ingresar en la “ranura”) elementos hijos provenientes de otros archivos en el maquetado de tu componente.</p><p>Por defecto, todos los elementos hijos que le sean enviados a un componente serán renderizados en su <code>&lt;slot /&gt;</code>.</p><aside class="content note astro-6BEKRN6C" aria-label="Nota">
+	<p class="title astro-6BEKRN6C" aria-hidden="true">
+		<span class="icon astro-6BEKRN6C">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" width="16" height="16" class="astro-6BEKRN6C">
+				<path fill-rule="evenodd" d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0114.25 14H1.75A1.75 1.75 0 010 12.25v-8.5zm1.75-.25a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25v-8.5a.25.25 0 00-.25-.25H1.75zM3.5 6.25a.75.75 0 01.75-.75h7a.75.75 0 010 1.5h-7a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5h4a.75.75 0 000-1.5h-4z" class="astro-6BEKRN6C"></path>
+			</svg>
+		</span>
+		Nota
+	</p>
+	<section class="astro-6BEKRN6C">
+		<p>Diferente a <em>props</em>, que son atributos enviados a un componente Astro y disponibles para utilizar con <code>Astro.props</code>, los <em>slots</em> renderizan elementos HTML hijos donde se lo indique.</p>
+	</section>
+</aside>
+
+
+<figure class="code-snippet has-title lang-astro">
+	<figcaption class="header"><span class="title">src/<wbr/>components/<wbr/>Wrapper.astro</span></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> Header </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;./Header.astro&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> Logo </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;./Logo.astro&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> Footer </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;./Footer.astro&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF657C">const</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> titulo </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> Astro</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">props</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">div</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">id</span><span style="color:#C7C5D3">=</span><span style="color:#16C082">&quot;content-wrapper&quot;</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">Header</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">/&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">Logo</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">/&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">h1</span><span style="color:#C7C5D3">&gt;{</span><span style="color:#D8DEE9">titulo</span><span style="color:#C7C5D3">}&lt;/</span><span style="color:#FF657C">h1</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">slot</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">/&gt;</span><span style="color:#D8DEE9">  </span><span style="color:#ABA8BD">&lt;!-- aquí van los hijos --&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">Footer</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">/&gt;</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">div</span><span style="color:#C7C5D3">&gt;</span></span></code></pre>
+</figure>
+<figure class="code-snippet has-title lang-astro">
+	<figcaption class="header"><span class="title">src/<wbr/>pages/<wbr/>fred.astro</span></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> Wrapper </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;../components/Wrapper.astro&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">Wrapper</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">titulo</span><span style="color:#C7C5D3">=</span><span style="color:#16C082">&quot;Página de Fred&quot;</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">h2</span><span style="color:#C7C5D3">&gt;</span><span style="color:#D8DEE9">Todo sobre Fred</span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">h2</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">p</span><span style="color:#C7C5D3">&gt;</span><span style="color:#D8DEE9">Aquí veremos cosas sobre Fred.</span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">p</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;/</span><span style="color:#FFBD2E">Wrapper</span><span style="color:#C7C5D3">&gt;</span></span></code></pre>
+</figure><p>Este patrón es la base de la plantilla de página de un componente de Astro: una página entera de contenido HTML puede ser “envuelta” con etiquetas <code>&lt;Layout&gt;&lt;/Layout&gt;</code> y enviadas al componente Layout para ser renderizada dentro de elementos comunes de la página.</p><div class="heading-wrapper level-h4" tabindex="-1"><h4 id="slots-con-nombre">Slots con nombre</h4><a class="anchor-link" href="#slots-con-nombre"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Slots con nombre</span></a></div><p>Un componente de Astro también puede tener slots con nombre. Esto te permite compartir elementos HTML únicamente con el nombre correspondiente al slot.</p>
+<figure class="code-snippet has-title lang-astro">
+	<figcaption class="header"><span class="title">src/<wbr/>components/<wbr/>Wrapper.astro</span></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> Header </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;./Header.astro&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> Logo </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;./Logo.astro&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> Footer </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;./Footer.astro&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF657C">const</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> titulo </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> Astro</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">props</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">div</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">id</span><span style="color:#C7C5D3">=</span><span style="color:#16C082">&quot;content-wrapper&quot;</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">Header</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">/&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">slot</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">name</span><span style="color:#C7C5D3">=</span><span style="color:#16C082">&quot;after-header&quot;</span><span style="color:#C7C5D3">/&gt;</span><span style="color:#D8DEE9">  </span><span style="color:#ABA8BD">&lt;!--  hijos con el atributo `slot=&quot;after-header&quot;` van aquí --&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">Logo</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">/&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">h1</span><span style="color:#C7C5D3">&gt;{</span><span style="color:#D8DEE9">titulo</span><span style="color:#C7C5D3">}&lt;/</span><span style="color:#FF657C">h1</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">slot</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">/&gt;</span><span style="color:#D8DEE9">  </span><span style="color:#ABA8BD">&lt;!--  hijos sin `slot`, o con el atributo `slot=&quot;default&quot;` van aquí --&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">Footer</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">/&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">slot</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">name</span><span style="color:#C7C5D3">=</span><span style="color:#16C082">&quot;after-footer&quot;</span><span style="color:#C7C5D3">/&gt;</span><span style="color:#D8DEE9">  </span><span style="color:#ABA8BD">&lt;!--  hijos con el atributo `slot=&quot;after-footer&quot;` van aquí --&gt;</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">div</span><span style="color:#C7C5D3">&gt;</span></span></code></pre>
+</figure>
+<figure class="code-snippet has-title lang-astro">
+	<figcaption class="header"><span class="title">src/<wbr/>pages/<wbr/>fred.astro</span></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> Wrapper </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;../components/Wrapper.astro&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">Wrapper</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">titulo</span><span style="color:#C7C5D3">=</span><span style="color:#16C082">&quot;Página de Fred&quot;</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">img</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">src</span><span style="color:#C7C5D3">=</span><span style="color:#16C082">&quot;https://my.photo/fred.jpg&quot;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">slot</span><span style="color:#C7C5D3">=</span><span style="color:#16C082">&quot;after-header&quot;</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">h2</span><span style="color:#C7C5D3">&gt;</span><span style="color:#D8DEE9">Todo sobre Fred</span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">h2</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">p</span><span style="color:#C7C5D3">&gt;</span><span style="color:#D8DEE9">Aquí veremos cosas sobre Fred.</span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">p</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">p</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">slot</span><span style="color:#C7C5D3">=</span><span style="color:#16C082">&quot;after-footer&quot;</span><span style="color:#C7C5D3">&gt;</span><span style="color:#D8DEE9">Copyright 2022</span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">p</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;/</span><span style="color:#FFBD2E">Wrapper</span><span style="color:#C7C5D3">&gt;</span></span></code></pre>
+</figure><p>Utiliza un atributo <code>slot="mi-slot"</code> en el elemento hijo que quieras enviar junto con su <code>&lt;slot name="mi-slot" /&gt;</code> emparejado en tu componente.</p><aside class="content tip astro-6BEKRN6C" aria-label="Sugerencia">
+	<p class="title astro-6BEKRN6C" aria-hidden="true">
+		<span class="icon astro-6BEKRN6C">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" width="16" height="16" class="astro-6BEKRN6C">
+				<path fill-rule="evenodd" d="M14 0a8.8 8.8 0 0 0-6 2.6l-.5.4-.9 1H3.3a1.8 1.8 0 0 0-1.5.8L.1 7.6a.8.8 0 0 0 .4 1.1l3.1 1 .2.1 2.4 2.4.1.2 1 3a.8.8 0 0 0 1 .5l2.9-1.7a1.8 1.8 0 0 0 .8-1.5V9.5l1-1 .4-.4A8.8 8.8 0 0 0 16 2v-.1A1.8 1.8 0 0 0 14.2 0h-.1zm-3.5 10.6-.3.2L8 12.3l.5 1.8 2-1.2a.3.3 0 0 0 .1-.2v-2zM3.7 8.1l1.5-2.3.2-.3h-2a.3.3 0 0 0-.3.1l-1.2 2 1.8.5zm5.2-4.5a7.3 7.3 0 0 1 5.2-2.1h.1a.3.3 0 0 1 .3.3v.1a7.3 7.3 0 0 1-2.1 5.2l-.5.4a15.2 15.2 0 0 1-2.5 2L7.1 11 5 9l1.5-2.3a15.3 15.3 0 0 1 2-2.5l.4-.5zM12 5a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-8.4 9.6a1.5 1.5 0 1 0-2.2-2.2 7 7 0 0 0-1.1 3 .2.2 0 0 0 .3.3c.6 0 2.2-.4 3-1.1z" class="astro-6BEKRN6C"></path>
+			</svg>
+		</span>
+		Sugerencia
+	</p>
+	<section class="astro-6BEKRN6C">
+		<p>Los slots con nombre tambien se pueden pasar a <a href="/es/core-concepts/framework-components/">componentes de framework</a> en archivos Astro.</p>
+	</section>
+</aside>
+
+<div class="heading-wrapper level-h4" tabindex="-1"><h4 id="contenido-alternativo-para-slots">Contenido alternativo para slots</h4><a class="anchor-link" href="#contenido-alternativo-para-slots"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Contenido alternativo para slots</span></a></div><p>Los slots también pueden renderizar <strong>contenido alternativo</strong> en el caso que no reciban datos con <code>&lt;slot /&gt;</code> para emparejar, sea slot con nombre o no.</p>
+<figure class="code-snippet has-title lang-astro">
+	<figcaption class="header"><span class="title">src/<wbr/>components/<wbr/>Wrapper.astro</span></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> Header </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;./Header.astro&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> Logo </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;./Logo.astro&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> Footer </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;./Footer.astro&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF657C">const</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> titulo </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> Astro</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">props</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">div</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">id</span><span style="color:#C7C5D3">=</span><span style="color:#16C082">&quot;content-wrapper&quot;</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">Header</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">/&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">Logo</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">/&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">h1</span><span style="color:#C7C5D3">&gt;{</span><span style="color:#D8DEE9">titulo</span><span style="color:#C7C5D3">}&lt;/</span><span style="color:#FF657C">h1</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">slot</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">p</span><span style="color:#C7C5D3">&gt;</span><span style="color:#D8DEE9">Este es mi contenido alternativo, si no hay ningún elemento pasado al slot</span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">p</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">slot</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">Footer</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">/&gt;</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">div</span><span style="color:#C7C5D3">&gt;</span></span></code></pre>
+</figure><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="estilos-css">Estilos CSS</h3><a class="anchor-link" href="#estilos-css"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Estilos CSS</span></a></div><p>Astro también soporta etiquetas de estilo CSS <code>&lt;style&gt;</code> dentro del maquetado del componente.</p><p>Pueden utilizarse para estilar los componentes y todas las reglas de estilo son encapsuladas en el componente para evitar conflictos de CSS en aplicaciones grandes.</p>
+<figure class="code-snippet lang-astro">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#ABA8BD">// El script de tu componente va aquí!</span></span>
+<span class="line"><span style="color:#ABA8BD">---</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">style</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#ABA8BD">/* encapsulado en el componente, otros H1 en la página no estarán afectados */</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#FF657C">h1</span><span style="color:#D8DEE9"> {</span><span style="color:#EBCB8B"> </span><span style="color:#23B1AF">color</span><span style="color:#C7C5D3">:</span><span style="color:#EBCB8B"> </span><span style="color:#FF657C">red</span><span style="color:#EBCB8B"> </span><span style="color:#D8DEE9">}</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">style</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">h1</span><span style="color:#C7C5D3">&gt;</span><span style="color:#D8DEE9">Hola mundo!</span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">h1</span><span style="color:#C7C5D3">&gt;</span></span></code></pre>
+</figure><aside class="content caution astro-6BEKRN6C" aria-label="Precaución">
+	<p class="title astro-6BEKRN6C" aria-hidden="true">
+		<span class="icon astro-6BEKRN6C">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 1 18 18" width="16" height="16" class="astro-6BEKRN6C">
+				<path fill-rule="evenodd" d="M8.9 1.5C8.7 1.2 8.4 1 8 1s-.7.2-.9.5l-7 12a1 1 0 0 0 0 1c.2.3.6.5 1 .5H15c.4 0 .7-.2.9-.5a1 1 0 0 0 0-1l-7-12zM9 13H7v-2h2v2zm0-3H7V6h2v4z" class="astro-6BEKRN6C"></path>
+			</svg>
+		</span>
+		Precaución
+	</p>
+	<section class="astro-6BEKRN6C">
+		<p>Los estilos definidos aquí serán aplicados únicamente en el maquetado del componente. <strong>No</strong> se verán afectados los componentes hijos ni cualquier otro componente importado por defecto.</p>
+	</section>
+</aside>
+
+<p>📚 Lea nuestra <a href="/es/guides/styling/">guía de estilos</a> para más información en cómo aplicar estilos.</p><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="scripts-del-lado-del-cliente">Scripts del lado del cliente</h3><a class="anchor-link" href="#scripts-del-lado-del-cliente"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Scripts del lado del cliente</span></a></div><p>Para enviar Javascript al cliente sin <a href="/es/core-concepts/framework-components/">utilizar componentes de framework</a> (React, Svelte, Vue, Preact, SolidJS, AlpineJS, Lit) o <a href="https://astro.build/integrations/">integraciones de Astro</a> (ej. astro-XElement), puedes utilizar una etiqueta <code>&lt;script&gt;</code> en el maquetado de tu componente y enviar JavaScript al navegador que será ejecutado en el ámbito global.</p><p>Por defecto, las etiquetas <code>&lt;script&gt;</code> son procesadas por Astro.</p><ul>
+<li>Cualquier importación se empaquetará, lo que le permitirá importar archivos locales o módulos de Node.</li>
+<li>El script procesado se inyectará en el <code>&lt;head&gt;</code> de su página con <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Modules"><code>type="module"</code></a> .</li>
+<li>Si su componente es usado varias veces en una página, la etiqueta del script solo se incluirá una vez.</li>
+</ul><aside class="content caution astro-6BEKRN6C" aria-label="Precaución">
+	<p class="title astro-6BEKRN6C" aria-hidden="true">
+		<span class="icon astro-6BEKRN6C">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 1 18 18" width="16" height="16" class="astro-6BEKRN6C">
+				<path fill-rule="evenodd" d="M8.9 1.5C8.7 1.2 8.4 1 8 1s-.7.2-.9.5l-7 12a1 1 0 0 0 0 1c.2.3.6.5 1 .5H15c.4 0 .7-.2.9-.5a1 1 0 0 0 0-1l-7-12zM9 13H7v-2h2v2zm0-3H7V6h2v4z" class="astro-6BEKRN6C"></path>
+			</svg>
+		</span>
+		Precaución
+	</p>
+	<section class="astro-6BEKRN6C">
+		<p>Actualmente no puede escribir TypeScript en scripts del lado del cliente, pero <em>puede</em> importar un archivo TypeScript si prefiere escribir con esa sintaxis.</p>
+	</section>
+</aside>
+
+
+<figure class="code-snippet lang-astro">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">script</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#C7C5D3">  </span><span style="color:#ABA8BD">// Procesado! Comprimido! Funciona la importación de ESM, aun si son paquetes npm.</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">script</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">script</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">is:inline</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#C7C5D3">  </span><span style="color:#ABA8BD">// Será renderizado en el HTML tal cual sea escrito!</span></span>
+<span class="line"><span style="color:#C7C5D3">  </span><span style="color:#ABA8BD">// El importado de ESM relativos al archivo no serán resueltos.</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">script</span><span style="color:#C7C5D3">&gt;</span></span></code></pre>
+</figure><p>Se pueden usar múltiples etiquetas <code>&lt;script&gt;</code> en el mismo archivo <code>.astro</code> usando cualquier combinación de los métodos anteriores.</p><aside class="content note astro-6BEKRN6C" aria-label="Nota">
+	<p class="title astro-6BEKRN6C" aria-hidden="true">
+		<span class="icon astro-6BEKRN6C">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" width="16" height="16" class="astro-6BEKRN6C">
+				<path fill-rule="evenodd" d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0114.25 14H1.75A1.75 1.75 0 010 12.25v-8.5zm1.75-.25a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25v-8.5a.25.25 0 00-.25-.25H1.75zM3.5 6.25a.75.75 0 01.75-.75h7a.75.75 0 010 1.5h-7a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5h4a.75.75 0 000-1.5h-4z" class="astro-6BEKRN6C"></path>
+			</svg>
+		</span>
+		Nota
+	</p>
+	<section class="astro-6BEKRN6C">
+		<p>Agregar <code>type="module"</code> o cualquier otro atributo a una etiqueta <code>&lt;script&gt;</code> deshabilitará el comportamiento de agrupación predeterminado de Astro, tratando la etiqueta como si tuviera una directiva <code>is:inline</code>.</p>
+	</section>
+</aside>
+
+<p>📚 Lea nuestra página de <a href="/es/reference/directives-reference/#directivas-script--style">referencias de directivas</a> para más información acerca de las directivas disponibles para las etiquetas <code>&lt;script&gt;</code>.</p><div class="heading-wrapper level-h4" tabindex="-1"><h4 id="utilizando-scripts-externos">Utilizando Scripts Externos</h4><a class="anchor-link" href="#utilizando-scripts-externos"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Utilizando Scripts Externos</span></a></div><p><strong>Cuándo utilizarlo:</strong> Si tu archivo JavaScript vive dentro de la carpeta <code>public/</code>.</p><p>Ten en cuenta que este enfoque saltea el procesamiento, compresión y optimización de JavaScript provista por Astro. (Para aprovechar todo esto debes utilizar el método <code>import</code> descripto en el siguiente item)</p>
+<figure class="code-snippet lang-astro">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#D8DEE9">// Ruta URL absoluta</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">script</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">is:inline</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">src</span><span style="color:#C7C5D3">=</span><span style="color:#16C082">&quot;/algun-script-externo.js&quot;</span><span style="color:#C7C5D3">&gt;&lt;/</span><span style="color:#FF657C">script</span><span style="color:#C7C5D3">&gt;</span></span></code></pre>
+</figure><div class="heading-wrapper level-h4" tabindex="-1"><h4 id="utilizando-scripts-hoisted">Utilizando Scripts Hoisted</h4><a class="anchor-link" href="#utilizando-scripts-hoisted"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Utilizando Scripts Hoisted</span></a></div><p><strong>Cuándo utilizarlo:</strong> Si tu script externo vive dentro de <code>src/</code> <em>y</em> soporta el tipo de módulos ESM.</p><p>Astro detecta los módulos Javascript importados del lado del cliente y luego comprime, optimiza y añade el JS a la página automáticamente.</p>
+<figure class="code-snippet lang-astro">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#D8DEE9">// Importar módulo ESM</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">script</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;./algun-script-externo.js&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">script</span><span style="color:#C7C5D3">&gt;</span></span></code></pre>
+</figure><div class="heading-wrapper level-h2" tabindex="-1"><h2 id="próximos-pasos">Próximos Pasos</h2><a class="anchor-link" href="#próximos-pasos"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Próximos Pasos</span></a></div><p>📚 Lee acerca de los <a href="/es/reference/api-reference/#componentes-incorporados">componentes internos de Astro</a>.</p><p>📚 Aprende acerca del uso de <a href="/es/core-concepts/framework-components/">componentes de framework de JavaScript</a> en Astro.</p>
+	</section>
+	
+</article>
+
+
+			</div>
+		</main>
+	</body></html>

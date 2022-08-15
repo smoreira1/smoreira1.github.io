@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ar" class="initial astro-6SNADQYA">
+	<head>
+		<!-- Global Metadata --><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="hsl(256, 44%, 15%)" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="hsl(273, 37%, 93%)" media="(prefers-color-scheme: light)">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate icon" type="image/x-icon" href="/favicon.ico">
+<link rel="sitemap" href="/sitemap-index.xml">
+
+<!-- Global CSS -->
+<link rel="stylesheet" href="/theme.css">
+<link rel="stylesheet" href="/index.css">
+
+<!-- Scrollable a11y code helper -->
+<script type="module" src="/make-scrollable-code-focusable.js"></script>
+
+<!-- This is intentionally inlined to avoid FOUC -->
+
+
+<!-- Double-click to highlight code blocks (inline only). -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-130280175-15"></script>
+
+
+		<!-- Page Metadata --><link rel="canonical" href="https://docs.astro.build/en/reference/integrations-reference/">
+
+
+<link rel="alternate" href="https://docs.astro.build/en/reference/integrations-reference/" hreflang="en"><link rel="alternate" href="https://docs.astro.build/de/reference/integrations-reference/" hreflang="de"><link rel="alternate" href="https://docs.astro.build/nl/reference/integrations-reference/" hreflang="nl"><link rel="alternate" href="https://docs.astro.build/pt-br/reference/integrations-reference/" hreflang="pt-BR"><link rel="alternate" href="https://docs.astro.build/fi/reference/integrations-reference/" hreflang="fi"><link rel="alternate" href="https://docs.astro.build/es/reference/integrations-reference/" hreflang="es"><link rel="alternate" href="https://docs.astro.build/zh-cn/reference/integrations-reference/" hreflang="zh-CN"><link rel="alternate" href="https://docs.astro.build/zh-tw/reference/integrations-reference/" hreflang="zh-TW"><link rel="alternate" href="https://docs.astro.build/bg/reference/integrations-reference/" hreflang="bg"><link rel="alternate" href="https://docs.astro.build/fr/reference/integrations-reference/" hreflang="fr"><link rel="alternate" href="https://docs.astro.build/bn/reference/integrations-reference/" hreflang="bn"><link rel="alternate" href="https://docs.astro.build/kr/reference/integrations-reference/" hreflang="kr"><link rel="alternate" href="https://docs.astro.build/ar/reference/integrations-reference/" hreflang="ar"><link rel="alternate" href="https://docs.astro.build/da/reference/integrations-reference/" hreflang="da"><link rel="alternate" href="https://docs.astro.build/ja/reference/integrations-reference/" hreflang="ja"><link rel="alternate" href="https://docs.astro.build/ru/reference/integrations-reference/" hreflang="ru"><link rel="alternate" href="https://docs.astro.build/it/reference/integrations-reference/" hreflang="it"><link rel="alternate" href="https://docs.astro.build/pl/reference/integrations-reference/" hreflang="pl"><link rel="alternate" href="https://docs.astro.build/hu/reference/integrations-reference/" hreflang="hu">
+
+<!-- Algolia docsearch language facet -->
+<meta name="docsearch:language" content="en">
+
+<!-- OpenGraph Tags -->
+<meta property="og:title" content="Astro Integration API">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://docs.astro.build/en/reference/integrations-reference/">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://docs.astro.build/default-og-image.png?v=1">
+<meta property="og:image:alt" content="astro logo on a starry expanse of space, with a purple saturn-like planet floating in the right foreground">
+<meta name="description" property="og:description" content="Technology, hobbies and much more">
+<meta property="og:site_name" content="Stephen.D.Moreira PorfolioDoc">
+
+<!-- Twitter Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="astrodotbuild">
+<meta name="twitter:title" content="Astro Integration API">
+<meta name="twitter:description" content="Technology, hobbies and much more">
+<meta name="twitter:image" content="https://docs.astro.build/default-og-image.png?v=1">
+<meta name="twitter:image:alt" content="astro logo on a starry expanse of space, with a purple saturn-like planet floating in the right foreground">
+
+<!--
+  TODO: Add json+ld data, maybe https://schema.org/APIReference makes sense?
+  Docs: https://developers.google.com/search/docs/advanced/structured-data/intro-structured-data
+  https://www.npmjs.com/package/schema-dts seems like a great resource for implementing this.
+  Even better, there’s a React component that integrates with `schema-dts`: https://github.com/google/react-schemaorg
+-->
+
+		<title>Astro Integration API 🚀 Stephen.D.Moreira PorfolioDoc</title>
+		
+		<script>
+			// This code was migrated/copied from ThemToggleBotton to make the
+			// dark mode toggle instant, vs. hidden inside of a Preact useEffect() call.
+			const theme = (() => {
+				if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+					return localStorage.getItem('theme');
+				}
+				if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+					return 'dark';
+				}
+				return 'light';
+			})();
+			if (theme === 'light') {
+				document.documentElement.classList.remove('theme-dark');
+			} else {
+				document.documentElement.classList.add('theme-dark');
+			}
+		</script>
+	<link rel="stylesheet" href="/assets/f542069c.c28a3eae.css" />
+<link rel="stylesheet" href="/assets/f32cfc26.50be7f9d.css" />
+<link rel="stylesheet" href="/assets/e2317e16.36ca0ba9.css" />
+<link rel="stylesheet" href="/assets/d262d885.28dd6693.css" />
+<link rel="stylesheet" href="/assets/cfc00703.f66dce2d.css" />
+<link rel="stylesheet" href="/assets/c866568c.73f89308.css" />
+<link rel="stylesheet" href="/assets/ac92a3ed.788e7765.css" />
+<link rel="stylesheet" href="/assets/9cf9e8db.97bfbd59.css" />
+<link rel="stylesheet" href="/assets/8707b070.bf31fab0.css" />
+<link rel="stylesheet" href="/assets/7b344959.9c17731f.css" />
+<link rel="stylesheet" href="/assets/6b9ff114.c5aa952c.css" />
+<link rel="stylesheet" href="/assets/4380b021.c6e882cf.css" />
+<link rel="stylesheet" href="/assets/2853ca2f.b258932f.css" />
+<link rel="stylesheet" href="/assets/1c3c31b7.1c38b371.css" />
+<link rel="stylesheet" href="/assets/0bfe69bc.f3379f69.css" /><script type="module" src="/hoisted.6f80f745.js"></script></head>
+
+	<body class="astro-6SNADQYA">
+		<header class="astro-OWYKDMOT">
+	<a href="#article" class="sr-only focus:not-sr-only skiplink astro-D5GPSQS7">
+	<span class="astro-D5GPSQS7">Skip to Content
+</span>
+</a>
+
+
+	<nav class="nav-wrapper astro-OWYKDMOT" aria-label="Top">
+		<div dir="ltr" lang="en" class="logo flex astro-OWYKDMOT">
+			<ul class="astro-OWYKDMOT">
+				<li class="astro-OWYKDMOT">
+					<a class="astro astro-OWYKDMOT" href="https://smoreira1.github.io">
+						<span class="sr-only astro-OWYKDMOT">Astrso</span>
+						Stephen D. M.
+					</a>
+					<a class="astro-OWYKDMOT">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="astro-OWYKDMOT">
+							<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" class="astro-OWYKDMOT"></path>
+						</svg>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- <ThemeToggleButton 
+				client:visible 
+				labels={{  useLight: t('themeToggle.useLight'), useDark: t('themeToggle.useDark')  }}
+				isInsideHeader={true} 
+			/> -->
+		<!-- {lang && <LanguageSelect lang={lang} client:idle />}
+		<Search {lang} labels={docsearchStrings} />
+		<SidebarToggle client:idle /> -->
+	</nav>
+</header>
+		<main class="layout astro-6SNADQYA">
+			<aside id="left-sidebar" class="sidebar astro-6SNADQYA">
+				<nav aria-label="Primary" class="astro-M2FRLZWK">
+	<style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).load=a=>{(async()=>await(await a())())()};var a;{const l={0:t=>t,1:t=>JSON.parse(t,n),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,n)),5:t=>new Set(JSON.parse(t,n)),6:t=>BigInt(t),7:t=>new URL(t)},n=(t,r)=>{if(t===""||!Array.isArray(r))return r;const[e,i]=r;return e in l?l[e](i):void 0};customElements.get("astro-island")||customElements.define("astro-island",(a=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement?.closest("astro-island[ssr]"))return;const r=this.querySelectorAll("astro-slot"),e={},i=this.querySelectorAll("template[data-astro-template]");for(const s of i)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("data-astro-template")||"default"]=s.innerHTML,s.remove());for(const s of r)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("name")||"default"]=s.innerHTML);const o=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),n):{};this.hydrator(this)(this.Component,o,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((r,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate),await import(this.getAttribute("before-hydration-url"));const r=JSON.parse(this.getAttribute("opts"));Astro[this.getAttribute("client")](async()=>{const e=this.getAttribute("renderer-url"),[i,{default:o}]=await Promise.all([import(this.getAttribute("component-url")),e?import(e):()=>()=>{}]);return this.Component=i[this.getAttribute("component-export")||"default"],this.hydrator=o,this.hydrate},r,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},a.observedAttributes=["props"],a))}</script><astro-island uid="1bIBBv" component-url="/SidebarToggleTabGroup.053ded21.js" component-export="default" renderer-url="/client.f1d83173.js" props="{&quot;defaultActiveTab&quot;:[0,&quot;api&quot;],&quot;labels&quot;:[0,{&quot;learn&quot;:[0,&quot;تَعلَم&quot;],&quot;api&quot;:[0,&quot;مرجع&quot;]}],&quot;class&quot;:[0,&quot;astro-M2FRLZWK&quot;]}" ssr="" client="load" before-hydration-url="data:text/javascript;charset=utf-8,//[no before-hydration script]" opts="{&quot;name&quot;:&quot;SidebarToggleTabGroup&quot;,&quot;value&quot;:true}" await-children=""><div class="TabGroup"><button class>تَعلَم</button><button class="active">مرجع</button></div></astro-island>
+	<ul class="nav-groups astro-M2FRLZWK">
+		
+<li class="nav-group learn  astro-VB2AOOVT">
+		<details open class="astro-VB2AOOVT">
+			<summary class="nav-group-title astro-VB2AOOVT">
+				<h2 class="astro-VB2AOOVT">
+					التهيئة
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true" class="astro-VB2AOOVT">
+						<path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z" class="astro-VB2AOOVT"></path>
+					</svg>
+				</h2>
+			</summary>
+			<ul class="astro-VB2AOOVT">
+				<li class="nav-link astro-VB2AOOVT">
+						<a href="/ar/getting-started/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">باشر البدأ </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ar/install/auto/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Resume <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ar/editor-setup/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Signicant Works <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ar/migrate/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Technology Stack <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ar/migrate/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Technology History <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ar/migrate/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Design Patterns <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li>
+			</ul>
+		</details>
+	</li><li class="nav-group learn  astro-VB2AOOVT">
+		<details open class="astro-VB2AOOVT">
+			<summary class="nav-group-title astro-VB2AOOVT">
+				<h2 class="astro-VB2AOOVT">
+					Resources
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true" class="astro-VB2AOOVT">
+						<path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z" class="astro-VB2AOOVT"></path>
+					</svg>
+				</h2>
+			</summary>
+			<ul class="astro-VB2AOOVT">
+				<li class="nav-link astro-VB2AOOVT">
+						<a href="/ar/guides/deploy/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Youtube <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ar/guides/deploy/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Twitter <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ar/core-concepts/project-structure/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Icon Assets <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li>
+			</ul>
+		</details>
+	</li><li class="nav-group learn  astro-VB2AOOVT">
+		<details open class="astro-VB2AOOVT">
+			<summary class="nav-group-title astro-VB2AOOVT">
+				<h2 class="astro-VB2AOOVT">
+					Projects
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true" class="astro-VB2AOOVT">
+						<path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z" class="astro-VB2AOOVT"></path>
+					</svg>
+				</h2>
+			</summary>
+			<ul class="astro-VB2AOOVT">
+				<li class="nav-link astro-VB2AOOVT">
+						<a href="/ar/guides/configuring-astro/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Starlight <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li>
+			</ul>
+		</details>
+	</li><li class="nav-group learn  astro-VB2AOOVT">
+		<details open class="astro-VB2AOOVT">
+			<summary class="nav-group-title astro-VB2AOOVT">
+				<h2 class="astro-VB2AOOVT">
+					Tips
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true" class="astro-VB2AOOVT">
+						<path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z" class="astro-VB2AOOVT"></path>
+					</svg>
+				</h2>
+			</summary>
+			<ul class="astro-VB2AOOVT">
+				<li class="nav-link astro-VB2AOOVT">
+						<a href="/ar/concepts/why-astro/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Angular <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ar/concepts/why-astro/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">TypeScript <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ar/concepts/why-astro/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">CSS <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ar/concepts/why-astro/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">HTML <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ar/concepts/why-astro/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">GIT <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li>
+			</ul>
+		</details>
+	</li>
+
+
+		
+<li class="nav-group api active astro-VB2AOOVT">
+		<details open class="astro-VB2AOOVT">
+			<summary class="nav-group-title astro-VB2AOOVT">
+				<h2 class="astro-VB2AOOVT">
+					Reference
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true" class="astro-VB2AOOVT">
+						<path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z" class="astro-VB2AOOVT"></path>
+					</svg>
+				</h2>
+			</summary>
+			<ul class="astro-VB2AOOVT">
+				<li class="nav-link astro-VB2AOOVT">
+						<a href="/ar/reference/configuration-reference/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Configuration <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ar/reference/cli-reference/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">CLI <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ar/reference/api-reference/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Runtime API <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ar/reference/integrations-reference/" aria-current="page" data-current-parent="true" class="astro-VB2AOOVT">Integrations API <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ar/reference/adapter-reference/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Adapter API <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ar/reference/directives-reference/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Template Directives <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ar/guides/publish-to-npm/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">NPM Package Format <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li>
+			</ul>
+		</details>
+	</li>
+
+
+		<details open class="hide-on-large-screens astro-TL4TIEEL"><summary class="astro-TL4TIEEL"><h2 class="heading astro-TL4TIEEL">Socials
+</h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true" class="astro-TL4TIEEL">
+			<path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z" class="astro-TL4TIEEL">
+			</path>
+		</svg></summary><ul class="astro-TL4TIEEL">
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://astro.build/chat" target="_blank" class="astro-TL4TIEEL">
+				<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="comment-alt" class="svg-inline--fa fa-comment-alt fa-w-16 astro-TL4TIEEL" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" height="1em" width="1em">
+					<path fill="currentColor" d="M448 0H64C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h96v84c0 9.8 11.2 15.5 19.1 9.7L304 416h144c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64z" class="astro-TL4TIEEL">
+					</path>
+				</svg>
+				<span class="astro-TL4TIEEL">407-310-8747
+</span>
+			</a>
+		</li>
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://www.linkedin.com/in/stephenmoreira" target="_blank" class="astro-TL4TIEEL">
+				<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024" class="astro-TL4TIEEL">
+					<path fill="currentColor" d="M928 161H699.2c-49.1 0-97.1 14.1-138.4 40.7L512 233l-48.8-31.3A255.2 255.2 0 0 0 324.8 161H96c-17.7 0-32 14.3-32 32v568c0 17.7 14.3 32 32 32h228.8c49.1 0 97.1 14.1 138.4 40.7l44.4 28.6c1.3.8 2.8 1.3 4.3 1.3s3-.4 4.3-1.3l44.4-28.6C602 807.1 650.1 793 699.2 793H928c17.7 0 32-14.3 32-32V193c0-17.7-14.3-32-32-32zM404 553.5c0 4.1-3.2 7.5-7.1 7.5H211.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45zm0-140c0 4.1-3.2 7.5-7.1 7.5H211.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45zm416 140c0 4.1-3.2 7.5-7.1 7.5H627.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45zm0-140c0 4.1-3.2 7.5-7.1 7.5H627.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45z" class="astro-TL4TIEEL"></path>
+				</svg>
+				<span class="astro-TL4TIEEL">LinkedIn
+</span>
+			</a>
+		</li>
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://twitter.com/stephendmoreira" target="_blank" class="astro-TL4TIEEL">
+				<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256" class="astro-TL4TIEEL">
+					<path fill="currentColor" d="M209.765 128.15c0 16.013-4.9 31.34-13.266 44.575l33.447 33.447a128.918 128.918 0 0 0 25.783-77.35c0-29.265-9.754-55.751-26.47-77.336l-32.776 32.729a79.442 79.442 0 0 1 13.267 43.888l.015.047Z" class="astro-TL4TIEEL"></path>
+					<path fill="currentColor" d="M127.513 210.355c-45.367-.086-82.125-36.838-82.22-82.205c.069-45.386 36.835-82.166 82.22-82.252c16.732 0 32.058 4.901 44.607 13.267l32.744-32.776A128.965 128.965 0 0 0 127.514.636C57.123.636 0 57.76 0 128.15c0 70.359 57.124 127.513 127.513 127.513a125.126 125.126 0 0 0 77.351-26.501l-33.447-33.431c-11.861 9.754-27.157 14.624-43.904 14.624Z" class="astro-TL4TIEEL"></path>
+				</svg>
+				<span class="astro-TL4TIEEL">Twitter
+</span>
+			</a>
+		</li>
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://github.com/withastro/docs" target="_blank" class="astro-TL4TIEEL">
+				<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="github" class="svg-inline--fa fa-brands fa-github fa-w-16 astro-TL4TIEEL" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+					<path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" class="astro-TL4TIEEL"></path>
+				</svg>
+				<span class="astro-TL4TIEEL">Github
+</span>
+			</a>
+		</li>
+	</ul></details open>
+
+
+		<li style="text-align: center;" class="astro-M2FRLZWK">
+			<script>(self.Astro=self.Astro||{}).visible=(i,c,n)=>{const r=async()=>{await(await i())()};let s=new IntersectionObserver(e=>{for(const t of e)if(!!t.isIntersecting){s.disconnect(),r();break}});for(let e=0;e<n.children.length;e++){const t=n.children[e];s.observe(t)}};</script><astro-island uid="209aSe" component-url="/ThemeToggleButton.b38468b8.js" component-export="default" renderer-url="/client.f1d83173.js" props="{&quot;labels&quot;:[0,{&quot;useLight&quot;:[0,&quot;Use light theme&quot;],&quot;useDark&quot;:[0,&quot;Use dark theme&quot;]}],&quot;class&quot;:[0,&quot;astro-M2FRLZWK&quot;]}" ssr="" client="visible" before-hydration-url="data:text/javascript;charset=utf-8,//[no before-hydration script]" opts="{&quot;name&quot;:&quot;ThemeToggleButton&quot;,&quot;value&quot;:true}" await-children=""><div class="theme-toggle "><label title="Use light theme" class><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path></svg><input type="radio" name="theme-toggle" value="light" aria-label="Use light theme" /></label><label title="Use dark theme" class><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg><input type="radio" name="theme-toggle" value="dark" aria-label="Use dark theme" /></label></div></astro-island>
+		</li>
+		<li class="astro-M2FRLZWK">
+			<!-- <div dir="ltr" lang="en" class="sponsors">
+	<h2 class="sponsors-title">Sponsored by</h2>
+	<div class="sponsor">
+		<a href="https://www.netlify.com/" aria-label="Go to Netlify website">
+			<svg class="sponsor-logo__netlify" viewBox="0 0 147 40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+				><radialGradient
+					id="netlify-gradient"
+					cx="-779.0521"
+					cy="1839.7205"
+					gradientTransform="matrix(0 38.301 44.1228 0 -81154.2578 29839.2441)"
+					gradientUnits="userSpaceOnUse"
+					r="1.0011"><stop offset="0" stop-color="#20c6b7"></stop><stop offset="1" stop-color="#4d9abf"></stop></radialGradient
+				><path
+					clip-rule="evenodd"
+					d="m53.37 12.98.12 2.2c1.4-1.7 3.24-2.55 5.53-2.55 3.95 0 5.96 2.27 6.03 6.8v12.57h-4.26v-12.32c0-1.21-.26-2.1-.78-2.68s-1.37-.87-2.55-.87c-1.72 0-3 .78-3.84 2.34v13.53h-4.26v-19.02zm24.38 19.37c-2.7 0-4.89-.85-6.57-2.56-1.68-1.7-2.52-3.98-2.52-6.81v-.53c0-1.9.36-3.59 1.1-5.09.73-1.49 1.76-2.66 3.08-3.49s2.79-1.25 4.42-1.25c2.58 0 4.58.83 5.99 2.48s2.11 3.99 2.11 7.01v1.72h-12.4c.13 1.57.65 2.81 1.57 3.73s2.07 1.37 3.46 1.37c1.95 0 3.54-.79 4.77-2.37l2.3 2.2c-.76 1.14-1.77 2.02-3.04 2.65s-2.69.94-4.27.94zm-.51-16.29c-1.17 0-2.11.41-2.83 1.23s-1.18 1.96-1.38 3.43h8.12v-.32c-.09-1.43-.47-2.51-1.14-3.24-.67-.74-1.59-1.1-2.77-1.1zm16.76-7.7v4.62h3.35v3.16h-3.35v10.62c0 .73.14 1.25.43 1.57s.8.48 1.54.48c.5 0 1-.06 1.49-.18v3.31c-.97.27-1.9.4-2.81.4-3.27 0-4.91-1.81-4.91-5.43v-10.77h-3.12v-3.16h3.12v-4.63zm11.14 23.64h-4.26v-27h4.26zm9.17 0h-4.26v-19.02h4.26zm-4.52-23.96c0-.65.21-1.2.62-1.63.42-.43 1.01-.65 1.78-.65s1.37.22 1.79.65.63.98.63 1.64c0 .64-.21 1.18-.63 1.61s-1.02.64-1.79.64-1.36-.21-1.78-.64c-.41-.44-.62-.98-.62-1.62zm10.66 23.96v-15.86h-2.89v-3.16h2.89v-1.74c0-2.11.58-3.74 1.75-4.89s2.81-1.72 4.91-1.72c.75 0 1.54.11 2.39.32l-.1 3.34c-.54-.1-1.08-.15-1.63-.14-2.04 0-3.05 1.05-3.05 3.15v1.69h3.86v3.16h-3.86v15.85zm17.87-6.12 3.86-12.9h4.54l-7.54 21.9c-1.16 3.2-3.12 4.8-5.89 4.8-.62 0-1.3-.11-2.05-.32v-3.31l.81.05c1.07 0 1.88-.2 2.43-.59.54-.39.97-1.05 1.29-1.98l.61-1.64-6.66-18.93h4.6z"
+					fill-rule="evenodd"></path><path
+					d="m27.89 14.14-.01-.01c-.01 0-.02-.01-.02-.01-.02-.02-.03-.06-.03-.09l.77-4.73 3.62 3.63-3.77 1.6c-.01 0-.02.01-.03.01h-.02s-.01-.01-.02-.02c-.14-.16-.31-.29-.49-.38zm5.26-.29 3.88 3.88c.81.81 1.21 1.21 1.35 1.67.02.07.04.14.05.21l-9.26-3.92s-.01 0-.01-.01c-.04-.02-.08-.03-.08-.07s.04-.06.08-.07l.01-.01zm5.12 7c-.2.38-.59.77-1.25 1.43l-4.37 4.37-5.65-1.18-.03-.01c-.05-.01-.1-.02-.1-.06-.04-.47-.28-.9-.66-1.19-.02-.02-.02-.06-.01-.09v-.01l1.06-6.53v-.02c.01-.05.01-.11.06-.11.46-.06.88-.3 1.16-.67.01-.01.01-.02.03-.03.03-.01.07 0 .1.01zm-6.62 6.8-7.19 7.19 1.23-7.56v-.01c0-.01 0-.02.01-.03.01-.02.04-.03.06-.04h.01c.27-.11.51-.29.69-.52.02-.03.05-.06.09-.06h.03zm-8.71 8.71-.81.81-8.95-12.94s-.01-.01-.01-.01c-.01-.02-.03-.04-.03-.06s.01-.03.02-.04l.01-.01c.03-.04.05-.08.07-.12l.02-.03c.01-.02.03-.05.05-.06s.05-.01.07 0l9.92 2.05c.03 0 .05.02.08.03.01.01.02.03.02.04.14.53.52.97 1.03 1.17.03.01.02.05 0 .08-.01.01-.01.03-.01.05-.12.74-1.19 7.27-1.48 9.04zm-1.69 1.69c-.6.59-.95.9-1.35 1.03-.39.12-.81.12-1.21 0-.47-.15-.87-.55-1.67-1.36l-8.99-8.99 2.35-3.64c.01-.02.02-.03.04-.05s.06-.01.09 0c.54.16 1.12.13 1.64-.08.03-.01.05-.02.07 0l.03.03zm-14.09-10.19-2.06-2.06 4.07-1.74c.01 0 .02-.01.03-.01.03 0 .05.03.07.07.04.06.08.12.13.18l.01.02c.01.02 0 .03-.01.05zm-2.98-2.97-2.61-2.61c-.44-.44-.77-.77-.99-1.04l7.94 1.65h.03c.05.01.1.02.1.06 0 .05-.06.07-.11.09l-.02.01zm-4.05-5c.01-.17.04-.33.09-.5.15-.47.55-.87 1.36-1.67l3.34-3.34c1.54 2.23 3.08 4.46 4.63 6.69.03.04.06.08.03.11-.15.16-.29.34-.4.53-.01.02-.03.05-.05.06-.01.01-.03 0-.04 0zm5.68-6.4 4.49-4.49c.42.19 1.96.83 3.33 1.41 1.04.44 1.99.84 2.29.97.03.01.06.02.07.05.01.02 0 .04 0 .06-.14.66.05 1.35.52 1.83.03.03 0 .07-.03.11l-.01.02-4.56 7.06c-.01.02-.02.04-.04.05s-.06.01-.09 0c-.18-.05-.36-.07-.54-.07-.16 0-.34.03-.52.06-.02 0-.04.01-.05 0-.02-.01-.03-.03-.05-.05zm5.4-5.4 5.81-5.81c.81-.81 1.21-1.21 1.67-1.36.39-.12.81-.12 1.21 0 .47.15.87.55 1.67 1.36l1.26 1.26-4.14 6.4c-.01.02-.02.03-.04.05s-.06.01-.09 0c-.66-.2-1.38-.06-1.92.37-.03.03-.07.01-.1 0-.53-.24-4.73-2.01-5.33-2.27zm12.5-3.67 3.82 3.82-.92 5.7v.02c0 .01 0 .03-.01.04-.01.02-.03.02-.05.03-.2.06-.38.15-.55.27-.01.01-.01.01-.02.02s-.02.02-.04.02c-.01 0-.03 0-.04-.01l-5.82-2.47-.01-.01c-.04-.02-.08-.03-.08-.07-.03-.32-.14-.64-.31-.91-.03-.05-.06-.09-.03-.14zm-3.93 8.6 5.45 2.31c.03.01.06.03.08.06.01.02.01.04 0 .06-.02.08-.03.17-.03.26v.15c0 .04-.04.05-.08.07h-.01c-.86.37-12.13 5.17-12.15 5.17s-.03 0-.05-.02c-.03-.03 0-.07.03-.11 0-.01.01-.01.01-.02l4.48-6.94.01-.01c.03-.04.06-.09.1-.09l.05.01c.1.01.19.03.28.03.68 0 1.31-.33 1.69-.9.01-.02.02-.03.03-.04.04-.01.08 0 .11.01zm-6.25 9.19 12.28-5.24s.02 0 .03.02c.07.07.12.11.18.15l.03.02c.02.01.05.03.05.06v.02l-1.05 6.46v.03c-.01.05-.01.11-.06.11-.57.04-1.08.36-1.37.85v.01c-.01.02-.03.05-.05.06s-.05.01-.07 0l-9.79-2.02c-.02-.02-.16-.53-.18-.53z"
+					fill="url(#netlify-gradient)"></path></svg
+			>
+		</a>
+	</div>
+</div> -->
+
+		</li>
+	</ul>
+</nav>
+
+
+
+
+			</aside>
+			<aside id="right-sidebar" class="sidebar astro-6SNADQYA">
+				<nav aria-label="Secondary" class="astro-7RGIIGOJ">
+	<script>(self.Astro=self.Astro||{}).media=(s,a)=>{const t=async()=>{await(await s())()};if(a.value){const e=matchMedia(a.value);e.matches?t():e.addEventListener("change",t,{once:!0})}};</script><astro-island uid="ZSC8C" component-url="/TableOfContents.109662f0.js" component-export="default" renderer-url="/client.f1d83173.js" props="{&quot;headings&quot;:[1,&quot;[[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;examples\&quot;],\&quot;text\&quot;:[0,\&quot;Examples\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;quick-api-reference\&quot;],\&quot;text\&quot;:[0,\&quot;Quick API Reference\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;hooks\&quot;],\&quot;text\&quot;:[0,\&quot;Hooks\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;astroconfigsetup\&quot;],\&quot;text\&quot;:[0,\&quot;astro:config:setup\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;config-option\&quot;],\&quot;text\&quot;:[0,\&quot;config option\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;command-option\&quot;],\&quot;text\&quot;:[0,\&quot;command option\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;updateconfig-option\&quot;],\&quot;text\&quot;:[0,\&quot;updateConfig option\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;addrenderer-option\&quot;],\&quot;text\&quot;:[0,\&quot;addRenderer option\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;injectroute-option\&quot;],\&quot;text\&quot;:[0,\&quot;injectRoute option\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;injectscript-option\&quot;],\&quot;text\&quot;:[0,\&quot;injectScript option\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;astroconfigdone\&quot;],\&quot;text\&quot;:[0,\&quot;astro:config:done\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;config-option-1\&quot;],\&quot;text\&quot;:[0,\&quot;config option\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;astroserversetup\&quot;],\&quot;text\&quot;:[0,\&quot;astro:server:setup\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;server-option\&quot;],\&quot;text\&quot;:[0,\&quot;server option\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;astroserverstart\&quot;],\&quot;text\&quot;:[0,\&quot;astro:server:start\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;address-option\&quot;],\&quot;text\&quot;:[0,\&quot;address option\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;astroserverdone\&quot;],\&quot;text\&quot;:[0,\&quot;astro:server:done\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;astrobuildstart\&quot;],\&quot;text\&quot;:[0,\&quot;astro:build:start\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;astrobuildsetup\&quot;],\&quot;text\&quot;:[0,\&quot;astro:build:setup\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;astrobuildssr\&quot;],\&quot;text\&quot;:[0,\&quot;astro:build:ssr\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;astrobuilddone\&quot;],\&quot;text\&quot;:[0,\&quot;astro:build:done\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;dir-option\&quot;],\&quot;text\&quot;:[0,\&quot;dir option\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;routes-option\&quot;],\&quot;text\&quot;:[0,\&quot;routes option\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;allow-installation-with-astro-add\&quot;],\&quot;text\&quot;:[0,\&quot;Allow installation with astro add\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;integration-ordering\&quot;],\&quot;text\&quot;:[0,\&quot;Integration Ordering\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;combine-integrations-into-presets\&quot;],\&quot;text\&quot;:[0,\&quot;Combine integrations into presets\&quot;]}]]&quot;],&quot;labels&quot;:[0,{&quot;onThisPage&quot;:[0,&quot;في الصفحة الحالية&quot;],&quot;overview&quot;:[0,&quot;نظرة عامة&quot;]}],&quot;isMobile&quot;:[0,false],&quot;class&quot;:[0,&quot;astro-7RGIIGOJ&quot;]}" ssr="" client="media" before-hydration-url="data:text/javascript;charset=utf-8,//[no before-hydration script]" opts="{&quot;name&quot;:&quot;TableOfContents&quot;,&quot;value&quot;:&quot;(min-width: 50em)&quot;}" await-children=""><h2 class="heading" id="on-this-page-heading">في الصفحة الحالية</h2><ul><li class="header-link depth-2 current-header-link"><a href="#overview">نظرة عامة</a></li><li class="header-link depth-2"><a href="#examples">Examples</a></li><li class="header-link depth-2"><a href="#quick-api-reference">Quick API Reference</a></li><li class="header-link depth-2"><a href="#hooks">Hooks</a></li><li class="header-link depth-3"><a href="#astroconfigsetup">astro:config:setup</a></li><li class="header-link depth-3"><a href="#astroconfigdone">astro:config:done</a></li><li class="header-link depth-3"><a href="#astroserversetup">astro:server:setup</a></li><li class="header-link depth-3"><a href="#astroserverstart">astro:server:start</a></li><li class="header-link depth-3"><a href="#astroserverdone">astro:server:done</a></li><li class="header-link depth-3"><a href="#astrobuildstart">astro:build:start</a></li><li class="header-link depth-3"><a href="#astrobuildsetup">astro:build:setup</a></li><li class="header-link depth-3"><a href="#astrobuildssr">astro:build:ssr</a></li><li class="header-link depth-3"><a href="#astrobuilddone">astro:build:done</a></li><li class="header-link depth-2"><a href="#allow-installation-with-astro-add">Allow installation with astro add</a></li><li class="header-link depth-2"><a href="#integration-ordering">Integration Ordering</a></li><li class="header-link depth-2"><a href="#combine-integrations-into-presets">Combine integrations into presets</a></li></ul></astro-island>
+	<!-- <h2 class="heading"><UIString key="rightSidebar.contribute" /></h2>
+<ul>
+	<li class={`header-link depth-2`}>
+		<a class="edit-on-github" href={editHref} target="_blank">
+			<svg
+				aria-hidden="true"
+				focusable="false"
+				data-prefix="fas"
+				data-icon="pen"
+				class="svg-inline--fa fa-pen fa-w-16"
+				role="img"
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512"
+				height="1em"
+				width="1em"
+			>
+				<path
+					fill="currentColor"
+					d="M290.74 93.24l128.02 128.02-277.99 277.99-114.14 12.6C11.35 513.54-1.56 500.62.14 485.34l12.7-114.22 277.9-277.88zm207.2-19.06l-60.11-60.11c-18.75-18.75-49.16-18.75-67.91 0l-56.55 56.55 128.02 128.02 56.55-56.55c18.75-18.76 18.75-49.16 0-67.91z"
+				></path>
+			</svg>
+			<span><UIString key="rightSidebar.editPage" /></span>
+		</a>
+	</li>
+	{isTranslatable &&
+		<li class={`header-link depth-2`}>
+			<a href="https://github.com/withastro/docs/blob/main/TRANSLATING.md" target="_blank">
+				<svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88.6 77.3" height="1.24em" width="1.24em" style="margin: -2px;">
+					<path fill="currentColor" d="M61,24.6h7.9l18.7,51.6h-7.7l-5.4-15.5H54.3l-5.6,15.5h-7.2L61,24.6z M72.6,55l-8-22.8L56.3,55H72.6z"></path>
+					<path
+						fill="currentColor"
+						d="M53.6,60.6c-10-4-16-9-22-14c0,0,1.3,1.3,0,0c-6,5-20,13-20,13l-4-6c8-5,10-6,19-13c-2.1-1.9-12-13-13-19h8          c4,9,10,14,10,14c10-8,10-19,10-19h8c0,0-1,13-12,24l0,0c5,5,10,9,19,13L53.6,60.6z M1.6,16.6h56v-8h-23v-7h-9v7h-24V16.6z"
+					></path>
+				</svg>
+				<span><UIString key="rightSidebar.translatePage" /></span>
+			</a>
+		</li>
+	}
+</ul> -->
+
+	<div class="astro-TL4TIEEL"><div class="astro-TL4TIEEL"><h2 class="heading astro-TL4TIEEL">Socials
+</h2></div><ul class="astro-TL4TIEEL">
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://astro.build/chat" target="_blank" class="astro-TL4TIEEL">
+				<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="comment-alt" class="svg-inline--fa fa-comment-alt fa-w-16 astro-TL4TIEEL" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" height="1em" width="1em">
+					<path fill="currentColor" d="M448 0H64C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h96v84c0 9.8 11.2 15.5 19.1 9.7L304 416h144c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64z" class="astro-TL4TIEEL">
+					</path>
+				</svg>
+				<span class="astro-TL4TIEEL">407-310-8747
+</span>
+			</a>
+		</li>
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://www.linkedin.com/in/stephenmoreira" target="_blank" class="astro-TL4TIEEL">
+				<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024" class="astro-TL4TIEEL">
+					<path fill="currentColor" d="M928 161H699.2c-49.1 0-97.1 14.1-138.4 40.7L512 233l-48.8-31.3A255.2 255.2 0 0 0 324.8 161H96c-17.7 0-32 14.3-32 32v568c0 17.7 14.3 32 32 32h228.8c49.1 0 97.1 14.1 138.4 40.7l44.4 28.6c1.3.8 2.8 1.3 4.3 1.3s3-.4 4.3-1.3l44.4-28.6C602 807.1 650.1 793 699.2 793H928c17.7 0 32-14.3 32-32V193c0-17.7-14.3-32-32-32zM404 553.5c0 4.1-3.2 7.5-7.1 7.5H211.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45zm0-140c0 4.1-3.2 7.5-7.1 7.5H211.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45zm416 140c0 4.1-3.2 7.5-7.1 7.5H627.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45zm0-140c0 4.1-3.2 7.5-7.1 7.5H627.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45z" class="astro-TL4TIEEL"></path>
+				</svg>
+				<span class="astro-TL4TIEEL">LinkedIn
+</span>
+			</a>
+		</li>
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://twitter.com/stephendmoreira" target="_blank" class="astro-TL4TIEEL">
+				<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256" class="astro-TL4TIEEL">
+					<path fill="currentColor" d="M209.765 128.15c0 16.013-4.9 31.34-13.266 44.575l33.447 33.447a128.918 128.918 0 0 0 25.783-77.35c0-29.265-9.754-55.751-26.47-77.336l-32.776 32.729a79.442 79.442 0 0 1 13.267 43.888l.015.047Z" class="astro-TL4TIEEL"></path>
+					<path fill="currentColor" d="M127.513 210.355c-45.367-.086-82.125-36.838-82.22-82.205c.069-45.386 36.835-82.166 82.22-82.252c16.732 0 32.058 4.901 44.607 13.267l32.744-32.776A128.965 128.965 0 0 0 127.514.636C57.123.636 0 57.76 0 128.15c0 70.359 57.124 127.513 127.513 127.513a125.126 125.126 0 0 0 77.351-26.501l-33.447-33.431c-11.861 9.754-27.157 14.624-43.904 14.624Z" class="astro-TL4TIEEL"></path>
+				</svg>
+				<span class="astro-TL4TIEEL">Twitter
+</span>
+			</a>
+		</li>
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://github.com/withastro/docs" target="_blank" class="astro-TL4TIEEL">
+				<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="github" class="svg-inline--fa fa-brands fa-github fa-w-16 astro-TL4TIEEL" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+					<path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" class="astro-TL4TIEEL"></path>
+				</svg>
+				<span class="astro-TL4TIEEL">Github
+</span>
+			</a>
+		</li>
+	</ul></div>
+
+
+</nav>
+
+
+			</aside>
+			<div id="main-content" lang="en" class="astro-6SNADQYA">
+				<nav class="mobile-toc astro-CCFK4WYY">
+			<astro-island uid="Z1v7PNo" component-url="/TableOfContents.109662f0.js" component-export="default" renderer-url="/client.f1d83173.js" props="{&quot;headings&quot;:[1,&quot;[[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;examples\&quot;],\&quot;text\&quot;:[0,\&quot;Examples\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;quick-api-reference\&quot;],\&quot;text\&quot;:[0,\&quot;Quick API Reference\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;hooks\&quot;],\&quot;text\&quot;:[0,\&quot;Hooks\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;astroconfigsetup\&quot;],\&quot;text\&quot;:[0,\&quot;astro:config:setup\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;config-option\&quot;],\&quot;text\&quot;:[0,\&quot;config option\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;command-option\&quot;],\&quot;text\&quot;:[0,\&quot;command option\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;updateconfig-option\&quot;],\&quot;text\&quot;:[0,\&quot;updateConfig option\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;addrenderer-option\&quot;],\&quot;text\&quot;:[0,\&quot;addRenderer option\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;injectroute-option\&quot;],\&quot;text\&quot;:[0,\&quot;injectRoute option\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;injectscript-option\&quot;],\&quot;text\&quot;:[0,\&quot;injectScript option\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;astroconfigdone\&quot;],\&quot;text\&quot;:[0,\&quot;astro:config:done\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;config-option-1\&quot;],\&quot;text\&quot;:[0,\&quot;config option\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;astroserversetup\&quot;],\&quot;text\&quot;:[0,\&quot;astro:server:setup\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;server-option\&quot;],\&quot;text\&quot;:[0,\&quot;server option\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;astroserverstart\&quot;],\&quot;text\&quot;:[0,\&quot;astro:server:start\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;address-option\&quot;],\&quot;text\&quot;:[0,\&quot;address option\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;astroserverdone\&quot;],\&quot;text\&quot;:[0,\&quot;astro:server:done\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;astrobuildstart\&quot;],\&quot;text\&quot;:[0,\&quot;astro:build:start\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;astrobuildsetup\&quot;],\&quot;text\&quot;:[0,\&quot;astro:build:setup\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;astrobuildssr\&quot;],\&quot;text\&quot;:[0,\&quot;astro:build:ssr\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;astrobuilddone\&quot;],\&quot;text\&quot;:[0,\&quot;astro:build:done\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;dir-option\&quot;],\&quot;text\&quot;:[0,\&quot;dir option\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;routes-option\&quot;],\&quot;text\&quot;:[0,\&quot;routes option\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;allow-installation-with-astro-add\&quot;],\&quot;text\&quot;:[0,\&quot;Allow installation with astro add\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;integration-ordering\&quot;],\&quot;text\&quot;:[0,\&quot;Integration Ordering\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;combine-integrations-into-presets\&quot;],\&quot;text\&quot;:[0,\&quot;Combine integrations into presets\&quot;]}]]&quot;],&quot;labels&quot;:[0,{&quot;onThisPage&quot;:[0,&quot;في الصفحة الحالية&quot;],&quot;overview&quot;:[0,&quot;نظرة عامة&quot;]}],&quot;isMobile&quot;:[0,true],&quot;class&quot;:[0,&quot;astro-CCFK4WYY&quot;]}" ssr="" client="media" before-hydration-url="data:text/javascript;charset=utf-8,//[no before-hydration script]" opts="{&quot;name&quot;:&quot;TableOfContents&quot;,&quot;value&quot;:&quot;(max-width: 72em)&quot;}" await-children=""><details class="toc-mobile-container"><summary class="toc-mobile-header"><div class="toc-mobile-header-content"><div class="toc-toggle"><h2 class="heading" id="on-this-page-heading">في الصفحة الحالية</h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z"></path></svg></div></div></summary><ul><li class="header-link depth-2 current-header-link"><a href="#overview">نظرة عامة</a></li><li class="header-link depth-2"><a href="#examples">Examples</a></li><li class="header-link depth-2"><a href="#quick-api-reference">Quick API Reference</a></li><li class="header-link depth-2"><a href="#hooks">Hooks</a></li><li class="header-link depth-3"><a href="#astroconfigsetup">astro:config:setup</a></li><li class="header-link depth-3"><a href="#astroconfigdone">astro:config:done</a></li><li class="header-link depth-3"><a href="#astroserversetup">astro:server:setup</a></li><li class="header-link depth-3"><a href="#astroserverstart">astro:server:start</a></li><li class="header-link depth-3"><a href="#astroserverdone">astro:server:done</a></li><li class="header-link depth-3"><a href="#astrobuildstart">astro:build:start</a></li><li class="header-link depth-3"><a href="#astrobuildsetup">astro:build:setup</a></li><li class="header-link depth-3"><a href="#astrobuildssr">astro:build:ssr</a></li><li class="header-link depth-3"><a href="#astrobuilddone">astro:build:done</a></li><li class="header-link depth-2"><a href="#allow-installation-with-astro-add">Allow installation with astro add</a></li><li class="header-link depth-2"><a href="#integration-ordering">Integration Ordering</a></li><li class="header-link depth-2"><a href="#combine-integrations-into-presets">Combine integrations into presets</a></li></ul></details></astro-island>
+		</nav>
+
+<article id="article" class="content astro-CCFK4WYY">
+	<section class="main-section astro-CCFK4WYY">
+		<h1 class="content-title astro-CCFK4WYY" id="overview">Astro Integration API</h1>
+		<aside class="content note astro-6BEKRN6C" aria-label="Note">
+	<p class="title astro-6BEKRN6C" aria-hidden="true">
+		<span class="icon astro-6BEKRN6C">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" width="16" height="16" class="astro-6BEKRN6C">
+				<path fill-rule="evenodd" d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0114.25 14H1.75A1.75 1.75 0 010 12.25v-8.5zm1.75-.25a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25v-8.5a.25.25 0 00-.25-.25H1.75zM3.5 6.25a.75.75 0 01.75-.75h7a.75.75 0 010 1.5h-7a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5h4a.75.75 0 000-1.5h-4z" class="astro-6BEKRN6C"></path>
+			</svg>
+		</span>
+		Note
+	</p>
+	<section class="astro-6BEKRN6C">
+		This page is not yet available in your language, so we’re showing you the English version. You can help by translating it!
+<a href="https://github.com/withastro/docs/blob/main/src/i18n#readme">Learn more about how you can contribute
+</a>
+	</section>
+</aside>
+
+<p><strong>Astro Integrations</strong> add new functionality and behaviors for your project with only a few lines of code.</p><p>This reference page is for anyone writing their own integration. To learn how to use an integration in your project, check out our <a href="/en/guides/integrations-guide/">Using Integrations</a> guide instead.</p><div class="heading-wrapper level-h2" tabindex="-1"><h2 id="examples">Examples</h2><a class="anchor-link" href="#examples"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Examples</span></a></div><p>The official Astro integrations can act as reference for you as you go to build your own integrations.</p><ul>
+<li><strong>Renderers:</strong> <a href="/en/guides/integrations-guide/lit/"><code>lit</code></a>, <a href="/en/guides/integrations-guide/svelte/"><code>svelte</code></a>, <a href="/en/guides/integrations-guide/react/"><code>react</code></a>, <a href="/en/guides/integrations-guide/preact/"><code>preact</code></a>, <a href="/en/guides/integrations-guide/vue/"><code>vue</code></a>, <a href="/en/guides/integrations-guide/solid-js/"><code>solid</code></a></li>
+<li><strong>Libraries:</strong> <a href="/en/guides/integrations-guide/tailwind/"><code>tailwind</code></a>, <a href="/en/guides/integrations-guide/partytown/"><code>partytown</code></a></li>
+<li><strong>Features:</strong> <a href="/en/guides/integrations-guide/sitemap/"><code>sitemap</code></a></li>
+</ul><div class="heading-wrapper level-h2" tabindex="-1"><h2 id="quick-api-reference">Quick API Reference</h2><a class="anchor-link" href="#quick-api-reference"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Quick API Reference</span></a></div>
+<figure class="code-snippet lang-ts">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#FF657C">interface</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">AstroIntegration</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">    name</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">string</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#D8DEE9">    hooks</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">        </span><span style="color:#16C082">&#39;astro:config:setup&#39;</span><span style="color:#FF657C">?:</span><span style="color:#D8DEE9"> (options</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">            config</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">AstroConfig</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#D8DEE9">            command</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;dev&#39;</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">|</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;build&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#D8DEE9">            </span><span style="color:#66ADFF">updateConfig</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> (newConfig</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">Record</span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">string</span><span style="color:#C7C5D3">,</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">any</span><span style="color:#C7C5D3">&gt;</span><span style="color:#D8DEE9">) </span><span style="color:#FF657C">=&gt;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">void</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#D8DEE9">            </span><span style="color:#66ADFF">addRenderer</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> (renderer</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">AstroRenderer</span><span style="color:#D8DEE9">) </span><span style="color:#FF657C">=&gt;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">void</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#D8DEE9">            </span><span style="color:#66ADFF">injectScript</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> (stage</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">InjectedScriptStage</span><span style="color:#C7C5D3">,</span><span style="color:#D8DEE9"> content</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">string</span><span style="color:#D8DEE9">) </span><span style="color:#FF657C">=&gt;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">void</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#D8DEE9">            injectRoute</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> (</span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> pattern</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">string</span><span style="color:#C7C5D3">,</span><span style="color:#D8DEE9"> entryPoint</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">string</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">) </span><span style="color:#FF657C">=&gt;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">void</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#D8DEE9">        </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">) </span><span style="color:#FF657C">=&gt;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">void</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#D8DEE9">        </span><span style="color:#16C082">&#39;astro:config:done&#39;</span><span style="color:#FF657C">?:</span><span style="color:#D8DEE9"> (options</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> config</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">AstroConfig</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">) </span><span style="color:#FF657C">=&gt;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">void</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">|</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">Promise</span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">void</span><span style="color:#C7C5D3">&gt;;</span></span>
+<span class="line"><span style="color:#D8DEE9">        </span><span style="color:#16C082">&#39;astro:server:setup&#39;</span><span style="color:#FF657C">?:</span><span style="color:#D8DEE9"> (options</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> server</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">vite</span><span style="color:#C7C5D3">.</span><span style="color:#FFBD2E">ViteDevServer</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">) </span><span style="color:#FF657C">=&gt;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">void</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">|</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">Promise</span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">void</span><span style="color:#C7C5D3">&gt;;</span></span>
+<span class="line"><span style="color:#D8DEE9">        </span><span style="color:#16C082">&#39;astro:server:start&#39;</span><span style="color:#FF657C">?:</span><span style="color:#D8DEE9"> (options</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> address</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">AddressInfo</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">) </span><span style="color:#FF657C">=&gt;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">void</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">|</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">Promise</span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">void</span><span style="color:#C7C5D3">&gt;;</span></span>
+<span class="line"><span style="color:#D8DEE9">        </span><span style="color:#16C082">&#39;astro:server:done&#39;</span><span style="color:#FF657C">?:</span><span style="color:#D8DEE9"> () </span><span style="color:#FF657C">=&gt;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">void</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">|</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">Promise</span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">void</span><span style="color:#C7C5D3">&gt;;</span></span>
+<span class="line"><span style="color:#D8DEE9">        </span><span style="color:#16C082">&#39;astro:build:start&#39;</span><span style="color:#FF657C">?:</span><span style="color:#D8DEE9"> (options</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> buildConfig</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">BuildConfig</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">) </span><span style="color:#FF657C">=&gt;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">void</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">|</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">Promise</span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">void</span><span style="color:#C7C5D3">&gt;;</span></span>
+<span class="line"><span style="color:#D8DEE9">        </span><span style="color:#16C082">&#39;astro:build:setup&#39;</span><span style="color:#FF657C">?:</span><span style="color:#D8DEE9"> (options</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">          vite</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">ViteConfigWithSSR</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#D8DEE9">          pages</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">Map</span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">string</span><span style="color:#C7C5D3">,</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">PageBuildData</span><span style="color:#C7C5D3">&gt;;</span></span>
+<span class="line"><span style="color:#D8DEE9">          target</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;client&#39;</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">|</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;server&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#D8DEE9">        </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">) </span><span style="color:#FF657C">=&gt;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">void</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">|</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">Promise</span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">void</span><span style="color:#C7C5D3">&gt;;</span></span>
+<span class="line"><span style="color:#D8DEE9">        </span><span style="color:#16C082">&#39;astro:build:ssr&#39;</span><span style="color:#FF657C">?:</span><span style="color:#D8DEE9"> (options</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> manifest</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">SerializedSSRManifest</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">) </span><span style="color:#FF657C">=&gt;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">void</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">|</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">Promise</span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">void</span><span style="color:#C7C5D3">&gt;;</span></span>
+<span class="line"><span style="color:#D8DEE9">        </span><span style="color:#16C082">&#39;astro:build:done&#39;</span><span style="color:#FF657C">?:</span><span style="color:#D8DEE9"> (options</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> pages</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> pathname</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">string</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">[]</span><span style="color:#C7C5D3">;</span><span style="color:#D8DEE9"> dir</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">URL</span><span style="color:#C7C5D3">;</span><span style="color:#D8DEE9"> routes</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">RouteData</span><span style="color:#D8DEE9">[] </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">) </span><span style="color:#FF657C">=&gt;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">void</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">|</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">Promise</span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">void</span><span style="color:#C7C5D3">&gt;;</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">};</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span></span></code></pre>
+</figure><div class="heading-wrapper level-h2" tabindex="-1"><h2 id="hooks">Hooks</h2><a class="anchor-link" href="#hooks"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Hooks</span></a></div><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="astroconfigsetup"><code>astro:config:setup</code></h3><a class="anchor-link" href="#astroconfigsetup"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled astro:config:setup</span></a></div><p><strong>Next hook:</strong> <a href="#astroconfigdone"><code>astro:config:done</code></a></p><p><strong>When:</strong> On initialization, before either the <a href="https://vitejs.dev/config/">Vite</a> or <a href="/en/reference/configuration-reference/">Astro config</a> have resolved.</p><p><strong>Why:</strong> To extend the project config. This inludes updating the <a href="/en/reference/configuration-reference/">Astro config</a>, applying <a href="https://vitejs.dev/guide/api-plugin.html">Vite plugins</a>, adding component renderers, and injecting scripts onto the page.</p>
+<figure class="code-snippet lang-js">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#16C082">&#39;astro:config:setup&#39;</span><span style="color:#FF657C">?:</span><span style="color:#D8DEE9"> (options</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">    config</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> AstroConfig</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#D8DEE9">    command</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;dev&#39;</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">|</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;build&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#66ADFF">updateConfig</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> (newConfig</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> Record</span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">string</span><span style="color:#C7C5D3">,</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">any</span><span style="color:#C7C5D3">&gt;</span><span style="color:#D8DEE9">) </span><span style="color:#FF657C">=&gt;</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">void</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#66ADFF">addRenderer</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> (renderer</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> AstroRenderer) </span><span style="color:#FF657C">=&gt;</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">void</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#66ADFF">injectScript</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> (stage</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> InjectedScriptStage</span><span style="color:#C7C5D3">,</span><span style="color:#D8DEE9"> content</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">string</span><span style="color:#D8DEE9">) </span><span style="color:#FF657C">=&gt;</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">void</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#D8DEE9">    injectRoute</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> (</span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> pattern</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">string</span><span style="color:#C7C5D3">,</span><span style="color:#D8DEE9"> entryPoint</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">string</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">) </span><span style="color:#FF657C">=&gt;</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">void</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">) </span><span style="color:#FF657C">=&gt;</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">void</span><span style="color:#C7C5D3">;</span></span></code></pre>
+</figure><div class="heading-wrapper level-h4" tabindex="-1"><h4 id="config-option"><code>config</code> option</h4><a class="anchor-link" href="#config-option"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled config option</span></a></div><p><strong>Type:</strong> <code>AstroConfig</code></p><p>A read-only copy of the user-supplied <a href="/en/reference/configuration-reference/">Astro config</a>. This is resolved <em>before</em> any other integrations have run. If you need a copy of the config after all integrations have completed their config updates, <a href="#astroconfigdone">see the <code>astro:config:done</code> hook</a>.</p><div class="heading-wrapper level-h4" tabindex="-1"><h4 id="command-option"><code>command</code> option</h4><a class="anchor-link" href="#command-option"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled command option</span></a></div><p><strong>Type:</strong> <code>'dev' / 'build'</code></p><ul>
+<li><code>dev</code> - Project is executed with <code>astro dev</code> or <code>astro preview</code></li>
+<li><code>build</code> - Project is executed with <code>astro build</code></li>
+</ul><div class="heading-wrapper level-h4" tabindex="-1"><h4 id="updateconfig-option"><code>updateConfig</code> option</h4><a class="anchor-link" href="#updateconfig-option"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled updateConfig option</span></a></div><p><strong>Type:</strong> <code>(newConfig: Record&lt;string, any&gt;) =&gt; void;</code></p><p>A callback function to update the user-supplied <a href="/en/reference/configuration-reference/">Astro config</a>. Any config you provide <strong>will be merged with the user config + other integration config updates,</strong> so you are free to omit keys!</p><p>For example, say you need to supply a <a href="https://vitejs.dev/">Vite</a> plugin to the user’s project:</p>
+<figure class="code-snippet lang-js">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">bananaCSS</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;@vitejs/official-banana-css-plugin&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF657C">export</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">default</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#66ADFF">name</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;banana-css-integration&#39;</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#66ADFF">hooks</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#16C082">&#39;astro:config:setup&#39;</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> (</span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> updateConfig </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">) </span><span style="color:#FF657C">=&gt;</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">      </span><span style="color:#66ADFF">updateConfig</span><span style="color:#D8DEE9">(</span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">        </span><span style="color:#66ADFF">vite</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">          </span><span style="color:#66ADFF">plugins</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> [</span><span style="color:#66ADFF">bananaCSS</span><span style="color:#D8DEE9">()]</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#D8DEE9">        </span><span style="color:#C7C5D3">}</span></span>
+<span class="line"><span style="color:#D8DEE9">      </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">)</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">}</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">}</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span></span></code></pre>
+</figure><div class="heading-wrapper level-h4" tabindex="-1"><h4 id="addrenderer-option"><code>addRenderer</code> option</h4><a class="anchor-link" href="#addrenderer-option"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled addRenderer option</span></a></div><p><strong>Type:</strong> <code>(renderer:</code> <a href="https://github.com/withastro/astro/blob/fdd607c5755034edf262e7b275732519328a33b2/packages/astro/src/%40types/astro.ts#L872-L883"><code>AstroRenderer</code></a> <code>) =&gt; void;</code>
+<strong>Examples:</strong> <a href="https://github.com/withastro/astro/blob/main/packages/integrations/lit/src/index.ts"><code>lit</code></a>, <a href="https://github.com/withastro/astro/blob/main/packages/integrations/svelte/src/index.ts"><code>svelte</code></a>, <a href="https://github.com/withastro/astro/blob/main/packages/integrations/react/src/index.ts"><code>react</code></a>, <a href="https://github.com/withastro/astro/blob/main/packages/integrations/preact/src/index.ts"><code>preact</code></a>, <a href="https://github.com/withastro/astro/blob/main/packages/integrations/vue/src/index.ts"><code>vue</code></a>, <a href="https://github.com/withastro/astro/blob/main/packages/integrations/solid/src/index.ts"><code>solid</code></a></p><p>A callback function to add a component framework renderer (i.e. React, Vue, Svelte, etc). You can browse the examples and type definition above for more advanced options, but here are the 2 main options to be aware of:</p><ul>
+<li><code>clientEntrypoint</code> - path to a file that executes on the client whenever your component is used. This is mainly for rendering or hydrating your component with JS.</li>
+<li><code>serverEntrypoint</code> - path to a file that executes during server-side requests or static builds whenever your component is used. These should render components to static markup, with hooks for hydration where applicable. <a href="https://reactjs.org/docs/react-dom-server.html#rendertostring">React’s <code>renderToString</code> callback</a> is a classic example.</li>
+</ul><div class="heading-wrapper level-h4" tabindex="-1"><h4 id="injectroute-option"><code>injectRoute</code> option</h4><a class="anchor-link" href="#injectroute-option"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled injectRoute option</span></a></div><p><strong>Type:</strong> <code>({ pattern: string, entryPoint: string }) =&gt; void;</code></p><p>A callback function to inject routes into an Astro project. Injected routes can be <a href="/en/core-concepts/astro-pages/"><code>.astro</code> pages</a> or <a href="/en/core-concepts/astro-pages/#non-html-pages"><code>.js</code> and <code>.ts</code> route handlers</a>.</p><p><code>injectRoute</code> takes an object with a <code>pattern</code> and an <code>entryPoint</code>.</p><ul>
+<li><code>pattern</code> - where the route should be output in the browser, for example <code>/foo/bar</code>. A <code>pattern</code> can use Astro’s filepath syntax for denoting dynamic routes, for example <code>/foo/[bar]</code> or <code>/foo/[...bar]</code>. Note that a file extension is <strong>not</strong> needed in the <code>pattern</code>.</li>
+<li><code>entryPoint</code> - a bare module specifier pointing towards the <code>.astro</code> page or <code>.js</code>/<code>.ts</code> route handler that handles the route denoted in the <code>pattern</code>.</li>
+</ul><p>Example usage:</p>
+<figure class="code-snippet lang-js">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#66ADFF">injectRoute</span><span style="color:#D8DEE9">(</span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#66ADFF">pattern</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;/foo/[dynamic]&#39;</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#66ADFF">entryPoint</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;foo/dynamic-page.astro&#39;</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">)</span><span style="color:#C7C5D3">;</span></span></code></pre>
+</figure><div class="heading-wrapper level-h4" tabindex="-1"><h4 id="injectscript-option"><code>injectScript</code> option</h4><a class="anchor-link" href="#injectscript-option"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled injectScript option</span></a></div><p><strong>Type:</strong> <code>(stage: InjectedScriptStage, content: string) =&gt; void;</code></p><p>A callback function to inject a string of JavaScript content onto every page.</p><p>The <strong><code>stage</code></strong> denotes how this script (the <code>content</code>) should be inserted. Some stages allow inserting scripts without modification, while others allow optimization during <a href="https://vitejs.dev/guide/build.html">Vite’s bundling step</a>:</p><ul>
+<li>
+<p><code>"head-inline"</code>: Injected into a script tag in the <code>&lt;head&gt;</code> of every page. <strong>Not</strong> optimized or resolved by Vite.</p>
+</li>
+<li>
+<p><code>"before-hydration"</code>: Imported client-side, before the hydration script runs. Optimized and resolved by Vite.</p>
+</li>
+<li>
+<p><code>"page"</code>: Similar to <code>head-inline</code>, except that the injected snippet is handled by Vite and bundled with any other <code>&lt;script&gt;</code> tags defined inside of Astro components on the page. The script will be loaded with a <code>&lt;script type="module"&gt;</code> in the final page output, optimized and resolved by Vite.</p>
+</li>
+<li>
+<p><code>"page-ssr"</code>: Imported as a separate module in the frontmatter of every Astro page component. Because this stage imports your script, the <code>Astro</code> global is not available and your script will only be run once when the <code>import</code> is first evaluated.</p>
+<p>The main use for the <code>page-ssr</code> stage is injecting a CSS <code>import</code> into every page to be optimized and resolved by Vite:</p>
+
+<figure class="code-snippet lang-js">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#66ADFF">injectScript</span><span style="color:#D8DEE9">(</span><span style="color:#16C082">&#39;page-ssr&#39;</span><span style="color:#C7C5D3">,</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;import &quot;global-styles.css&quot;;&#39;</span><span style="color:#D8DEE9">)</span><span style="color:#C7C5D3">;</span></span></code></pre>
+</figure>
+</li>
+</ul><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="astroconfigdone"><code>astro:config:done</code></h3><a class="anchor-link" href="#astroconfigdone"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled astro:config:done</span></a></div><p><strong>Previous hook:</strong> <a href="#astroconfigsetup"><code>astro:config:setup</code></a></p><p><strong>Next hook:</strong> <a href="#astroserversetup"><code>astro:server:setup</code></a> when running in “dev” or “preview” mode, or <a href="#astrobuildstart">astro:build</a></p><div></div> during production builds<p><strong>When:</strong> After the Astro config has resolved and other integrations have run their <code>astro:config:setup</code> hooks.</p><p><strong>Why:</strong> To retrieve the final config for use in other hooks.</p>
+<figure class="code-snippet lang-js">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#16C082">&#39;astro:config:done&#39;</span><span style="color:#FF657C">?:</span><span style="color:#D8DEE9"> (options</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> config</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> AstroConfig </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">) </span><span style="color:#FF657C">=&gt;</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">void</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">|</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">Promise</span><span style="color:#FF657C">&lt;void&gt;</span><span style="color:#C7C5D3">;</span></span></code></pre>
+</figure><div class="heading-wrapper level-h4" tabindex="-1"><h4 id="config-option-1"><code>config</code> option</h4><a class="anchor-link" href="#config-option-1"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled config option</span></a></div><p><strong>Type:</strong> <code>AstroConfig</code></p><p>A read-only copy of the user-supplied <a href="/en/reference/configuration-reference/">Astro config</a>. This is resolved <em>after</em> other integrations have run.</p><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="astroserversetup"><code>astro:server:setup</code></h3><a class="anchor-link" href="#astroserversetup"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled astro:server:setup</span></a></div><p><strong>Previous hook:</strong> <a href="#astroconfigdone"><code>astro:config:done</code></a></p><p><strong>Next hook:</strong> <a href="#astroserverstart"><code>astro:server:start</code></a></p><p><strong>When:</strong> Just after the Vite server is created in “dev” or “preview” mode, but before the <code>listen()</code> event is fired. <a href="https://vitejs.dev/guide/api-javascript.html#createserver">See Vite’s createServer API</a> for more.</p><p><strong>Why:</strong> To update Vite server options and middleware.</p>
+<figure class="code-snippet lang-js">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#16C082">&#39;astro:server:setup&#39;</span><span style="color:#FF657C">?:</span><span style="color:#D8DEE9"> (options</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> server</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> vite</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">ViteDevServer </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">) </span><span style="color:#FF657C">=&gt;</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">void</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">|</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">Promise</span><span style="color:#FF657C">&lt;void&gt;</span><span style="color:#C7C5D3">;</span></span></code></pre>
+</figure><div class="heading-wrapper level-h4" tabindex="-1"><h4 id="server-option"><code>server</code> option</h4><a class="anchor-link" href="#server-option"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled server option</span></a></div><p><strong>Type:</strong> <a href="https://vitejs.dev/guide/api-javascript.html#vitedevserver"><code>ViteDevServer</code></a></p><p>A mutable instance of the Vite server used in “dev” and “preview” mode. For instance, this is <a href="/en/guides/integrations-guide/partytown/">used by our Partytown integration</a> to inject the Partytown server as middleware:</p>
+<figure class="code-snippet lang-js">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#FF657C">export</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">default</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#66ADFF">name</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;partytown&#39;</span></span>
+<span class="line"><span style="color:#D8DEE9">  hooks: </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#16C082">&#39;astro:server:setup&#39;</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> (</span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> server </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">) </span><span style="color:#FF657C">=&gt;</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">      server</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">middlewares</span><span style="color:#C7C5D3">.</span><span style="color:#66ADFF">use</span><span style="color:#D8DEE9">(</span></span>
+<span class="line"><span style="color:#D8DEE9">        </span><span style="color:#FF657C">function</span><span style="color:#D8DEE9"> </span><span style="color:#66ADFF">middleware</span><span style="color:#D8DEE9">(req</span><span style="color:#C7C5D3">,</span><span style="color:#D8DEE9"> res</span><span style="color:#C7C5D3">,</span><span style="color:#D8DEE9"> next) </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#C7C5D3">          </span><span style="color:#ABA8BD">// handle requests</span></span>
+<span class="line"><span style="color:#D8DEE9">        </span><span style="color:#C7C5D3">}</span></span>
+<span class="line"><span style="color:#D8DEE9">      )</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">}</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">}</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span></span></code></pre>
+</figure><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="astroserverstart"><code>astro:server:start</code></h3><a class="anchor-link" href="#astroserverstart"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled astro:server:start</span></a></div><p><strong>Previous hook:</strong> <a href="#astroserversetup"><code>astro:server:setup</code></a></p><p><strong>Next hook:</strong> <a href="#astroserverdone"><code>astro:server:done</code></a></p><p><strong>When:</strong> Just after the server’s <code>listen()</code> event has fired.</p><p><strong>Why:</strong> To intercept network requests at the specified address. If you intend to use this address for middleware, consider using <code>astro:server:setup</code> instead.</p>
+<figure class="code-snippet lang-js">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#16C082">&#39;astro:server:start&#39;</span><span style="color:#FF657C">?:</span><span style="color:#D8DEE9"> (options</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> address</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> AddressInfo </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">) </span><span style="color:#FF657C">=&gt;</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">void</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">|</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">Promise</span><span style="color:#FF657C">&lt;void&gt;</span><span style="color:#C7C5D3">;</span></span></code></pre>
+</figure><div class="heading-wrapper level-h4" tabindex="-1"><h4 id="address-option"><code>address</code> option</h4><a class="anchor-link" href="#address-option"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled address option</span></a></div><p><strong>Type:</strong> <a href="https://microsoft.github.io/PowerBI-JavaScript/interfaces/_node_modules__types_node_net_d_._net_.addressinfo.html"><code>AddressInfo</code></a></p><p>The address, family and port number supplied by the <a href="https://nodejs.org/api/net.html">NodeJS Net module</a>.</p><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="astroserverdone"><code>astro:server:done</code></h3><a class="anchor-link" href="#astroserverdone"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled astro:server:done</span></a></div><p><strong>Previous hook:</strong> <a href="#astroserverstart"><code>astro:server:start</code></a></p><p><strong>When:</strong> Just after the dev server is closed.</p><p><strong>Why:</strong> To run any cleanup events you may trigger during the <code>astro:server:setup</code> or <code>astro:server:start</code> hooks.</p>
+<figure class="code-snippet lang-js">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#16C082">&#39;astro:server:done&#39;</span><span style="color:#FF657C">?:</span><span style="color:#D8DEE9"> () </span><span style="color:#FF657C">=&gt;</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">void</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">|</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">Promise</span><span style="color:#FF657C">&lt;void&gt;</span><span style="color:#C7C5D3">;</span></span></code></pre>
+</figure><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="astrobuildstart"><code>astro:build:start</code></h3><a class="anchor-link" href="#astrobuildstart"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled astro:build:start</span></a></div><p><strong>Previous hook:</strong> <a href="#astroconfigdone"><code>astro:config:done</code></a></p><p><strong>Next hook:</strong> <a href="#astrobuildsetup"><code>astro:build:setup</code></a></p><p><strong>When:</strong> After the <code>astro:config:done</code> event, but before the production build begins.</p><p><strong>Why:</strong> To set up any global objects or clients needed during a production build. This can also extend the build configuration options in the <a href="/en/reference/adapter-reference/">adapter API</a>.</p>
+<figure class="code-snippet lang-js">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#16C082">&#39;astro:build:start&#39;</span><span style="color:#FF657C">?:</span><span style="color:#D8DEE9"> (options</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> buildConfig</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> BuildConfig </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">) </span><span style="color:#FF657C">=&gt;</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">void</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">|</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">Promise</span><span style="color:#FF657C">&lt;void&gt;</span><span style="color:#C7C5D3">;</span></span></code></pre>
+</figure><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="astrobuildsetup"><code>astro:build:setup</code></h3><a class="anchor-link" href="#astrobuildsetup"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled astro:build:setup</span></a></div><p><strong>Previous hook:</strong> <a href="#astrobuildstart"><code>astro:build:start</code></a></p><p><strong>Next hook:</strong> <a href="#astrobuildssr"><code>astro:build:ssr</code></a></p><p><strong>When:</strong> After the <code>astro:build:start</code> hook, runs immediately before the build.</p><p><strong>Why:</strong> At this point, the Vite config for the build has been completely constructed, this is your final chance to modify it. This can be useful for example to overwrite some defaults. If you’re not sure whether you should use this hook or <code>astro:build:start</code>, use <code>astro:build:start</code> instead.</p>
+<figure class="code-snippet lang-js">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#16C082">&#39;astro:build:setup&#39;</span><span style="color:#FF657C">?:</span><span style="color:#D8DEE9"> (options</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  vite</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> ViteConfigWithSSR</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#D8DEE9">  pages</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> Map</span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">string</span><span style="color:#C7C5D3">,</span><span style="color:#D8DEE9"> PageBuildData</span><span style="color:#C7C5D3">&gt;;</span></span>
+<span class="line"><span style="color:#D8DEE9">  target</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;client&#39;</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">|</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;server&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">) </span><span style="color:#FF657C">=&gt;</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">void</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">|</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">Promise</span><span style="color:#FF657C">&lt;void&gt;</span><span style="color:#C7C5D3">;</span></span></code></pre>
+</figure><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="astrobuildssr"><code>astro:build:ssr</code></h3><a class="anchor-link" href="#astrobuildssr"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled astro:build:ssr</span></a></div><p><strong>Previous hook:</strong> <a href="#astrobuildsetup"><code>astro:build:setup</code></a></p><p><strong>When:</strong> After a production build (SSG or SSR) has completed.</p><p><strong>Why:</strong> To get access the SSR manifest, this is useful when creating custom SSR builds in plugins or integrations.</p>
+<figure class="code-snippet lang-js">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#16C082">&#39;astro:build:ssr&#39;</span><span style="color:#FF657C">?:</span><span style="color:#D8DEE9"> (options</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> manifest</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> SerializedSSRManifest </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">) </span><span style="color:#FF657C">=&gt;</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">void</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">|</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">Promise</span><span style="color:#FF657C">&lt;void&gt;</span><span style="color:#C7C5D3">;</span></span></code></pre>
+</figure><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="astrobuilddone"><code>astro:build:done</code></h3><a class="anchor-link" href="#astrobuilddone"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled astro:build:done</span></a></div><p><strong>Previous hook:</strong> <a href="#astrobuildssr"><code>astro:build:ssr</code></a></p><p><strong>When:</strong> After a production build (SSG or SSR) has completed.</p><p><strong>Why:</strong> To access generated routes and assets for extension (ex. copy content into the generated <code>/assets</code> directory). If you plan to transform generated assets, we recommend exploring the <a href="https://vitejs.dev/guide/api-plugin.html">Vite Plugin API</a> and <a href="#updateconfig-option">configuring via <code>astro:config:setup</code></a> instead.</p>
+<figure class="code-snippet lang-js">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#16C082">&#39;astro:build:done&#39;</span><span style="color:#FF657C">?:</span><span style="color:#D8DEE9"> (options</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> dir</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> URL</span><span style="color:#C7C5D3">;</span><span style="color:#D8DEE9"> routes</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> RouteData[] </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">) </span><span style="color:#FF657C">=&gt;</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">void</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">|</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">Promise</span><span style="color:#FF657C">&lt;void&gt;</span><span style="color:#C7C5D3">;</span></span></code></pre>
+</figure><div class="heading-wrapper level-h4" tabindex="-1"><h4 id="dir-option"><code>dir</code> option</h4><a class="anchor-link" href="#dir-option"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled dir option</span></a></div><p><strong>Type:</strong> <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL"><code>URL</code></a></p><p>A URL path to the build output directory. Note that if you need a valid absolute path string, you should use Node’s built-in <a href="https://nodejs.org/api/url.html#urlfileurltopathurl"><code>fileURLToPath</code></a> utility.</p>
+<figure class="code-snippet lang-js">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">writeFile</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;node:fs/promises&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">fileURLToPath</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;node:url&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF657C">export</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">default</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">function</span><span style="color:#D8DEE9"> </span><span style="color:#66ADFF">myIntegration</span><span style="color:#D8DEE9">() </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#FF657C">return</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#66ADFF">hooks</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">      </span><span style="color:#16C082">&#39;astro:build:done&#39;</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">async</span><span style="color:#D8DEE9"> (</span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> dir </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">) </span><span style="color:#FF657C">=&gt;</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">        </span><span style="color:#FF657C">const</span><span style="color:#D8DEE9"> metadata </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">await</span><span style="color:#D8DEE9"> </span><span style="color:#66ADFF">getIntegrationMetadata</span><span style="color:#D8DEE9">()</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#C7C5D3">        </span><span style="color:#ABA8BD">// Use fileURLToPath to get a valid, cross-platform absolute path string </span></span>
+<span class="line"><span style="color:#D8DEE9">        </span><span style="color:#FF657C">const</span><span style="color:#D8DEE9"> outFile </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> </span><span style="color:#66ADFF">fileURLToPath</span><span style="color:#D8DEE9">(</span><span style="color:#FF657C">new</span><span style="color:#D8DEE9"> </span><span style="color:#66ADFF">URL</span><span style="color:#D8DEE9">(</span><span style="color:#16C082">&#39;./my-integration.json&#39;</span><span style="color:#C7C5D3">,</span><span style="color:#D8DEE9"> dir))</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#D8DEE9">        </span><span style="color:#FF657C">await</span><span style="color:#D8DEE9"> fs</span><span style="color:#C7C5D3">.</span><span style="color:#66ADFF">writeFile</span><span style="color:#D8DEE9">(outFile</span><span style="color:#C7C5D3">,</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">JSON</span><span style="color:#C7C5D3">.</span><span style="color:#66ADFF">stringify</span><span style="color:#D8DEE9">(metadata))</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#D8DEE9">      </span><span style="color:#C7C5D3">}</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">}</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">}</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span></span></code></pre>
+</figure><div class="heading-wrapper level-h4" tabindex="-1"><h4 id="routes-option"><code>routes</code> option</h4><a class="anchor-link" href="#routes-option"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled routes option</span></a></div><p><strong>Type:</strong> <a href="https://github.com/withastro/astro/blob/main/packages/astro/src/%40types/astro.ts#L973"><code>RouteData[]</code></a></p><p>A list of all generated routes alongside their associated metadata. <strong>This will be empty when using an SSR adapter!</strong></p><p>You can reference the full <code>RouteData</code> type below, but the most common properties are:</p><ul>
+<li><code>component</code> - the input file path relative to the project root</li>
+<li><code>pathname</code> - the output file URL (undefined for routes using <code>[dynamic]</code> and <code>[...spread]</code> params)</li>
+</ul><p><strong><code>RouteData</code> type reference</strong></p>
+<figure class="code-snippet lang-ts">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#FF657C">interface</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">RouteData</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#ABA8BD">/** Whether a given route is an HTML page or non-HTML endpoint */</span></span>
+<span class="line"><span style="color:#D8DEE9">  type</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;page&#39;</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">|</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;endpoint&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#ABA8BD">/** Source component URL */</span></span>
+<span class="line"><span style="color:#D8DEE9">  component</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">string</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#ABA8BD">/**</span></span>
+<span class="line"><span style="color:#ABA8BD">   * Output URL pathname where this route will be served</span></span>
+<span class="line"><span style="color:#ABA8BD">   * note: will be undefined for [dynamic] and [...spread] routes</span></span>
+<span class="line"><span style="color:#ABA8BD">   */</span></span>
+<span class="line"><span style="color:#D8DEE9">  pathname</span><span style="color:#FF657C">?:</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">string</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#ABA8BD">/** </span></span>
+<span class="line"><span style="color:#ABA8BD">   * regex used for matching an input URL against a requested route</span></span>
+<span class="line"><span style="color:#ABA8BD">   * ex. &quot;[fruit]/about.astro&quot; will generate the pattern: /^\/([^/]+?)\/about\/?$/</span></span>
+<span class="line"><span style="color:#ABA8BD">   * where pattern.test(&quot;banana/about&quot;) is &quot;true&quot;</span></span>
+<span class="line"><span style="color:#ABA8BD">   */</span></span>
+<span class="line"><span style="color:#D8DEE9">  pattern</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">RegExp</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#ABA8BD">/**</span></span>
+<span class="line"><span style="color:#ABA8BD">   * Dynamic and spread route params</span></span>
+<span class="line"><span style="color:#ABA8BD">   * ex. &quot;/pages/[lang]/[..slug].astro&quot; will output the params [&#39;lang&#39;, &#39;...slug&#39;]</span></span>
+<span class="line"><span style="color:#ABA8BD">   */</span></span>
+<span class="line"><span style="color:#D8DEE9">  params</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">string</span><span style="color:#D8DEE9">[]</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#ABA8BD">/**</span></span>
+<span class="line"><span style="color:#ABA8BD">   * Similar to the &quot;params&quot; field, but with more associated metadata</span></span>
+<span class="line"><span style="color:#ABA8BD">   * ex. &quot;/pages/[lang]/index.astro&quot; will output the segments</span></span>
+<span class="line"><span style="color:#ABA8BD">   * [[ { content: &#39;lang&#39;, dynamic: true, spread: false } ]]</span></span>
+<span class="line"><span style="color:#ABA8BD">   */</span></span>
+<span class="line"><span style="color:#D8DEE9">  segments</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> content</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">string</span><span style="color:#C7C5D3">;</span><span style="color:#D8DEE9"> dynamic</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">boolean</span><span style="color:#C7C5D3">;</span><span style="color:#D8DEE9"> spread</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">boolean</span><span style="color:#C7C5D3">;</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">[][]</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#ABA8BD">/** </span></span>
+<span class="line"><span style="color:#ABA8BD">   * Function to render component in-place from a set of input data.</span></span>
+<span class="line"><span style="color:#ABA8BD">   * This is typically for internal use, so call with caution!</span></span>
+<span class="line"><span style="color:#ABA8BD">   */</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#66ADFF">generate</span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> (data</span><span style="color:#FF657C">?:</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">any</span><span style="color:#D8DEE9">) </span><span style="color:#FF657C">=&gt;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">string</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span></span></code></pre>
+</figure><div class="heading-wrapper level-h2" tabindex="-1"><h2 id="allow-installation-with-astro-add">Allow installation with <code>astro add</code></h2><a class="anchor-link" href="#allow-installation-with-astro-add"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Allow installation with astro add</span></a></div><p><a href="/en/reference/cli-reference/#astro-add">The <code>astro add</code> command</a> allows users to easily add integrations and adapters to their project. If you want <em>your</em> integration to be installable with this tool, <strong>add <code>astro-integration</code> to the <code>keywords</code> field in your <code>package.json</code></strong>:</p>
+<figure class="code-snippet lang-json">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&quot;</span><span style="color:#FFBD2E">name</span><span style="color:#C7C5D3">&quot;</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&quot;example&quot;</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&quot;</span><span style="color:#FFBD2E">keywords</span><span style="color:#C7C5D3">&quot;</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">[</span><span style="color:#16C082">&quot;astro-integration&quot;</span><span style="color:#C7C5D3">],</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span></span></code></pre>
+</figure><p>Once you <a href="https://docs.npmjs.com/cli/v8/commands/npm-publish">publish your integration to npm</a>, running <code>astro add example</code> will install your package with any peer dependencies specified in your <code>package.json</code>. This will also apply your integration to the user’s <code>astro.config</code> like so:</p>
+<figure class="code-snippet has-title lang-diff">
+	<figcaption class="header"><span class="title">astro.config.mjs</span></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#D8DEE9">import { defineConfig } from &#39;astro/config&#39;;</span></span>
+<span class="line"><span style="color:#C7C5D3"><span style="user-select: none;">+</span><span style="color:#16C082"> import example from &#39;example&#39;;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D8DEE9">export default defineConfig({</span></span>
+<span class="line"><span style="color:#C7C5D3"><span style="user-select: none;">+</span><span style="color:#16C082">  integrations: [example()],</span></span>
+<span class="line"><span style="color:#D8DEE9">})</span></span></code></pre>
+</figure><aside class="content caution astro-6BEKRN6C" aria-label="Caution">
+	<p class="title astro-6BEKRN6C" aria-hidden="true">
+		<span class="icon astro-6BEKRN6C">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 1 18 18" width="16" height="16" class="astro-6BEKRN6C">
+				<path fill-rule="evenodd" d="M8.9 1.5C8.7 1.2 8.4 1 8 1s-.7.2-.9.5l-7 12a1 1 0 0 0 0 1c.2.3.6.5 1 .5H15c.4 0 .7-.2.9-.5a1 1 0 0 0 0-1l-7-12zM9 13H7v-2h2v2zm0-3H7V6h2v4z" class="astro-6BEKRN6C"></path>
+			</svg>
+		</span>
+		Caution
+	</p>
+	<section class="astro-6BEKRN6C">
+		<p>This assumes your integration definition is 1) a <code>default</code> export and 2) a function. Ensure this is true before adding the <code>astro-integration</code> keyword!</p>
+	</section>
+</aside>
+
+<div class="heading-wrapper level-h2" tabindex="-1"><h2 id="integration-ordering">Integration Ordering</h2><a class="anchor-link" href="#integration-ordering"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Integration Ordering</span></a></div><p>All integrations are run in the order that they are configured. For instance, for the array <code>[react(), svelte()]</code> in a user’s <code>astro.config.*</code>, <code>react</code> will run before <code>svelte</code>.</p><p>Your integration should ideally run in any order. If this isn’t possible, we recommend documenting that your integration needs to come first or last in your user’s <code>integrations</code> configuration array.</p><div class="heading-wrapper level-h2" tabindex="-1"><h2 id="combine-integrations-into-presets">Combine integrations into presets</h2><a class="anchor-link" href="#combine-integrations-into-presets"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Combine integrations into presets</span></a></div><p>An integration can also be written as a collection of multiple, smaller integrations. We call these collections <strong>presets.</strong> Instead of creating a factory function that returns a single integration object, a preset returns an <em>array</em> of integration objects. This is useful for building complex features out of multiple integrations.</p>
+<figure class="code-snippet lang-js">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#D8DEE9">integrations</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> [</span></span>
+<span class="line"><span style="color:#C7C5D3">  </span><span style="color:#ABA8BD">// Example: where examplePreset() returns: [integrationOne, integrationTwo, ...etc]</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#66ADFF">examplePreset</span><span style="color:#D8DEE9">()</span></span>
+<span class="line"><span style="color:#D8DEE9">]</span></span></code></pre>
+</figure>
+	</section>
+	<aside class="next-previous-nav astro-CCFK4WYY">
+			<a class="ltr astro-2WJE3NNX" rel="prev" href="/ar/reference/api-reference/">
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="32" width="32" fill="currentColor" class="astro-2WJE3NNX">
+			<path d="M447.1 256C447.1 273.7 433.7 288 416 288H109.3l105.4 105.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448s-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L109.3 224H416C433.7 224 447.1 238.3 447.1 256z" class="astro-2WJE3NNX"></path>
+		</svg>
+	
+	<div class="copy astro-2WJE3NNX">
+		<div class="heading astro-2WJE3NNX">عودة
+</div>
+		<div class="name astro-2WJE3NNX">Runtime API</div>
+	</div>
+</a>
+
+
+			<a class="rtl astro-2WJE3NNX" rel="next" href="/ar/reference/adapter-reference/">
+	
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="32" width="32" fill="currentColor" class="astro-2WJE3NNX">
+			<path d="M438.6 278.6l-160 160C272.4 444.9 264.2 448 256 448s-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L338.8 288H32C14.33 288 .0016 273.7 .0016 256S14.33 224 32 224h306.8l-105.4-105.4c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160C451.1 245.9 451.1 266.1 438.6 278.6z" class="astro-2WJE3NNX"></path>
+		</svg>
+	<div class="copy astro-2WJE3NNX">
+		<div class="heading astro-2WJE3NNX">الصفحة التالية
+</div>
+		<div class="name astro-2WJE3NNX">Adapter API</div>
+	</div>
+</a>
+
+
+		</aside>
+</article>
+
+
+			</div>
+		</main>
+	</body></html>

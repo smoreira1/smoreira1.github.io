@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja" class="initial astro-6SNADQYA">
+	<head>
+		<!-- Global Metadata --><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="hsl(256, 44%, 15%)" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="hsl(273, 37%, 93%)" media="(prefers-color-scheme: light)">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate icon" type="image/x-icon" href="/favicon.ico">
+<link rel="sitemap" href="/sitemap-index.xml">
+
+<!-- Global CSS -->
+<link rel="stylesheet" href="/theme.css">
+<link rel="stylesheet" href="/index.css">
+
+<!-- Scrollable a11y code helper -->
+<script type="module" src="/make-scrollable-code-focusable.js"></script>
+
+<!-- This is intentionally inlined to avoid FOUC -->
+
+
+<!-- Double-click to highlight code blocks (inline only). -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-130280175-15"></script>
+
+
+		<!-- Page Metadata --><link rel="canonical" href="https://docs.astro.build/ja/reference/configuration-reference/">
+
+
+<link rel="alternate" href="https://docs.astro.build/en/reference/configuration-reference/" hreflang="en"><link rel="alternate" href="https://docs.astro.build/de/reference/configuration-reference/" hreflang="de"><link rel="alternate" href="https://docs.astro.build/nl/reference/configuration-reference/" hreflang="nl"><link rel="alternate" href="https://docs.astro.build/pt-br/reference/configuration-reference/" hreflang="pt-BR"><link rel="alternate" href="https://docs.astro.build/fi/reference/configuration-reference/" hreflang="fi"><link rel="alternate" href="https://docs.astro.build/es/reference/configuration-reference/" hreflang="es"><link rel="alternate" href="https://docs.astro.build/zh-cn/reference/configuration-reference/" hreflang="zh-CN"><link rel="alternate" href="https://docs.astro.build/zh-tw/reference/configuration-reference/" hreflang="zh-TW"><link rel="alternate" href="https://docs.astro.build/bg/reference/configuration-reference/" hreflang="bg"><link rel="alternate" href="https://docs.astro.build/fr/reference/configuration-reference/" hreflang="fr"><link rel="alternate" href="https://docs.astro.build/bn/reference/configuration-reference/" hreflang="bn"><link rel="alternate" href="https://docs.astro.build/kr/reference/configuration-reference/" hreflang="kr"><link rel="alternate" href="https://docs.astro.build/ar/reference/configuration-reference/" hreflang="ar"><link rel="alternate" href="https://docs.astro.build/da/reference/configuration-reference/" hreflang="da"><link rel="alternate" href="https://docs.astro.build/ja/reference/configuration-reference/" hreflang="ja"><link rel="alternate" href="https://docs.astro.build/ru/reference/configuration-reference/" hreflang="ru"><link rel="alternate" href="https://docs.astro.build/it/reference/configuration-reference/" hreflang="it"><link rel="alternate" href="https://docs.astro.build/pl/reference/configuration-reference/" hreflang="pl"><link rel="alternate" href="https://docs.astro.build/hu/reference/configuration-reference/" hreflang="hu">
+
+<!-- Algolia docsearch language facet -->
+<meta name="docsearch:language" content="ja">
+
+<!-- OpenGraph Tags -->
+<meta property="og:title" content="設定方法">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://docs.astro.build/ja/reference/configuration-reference/">
+<meta property="og:locale" content="ja">
+<meta property="og:image" content="https://docs.astro.build/default-og-image.png?v=1">
+<meta property="og:image:alt" content="星空にAstroロゴ、右手前には紫色の土星のような惑星が見える。">
+<meta name="description" property="og:description" content="より少ないクライアントサイドJavascriptで、より高速なWebサイトを構築できます。">
+<meta property="og:site_name" content="Astroドキュメント">
+
+<!-- Twitter Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="astrodotbuild">
+<meta name="twitter:title" content="設定方法">
+<meta name="twitter:description" content="より少ないクライアントサイドJavascriptで、より高速なWebサイトを構築できます。">
+<meta name="twitter:image" content="https://docs.astro.build/default-og-image.png?v=1">
+<meta name="twitter:image:alt" content="星空にAstroロゴ、右手前には紫色の土星のような惑星が見える。">
+
+<!--
+  TODO: Add json+ld data, maybe https://schema.org/APIReference makes sense?
+  Docs: https://developers.google.com/search/docs/advanced/structured-data/intro-structured-data
+  https://www.npmjs.com/package/schema-dts seems like a great resource for implementing this.
+  Even better, there’s a React component that integrates with `schema-dts`: https://github.com/google/react-schemaorg
+-->
+
+		<title>設定方法 🚀 Astroドキュメント</title>
+		
+		<script>
+			// This code was migrated/copied from ThemToggleBotton to make the
+			// dark mode toggle instant, vs. hidden inside of a Preact useEffect() call.
+			const theme = (() => {
+				if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+					return localStorage.getItem('theme');
+				}
+				if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+					return 'dark';
+				}
+				return 'light';
+			})();
+			if (theme === 'light') {
+				document.documentElement.classList.remove('theme-dark');
+			} else {
+				document.documentElement.classList.add('theme-dark');
+			}
+		</script>
+	<link rel="stylesheet" href="/assets/f542069c.c28a3eae.css" />
+<link rel="stylesheet" href="/assets/e2317e16.36ca0ba9.css" />
+<link rel="stylesheet" href="/assets/d262d885.28dd6693.css" />
+<link rel="stylesheet" href="/assets/9cf9e8db.97bfbd59.css" />
+<link rel="stylesheet" href="/assets/7b344959.9c17731f.css" />
+<link rel="stylesheet" href="/assets/6b9ff114.c5aa952c.css" /><script type="module" src="/hoisted.6f80f745.js"></script></head>
+
+	<body class="astro-6SNADQYA">
+		<header class="astro-OWYKDMOT">
+	<a href="#article" class="sr-only focus:not-sr-only skiplink astro-D5GPSQS7">
+	<span class="astro-D5GPSQS7">コンテンツにスキップ
+</span>
+</a>
+
+
+	<nav class="nav-wrapper astro-OWYKDMOT" aria-label="トップナビゲーション">
+		<div dir="ltr" lang="en" class="logo flex astro-OWYKDMOT">
+			<ul class="astro-OWYKDMOT">
+				<li class="astro-OWYKDMOT">
+					<a class="astro astro-OWYKDMOT" href="https://smoreira1.github.io">
+						<span class="sr-only astro-OWYKDMOT">Astrso</span>
+						Stephen D. M.
+					</a>
+					<a class="astro-OWYKDMOT">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="astro-OWYKDMOT">
+							<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" class="astro-OWYKDMOT"></path>
+						</svg>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- <ThemeToggleButton 
+				client:visible 
+				labels={{  useLight: t('themeToggle.useLight'), useDark: t('themeToggle.useDark')  }}
+				isInsideHeader={true} 
+			/> -->
+		<!-- {lang && <LanguageSelect lang={lang} client:idle />}
+		<Search {lang} labels={docsearchStrings} />
+		<SidebarToggle client:idle /> -->
+	</nav>
+</header>
+		<main class="layout astro-6SNADQYA">
+			<aside id="left-sidebar" class="sidebar astro-6SNADQYA">
+				<nav aria-label="サイトナビゲーション" class="astro-M2FRLZWK">
+	<style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).load=a=>{(async()=>await(await a())())()};var a;{const l={0:t=>t,1:t=>JSON.parse(t,n),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,n)),5:t=>new Set(JSON.parse(t,n)),6:t=>BigInt(t),7:t=>new URL(t)},n=(t,r)=>{if(t===""||!Array.isArray(r))return r;const[e,i]=r;return e in l?l[e](i):void 0};customElements.get("astro-island")||customElements.define("astro-island",(a=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement?.closest("astro-island[ssr]"))return;const r=this.querySelectorAll("astro-slot"),e={},i=this.querySelectorAll("template[data-astro-template]");for(const s of i)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("data-astro-template")||"default"]=s.innerHTML,s.remove());for(const s of r)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("name")||"default"]=s.innerHTML);const o=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),n):{};this.hydrator(this)(this.Component,o,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((r,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate),await import(this.getAttribute("before-hydration-url"));const r=JSON.parse(this.getAttribute("opts"));Astro[this.getAttribute("client")](async()=>{const e=this.getAttribute("renderer-url"),[i,{default:o}]=await Promise.all([import(this.getAttribute("component-url")),e?import(e):()=>()=>{}]);return this.Component=i[this.getAttribute("component-export")||"default"],this.hydrator=o,this.hydrate},r,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},a.observedAttributes=["props"],a))}</script><astro-island uid="Z2ieTaS" component-url="/SidebarToggleTabGroup.053ded21.js" component-export="default" renderer-url="/client.f1d83173.js" props="{&quot;defaultActiveTab&quot;:[0,&quot;api&quot;],&quot;labels&quot;:[0,{&quot;learn&quot;:[0,&quot;学習&quot;],&quot;api&quot;:[0,&quot;リファレンス&quot;]}],&quot;class&quot;:[0,&quot;astro-M2FRLZWK&quot;]}" ssr="" client="load" before-hydration-url="data:text/javascript;charset=utf-8,//[no before-hydration script]" opts="{&quot;name&quot;:&quot;SidebarToggleTabGroup&quot;,&quot;value&quot;:true}" await-children=""><div class="TabGroup"><button class>学習</button><button class="active">リファレンス</button></div></astro-island>
+	<ul class="nav-groups astro-M2FRLZWK">
+		
+<li class="nav-group learn  astro-VB2AOOVT">
+		<details open class="astro-VB2AOOVT">
+			<summary class="nav-group-title astro-VB2AOOVT">
+				<h2 class="astro-VB2AOOVT">
+					スタートガイド
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true" class="astro-VB2AOOVT">
+						<path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z" class="astro-VB2AOOVT"></path>
+					</svg>
+				</h2>
+			</summary>
+			<ul class="astro-VB2AOOVT">
+				<li class="nav-link astro-VB2AOOVT">
+						<a href="/ja/getting-started/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">はじめに </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ja/install/auto/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">インストール </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ja/editor-setup/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">エディタのセットアップ </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ja/migrate/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">アップグレードガイド </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ja/migrate/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">アップグレードガイド </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ja/migrate/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">アップグレードガイド </a>
+					</li>
+			</ul>
+		</details>
+	</li><li class="nav-group learn  astro-VB2AOOVT">
+		<details open class="astro-VB2AOOVT">
+			<summary class="nav-group-title astro-VB2AOOVT">
+				<h2 class="astro-VB2AOOVT">
+					基本
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true" class="astro-VB2AOOVT">
+						<path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z" class="astro-VB2AOOVT"></path>
+					</svg>
+				</h2>
+			</summary>
+			<ul class="astro-VB2AOOVT">
+				<li class="nav-link astro-VB2AOOVT">
+						<a href="/ja/guides/deploy/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">デプロイ </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ja/guides/deploy/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">デプロイ </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ja/core-concepts/project-structure/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">ディレクトリ構成 </a>
+					</li>
+			</ul>
+		</details>
+	</li><li class="nav-group learn  astro-VB2AOOVT">
+		<details open class="astro-VB2AOOVT">
+			<summary class="nav-group-title astro-VB2AOOVT">
+				<h2 class="astro-VB2AOOVT">
+					特徴
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true" class="astro-VB2AOOVT">
+						<path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z" class="astro-VB2AOOVT"></path>
+					</svg>
+				</h2>
+			</summary>
+			<ul class="astro-VB2AOOVT">
+				<li class="nav-link astro-VB2AOOVT">
+						<a href="/ja/guides/configuring-astro/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Astroの設定 </a>
+					</li>
+			</ul>
+		</details>
+	</li><li class="nav-group learn  astro-VB2AOOVT">
+		<details open class="astro-VB2AOOVT">
+			<summary class="nav-group-title astro-VB2AOOVT">
+				<h2 class="astro-VB2AOOVT">
+					コアコンセプト
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true" class="astro-VB2AOOVT">
+						<path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z" class="astro-VB2AOOVT"></path>
+					</svg>
+				</h2>
+			</summary>
+			<ul class="astro-VB2AOOVT">
+				<li class="nav-link astro-VB2AOOVT">
+						<a href="/ja/concepts/why-astro/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Astroを選ぶ理由 </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ja/concepts/why-astro/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Astroを選ぶ理由 </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ja/concepts/why-astro/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Astroを選ぶ理由 </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ja/concepts/why-astro/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Astroを選ぶ理由 </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ja/concepts/why-astro/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Astroを選ぶ理由 </a>
+					</li>
+			</ul>
+		</details>
+	</li>
+
+
+		
+<li class="nav-group api active astro-VB2AOOVT">
+		<details open class="astro-VB2AOOVT">
+			<summary class="nav-group-title astro-VB2AOOVT">
+				<h2 class="astro-VB2AOOVT">
+					リファレンス
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true" class="astro-VB2AOOVT">
+						<path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z" class="astro-VB2AOOVT"></path>
+					</svg>
+				</h2>
+			</summary>
+			<ul class="astro-VB2AOOVT">
+				<li class="nav-link astro-VB2AOOVT">
+						<a href="/ja/reference/configuration-reference/" aria-current="page" data-current-parent="true" class="astro-VB2AOOVT">設定方法 </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ja/reference/cli-reference/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">CLI <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ja/reference/api-reference/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">ランタイムAPI <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ja/reference/integrations-reference/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">インテグレーションAPI <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ja/reference/adapter-reference/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">アダプターAPI <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ja/reference/directives-reference/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">テンプレートディレクティブ <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ja/guides/publish-to-npm/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">npmへの公開 <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li>
+			</ul>
+		</details>
+	</li>
+
+
+		<details open class="hide-on-large-screens astro-TL4TIEEL"><summary class="astro-TL4TIEEL"><h2 class="heading astro-TL4TIEEL">Socials
+</h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true" class="astro-TL4TIEEL">
+			<path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z" class="astro-TL4TIEEL">
+			</path>
+		</svg></summary><ul class="astro-TL4TIEEL">
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://astro.build/chat" target="_blank" class="astro-TL4TIEEL">
+				<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="comment-alt" class="svg-inline--fa fa-comment-alt fa-w-16 astro-TL4TIEEL" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" height="1em" width="1em">
+					<path fill="currentColor" d="M448 0H64C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h96v84c0 9.8 11.2 15.5 19.1 9.7L304 416h144c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64z" class="astro-TL4TIEEL">
+					</path>
+				</svg>
+				<span class="astro-TL4TIEEL">407-310-8747
+</span>
+			</a>
+		</li>
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://www.linkedin.com/in/stephenmoreira" target="_blank" class="astro-TL4TIEEL">
+				<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024" class="astro-TL4TIEEL">
+					<path fill="currentColor" d="M928 161H699.2c-49.1 0-97.1 14.1-138.4 40.7L512 233l-48.8-31.3A255.2 255.2 0 0 0 324.8 161H96c-17.7 0-32 14.3-32 32v568c0 17.7 14.3 32 32 32h228.8c49.1 0 97.1 14.1 138.4 40.7l44.4 28.6c1.3.8 2.8 1.3 4.3 1.3s3-.4 4.3-1.3l44.4-28.6C602 807.1 650.1 793 699.2 793H928c17.7 0 32-14.3 32-32V193c0-17.7-14.3-32-32-32zM404 553.5c0 4.1-3.2 7.5-7.1 7.5H211.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45zm0-140c0 4.1-3.2 7.5-7.1 7.5H211.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45zm416 140c0 4.1-3.2 7.5-7.1 7.5H627.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45zm0-140c0 4.1-3.2 7.5-7.1 7.5H627.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45z" class="astro-TL4TIEEL"></path>
+				</svg>
+				<span class="astro-TL4TIEEL">LinkedIn
+</span>
+			</a>
+		</li>
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://twitter.com/stephendmoreira" target="_blank" class="astro-TL4TIEEL">
+				<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256" class="astro-TL4TIEEL">
+					<path fill="currentColor" d="M209.765 128.15c0 16.013-4.9 31.34-13.266 44.575l33.447 33.447a128.918 128.918 0 0 0 25.783-77.35c0-29.265-9.754-55.751-26.47-77.336l-32.776 32.729a79.442 79.442 0 0 1 13.267 43.888l.015.047Z" class="astro-TL4TIEEL"></path>
+					<path fill="currentColor" d="M127.513 210.355c-45.367-.086-82.125-36.838-82.22-82.205c.069-45.386 36.835-82.166 82.22-82.252c16.732 0 32.058 4.901 44.607 13.267l32.744-32.776A128.965 128.965 0 0 0 127.514.636C57.123.636 0 57.76 0 128.15c0 70.359 57.124 127.513 127.513 127.513a125.126 125.126 0 0 0 77.351-26.501l-33.447-33.431c-11.861 9.754-27.157 14.624-43.904 14.624Z" class="astro-TL4TIEEL"></path>
+				</svg>
+				<span class="astro-TL4TIEEL">Twitter
+</span>
+			</a>
+		</li>
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://github.com/withastro/docs" target="_blank" class="astro-TL4TIEEL">
+				<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="github" class="svg-inline--fa fa-brands fa-github fa-w-16 astro-TL4TIEEL" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+					<path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" class="astro-TL4TIEEL"></path>
+				</svg>
+				<span class="astro-TL4TIEEL">GitHubリポジトリ
+</span>
+			</a>
+		</li>
+	</ul></details open>
+
+
+		<li style="text-align: center;" class="astro-M2FRLZWK">
+			<script>(self.Astro=self.Astro||{}).visible=(i,c,n)=>{const r=async()=>{await(await i())()};let s=new IntersectionObserver(e=>{for(const t of e)if(!!t.isIntersecting){s.disconnect(),r();break}});for(let e=0;e<n.children.length;e++){const t=n.children[e];s.observe(t)}};</script><astro-island uid="Za2rPX" component-url="/ThemeToggleButton.b38468b8.js" component-export="default" renderer-url="/client.f1d83173.js" props="{&quot;labels&quot;:[0,{&quot;useLight&quot;:[0,&quot;ライトモード&quot;],&quot;useDark&quot;:[0,&quot;ダークモード&quot;]}],&quot;class&quot;:[0,&quot;astro-M2FRLZWK&quot;]}" ssr="" client="visible" before-hydration-url="data:text/javascript;charset=utf-8,//[no before-hydration script]" opts="{&quot;name&quot;:&quot;ThemeToggleButton&quot;,&quot;value&quot;:true}" await-children=""><div class="theme-toggle "><label title="ライトモード" class><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path></svg><input type="radio" name="theme-toggle" value="light" aria-label="ライトモード" /></label><label title="ダークモード" class><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg><input type="radio" name="theme-toggle" value="dark" aria-label="ダークモード" /></label></div></astro-island>
+		</li>
+		<li class="astro-M2FRLZWK">
+			<!-- <div dir="ltr" lang="en" class="sponsors">
+	<h2 class="sponsors-title">Sponsored by</h2>
+	<div class="sponsor">
+		<a href="https://www.netlify.com/" aria-label="Go to Netlify website">
+			<svg class="sponsor-logo__netlify" viewBox="0 0 147 40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+				><radialGradient
+					id="netlify-gradient"
+					cx="-779.0521"
+					cy="1839.7205"
+					gradientTransform="matrix(0 38.301 44.1228 0 -81154.2578 29839.2441)"
+					gradientUnits="userSpaceOnUse"
+					r="1.0011"><stop offset="0" stop-color="#20c6b7"></stop><stop offset="1" stop-color="#4d9abf"></stop></radialGradient
+				><path
+					clip-rule="evenodd"
+					d="m53.37 12.98.12 2.2c1.4-1.7 3.24-2.55 5.53-2.55 3.95 0 5.96 2.27 6.03 6.8v12.57h-4.26v-12.32c0-1.21-.26-2.1-.78-2.68s-1.37-.87-2.55-.87c-1.72 0-3 .78-3.84 2.34v13.53h-4.26v-19.02zm24.38 19.37c-2.7 0-4.89-.85-6.57-2.56-1.68-1.7-2.52-3.98-2.52-6.81v-.53c0-1.9.36-3.59 1.1-5.09.73-1.49 1.76-2.66 3.08-3.49s2.79-1.25 4.42-1.25c2.58 0 4.58.83 5.99 2.48s2.11 3.99 2.11 7.01v1.72h-12.4c.13 1.57.65 2.81 1.57 3.73s2.07 1.37 3.46 1.37c1.95 0 3.54-.79 4.77-2.37l2.3 2.2c-.76 1.14-1.77 2.02-3.04 2.65s-2.69.94-4.27.94zm-.51-16.29c-1.17 0-2.11.41-2.83 1.23s-1.18 1.96-1.38 3.43h8.12v-.32c-.09-1.43-.47-2.51-1.14-3.24-.67-.74-1.59-1.1-2.77-1.1zm16.76-7.7v4.62h3.35v3.16h-3.35v10.62c0 .73.14 1.25.43 1.57s.8.48 1.54.48c.5 0 1-.06 1.49-.18v3.31c-.97.27-1.9.4-2.81.4-3.27 0-4.91-1.81-4.91-5.43v-10.77h-3.12v-3.16h3.12v-4.63zm11.14 23.64h-4.26v-27h4.26zm9.17 0h-4.26v-19.02h4.26zm-4.52-23.96c0-.65.21-1.2.62-1.63.42-.43 1.01-.65 1.78-.65s1.37.22 1.79.65.63.98.63 1.64c0 .64-.21 1.18-.63 1.61s-1.02.64-1.79.64-1.36-.21-1.78-.64c-.41-.44-.62-.98-.62-1.62zm10.66 23.96v-15.86h-2.89v-3.16h2.89v-1.74c0-2.11.58-3.74 1.75-4.89s2.81-1.72 4.91-1.72c.75 0 1.54.11 2.39.32l-.1 3.34c-.54-.1-1.08-.15-1.63-.14-2.04 0-3.05 1.05-3.05 3.15v1.69h3.86v3.16h-3.86v15.85zm17.87-6.12 3.86-12.9h4.54l-7.54 21.9c-1.16 3.2-3.12 4.8-5.89 4.8-.62 0-1.3-.11-2.05-.32v-3.31l.81.05c1.07 0 1.88-.2 2.43-.59.54-.39.97-1.05 1.29-1.98l.61-1.64-6.66-18.93h4.6z"
+					fill-rule="evenodd"></path><path
+					d="m27.89 14.14-.01-.01c-.01 0-.02-.01-.02-.01-.02-.02-.03-.06-.03-.09l.77-4.73 3.62 3.63-3.77 1.6c-.01 0-.02.01-.03.01h-.02s-.01-.01-.02-.02c-.14-.16-.31-.29-.49-.38zm5.26-.29 3.88 3.88c.81.81 1.21 1.21 1.35 1.67.02.07.04.14.05.21l-9.26-3.92s-.01 0-.01-.01c-.04-.02-.08-.03-.08-.07s.04-.06.08-.07l.01-.01zm5.12 7c-.2.38-.59.77-1.25 1.43l-4.37 4.37-5.65-1.18-.03-.01c-.05-.01-.1-.02-.1-.06-.04-.47-.28-.9-.66-1.19-.02-.02-.02-.06-.01-.09v-.01l1.06-6.53v-.02c.01-.05.01-.11.06-.11.46-.06.88-.3 1.16-.67.01-.01.01-.02.03-.03.03-.01.07 0 .1.01zm-6.62 6.8-7.19 7.19 1.23-7.56v-.01c0-.01 0-.02.01-.03.01-.02.04-.03.06-.04h.01c.27-.11.51-.29.69-.52.02-.03.05-.06.09-.06h.03zm-8.71 8.71-.81.81-8.95-12.94s-.01-.01-.01-.01c-.01-.02-.03-.04-.03-.06s.01-.03.02-.04l.01-.01c.03-.04.05-.08.07-.12l.02-.03c.01-.02.03-.05.05-.06s.05-.01.07 0l9.92 2.05c.03 0 .05.02.08.03.01.01.02.03.02.04.14.53.52.97 1.03 1.17.03.01.02.05 0 .08-.01.01-.01.03-.01.05-.12.74-1.19 7.27-1.48 9.04zm-1.69 1.69c-.6.59-.95.9-1.35 1.03-.39.12-.81.12-1.21 0-.47-.15-.87-.55-1.67-1.36l-8.99-8.99 2.35-3.64c.01-.02.02-.03.04-.05s.06-.01.09 0c.54.16 1.12.13 1.64-.08.03-.01.05-.02.07 0l.03.03zm-14.09-10.19-2.06-2.06 4.07-1.74c.01 0 .02-.01.03-.01.03 0 .05.03.07.07.04.06.08.12.13.18l.01.02c.01.02 0 .03-.01.05zm-2.98-2.97-2.61-2.61c-.44-.44-.77-.77-.99-1.04l7.94 1.65h.03c.05.01.1.02.1.06 0 .05-.06.07-.11.09l-.02.01zm-4.05-5c.01-.17.04-.33.09-.5.15-.47.55-.87 1.36-1.67l3.34-3.34c1.54 2.23 3.08 4.46 4.63 6.69.03.04.06.08.03.11-.15.16-.29.34-.4.53-.01.02-.03.05-.05.06-.01.01-.03 0-.04 0zm5.68-6.4 4.49-4.49c.42.19 1.96.83 3.33 1.41 1.04.44 1.99.84 2.29.97.03.01.06.02.07.05.01.02 0 .04 0 .06-.14.66.05 1.35.52 1.83.03.03 0 .07-.03.11l-.01.02-4.56 7.06c-.01.02-.02.04-.04.05s-.06.01-.09 0c-.18-.05-.36-.07-.54-.07-.16 0-.34.03-.52.06-.02 0-.04.01-.05 0-.02-.01-.03-.03-.05-.05zm5.4-5.4 5.81-5.81c.81-.81 1.21-1.21 1.67-1.36.39-.12.81-.12 1.21 0 .47.15.87.55 1.67 1.36l1.26 1.26-4.14 6.4c-.01.02-.02.03-.04.05s-.06.01-.09 0c-.66-.2-1.38-.06-1.92.37-.03.03-.07.01-.1 0-.53-.24-4.73-2.01-5.33-2.27zm12.5-3.67 3.82 3.82-.92 5.7v.02c0 .01 0 .03-.01.04-.01.02-.03.02-.05.03-.2.06-.38.15-.55.27-.01.01-.01.01-.02.02s-.02.02-.04.02c-.01 0-.03 0-.04-.01l-5.82-2.47-.01-.01c-.04-.02-.08-.03-.08-.07-.03-.32-.14-.64-.31-.91-.03-.05-.06-.09-.03-.14zm-3.93 8.6 5.45 2.31c.03.01.06.03.08.06.01.02.01.04 0 .06-.02.08-.03.17-.03.26v.15c0 .04-.04.05-.08.07h-.01c-.86.37-12.13 5.17-12.15 5.17s-.03 0-.05-.02c-.03-.03 0-.07.03-.11 0-.01.01-.01.01-.02l4.48-6.94.01-.01c.03-.04.06-.09.1-.09l.05.01c.1.01.19.03.28.03.68 0 1.31-.33 1.69-.9.01-.02.02-.03.03-.04.04-.01.08 0 .11.01zm-6.25 9.19 12.28-5.24s.02 0 .03.02c.07.07.12.11.18.15l.03.02c.02.01.05.03.05.06v.02l-1.05 6.46v.03c-.01.05-.01.11-.06.11-.57.04-1.08.36-1.37.85v.01c-.01.02-.03.05-.05.06s-.05.01-.07 0l-9.79-2.02c-.02-.02-.16-.53-.18-.53z"
+					fill="url(#netlify-gradient)"></path></svg
+			>
+		</a>
+	</div>
+</div> -->
+
+		</li>
+	</ul>
+</nav>
+
+
+
+
+			</aside>
+			<aside id="right-sidebar" class="sidebar astro-6SNADQYA">
+				<nav aria-label="目次" class="astro-7RGIIGOJ">
+	<script>(self.Astro=self.Astro||{}).media=(s,a)=>{const t=async()=>{await(await s())()};if(a.value){const e=matchMedia(a.value);e.matches?t():e.addEventListener("change",t,{once:!0})}};</script><astro-island uid="Rn4Ob" component-url="/TableOfContents.109662f0.js" component-export="default" renderer-url="/client.f1d83173.js" props="{&quot;headings&quot;:[1,&quot;[[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;トップレベルのオプション\&quot;],\&quot;text\&quot;:[0,\&quot;トップレベルのオプション\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;root\&quot;],\&quot;text\&quot;:[0,\&quot;root\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;例\&quot;],\&quot;text\&quot;:[0,\&quot;例\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;srcdir\&quot;],\&quot;text\&quot;:[0,\&quot;srcDir\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;publicdir\&quot;],\&quot;text\&quot;:[0,\&quot;publicDir\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;outdir\&quot;],\&quot;text\&quot;:[0,\&quot;outDir\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;site\&quot;],\&quot;text\&quot;:[0,\&quot;site\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;base\&quot;],\&quot;text\&quot;:[0,\&quot;base\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;trailingslash\&quot;],\&quot;text\&quot;:[0,\&quot;trailingSlash\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;ビルドのオプション\&quot;],\&quot;text\&quot;:[0,\&quot;ビルドのオプション\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;buildformat\&quot;],\&quot;text\&quot;:[0,\&quot;build.format\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;サーバーのオプション\&quot;],\&quot;text\&quot;:[0,\&quot;サーバーのオプション\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;serverhost\&quot;],\&quot;text\&quot;:[0,\&quot;server.host\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;serverport\&quot;],\&quot;text\&quot;:[0,\&quot;server.port\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;マークダウンのオプション\&quot;],\&quot;text\&quot;:[0,\&quot;マークダウンのオプション\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;markdowndrafts\&quot;],\&quot;text\&quot;:[0,\&quot;markdown.drafts\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;markdownshikiconfig\&quot;],\&quot;text\&quot;:[0,\&quot;markdown.shikiConfig\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;markdownsyntaxhighlight\&quot;],\&quot;text\&quot;:[0,\&quot;markdown.syntaxHighlight\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;markdownremarkplugins\&quot;],\&quot;text\&quot;:[0,\&quot;markdown.remarkPlugins\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;markdownrehypeplugins\&quot;],\&quot;text\&quot;:[0,\&quot;markdown.rehypePlugins\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;アダブター\&quot;],\&quot;text\&quot;:[0,\&quot;アダブター\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;インテグレーション\&quot;],\&quot;text\&quot;:[0,\&quot;インテグレーション\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;vite\&quot;],\&quot;text\&quot;:[0,\&quot;Vite\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;例-1\&quot;],\&quot;text\&quot;:[0,\&quot;例\&quot;]}]]&quot;],&quot;labels&quot;:[0,{&quot;onThisPage&quot;:[0,&quot;目次&quot;],&quot;overview&quot;:[0,&quot;概要&quot;]}],&quot;isMobile&quot;:[0,false],&quot;class&quot;:[0,&quot;astro-7RGIIGOJ&quot;]}" ssr="" client="media" before-hydration-url="data:text/javascript;charset=utf-8,//[no before-hydration script]" opts="{&quot;name&quot;:&quot;TableOfContents&quot;,&quot;value&quot;:&quot;(min-width: 50em)&quot;}" await-children=""><h2 class="heading" id="on-this-page-heading">目次</h2><ul><li class="header-link depth-2 current-header-link"><a href="#overview">概要</a></li><li class="header-link depth-2"><a href="#トップレベルのオプション">トップレベルのオプション</a></li><li class="header-link depth-3"><a href="#root">root</a></li><li class="header-link depth-3"><a href="#srcdir">srcDir</a></li><li class="header-link depth-3"><a href="#publicdir">publicDir</a></li><li class="header-link depth-3"><a href="#outdir">outDir</a></li><li class="header-link depth-3"><a href="#site">site</a></li><li class="header-link depth-3"><a href="#base">base</a></li><li class="header-link depth-3"><a href="#trailingslash">trailingSlash</a></li><li class="header-link depth-2"><a href="#ビルドのオプション">ビルドのオプション</a></li><li class="header-link depth-3"><a href="#buildformat">build.format</a></li><li class="header-link depth-2"><a href="#サーバーのオプション">サーバーのオプション</a></li><li class="header-link depth-3"><a href="#serverhost">server.host</a></li><li class="header-link depth-3"><a href="#serverport">server.port</a></li><li class="header-link depth-2"><a href="#マークダウンのオプション">マークダウンのオプション</a></li><li class="header-link depth-3"><a href="#markdowndrafts">markdown.drafts</a></li><li class="header-link depth-3"><a href="#markdownshikiconfig">markdown.shikiConfig</a></li><li class="header-link depth-3"><a href="#markdownsyntaxhighlight">markdown.syntaxHighlight</a></li><li class="header-link depth-3"><a href="#markdownremarkplugins">markdown.remarkPlugins</a></li><li class="header-link depth-3"><a href="#markdownrehypeplugins">markdown.rehypePlugins</a></li><li class="header-link depth-2"><a href="#アダブター">アダブター</a></li><li class="header-link depth-2"><a href="#インテグレーション">インテグレーション</a></li><li class="header-link depth-2"><a href="#vite">Vite</a></li></ul></astro-island>
+	<!-- <h2 class="heading"><UIString key="rightSidebar.contribute" /></h2>
+<ul>
+	<li class={`header-link depth-2`}>
+		<a class="edit-on-github" href={editHref} target="_blank">
+			<svg
+				aria-hidden="true"
+				focusable="false"
+				data-prefix="fas"
+				data-icon="pen"
+				class="svg-inline--fa fa-pen fa-w-16"
+				role="img"
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512"
+				height="1em"
+				width="1em"
+			>
+				<path
+					fill="currentColor"
+					d="M290.74 93.24l128.02 128.02-277.99 277.99-114.14 12.6C11.35 513.54-1.56 500.62.14 485.34l12.7-114.22 277.9-277.88zm207.2-19.06l-60.11-60.11c-18.75-18.75-49.16-18.75-67.91 0l-56.55 56.55 128.02 128.02 56.55-56.55c18.75-18.76 18.75-49.16 0-67.91z"
+				></path>
+			</svg>
+			<span><UIString key="rightSidebar.editPage" /></span>
+		</a>
+	</li>
+	{isTranslatable &&
+		<li class={`header-link depth-2`}>
+			<a href="https://github.com/withastro/docs/blob/main/TRANSLATING.md" target="_blank">
+				<svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88.6 77.3" height="1.24em" width="1.24em" style="margin: -2px;">
+					<path fill="currentColor" d="M61,24.6h7.9l18.7,51.6h-7.7l-5.4-15.5H54.3l-5.6,15.5h-7.2L61,24.6z M72.6,55l-8-22.8L56.3,55H72.6z"></path>
+					<path
+						fill="currentColor"
+						d="M53.6,60.6c-10-4-16-9-22-14c0,0,1.3,1.3,0,0c-6,5-20,13-20,13l-4-6c8-5,10-6,19-13c-2.1-1.9-12-13-13-19h8          c4,9,10,14,10,14c10-8,10-19,10-19h8c0,0-1,13-12,24l0,0c5,5,10,9,19,13L53.6,60.6z M1.6,16.6h56v-8h-23v-7h-9v7h-24V16.6z"
+					></path>
+				</svg>
+				<span><UIString key="rightSidebar.translatePage" /></span>
+			</a>
+		</li>
+	}
+</ul> -->
+
+	<div class="astro-TL4TIEEL"><div class="astro-TL4TIEEL"><h2 class="heading astro-TL4TIEEL">Socials
+</h2></div><ul class="astro-TL4TIEEL">
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://astro.build/chat" target="_blank" class="astro-TL4TIEEL">
+				<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="comment-alt" class="svg-inline--fa fa-comment-alt fa-w-16 astro-TL4TIEEL" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" height="1em" width="1em">
+					<path fill="currentColor" d="M448 0H64C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h96v84c0 9.8 11.2 15.5 19.1 9.7L304 416h144c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64z" class="astro-TL4TIEEL">
+					</path>
+				</svg>
+				<span class="astro-TL4TIEEL">407-310-8747
+</span>
+			</a>
+		</li>
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://www.linkedin.com/in/stephenmoreira" target="_blank" class="astro-TL4TIEEL">
+				<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024" class="astro-TL4TIEEL">
+					<path fill="currentColor" d="M928 161H699.2c-49.1 0-97.1 14.1-138.4 40.7L512 233l-48.8-31.3A255.2 255.2 0 0 0 324.8 161H96c-17.7 0-32 14.3-32 32v568c0 17.7 14.3 32 32 32h228.8c49.1 0 97.1 14.1 138.4 40.7l44.4 28.6c1.3.8 2.8 1.3 4.3 1.3s3-.4 4.3-1.3l44.4-28.6C602 807.1 650.1 793 699.2 793H928c17.7 0 32-14.3 32-32V193c0-17.7-14.3-32-32-32zM404 553.5c0 4.1-3.2 7.5-7.1 7.5H211.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45zm0-140c0 4.1-3.2 7.5-7.1 7.5H211.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45zm416 140c0 4.1-3.2 7.5-7.1 7.5H627.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45zm0-140c0 4.1-3.2 7.5-7.1 7.5H627.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45z" class="astro-TL4TIEEL"></path>
+				</svg>
+				<span class="astro-TL4TIEEL">LinkedIn
+</span>
+			</a>
+		</li>
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://twitter.com/stephendmoreira" target="_blank" class="astro-TL4TIEEL">
+				<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256" class="astro-TL4TIEEL">
+					<path fill="currentColor" d="M209.765 128.15c0 16.013-4.9 31.34-13.266 44.575l33.447 33.447a128.918 128.918 0 0 0 25.783-77.35c0-29.265-9.754-55.751-26.47-77.336l-32.776 32.729a79.442 79.442 0 0 1 13.267 43.888l.015.047Z" class="astro-TL4TIEEL"></path>
+					<path fill="currentColor" d="M127.513 210.355c-45.367-.086-82.125-36.838-82.22-82.205c.069-45.386 36.835-82.166 82.22-82.252c16.732 0 32.058 4.901 44.607 13.267l32.744-32.776A128.965 128.965 0 0 0 127.514.636C57.123.636 0 57.76 0 128.15c0 70.359 57.124 127.513 127.513 127.513a125.126 125.126 0 0 0 77.351-26.501l-33.447-33.431c-11.861 9.754-27.157 14.624-43.904 14.624Z" class="astro-TL4TIEEL"></path>
+				</svg>
+				<span class="astro-TL4TIEEL">Twitter
+</span>
+			</a>
+		</li>
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://github.com/withastro/docs" target="_blank" class="astro-TL4TIEEL">
+				<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="github" class="svg-inline--fa fa-brands fa-github fa-w-16 astro-TL4TIEEL" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+					<path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" class="astro-TL4TIEEL"></path>
+				</svg>
+				<span class="astro-TL4TIEEL">GitHubリポジトリ
+</span>
+			</a>
+		</li>
+	</ul></div>
+
+
+</nav>
+
+
+			</aside>
+			<div id="main-content" class="astro-6SNADQYA">
+				<nav class="mobile-toc astro-CCFK4WYY">
+			<astro-island uid="jA6kn" component-url="/TableOfContents.109662f0.js" component-export="default" renderer-url="/client.f1d83173.js" props="{&quot;headings&quot;:[1,&quot;[[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;トップレベルのオプション\&quot;],\&quot;text\&quot;:[0,\&quot;トップレベルのオプション\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;root\&quot;],\&quot;text\&quot;:[0,\&quot;root\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;例\&quot;],\&quot;text\&quot;:[0,\&quot;例\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;srcdir\&quot;],\&quot;text\&quot;:[0,\&quot;srcDir\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;publicdir\&quot;],\&quot;text\&quot;:[0,\&quot;publicDir\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;outdir\&quot;],\&quot;text\&quot;:[0,\&quot;outDir\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;site\&quot;],\&quot;text\&quot;:[0,\&quot;site\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;base\&quot;],\&quot;text\&quot;:[0,\&quot;base\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;trailingslash\&quot;],\&quot;text\&quot;:[0,\&quot;trailingSlash\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;ビルドのオプション\&quot;],\&quot;text\&quot;:[0,\&quot;ビルドのオプション\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;buildformat\&quot;],\&quot;text\&quot;:[0,\&quot;build.format\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;サーバーのオプション\&quot;],\&quot;text\&quot;:[0,\&quot;サーバーのオプション\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;serverhost\&quot;],\&quot;text\&quot;:[0,\&quot;server.host\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;serverport\&quot;],\&quot;text\&quot;:[0,\&quot;server.port\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;マークダウンのオプション\&quot;],\&quot;text\&quot;:[0,\&quot;マークダウンのオプション\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;markdowndrafts\&quot;],\&quot;text\&quot;:[0,\&quot;markdown.drafts\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;markdownshikiconfig\&quot;],\&quot;text\&quot;:[0,\&quot;markdown.shikiConfig\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;markdownsyntaxhighlight\&quot;],\&quot;text\&quot;:[0,\&quot;markdown.syntaxHighlight\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;markdownremarkplugins\&quot;],\&quot;text\&quot;:[0,\&quot;markdown.remarkPlugins\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;markdownrehypeplugins\&quot;],\&quot;text\&quot;:[0,\&quot;markdown.rehypePlugins\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;アダブター\&quot;],\&quot;text\&quot;:[0,\&quot;アダブター\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;インテグレーション\&quot;],\&quot;text\&quot;:[0,\&quot;インテグレーション\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;vite\&quot;],\&quot;text\&quot;:[0,\&quot;Vite\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;例-1\&quot;],\&quot;text\&quot;:[0,\&quot;例\&quot;]}]]&quot;],&quot;labels&quot;:[0,{&quot;onThisPage&quot;:[0,&quot;目次&quot;],&quot;overview&quot;:[0,&quot;概要&quot;]}],&quot;isMobile&quot;:[0,true],&quot;class&quot;:[0,&quot;astro-CCFK4WYY&quot;]}" ssr="" client="media" before-hydration-url="data:text/javascript;charset=utf-8,//[no before-hydration script]" opts="{&quot;name&quot;:&quot;TableOfContents&quot;,&quot;value&quot;:&quot;(max-width: 72em)&quot;}" await-children=""><details class="toc-mobile-container"><summary class="toc-mobile-header"><div class="toc-mobile-header-content"><div class="toc-toggle"><h2 class="heading" id="on-this-page-heading">目次</h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z"></path></svg></div></div></summary><ul><li class="header-link depth-2 current-header-link"><a href="#overview">概要</a></li><li class="header-link depth-2"><a href="#トップレベルのオプション">トップレベルのオプション</a></li><li class="header-link depth-3"><a href="#root">root</a></li><li class="header-link depth-3"><a href="#srcdir">srcDir</a></li><li class="header-link depth-3"><a href="#publicdir">publicDir</a></li><li class="header-link depth-3"><a href="#outdir">outDir</a></li><li class="header-link depth-3"><a href="#site">site</a></li><li class="header-link depth-3"><a href="#base">base</a></li><li class="header-link depth-3"><a href="#trailingslash">trailingSlash</a></li><li class="header-link depth-2"><a href="#ビルドのオプション">ビルドのオプション</a></li><li class="header-link depth-3"><a href="#buildformat">build.format</a></li><li class="header-link depth-2"><a href="#サーバーのオプション">サーバーのオプション</a></li><li class="header-link depth-3"><a href="#serverhost">server.host</a></li><li class="header-link depth-3"><a href="#serverport">server.port</a></li><li class="header-link depth-2"><a href="#マークダウンのオプション">マークダウンのオプション</a></li><li class="header-link depth-3"><a href="#markdowndrafts">markdown.drafts</a></li><li class="header-link depth-3"><a href="#markdownshikiconfig">markdown.shikiConfig</a></li><li class="header-link depth-3"><a href="#markdownsyntaxhighlight">markdown.syntaxHighlight</a></li><li class="header-link depth-3"><a href="#markdownremarkplugins">markdown.remarkPlugins</a></li><li class="header-link depth-3"><a href="#markdownrehypeplugins">markdown.rehypePlugins</a></li><li class="header-link depth-2"><a href="#アダブター">アダブター</a></li><li class="header-link depth-2"><a href="#インテグレーション">インテグレーション</a></li><li class="header-link depth-2"><a href="#vite">Vite</a></li></ul></details></astro-island>
+		</nav>
+
+<article id="article" class="content astro-CCFK4WYY">
+	<section class="main-section astro-CCFK4WYY">
+		<h1 class="content-title astro-CCFK4WYY" id="overview">設定方法</h1>
+		<p>次のリファレンスは Astro でサポートされているすべての設定項目をカバーしています。Astro の設定についてもっと知りたい場合は、<a href="/ja/guides/configuring-astro/">Astro の設定</a>の解説をご覧ください。</p>
+<figure class="code-snippet has-title lang-js">
+	<figcaption class="header"><span class="title">astro.config.mjs</span></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">defineConfig</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;astro/config&#39;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF657C">export</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">default</span><span style="color:#D8DEE9"> </span><span style="color:#66ADFF">defineConfig</span><span style="color:#D8DEE9">(</span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#C7C5D3">  </span><span style="color:#ABA8BD">// 設定項目をこちらに記載</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">)</span></span></code></pre>
+</figure><div class="heading-wrapper level-h2" tabindex="-1"><h2 id="トップレベルのオプション">トップレベルのオプション</h2><a class="anchor-link" href="#トップレベルのオプション"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled トップレベルのオプション</span></a></div><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="root">root</h3><a class="anchor-link" href="#root"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled root</span></a></div><p></p><p><strong>データ型:</strong> <code>string</code><br>
+<strong>CLI:</strong> <code>--root</code><br>
+<strong>デフォルト値:</strong> <code>"."</code> (現在の作業ディレクトリ)</p><p>このオプションはプロジェクトルートのディレクトリ以外のディレクトリで <code>astro</code> の CLI コマンドを実行するときのみに指定する必要があります。Astro は設定ファイルを見つける前にプロジェクトルートを知る必要があるため、通常このオプションは <a href="/ja/guides/configuring-astro/#%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E8%A8%AD%E5%AE%9A%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E7%A8%AE%E9%A1%9E">Astro の設定ファイル</a>のかわりに CLI 経由で指定されます。</p><p>もし相対パスを渡した場合 (例: <code>--root: './my-project'</code>) 、Astro は現在の作業ディレクトリに対して相対パスを解決します。</p><div class="heading-wrapper level-h4" tabindex="-1"><h4 id="例">例</h4><a class="anchor-link" href="#例"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled 例</span></a></div>
+<figure class="code-snippet lang-js">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  root</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;./my-project-directory&#39;</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span></span></code></pre>
+</figure>
+<figure class="code-snippet is-terminal lang-bash">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#D8DEE9">$ astro build --root ./my-project-directory</span></span></code></pre>
+</figure><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="srcdir">srcDir</h3><a class="anchor-link" href="#srcdir"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled srcDir</span></a></div><p></p><p><strong>データ型:</strong> <code>string</code><br>
+<strong>デフォルト値:</strong> <code>"./src"</code></p><p>Astro がサイトを読み込むディレクトリを設定します。</p><p>この値はファイルシステムの絶対パスかプロジェクトルートからの相対パスのどちらかで設定されます。</p>
+<figure class="code-snippet lang-js">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  srcDir</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;./www&#39;</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span></span></code></pre>
+</figure><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="publicdir">publicDir</h3><a class="anchor-link" href="#publicdir"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled publicDir</span></a></div><p></p><p><strong>データ型:</strong> <code>string</code><br>
+<strong>デフォルト値:</strong> <code>"./public"</code></p><p>静的アセットを置くディレクトリを設定します。このディレクトリのファイルは開発環境では <code>/</code> で配信され、ビルド時にはビルド用のディレクトリにコピーされます。これらのファイルは変換、バンドルされることはなく、常にそのままの状態で配信、コピーされます。</p><p>この値はファイルシステムの絶対パスかプロジェクトルートからの相対パスのどちらかで設定されます。</p>
+<figure class="code-snippet lang-js">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  publicDir</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;./my-custom-publicDir-directory&#39;</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span></span></code></pre>
+</figure><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="outdir">outDir</h3><a class="anchor-link" href="#outdir"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled outDir</span></a></div><p></p><p><strong>データ型:</strong> <code>string</code><br>
+<strong>デフォルト値:</strong> <code>"./dist"</code></p><p><code>astro build</code> コマンドが最終的にビルドした成果物を出力するディレクトリを設定します。</p><p>この値はファイルシステムの絶対パスかプロジェクトルートからの相対パスのどちらかで設定されます。</p>
+<figure class="code-snippet lang-js">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  outDir</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;./my-custom-build-directory&#39;</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span></span></code></pre>
+</figure><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="site">site</h3><a class="anchor-link" href="#site"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled site</span></a></div><p></p><p><strong>データ型:</strong> <code>string</code></p><p>最終的にデプロイされた URL です。Astro は最後のビルドでサイトマップと canonical タグの URL を生成するためにこの完全な URL を使用します。Astro を最大限活用するためにこちらを設定することを強く推奨します。</p>
+<figure class="code-snippet lang-js">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  site</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;https://www.my-site.dev&#39;</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span></span></code></pre>
+</figure><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="base">base</h3><a class="anchor-link" href="#base"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled base</span></a></div><p></p><p><strong>データ型:</strong> <code>string</code></p><p>デプロイするベースのパスです。開発体験をビルド環境とできるだけ近づけるために Astro はこのパス名を一致させます。以下の例では、<code>astro dev</code> コマンドは <code>/docs</code> でサーバーを起動します。</p>
+<figure class="code-snippet lang-js">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  base</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;/docs&#39;</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span></span></code></pre>
+</figure><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="trailingslash">trailingSlash</h3><a class="anchor-link" href="#trailingslash"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled trailingSlash</span></a></div><p></p><p><strong>データ型:</strong> <code>'always' | 'never' | 'ignore'</code><br>
+<strong>デフォルト値:</strong> <code>'ignore'</code></p><p>開発サーバーのルーティングを合わせる動作の設定をします。次のオプションから選択してください。</p><ul>
+<li><code>'always'</code> - 末尾にスラッシュを含むURLにのみマッチする (例: “/foo/“)</li>
+<li><code>'never'</code> - 末尾にスラッシュを含むURLにはマッチしない (ex: “/foo”)</li>
+<li><code>'ignore'</code> - URL の末尾に ”/” があるかどうかに関係なく一致する</li>
+</ul><p>本番用ホストが末尾のスラッシュどのように機能するか、機能しないかについて厳格な取り扱いをしている場合、この設定項目を使用してください。</p><p>末尾のスラッシュを含む、または含まない URL が開発時に動作させないようにより厳格にしたい場合はこのオプションを設定することもできます。</p>
+<figure class="code-snippet lang-js">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#C7C5D3">  </span><span style="color:#ABA8BD">// 例: 開発時に末尾のスラッシュを必須にするdevelopment</span></span>
+<span class="line"><span style="color:#D8DEE9">  trailingSlash</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;always&#39;</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span></span></code></pre>
+</figure><p><strong>こちらもご覧ください:</strong></p><ul>
+<li>buildOptions.pageUrlFormat</li>
+</ul><div class="heading-wrapper level-h2" tabindex="-1"><h2 id="ビルドのオプション">ビルドのオプション</h2><a class="anchor-link" href="#ビルドのオプション"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled ビルドのオプション</span></a></div><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="buildformat">build.format</h3><a class="anchor-link" href="#buildformat"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled build.format</span></a></div><p></p><p><strong>データ型:</strong> <code>('file' | 'directory')</code><br>
+<strong>デフォルト値:</strong> <code>'directory'</code></p><p>それぞれのページの出力ファイルの形式を取り扱います。</p><ul>
+<li>‘file’ が指定された場合、Astro はそれぞれのページで HTML ファイルを生成します。 (例: “/foo.html”)</li>
+<li>‘directory’ が指定された場合、Astro はそれぞれのページでネストされた <code>index.html</code> ファイル (例: “/foo/index.html”) があるディレクトリを生成します。</li>
+</ul>
+<figure class="code-snippet lang-js">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  build</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#C7C5D3">    </span><span style="color:#ABA8BD">// 例: ビルドの間に `page/index.html` のかわりに `page.html` を生成します。</span></span>
+<span class="line"><span style="color:#D8DEE9">    format</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;file&#39;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">}</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span></span></code></pre>
+</figure><div class="heading-wrapper level-h2" tabindex="-1"><h2 id="サーバーのオプション">サーバーのオプション</h2><a class="anchor-link" href="#サーバーのオプション"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled サーバーのオプション</span></a></div><p><code>astro dev</code> と <code>astro preview</code> の両方で使用される、Astro の開発サーバーをカスタマイズします。</p>
+<figure class="code-snippet lang-js">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  server</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> port</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#EBCB8B">1234</span><span style="color:#C7C5D3">,</span><span style="color:#D8DEE9"> host</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">true</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">}</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span></span></code></pre>
+</figure><p>実行するコマンド (“dev”, “preview”) に応じて異なる設定をするために、この設定項目に関数も渡すことができます。</p>
+<figure class="code-snippet lang-js">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#C7C5D3">  </span><span style="color:#ABA8BD">// 例: コマンドに応じてカスタマイズするためには関数の構文を使用します</span></span>
+<span class="line"><span style="color:#D8DEE9">  server</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> (command) </span><span style="color:#FF657C">=&gt;</span><span style="color:#D8DEE9"> (</span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> </span><span style="color:#66ADFF">port</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> command </span><span style="color:#FF657C">===</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;dev&#39;</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">?</span><span style="color:#D8DEE9"> </span><span style="color:#EBCB8B">3000</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">:</span><span style="color:#D8DEE9"> </span><span style="color:#EBCB8B">4000</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">)</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span></span></code></pre>
+</figure><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="serverhost">server.host</h3><a class="anchor-link" href="#serverhost"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled server.host</span></a></div><p></p><p><strong>データ型:</strong> <code>string | boolean</code><br>
+<strong>デフォルト値:</strong> <code>false</code><br></p><span>
+  <strong>追加:
+</strong> v0.24.0
+  
+</span><p>どのネットワーク IP アドレスでサーバーがリッスンするか設定します。(例: localhost ではない IP)</p><ul>
+<li><code>false</code> - ネットワーク IP アドレスを公開しない</li>
+<li><code>true</code> - LAN やパブリックなアドレスを含むすべてのアドレスでリッスンする</li>
+<li><code>[custom-address]</code> - <code>[custom-address]</code> (例: <code>192.168.0.1</code>) のネットワーク IP アドレスを公開する</li>
+</ul><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="serverport">server.port</h3><a class="anchor-link" href="#serverport"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled server.port</span></a></div><p></p><p><strong>データ型:</strong> <code>number</code><br>
+<strong>デフォルト値:</strong> <code>3000</code></p><p>ポートがリッスンするポートを設定する。</p><p>設定されたポートが使用されていた場合、Astro は自動的に次の利用可能なポート番号を試みます。</p>
+<figure class="code-snippet lang-js">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  server</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> port</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#EBCB8B">8080</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">}</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span></span></code></pre>
+</figure><div class="heading-wrapper level-h2" tabindex="-1"><h2 id="マークダウンのオプション">マークダウンのオプション</h2><a class="anchor-link" href="#マークダウンのオプション"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled マークダウンのオプション</span></a></div><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="markdowndrafts">markdown.drafts</h3><a class="anchor-link" href="#markdowndrafts"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled markdown.drafts</span></a></div><p></p><p><strong>データ型:</strong> <code>boolean</code><br>
+<strong>デフォルト値:</strong> <code>false</code></p><p>マークダウンのドラフトページがビルドに含まれるかを制御します。</p><p>マークダウンページが front-matter に <code>draft: true</code> を含む場合、ドラフトとみなされます。ドラフトページは開発環境 (<code>astro dev</code>) では常に含まれ、閲覧できますが、デフォルトでは最終的なビルドに含まれません。</p>
+<figure class="code-snippet lang-js">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  markdown</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#C7C5D3">    </span><span style="color:#ABA8BD">// 例: 最終的なビルドにドラフトをすべて含む</span></span>
+<span class="line"><span style="color:#D8DEE9">    drafts</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">true</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">}</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span></span></code></pre>
+</figure><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="markdownshikiconfig">markdown.shikiConfig</h3><a class="anchor-link" href="#markdownshikiconfig"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled markdown.shikiConfig</span></a></div><p></p><p><strong>データ型:</strong> <code>Partial&lt;ShikiConfig&gt;</code></p><p>Shiki の設定項目です。使い方は<a href="/ja/guides/markdown-content/#shiki%E3%81%AE%E8%A8%AD%E5%AE%9A">マークダウンの設定のドキュメント</a>をご覧ください。</p><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="markdownsyntaxhighlight">markdown.syntaxHighlight</h3><a class="anchor-link" href="#markdownsyntaxhighlight"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled markdown.syntaxHighlight</span></a></div><p></p><p><strong>データ型:</strong> <code>'shiki' | 'prism' | false</code><br>
+<strong>デフォルト値:</strong> <code>shiki</code></p><p>もしあれば、使用するシンタックスハイライトを設定します。</p><ul>
+<li><code>shiki</code> - <a href="https://github.com/shikijs/shiki">Shiki</a> のハイライトを使用します</li>
+<li><code>prism</code> - <a href="https://prismjs.com/">Prism</a> のハイライトを使用します</li>
+<li><code>false</code> - シンタックスハイライトを使用しません</li>
+</ul>
+<figure class="code-snippet lang-js">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  markdown</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#C7C5D3">    </span><span style="color:#ABA8BD">// 例: マークダウンで prism のシンタックスハイライトを使用するよう変更する</span></span>
+<span class="line"><span style="color:#D8DEE9">    syntaxHighlight</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;prism&#39;</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">}</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span></span></code></pre>
+</figure><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="markdownremarkplugins">markdown.remarkPlugins</h3><a class="anchor-link" href="#markdownremarkplugins"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled markdown.remarkPlugins</span></a></div><p></p><p><strong>データ型:</strong> <code>RemarkPlugins</code></p><p>どのようにマークダウンがビルドされるかをカスタマイズするために <a href="https://github.com/remarkjs/remark">Remark</a> のプラグインを渡します。</p><p><strong>注意:</strong> カスタムの <code>remarkPlugins</code> または <code>rehypePlugins</code> を有効にすると、Astro の <a href="https://github.github.com/gfm/">GitHub-flavored Markdown</a> と <a href="https://github.com/silvenon/remark-smartypants">Smartypants</a> のビルトインサポートが無効になります。必要であれば、これらのプラグインを <code>astro.config.mjs</code> ファイルに明示的に追加する必要があります。</p>
+<figure class="code-snippet lang-js">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  markdown</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#C7C5D3">    </span><span style="color:#ABA8BD">// 例: Astro で使用されるデフォルトの remark のプラグイン</span></span>
+<span class="line"><span style="color:#D8DEE9">    remarkPlugins</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> [</span><span style="color:#16C082">&#39;remark-gfm&#39;</span><span style="color:#C7C5D3">,</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;remark-smartypants&#39;</span><span style="color:#D8DEE9">]</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">},</span></span>
+<span class="line"><span style="color:#C7C5D3">};</span></span></code></pre>
+</figure><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="markdownrehypeplugins">markdown.rehypePlugins</h3><a class="anchor-link" href="#markdownrehypeplugins"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled markdown.rehypePlugins</span></a></div><p></p><p><strong>データ型:</strong> <code>RehypePlugins</code></p><p>どのようにマークダウンがビルドされるかをカスタマイズするために <a href="https://github.com/remarkjs/remark-rehype">Rehype</a> のプラグインを渡します。</p><p><strong>注意:</strong> カスタムの <code>remarkPlugins</code> または <code>rehypePlugins</code> を有効にすると、Astro の <a href="https://github.github.com/gfm/">GitHub-flavored Markdown</a> と <a href="https://github.com/silvenon/remark-smartypants">Smartypants</a> のビルトインサポートが無効になります。必要であれば、これらのプラグインを <code>astro.config.mjs</code> ファイルに明示的に追加する必要があります。</p>
+<figure class="code-snippet lang-js">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  markdown</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#C7C5D3">    </span><span style="color:#ABA8BD">// 例: Astro で使用されるデフォルトの rehype のプラグイン</span></span>
+<span class="line"><span style="color:#D8DEE9">    rehypePlugins</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> []</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">},</span></span>
+<span class="line"><span style="color:#C7C5D3">};</span></span></code></pre>
+</figure><div class="heading-wrapper level-h2" tabindex="-1"><h2 id="アダブター">アダブター</h2><a class="anchor-link" href="#アダブター"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled アダブター</span></a></div><p>ビルドアダプタを使用して、お好きなサーバー、サーバーレス、エッジのホストにデプロイできます。<a href="/ja/guides/deploy/netlify/#adapter-for-ssredge">Netlify&nbsp;(EN)</a> や <a href="/ja/guides/deploy/vercel/#adapter-for-ssr">Vercel&nbsp;(EN)</a> などのファーストパーティーのアダプターを Astro の SSRにインポートしてください。</p><p>SSR についてより詳しく知りたい場合は<a href="/ja/guides/server-side-rendering/">サーバーサイドレンダリングのガイド&nbsp;(EN)</a>を、ホストの完全な一覧は<a href="/ja/guides/deploy/">デプロイのガイド</a>をご覧ください。</p>
+<figure class="code-snippet lang-js">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">netlify</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;@astrojs/netlify/functions&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#C7C5D3">  </span><span style="color:#ABA8BD">// 例: Netlify のサーバーレスのデプロイのためのビルド</span></span>
+<span class="line"><span style="color:#D8DEE9">  adapter</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#66ADFF">netlify</span><span style="color:#D8DEE9">()</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span></span></code></pre>
+</figure><div class="heading-wrapper level-h2" tabindex="-1"><h2 id="インテグレーション">インテグレーション</h2><a class="anchor-link" href="#インテグレーション"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled インテグレーション</span></a></div><p>カスタムインテグレーションで Astro を拡張します。インテグレーションは、フレームワークのサポート (Solid.js など) 、新機能 (サイトマップなど) 、新しいライブラリ(Partytown や Turbolinks など) を追加するためのワンストップ・ショップです。</p><p>Astro のインテグレーションを使い始めるためには<a href="/ja/guides/integrations-guide/">インテグレーションガイド&nbsp;(EN)</a>をご覧ください。</p>
+<figure class="code-snippet lang-js">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">react</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;@astrojs/react&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">tailwind</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;@astrojs/tailwind&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#C7C5D3">  </span><span style="color:#ABA8BD">// 例: Astro に React と Tailwind のサポートを追加</span></span>
+<span class="line"><span style="color:#D8DEE9">  integrations</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> [</span><span style="color:#66ADFF">react</span><span style="color:#D8DEE9">()</span><span style="color:#C7C5D3">,</span><span style="color:#D8DEE9"> </span><span style="color:#66ADFF">tailwind</span><span style="color:#D8DEE9">()]</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span></span></code></pre>
+</figure><div class="heading-wrapper level-h2" tabindex="-1"><h2 id="vite">Vite</h2><a class="anchor-link" href="#vite"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Vite</span></a></div><p>Vite に追加の設定項目を渡します。Astro が必要な高度な設定をサポートしていない場合に有用です。</p><p><code>vite</code> に設定するオブジェクトの完全なドキュメントは <a href="https://vitejs.dev/config/">vitejs.dev</a> でご覧になれます。</p><div class="heading-wrapper level-h4" tabindex="-1"><h4 id="例-1">例</h4><a class="anchor-link" href="#例-1"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled 例</span></a></div>
+<figure class="code-snippet lang-js">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  vite</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">    ssr</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#C7C5D3">      </span><span style="color:#ABA8BD">// 例: 必要な場合、壊れたパッケージが SSR の処理を行うのをスキップさせます</span></span>
+<span class="line"><span style="color:#D8DEE9">      external</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> [</span><span style="color:#16C082">&#39;broken-npm-package&#39;</span><span style="color:#D8DEE9">]</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">}</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">}</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span></span></code></pre>
+</figure>
+<figure class="code-snippet lang-js">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  vite</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#C7C5D3">    </span><span style="color:#ABA8BD">// 例: Astro プロジェクトに直接カスタムの vite プラグインを追加する</span></span>
+<span class="line"><span style="color:#D8DEE9">    plugins</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> [</span><span style="color:#66ADFF">myPlugin</span><span style="color:#D8DEE9">()]</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">}</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span></span></code></pre>
+</figure>
+	</section>
+	<aside class="next-previous-nav astro-CCFK4WYY">
+			<a class="ltr astro-2WJE3NNX" rel="prev" href="/ja/guides/configuring-astro/">
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="32" width="32" fill="currentColor" class="astro-2WJE3NNX">
+			<path d="M447.1 256C447.1 273.7 433.7 288 416 288H109.3l105.4 105.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448s-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L109.3 224H416C433.7 224 447.1 238.3 447.1 256z" class="astro-2WJE3NNX"></path>
+		</svg>
+	
+	<div class="copy astro-2WJE3NNX">
+		<div class="heading astro-2WJE3NNX">戻る
+</div>
+		<div class="name astro-2WJE3NNX">Astroの設定</div>
+	</div>
+</a>
+
+
+			<a class="rtl astro-2WJE3NNX" rel="next" href="/ja/reference/cli-reference/">
+	
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="32" width="32" fill="currentColor" class="astro-2WJE3NNX">
+			<path d="M438.6 278.6l-160 160C272.4 444.9 264.2 448 256 448s-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L338.8 288H32C14.33 288 .0016 273.7 .0016 256S14.33 224 32 224h306.8l-105.4-105.4c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160C451.1 245.9 451.1 266.1 438.6 278.6z" class="astro-2WJE3NNX"></path>
+		</svg>
+	<div class="copy astro-2WJE3NNX">
+		<div class="heading astro-2WJE3NNX">次のページ
+</div>
+		<div class="name astro-2WJE3NNX">CLI</div>
+	</div>
+</a>
+
+
+		</aside>
+</article>
+
+
+			</div>
+		</main>
+	</body></html>

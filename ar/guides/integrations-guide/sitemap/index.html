@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ar" class="initial astro-6SNADQYA">
+	<head>
+		<!-- Global Metadata --><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="hsl(256, 44%, 15%)" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="hsl(273, 37%, 93%)" media="(prefers-color-scheme: light)">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate icon" type="image/x-icon" href="/favicon.ico">
+<link rel="sitemap" href="/sitemap-index.xml">
+
+<!-- Global CSS -->
+<link rel="stylesheet" href="/theme.css">
+<link rel="stylesheet" href="/index.css">
+
+<!-- Scrollable a11y code helper -->
+<script type="module" src="/make-scrollable-code-focusable.js"></script>
+
+<!-- This is intentionally inlined to avoid FOUC -->
+
+
+<!-- Double-click to highlight code blocks (inline only). -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-130280175-15"></script>
+
+
+		<!-- Page Metadata --><link rel="canonical" href="https://docs.astro.build/en/guides/integrations-guide/sitemap/">
+
+
+<link rel="alternate" href="https://docs.astro.build/en/guides/integrations-guide/sitemap/" hreflang="en"><link rel="alternate" href="https://docs.astro.build/de/guides/integrations-guide/sitemap/" hreflang="de"><link rel="alternate" href="https://docs.astro.build/nl/guides/integrations-guide/sitemap/" hreflang="nl"><link rel="alternate" href="https://docs.astro.build/pt-br/guides/integrations-guide/sitemap/" hreflang="pt-BR"><link rel="alternate" href="https://docs.astro.build/fi/guides/integrations-guide/sitemap/" hreflang="fi"><link rel="alternate" href="https://docs.astro.build/es/guides/integrations-guide/sitemap/" hreflang="es"><link rel="alternate" href="https://docs.astro.build/zh-cn/guides/integrations-guide/sitemap/" hreflang="zh-CN"><link rel="alternate" href="https://docs.astro.build/zh-tw/guides/integrations-guide/sitemap/" hreflang="zh-TW"><link rel="alternate" href="https://docs.astro.build/bg/guides/integrations-guide/sitemap/" hreflang="bg"><link rel="alternate" href="https://docs.astro.build/fr/guides/integrations-guide/sitemap/" hreflang="fr"><link rel="alternate" href="https://docs.astro.build/bn/guides/integrations-guide/sitemap/" hreflang="bn"><link rel="alternate" href="https://docs.astro.build/kr/guides/integrations-guide/sitemap/" hreflang="kr"><link rel="alternate" href="https://docs.astro.build/ar/guides/integrations-guide/sitemap/" hreflang="ar"><link rel="alternate" href="https://docs.astro.build/da/guides/integrations-guide/sitemap/" hreflang="da"><link rel="alternate" href="https://docs.astro.build/ja/guides/integrations-guide/sitemap/" hreflang="ja"><link rel="alternate" href="https://docs.astro.build/ru/guides/integrations-guide/sitemap/" hreflang="ru"><link rel="alternate" href="https://docs.astro.build/it/guides/integrations-guide/sitemap/" hreflang="it"><link rel="alternate" href="https://docs.astro.build/pl/guides/integrations-guide/sitemap/" hreflang="pl"><link rel="alternate" href="https://docs.astro.build/hu/guides/integrations-guide/sitemap/" hreflang="hu">
+
+<!-- Algolia docsearch language facet -->
+<meta name="docsearch:language" content="en">
+
+<!-- OpenGraph Tags -->
+<meta property="og:title" content="@astrojs/sitemap">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://docs.astro.build/en/guides/integrations-guide/sitemap/">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://docs.astro.build/default-og-image.png?v=1">
+<meta property="og:image:alt" content="astro logo on a starry expanse of space, with a purple saturn-like planet floating in the right foreground">
+<meta name="description" property="og:description" content="Technology, hobbies and much more">
+<meta property="og:site_name" content="Stephen.D.Moreira PorfolioDoc">
+
+<!-- Twitter Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="astrodotbuild">
+<meta name="twitter:title" content="@astrojs/sitemap">
+<meta name="twitter:description" content="Technology, hobbies and much more">
+<meta name="twitter:image" content="https://docs.astro.build/default-og-image.png?v=1">
+<meta name="twitter:image:alt" content="astro logo on a starry expanse of space, with a purple saturn-like planet floating in the right foreground">
+
+<!--
+  TODO: Add json+ld data, maybe https://schema.org/APIReference makes sense?
+  Docs: https://developers.google.com/search/docs/advanced/structured-data/intro-structured-data
+  https://www.npmjs.com/package/schema-dts seems like a great resource for implementing this.
+  Even better, there’s a React component that integrates with `schema-dts`: https://github.com/google/react-schemaorg
+-->
+
+		<title>@astrojs/sitemap 🚀 Stephen.D.Moreira PorfolioDoc</title>
+		
+		<script>
+			// This code was migrated/copied from ThemToggleBotton to make the
+			// dark mode toggle instant, vs. hidden inside of a Preact useEffect() call.
+			const theme = (() => {
+				if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+					return localStorage.getItem('theme');
+				}
+				if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+					return 'dark';
+				}
+				return 'light';
+			})();
+			if (theme === 'light') {
+				document.documentElement.classList.remove('theme-dark');
+			} else {
+				document.documentElement.classList.add('theme-dark');
+			}
+		</script>
+	<link rel="stylesheet" href="/assets/f542069c.c28a3eae.css" />
+<link rel="stylesheet" href="/assets/f32cfc26.50be7f9d.css" />
+<link rel="stylesheet" href="/assets/e2317e16.36ca0ba9.css" />
+<link rel="stylesheet" href="/assets/d262d885.28dd6693.css" />
+<link rel="stylesheet" href="/assets/cfc00703.f66dce2d.css" />
+<link rel="stylesheet" href="/assets/c866568c.73f89308.css" />
+<link rel="stylesheet" href="/assets/ac92a3ed.788e7765.css" />
+<link rel="stylesheet" href="/assets/9cf9e8db.97bfbd59.css" />
+<link rel="stylesheet" href="/assets/8707b070.bf31fab0.css" />
+<link rel="stylesheet" href="/assets/7b344959.9c17731f.css" />
+<link rel="stylesheet" href="/assets/6b9ff114.c5aa952c.css" />
+<link rel="stylesheet" href="/assets/4380b021.c6e882cf.css" />
+<link rel="stylesheet" href="/assets/2853ca2f.b258932f.css" />
+<link rel="stylesheet" href="/assets/1c3c31b7.1c38b371.css" />
+<link rel="stylesheet" href="/assets/0bfe69bc.f3379f69.css" /><script type="module" src="/hoisted.6f80f745.js"></script></head>
+
+	<body class="astro-6SNADQYA">
+		<header class="astro-OWYKDMOT">
+	<a href="#article" class="sr-only focus:not-sr-only skiplink astro-D5GPSQS7">
+	<span class="astro-D5GPSQS7">Skip to Content
+</span>
+</a>
+
+
+	<nav class="nav-wrapper astro-OWYKDMOT" aria-label="Top">
+		<div dir="ltr" lang="en" class="logo flex astro-OWYKDMOT">
+			<ul class="astro-OWYKDMOT">
+				<li class="astro-OWYKDMOT">
+					<a class="astro astro-OWYKDMOT" href="https://smoreira1.github.io">
+						<span class="sr-only astro-OWYKDMOT">Astrso</span>
+						Stephen D. M.
+					</a>
+					<a class="astro-OWYKDMOT">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="astro-OWYKDMOT">
+							<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" class="astro-OWYKDMOT"></path>
+						</svg>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- <ThemeToggleButton 
+				client:visible 
+				labels={{  useLight: t('themeToggle.useLight'), useDark: t('themeToggle.useDark')  }}
+				isInsideHeader={true} 
+			/> -->
+		<!-- {lang && <LanguageSelect lang={lang} client:idle />}
+		<Search {lang} labels={docsearchStrings} />
+		<SidebarToggle client:idle /> -->
+	</nav>
+</header>
+		<main class="layout astro-6SNADQYA">
+			<aside id="left-sidebar" class="sidebar astro-6SNADQYA">
+				<nav aria-label="Primary" class="astro-M2FRLZWK">
+	<style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).load=a=>{(async()=>await(await a())())()};var a;{const l={0:t=>t,1:t=>JSON.parse(t,n),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,n)),5:t=>new Set(JSON.parse(t,n)),6:t=>BigInt(t),7:t=>new URL(t)},n=(t,r)=>{if(t===""||!Array.isArray(r))return r;const[e,i]=r;return e in l?l[e](i):void 0};customElements.get("astro-island")||customElements.define("astro-island",(a=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement?.closest("astro-island[ssr]"))return;const r=this.querySelectorAll("astro-slot"),e={},i=this.querySelectorAll("template[data-astro-template]");for(const s of i)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("data-astro-template")||"default"]=s.innerHTML,s.remove());for(const s of r)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("name")||"default"]=s.innerHTML);const o=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),n):{};this.hydrator(this)(this.Component,o,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((r,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate),await import(this.getAttribute("before-hydration-url"));const r=JSON.parse(this.getAttribute("opts"));Astro[this.getAttribute("client")](async()=>{const e=this.getAttribute("renderer-url"),[i,{default:o}]=await Promise.all([import(this.getAttribute("component-url")),e?import(e):()=>()=>{}]);return this.Component=i[this.getAttribute("component-export")||"default"],this.hydrator=o,this.hydrate},r,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},a.observedAttributes=["props"],a))}</script><astro-island uid="Z2eU5YA" component-url="/SidebarToggleTabGroup.053ded21.js" component-export="default" renderer-url="/client.f1d83173.js" props="{&quot;defaultActiveTab&quot;:[0,&quot;learn&quot;],&quot;labels&quot;:[0,{&quot;learn&quot;:[0,&quot;تَعلَم&quot;],&quot;api&quot;:[0,&quot;مرجع&quot;]}],&quot;class&quot;:[0,&quot;astro-M2FRLZWK&quot;]}" ssr="" client="load" before-hydration-url="data:text/javascript;charset=utf-8,//[no before-hydration script]" opts="{&quot;name&quot;:&quot;SidebarToggleTabGroup&quot;,&quot;value&quot;:true}" await-children=""><div class="TabGroup"><button class="active">تَعلَم</button><button class>مرجع</button></div></astro-island>
+	<ul class="nav-groups astro-M2FRLZWK">
+		
+<li class="nav-group learn active astro-VB2AOOVT">
+		<details open class="astro-VB2AOOVT">
+			<summary class="nav-group-title astro-VB2AOOVT">
+				<h2 class="astro-VB2AOOVT">
+					التهيئة
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true" class="astro-VB2AOOVT">
+						<path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z" class="astro-VB2AOOVT"></path>
+					</svg>
+				</h2>
+			</summary>
+			<ul class="astro-VB2AOOVT">
+				<li class="nav-link astro-VB2AOOVT">
+						<a href="/ar/getting-started/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">باشر البدأ </a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ar/install/auto/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Resume <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ar/editor-setup/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Signicant Works <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ar/migrate/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Technology Stack <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ar/migrate/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Technology History <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ar/migrate/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Design Patterns <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li>
+			</ul>
+		</details>
+	</li><li class="nav-group learn active astro-VB2AOOVT">
+		<details open class="astro-VB2AOOVT">
+			<summary class="nav-group-title astro-VB2AOOVT">
+				<h2 class="astro-VB2AOOVT">
+					Resources
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true" class="astro-VB2AOOVT">
+						<path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z" class="astro-VB2AOOVT"></path>
+					</svg>
+				</h2>
+			</summary>
+			<ul class="astro-VB2AOOVT">
+				<li class="nav-link astro-VB2AOOVT">
+						<a href="/ar/guides/deploy/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Youtube <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ar/guides/deploy/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Twitter <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ar/core-concepts/project-structure/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Icon Assets <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li>
+			</ul>
+		</details>
+	</li><li class="nav-group learn active astro-VB2AOOVT">
+		<details open class="astro-VB2AOOVT">
+			<summary class="nav-group-title astro-VB2AOOVT">
+				<h2 class="astro-VB2AOOVT">
+					Projects
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true" class="astro-VB2AOOVT">
+						<path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z" class="astro-VB2AOOVT"></path>
+					</svg>
+				</h2>
+			</summary>
+			<ul class="astro-VB2AOOVT">
+				<li class="nav-link astro-VB2AOOVT">
+						<a href="/ar/guides/configuring-astro/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Starlight <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li>
+			</ul>
+		</details>
+	</li><li class="nav-group learn active astro-VB2AOOVT">
+		<details open class="astro-VB2AOOVT">
+			<summary class="nav-group-title astro-VB2AOOVT">
+				<h2 class="astro-VB2AOOVT">
+					Tips
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true" class="astro-VB2AOOVT">
+						<path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z" class="astro-VB2AOOVT"></path>
+					</svg>
+				</h2>
+			</summary>
+			<ul class="astro-VB2AOOVT">
+				<li class="nav-link astro-VB2AOOVT">
+						<a href="/ar/concepts/why-astro/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Angular <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ar/concepts/why-astro/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">TypeScript <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ar/concepts/why-astro/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">CSS <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ar/concepts/why-astro/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">HTML <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ar/concepts/why-astro/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">GIT <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li>
+			</ul>
+		</details>
+	</li>
+
+
+		
+<li class="nav-group api  astro-VB2AOOVT">
+		<details open class="astro-VB2AOOVT">
+			<summary class="nav-group-title astro-VB2AOOVT">
+				<h2 class="astro-VB2AOOVT">
+					Reference
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true" class="astro-VB2AOOVT">
+						<path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z" class="astro-VB2AOOVT"></path>
+					</svg>
+				</h2>
+			</summary>
+			<ul class="astro-VB2AOOVT">
+				<li class="nav-link astro-VB2AOOVT">
+						<a href="/ar/reference/configuration-reference/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Configuration <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ar/reference/cli-reference/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">CLI <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ar/reference/api-reference/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Runtime API <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ar/reference/integrations-reference/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Integrations API <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ar/reference/adapter-reference/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Adapter API <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ar/reference/directives-reference/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">Template Directives <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li><li class="nav-link astro-VB2AOOVT">
+						<a href="/ar/guides/publish-to-npm/" aria-current="false" data-current-parent="false" class="astro-VB2AOOVT">NPM Package Format <sup class="fallback astro-VB2AOOVT">EN</sup></a>
+					</li>
+			</ul>
+		</details>
+	</li>
+
+
+		<details open class="hide-on-large-screens astro-TL4TIEEL"><summary class="astro-TL4TIEEL"><h2 class="heading astro-TL4TIEEL">Socials
+</h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true" class="astro-TL4TIEEL">
+			<path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z" class="astro-TL4TIEEL">
+			</path>
+		</svg></summary><ul class="astro-TL4TIEEL">
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://astro.build/chat" target="_blank" class="astro-TL4TIEEL">
+				<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="comment-alt" class="svg-inline--fa fa-comment-alt fa-w-16 astro-TL4TIEEL" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" height="1em" width="1em">
+					<path fill="currentColor" d="M448 0H64C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h96v84c0 9.8 11.2 15.5 19.1 9.7L304 416h144c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64z" class="astro-TL4TIEEL">
+					</path>
+				</svg>
+				<span class="astro-TL4TIEEL">407-310-8747
+</span>
+			</a>
+		</li>
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://www.linkedin.com/in/stephenmoreira" target="_blank" class="astro-TL4TIEEL">
+				<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024" class="astro-TL4TIEEL">
+					<path fill="currentColor" d="M928 161H699.2c-49.1 0-97.1 14.1-138.4 40.7L512 233l-48.8-31.3A255.2 255.2 0 0 0 324.8 161H96c-17.7 0-32 14.3-32 32v568c0 17.7 14.3 32 32 32h228.8c49.1 0 97.1 14.1 138.4 40.7l44.4 28.6c1.3.8 2.8 1.3 4.3 1.3s3-.4 4.3-1.3l44.4-28.6C602 807.1 650.1 793 699.2 793H928c17.7 0 32-14.3 32-32V193c0-17.7-14.3-32-32-32zM404 553.5c0 4.1-3.2 7.5-7.1 7.5H211.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45zm0-140c0 4.1-3.2 7.5-7.1 7.5H211.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45zm416 140c0 4.1-3.2 7.5-7.1 7.5H627.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45zm0-140c0 4.1-3.2 7.5-7.1 7.5H627.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45z" class="astro-TL4TIEEL"></path>
+				</svg>
+				<span class="astro-TL4TIEEL">LinkedIn
+</span>
+			</a>
+		</li>
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://twitter.com/stephendmoreira" target="_blank" class="astro-TL4TIEEL">
+				<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256" class="astro-TL4TIEEL">
+					<path fill="currentColor" d="M209.765 128.15c0 16.013-4.9 31.34-13.266 44.575l33.447 33.447a128.918 128.918 0 0 0 25.783-77.35c0-29.265-9.754-55.751-26.47-77.336l-32.776 32.729a79.442 79.442 0 0 1 13.267 43.888l.015.047Z" class="astro-TL4TIEEL"></path>
+					<path fill="currentColor" d="M127.513 210.355c-45.367-.086-82.125-36.838-82.22-82.205c.069-45.386 36.835-82.166 82.22-82.252c16.732 0 32.058 4.901 44.607 13.267l32.744-32.776A128.965 128.965 0 0 0 127.514.636C57.123.636 0 57.76 0 128.15c0 70.359 57.124 127.513 127.513 127.513a125.126 125.126 0 0 0 77.351-26.501l-33.447-33.431c-11.861 9.754-27.157 14.624-43.904 14.624Z" class="astro-TL4TIEEL"></path>
+				</svg>
+				<span class="astro-TL4TIEEL">Twitter
+</span>
+			</a>
+		</li>
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://github.com/withastro/docs" target="_blank" class="astro-TL4TIEEL">
+				<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="github" class="svg-inline--fa fa-brands fa-github fa-w-16 astro-TL4TIEEL" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+					<path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" class="astro-TL4TIEEL"></path>
+				</svg>
+				<span class="astro-TL4TIEEL">Github
+</span>
+			</a>
+		</li>
+	</ul></details open>
+
+
+		<li style="text-align: center;" class="astro-M2FRLZWK">
+			<script>(self.Astro=self.Astro||{}).visible=(i,c,n)=>{const r=async()=>{await(await i())()};let s=new IntersectionObserver(e=>{for(const t of e)if(!!t.isIntersecting){s.disconnect(),r();break}});for(let e=0;e<n.children.length;e++){const t=n.children[e];s.observe(t)}};</script><astro-island uid="209aSe" component-url="/ThemeToggleButton.b38468b8.js" component-export="default" renderer-url="/client.f1d83173.js" props="{&quot;labels&quot;:[0,{&quot;useLight&quot;:[0,&quot;Use light theme&quot;],&quot;useDark&quot;:[0,&quot;Use dark theme&quot;]}],&quot;class&quot;:[0,&quot;astro-M2FRLZWK&quot;]}" ssr="" client="visible" before-hydration-url="data:text/javascript;charset=utf-8,//[no before-hydration script]" opts="{&quot;name&quot;:&quot;ThemeToggleButton&quot;,&quot;value&quot;:true}" await-children=""><div class="theme-toggle "><label title="Use light theme" class><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path></svg><input type="radio" name="theme-toggle" value="light" aria-label="Use light theme" /></label><label title="Use dark theme" class><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg><input type="radio" name="theme-toggle" value="dark" aria-label="Use dark theme" /></label></div></astro-island>
+		</li>
+		<li class="astro-M2FRLZWK">
+			<!-- <div dir="ltr" lang="en" class="sponsors">
+	<h2 class="sponsors-title">Sponsored by</h2>
+	<div class="sponsor">
+		<a href="https://www.netlify.com/" aria-label="Go to Netlify website">
+			<svg class="sponsor-logo__netlify" viewBox="0 0 147 40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+				><radialGradient
+					id="netlify-gradient"
+					cx="-779.0521"
+					cy="1839.7205"
+					gradientTransform="matrix(0 38.301 44.1228 0 -81154.2578 29839.2441)"
+					gradientUnits="userSpaceOnUse"
+					r="1.0011"><stop offset="0" stop-color="#20c6b7"></stop><stop offset="1" stop-color="#4d9abf"></stop></radialGradient
+				><path
+					clip-rule="evenodd"
+					d="m53.37 12.98.12 2.2c1.4-1.7 3.24-2.55 5.53-2.55 3.95 0 5.96 2.27 6.03 6.8v12.57h-4.26v-12.32c0-1.21-.26-2.1-.78-2.68s-1.37-.87-2.55-.87c-1.72 0-3 .78-3.84 2.34v13.53h-4.26v-19.02zm24.38 19.37c-2.7 0-4.89-.85-6.57-2.56-1.68-1.7-2.52-3.98-2.52-6.81v-.53c0-1.9.36-3.59 1.1-5.09.73-1.49 1.76-2.66 3.08-3.49s2.79-1.25 4.42-1.25c2.58 0 4.58.83 5.99 2.48s2.11 3.99 2.11 7.01v1.72h-12.4c.13 1.57.65 2.81 1.57 3.73s2.07 1.37 3.46 1.37c1.95 0 3.54-.79 4.77-2.37l2.3 2.2c-.76 1.14-1.77 2.02-3.04 2.65s-2.69.94-4.27.94zm-.51-16.29c-1.17 0-2.11.41-2.83 1.23s-1.18 1.96-1.38 3.43h8.12v-.32c-.09-1.43-.47-2.51-1.14-3.24-.67-.74-1.59-1.1-2.77-1.1zm16.76-7.7v4.62h3.35v3.16h-3.35v10.62c0 .73.14 1.25.43 1.57s.8.48 1.54.48c.5 0 1-.06 1.49-.18v3.31c-.97.27-1.9.4-2.81.4-3.27 0-4.91-1.81-4.91-5.43v-10.77h-3.12v-3.16h3.12v-4.63zm11.14 23.64h-4.26v-27h4.26zm9.17 0h-4.26v-19.02h4.26zm-4.52-23.96c0-.65.21-1.2.62-1.63.42-.43 1.01-.65 1.78-.65s1.37.22 1.79.65.63.98.63 1.64c0 .64-.21 1.18-.63 1.61s-1.02.64-1.79.64-1.36-.21-1.78-.64c-.41-.44-.62-.98-.62-1.62zm10.66 23.96v-15.86h-2.89v-3.16h2.89v-1.74c0-2.11.58-3.74 1.75-4.89s2.81-1.72 4.91-1.72c.75 0 1.54.11 2.39.32l-.1 3.34c-.54-.1-1.08-.15-1.63-.14-2.04 0-3.05 1.05-3.05 3.15v1.69h3.86v3.16h-3.86v15.85zm17.87-6.12 3.86-12.9h4.54l-7.54 21.9c-1.16 3.2-3.12 4.8-5.89 4.8-.62 0-1.3-.11-2.05-.32v-3.31l.81.05c1.07 0 1.88-.2 2.43-.59.54-.39.97-1.05 1.29-1.98l.61-1.64-6.66-18.93h4.6z"
+					fill-rule="evenodd"></path><path
+					d="m27.89 14.14-.01-.01c-.01 0-.02-.01-.02-.01-.02-.02-.03-.06-.03-.09l.77-4.73 3.62 3.63-3.77 1.6c-.01 0-.02.01-.03.01h-.02s-.01-.01-.02-.02c-.14-.16-.31-.29-.49-.38zm5.26-.29 3.88 3.88c.81.81 1.21 1.21 1.35 1.67.02.07.04.14.05.21l-9.26-3.92s-.01 0-.01-.01c-.04-.02-.08-.03-.08-.07s.04-.06.08-.07l.01-.01zm5.12 7c-.2.38-.59.77-1.25 1.43l-4.37 4.37-5.65-1.18-.03-.01c-.05-.01-.1-.02-.1-.06-.04-.47-.28-.9-.66-1.19-.02-.02-.02-.06-.01-.09v-.01l1.06-6.53v-.02c.01-.05.01-.11.06-.11.46-.06.88-.3 1.16-.67.01-.01.01-.02.03-.03.03-.01.07 0 .1.01zm-6.62 6.8-7.19 7.19 1.23-7.56v-.01c0-.01 0-.02.01-.03.01-.02.04-.03.06-.04h.01c.27-.11.51-.29.69-.52.02-.03.05-.06.09-.06h.03zm-8.71 8.71-.81.81-8.95-12.94s-.01-.01-.01-.01c-.01-.02-.03-.04-.03-.06s.01-.03.02-.04l.01-.01c.03-.04.05-.08.07-.12l.02-.03c.01-.02.03-.05.05-.06s.05-.01.07 0l9.92 2.05c.03 0 .05.02.08.03.01.01.02.03.02.04.14.53.52.97 1.03 1.17.03.01.02.05 0 .08-.01.01-.01.03-.01.05-.12.74-1.19 7.27-1.48 9.04zm-1.69 1.69c-.6.59-.95.9-1.35 1.03-.39.12-.81.12-1.21 0-.47-.15-.87-.55-1.67-1.36l-8.99-8.99 2.35-3.64c.01-.02.02-.03.04-.05s.06-.01.09 0c.54.16 1.12.13 1.64-.08.03-.01.05-.02.07 0l.03.03zm-14.09-10.19-2.06-2.06 4.07-1.74c.01 0 .02-.01.03-.01.03 0 .05.03.07.07.04.06.08.12.13.18l.01.02c.01.02 0 .03-.01.05zm-2.98-2.97-2.61-2.61c-.44-.44-.77-.77-.99-1.04l7.94 1.65h.03c.05.01.1.02.1.06 0 .05-.06.07-.11.09l-.02.01zm-4.05-5c.01-.17.04-.33.09-.5.15-.47.55-.87 1.36-1.67l3.34-3.34c1.54 2.23 3.08 4.46 4.63 6.69.03.04.06.08.03.11-.15.16-.29.34-.4.53-.01.02-.03.05-.05.06-.01.01-.03 0-.04 0zm5.68-6.4 4.49-4.49c.42.19 1.96.83 3.33 1.41 1.04.44 1.99.84 2.29.97.03.01.06.02.07.05.01.02 0 .04 0 .06-.14.66.05 1.35.52 1.83.03.03 0 .07-.03.11l-.01.02-4.56 7.06c-.01.02-.02.04-.04.05s-.06.01-.09 0c-.18-.05-.36-.07-.54-.07-.16 0-.34.03-.52.06-.02 0-.04.01-.05 0-.02-.01-.03-.03-.05-.05zm5.4-5.4 5.81-5.81c.81-.81 1.21-1.21 1.67-1.36.39-.12.81-.12 1.21 0 .47.15.87.55 1.67 1.36l1.26 1.26-4.14 6.4c-.01.02-.02.03-.04.05s-.06.01-.09 0c-.66-.2-1.38-.06-1.92.37-.03.03-.07.01-.1 0-.53-.24-4.73-2.01-5.33-2.27zm12.5-3.67 3.82 3.82-.92 5.7v.02c0 .01 0 .03-.01.04-.01.02-.03.02-.05.03-.2.06-.38.15-.55.27-.01.01-.01.01-.02.02s-.02.02-.04.02c-.01 0-.03 0-.04-.01l-5.82-2.47-.01-.01c-.04-.02-.08-.03-.08-.07-.03-.32-.14-.64-.31-.91-.03-.05-.06-.09-.03-.14zm-3.93 8.6 5.45 2.31c.03.01.06.03.08.06.01.02.01.04 0 .06-.02.08-.03.17-.03.26v.15c0 .04-.04.05-.08.07h-.01c-.86.37-12.13 5.17-12.15 5.17s-.03 0-.05-.02c-.03-.03 0-.07.03-.11 0-.01.01-.01.01-.02l4.48-6.94.01-.01c.03-.04.06-.09.1-.09l.05.01c.1.01.19.03.28.03.68 0 1.31-.33 1.69-.9.01-.02.02-.03.03-.04.04-.01.08 0 .11.01zm-6.25 9.19 12.28-5.24s.02 0 .03.02c.07.07.12.11.18.15l.03.02c.02.01.05.03.05.06v.02l-1.05 6.46v.03c-.01.05-.01.11-.06.11-.57.04-1.08.36-1.37.85v.01c-.01.02-.03.05-.05.06s-.05.01-.07 0l-9.79-2.02c-.02-.02-.16-.53-.18-.53z"
+					fill="url(#netlify-gradient)"></path></svg
+			>
+		</a>
+	</div>
+</div> -->
+
+		</li>
+	</ul>
+</nav>
+
+
+
+
+			</aside>
+			<aside id="right-sidebar" class="sidebar astro-6SNADQYA">
+				<nav aria-label="Secondary" class="astro-7RGIIGOJ">
+	<script>(self.Astro=self.Astro||{}).media=(s,a)=>{const t=async()=>{await(await s())()};if(a.value){const e=matchMedia(a.value);e.matches?t():e.addEventListener("change",t,{once:!0})}};</script><astro-island uid="Z1W5xG7" component-url="/TableOfContents.109662f0.js" component-export="default" renderer-url="/client.f1d83173.js" props="{&quot;headings&quot;:[1,&quot;[[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;why-astro-sitemap\&quot;],\&quot;text\&quot;:[0,\&quot;Why Astro Sitemap\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;installation\&quot;],\&quot;text\&quot;:[0,\&quot;Installation\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;quick-install\&quot;],\&quot;text\&quot;:[0,\&quot;Quick Install\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;manual-install\&quot;],\&quot;text\&quot;:[0,\&quot;Manual Install\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;usage\&quot;],\&quot;text\&quot;:[0,\&quot;Usage\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;example-of-generated-files-for-a-two-page-website\&quot;],\&quot;text\&quot;:[0,\&quot;Example of generated files for a two-page website\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;configuration\&quot;],\&quot;text\&quot;:[0,\&quot;Configuration\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;filter\&quot;],\&quot;text\&quot;:[0,\&quot;filter\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;custompages\&quot;],\&quot;text\&quot;:[0,\&quot;customPages\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;entrylimit\&quot;],\&quot;text\&quot;:[0,\&quot;entryLimit\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;changefreq-lastmod-and-priority\&quot;],\&quot;text\&quot;:[0,\&quot;changefreq, lastmod, and priority\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;serialize\&quot;],\&quot;text\&quot;:[0,\&quot;serialize\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;i18n\&quot;],\&quot;text\&quot;:[0,\&quot;i18n\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;examples\&quot;],\&quot;text\&quot;:[0,\&quot;Examples\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;troubleshooting\&quot;],\&quot;text\&quot;:[0,\&quot;Troubleshooting\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;contributing\&quot;],\&quot;text\&quot;:[0,\&quot;Contributing\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;changelog\&quot;],\&quot;text\&quot;:[0,\&quot;Changelog\&quot;]}]]&quot;],&quot;labels&quot;:[0,{&quot;onThisPage&quot;:[0,&quot;في الصفحة الحالية&quot;],&quot;overview&quot;:[0,&quot;نظرة عامة&quot;]}],&quot;isMobile&quot;:[0,false],&quot;class&quot;:[0,&quot;astro-7RGIIGOJ&quot;]}" ssr="" client="media" before-hydration-url="data:text/javascript;charset=utf-8,//[no before-hydration script]" opts="{&quot;name&quot;:&quot;TableOfContents&quot;,&quot;value&quot;:&quot;(min-width: 50em)&quot;}" await-children=""><h2 class="heading" id="on-this-page-heading">في الصفحة الحالية</h2><ul><li class="header-link depth-2 current-header-link"><a href="#overview">نظرة عامة</a></li><li class="header-link depth-2"><a href="#why-astro-sitemap">Why Astro Sitemap</a></li><li class="header-link depth-2"><a href="#installation">Installation</a></li><li class="header-link depth-3"><a href="#quick-install">Quick Install</a></li><li class="header-link depth-3"><a href="#manual-install">Manual Install</a></li><li class="header-link depth-2"><a href="#usage">Usage</a></li><li class="header-link depth-3"><a href="#example-of-generated-files-for-a-two-page-website">Example of generated files for a two-page website</a></li><li class="header-link depth-2"><a href="#configuration">Configuration</a></li><li class="header-link depth-3"><a href="#filter">filter</a></li><li class="header-link depth-3"><a href="#custompages">customPages</a></li><li class="header-link depth-3"><a href="#entrylimit">entryLimit</a></li><li class="header-link depth-3"><a href="#changefreq-lastmod-and-priority">changefreq, lastmod, and priority</a></li><li class="header-link depth-3"><a href="#serialize">serialize</a></li><li class="header-link depth-3"><a href="#i18n">i18n</a></li><li class="header-link depth-2"><a href="#examples">Examples</a></li><li class="header-link depth-2"><a href="#troubleshooting">Troubleshooting</a></li><li class="header-link depth-2"><a href="#contributing">Contributing</a></li><li class="header-link depth-2"><a href="#changelog">Changelog</a></li></ul></astro-island>
+	<!-- <h2 class="heading"><UIString key="rightSidebar.contribute" /></h2>
+<ul>
+	<li class={`header-link depth-2`}>
+		<a class="edit-on-github" href={editHref} target="_blank">
+			<svg
+				aria-hidden="true"
+				focusable="false"
+				data-prefix="fas"
+				data-icon="pen"
+				class="svg-inline--fa fa-pen fa-w-16"
+				role="img"
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512"
+				height="1em"
+				width="1em"
+			>
+				<path
+					fill="currentColor"
+					d="M290.74 93.24l128.02 128.02-277.99 277.99-114.14 12.6C11.35 513.54-1.56 500.62.14 485.34l12.7-114.22 277.9-277.88zm207.2-19.06l-60.11-60.11c-18.75-18.75-49.16-18.75-67.91 0l-56.55 56.55 128.02 128.02 56.55-56.55c18.75-18.76 18.75-49.16 0-67.91z"
+				></path>
+			</svg>
+			<span><UIString key="rightSidebar.editPage" /></span>
+		</a>
+	</li>
+	{isTranslatable &&
+		<li class={`header-link depth-2`}>
+			<a href="https://github.com/withastro/docs/blob/main/TRANSLATING.md" target="_blank">
+				<svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88.6 77.3" height="1.24em" width="1.24em" style="margin: -2px;">
+					<path fill="currentColor" d="M61,24.6h7.9l18.7,51.6h-7.7l-5.4-15.5H54.3l-5.6,15.5h-7.2L61,24.6z M72.6,55l-8-22.8L56.3,55H72.6z"></path>
+					<path
+						fill="currentColor"
+						d="M53.6,60.6c-10-4-16-9-22-14c0,0,1.3,1.3,0,0c-6,5-20,13-20,13l-4-6c8-5,10-6,19-13c-2.1-1.9-12-13-13-19h8          c4,9,10,14,10,14c10-8,10-19,10-19h8c0,0-1,13-12,24l0,0c5,5,10,9,19,13L53.6,60.6z M1.6,16.6h56v-8h-23v-7h-9v7h-24V16.6z"
+					></path>
+				</svg>
+				<span><UIString key="rightSidebar.translatePage" /></span>
+			</a>
+		</li>
+	}
+</ul> -->
+
+	<div class="astro-TL4TIEEL"><div class="astro-TL4TIEEL"><h2 class="heading astro-TL4TIEEL">Socials
+</h2></div><ul class="astro-TL4TIEEL">
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://astro.build/chat" target="_blank" class="astro-TL4TIEEL">
+				<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="comment-alt" class="svg-inline--fa fa-comment-alt fa-w-16 astro-TL4TIEEL" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" height="1em" width="1em">
+					<path fill="currentColor" d="M448 0H64C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h96v84c0 9.8 11.2 15.5 19.1 9.7L304 416h144c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64z" class="astro-TL4TIEEL">
+					</path>
+				</svg>
+				<span class="astro-TL4TIEEL">407-310-8747
+</span>
+			</a>
+		</li>
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://www.linkedin.com/in/stephenmoreira" target="_blank" class="astro-TL4TIEEL">
+				<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024" class="astro-TL4TIEEL">
+					<path fill="currentColor" d="M928 161H699.2c-49.1 0-97.1 14.1-138.4 40.7L512 233l-48.8-31.3A255.2 255.2 0 0 0 324.8 161H96c-17.7 0-32 14.3-32 32v568c0 17.7 14.3 32 32 32h228.8c49.1 0 97.1 14.1 138.4 40.7l44.4 28.6c1.3.8 2.8 1.3 4.3 1.3s3-.4 4.3-1.3l44.4-28.6C602 807.1 650.1 793 699.2 793H928c17.7 0 32-14.3 32-32V193c0-17.7-14.3-32-32-32zM404 553.5c0 4.1-3.2 7.5-7.1 7.5H211.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45zm0-140c0 4.1-3.2 7.5-7.1 7.5H211.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45zm416 140c0 4.1-3.2 7.5-7.1 7.5H627.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45zm0-140c0 4.1-3.2 7.5-7.1 7.5H627.1c-3.9 0-7.1-3.4-7.1-7.5v-45c0-4.1 3.2-7.5 7.1-7.5h185.7c3.9 0 7.1 3.4 7.1 7.5v45z" class="astro-TL4TIEEL"></path>
+				</svg>
+				<span class="astro-TL4TIEEL">LinkedIn
+</span>
+			</a>
+		</li>
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://twitter.com/stephendmoreira" target="_blank" class="astro-TL4TIEEL">
+				<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256" class="astro-TL4TIEEL">
+					<path fill="currentColor" d="M209.765 128.15c0 16.013-4.9 31.34-13.266 44.575l33.447 33.447a128.918 128.918 0 0 0 25.783-77.35c0-29.265-9.754-55.751-26.47-77.336l-32.776 32.729a79.442 79.442 0 0 1 13.267 43.888l.015.047Z" class="astro-TL4TIEEL"></path>
+					<path fill="currentColor" d="M127.513 210.355c-45.367-.086-82.125-36.838-82.22-82.205c.069-45.386 36.835-82.166 82.22-82.252c16.732 0 32.058 4.901 44.607 13.267l32.744-32.776A128.965 128.965 0 0 0 127.514.636C57.123.636 0 57.76 0 128.15c0 70.359 57.124 127.513 127.513 127.513a125.126 125.126 0 0 0 77.351-26.501l-33.447-33.431c-11.861 9.754-27.157 14.624-43.904 14.624Z" class="astro-TL4TIEEL"></path>
+				</svg>
+				<span class="astro-TL4TIEEL">Twitter
+</span>
+			</a>
+		</li>
+		<li class="header-link depth-2 astro-TL4TIEEL">
+			<a href="https://github.com/withastro/docs" target="_blank" class="astro-TL4TIEEL">
+				<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="github" class="svg-inline--fa fa-brands fa-github fa-w-16 astro-TL4TIEEL" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+					<path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" class="astro-TL4TIEEL"></path>
+				</svg>
+				<span class="astro-TL4TIEEL">Github
+</span>
+			</a>
+		</li>
+	</ul></div>
+
+
+</nav>
+
+
+			</aside>
+			<div id="main-content" lang="en" class="astro-6SNADQYA">
+				<nav class="mobile-toc astro-CCFK4WYY">
+			<astro-island uid="Z1i0dJy" component-url="/TableOfContents.109662f0.js" component-export="default" renderer-url="/client.f1d83173.js" props="{&quot;headings&quot;:[1,&quot;[[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;why-astro-sitemap\&quot;],\&quot;text\&quot;:[0,\&quot;Why Astro Sitemap\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;installation\&quot;],\&quot;text\&quot;:[0,\&quot;Installation\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;quick-install\&quot;],\&quot;text\&quot;:[0,\&quot;Quick Install\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;manual-install\&quot;],\&quot;text\&quot;:[0,\&quot;Manual Install\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;usage\&quot;],\&quot;text\&quot;:[0,\&quot;Usage\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;example-of-generated-files-for-a-two-page-website\&quot;],\&quot;text\&quot;:[0,\&quot;Example of generated files for a two-page website\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;configuration\&quot;],\&quot;text\&quot;:[0,\&quot;Configuration\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;filter\&quot;],\&quot;text\&quot;:[0,\&quot;filter\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;custompages\&quot;],\&quot;text\&quot;:[0,\&quot;customPages\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;entrylimit\&quot;],\&quot;text\&quot;:[0,\&quot;entryLimit\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;changefreq-lastmod-and-priority\&quot;],\&quot;text\&quot;:[0,\&quot;changefreq, lastmod, and priority\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;serialize\&quot;],\&quot;text\&quot;:[0,\&quot;serialize\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;i18n\&quot;],\&quot;text\&quot;:[0,\&quot;i18n\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;examples\&quot;],\&quot;text\&quot;:[0,\&quot;Examples\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;troubleshooting\&quot;],\&quot;text\&quot;:[0,\&quot;Troubleshooting\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;contributing\&quot;],\&quot;text\&quot;:[0,\&quot;Contributing\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;changelog\&quot;],\&quot;text\&quot;:[0,\&quot;Changelog\&quot;]}]]&quot;],&quot;labels&quot;:[0,{&quot;onThisPage&quot;:[0,&quot;في الصفحة الحالية&quot;],&quot;overview&quot;:[0,&quot;نظرة عامة&quot;]}],&quot;isMobile&quot;:[0,true],&quot;class&quot;:[0,&quot;astro-CCFK4WYY&quot;]}" ssr="" client="media" before-hydration-url="data:text/javascript;charset=utf-8,//[no before-hydration script]" opts="{&quot;name&quot;:&quot;TableOfContents&quot;,&quot;value&quot;:&quot;(max-width: 72em)&quot;}" await-children=""><details class="toc-mobile-container"><summary class="toc-mobile-header"><div class="toc-mobile-header-content"><div class="toc-toggle"><h2 class="heading" id="on-this-page-heading">في الصفحة الحالية</h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 16 16" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z"></path></svg></div></div></summary><ul><li class="header-link depth-2 current-header-link"><a href="#overview">نظرة عامة</a></li><li class="header-link depth-2"><a href="#why-astro-sitemap">Why Astro Sitemap</a></li><li class="header-link depth-2"><a href="#installation">Installation</a></li><li class="header-link depth-3"><a href="#quick-install">Quick Install</a></li><li class="header-link depth-3"><a href="#manual-install">Manual Install</a></li><li class="header-link depth-2"><a href="#usage">Usage</a></li><li class="header-link depth-3"><a href="#example-of-generated-files-for-a-two-page-website">Example of generated files for a two-page website</a></li><li class="header-link depth-2"><a href="#configuration">Configuration</a></li><li class="header-link depth-3"><a href="#filter">filter</a></li><li class="header-link depth-3"><a href="#custompages">customPages</a></li><li class="header-link depth-3"><a href="#entrylimit">entryLimit</a></li><li class="header-link depth-3"><a href="#changefreq-lastmod-and-priority">changefreq, lastmod, and priority</a></li><li class="header-link depth-3"><a href="#serialize">serialize</a></li><li class="header-link depth-3"><a href="#i18n">i18n</a></li><li class="header-link depth-2"><a href="#examples">Examples</a></li><li class="header-link depth-2"><a href="#troubleshooting">Troubleshooting</a></li><li class="header-link depth-2"><a href="#contributing">Contributing</a></li><li class="header-link depth-2"><a href="#changelog">Changelog</a></li></ul></details></astro-island>
+		</nav>
+
+<article id="article" class="content astro-CCFK4WYY">
+	<section class="main-section astro-CCFK4WYY">
+		<h1 class="content-title astro-CCFK4WYY" id="overview"><span class="scope">@astrojs/</span>sitemap</h1>
+		<aside class="pkg-info astro-CQ2FNVLQ">
+		<span>v1.0.0</span>
+		<a href="https://github.com/withastro/astro/tree/main/packages/integrations/sitemap/" class="astro-CQ2FNVLQ">
+			<svg aria-hidden="true" viewBox="0 0 496 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" class="astro-CQ2FNVLQ">
+				<path fill="currentColor" d="M166 397c0 2-2 4-5 4-4 0-6-1-6-4 0-2 2-3 5-3 3-1 6 1 6 3zm-31-4c-1 2 1 4 4 5s6 0 6-2-1-5-4-5c-3-1-5 0-6 2zm44-2c-3 1-5 3-5 5 1 2 3 3 6 3 3-1 5-3 5-5s-3-3-6-3zM245 8A240 240 0 0 0 0 252c0 111 70 206 170 239 12 2 17-5 17-12v-61s-70 15-85-30c0 0-12-29-28-37 0 0-23-15 2-15 0 0 24 2 38 26 22 38 59 27 73 21 2-16 9-28 16-34-56-6-112-14-112-111 0-27 7-41 23-59-2-6-11-33 3-67 21-7 69 27 69 27a237 237 0 0 1 126 0s48-34 69-27c13 34 5 61 2 67 16 18 26 32 26 59 0 97-59 105-115 111 9 8 17 23 17 46v84c0 6 5 14 17 12a248 248 0 0 0 168-239C496 113 384 8 245 8zM97 353c-1 1-1 3 1 5 1 2 4 2 5 1s1-3-1-5c-1-2-4-2-5-1zm-11-8 3 4c1 1 3 0 4-1s0-3-2-4-4 0-5 1zm33 35c-2 2-1 5 1 7s5 2 7 1c1-2 0-5-2-7s-5-2-6-1zm-12-14v6c2 2 5 3 6 2 2-1 2-4 0-6-1-3-4-4-6-2z" class="astro-CQ2FNVLQ"></path>
+			</svg>GitHub
+		</a>
+		<a href="https://www.npmjs.com/package/@astrojs/sitemap" class="astro-CQ2FNVLQ">
+			<svg aria-hidden="true" viewBox="0 -20 576 512" height="2em" width="2em" xmlns="http://www.w3.org/2000/svg" class="astro-CQ2FNVLQ">
+				<path fill="currentColor" d="M288 288h-32v-64h32v64zm288-128v192H288v32H160v-32H0V160h576zm-416 32H32v128h64v-96h32v96h32V192zm160 0H192v160h64v-32h64V192zm224 0H352v128h64v-96h32v96h32v-96h32v96h32V192z" class="astro-CQ2FNVLQ"></path>
+			</svg>npm
+		</a>
+	</aside><aside class="content note astro-6BEKRN6C" aria-label="Note">
+	<p class="title astro-6BEKRN6C" aria-hidden="true">
+		<span class="icon astro-6BEKRN6C">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" width="16" height="16" class="astro-6BEKRN6C">
+				<path fill-rule="evenodd" d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0114.25 14H1.75A1.75 1.75 0 010 12.25v-8.5zm1.75-.25a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25v-8.5a.25.25 0 00-.25-.25H1.75zM3.5 6.25a.75.75 0 01.75-.75h7a.75.75 0 010 1.5h-7a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5h4a.75.75 0 000-1.5h-4z" class="astro-6BEKRN6C"></path>
+			</svg>
+		</span>
+		Note
+	</p>
+	<section class="astro-6BEKRN6C">
+		This page is not yet available in your language, so we’re showing you the English version. You can help by translating it!
+<a href="https://github.com/withastro/docs/blob/main/src/i18n#readme">Learn more about how you can contribute
+</a>
+	</section>
+</aside>
+
+<p>This <strong><a href="/en/guides/integrations-guide/">Astro integration</a></strong> generates a sitemap based on your routes when you build your Astro project.</p><div class="heading-wrapper level-h2" tabindex="-1"><h2 id="why-astro-sitemap">Why Astro Sitemap</h2><a class="anchor-link" href="#why-astro-sitemap"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Why Astro Sitemap</span></a></div><p>A Sitemap is an XML file that outlines all of the pages, videos, and files on your site. Search engines like Google read this file to crawl your site more efficiently. <a href="https://developers.google.com/search/docs/advanced/sitemaps/overview">See Google’s own advice on sitemaps</a> to learn more.</p><p>A sitemap file is recommended for large multi-page sites. If you don’t use a sitemap, most search engines will still be able to list your site’s pages, but a sitemap is a great way to ensure that your site is as search engine friendly as possible.</p><p>With Astro Sitemap, you don’t have to worry about creating this file: build your Astro site how you normally would, and the Astro Sitemap integration will crawl your routes and create the sitemap file.</p><div class="heading-wrapper level-h2" tabindex="-1"><h2 id="installation">Installation</h2><a class="anchor-link" href="#installation"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Installation</span></a></div><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="quick-install">Quick Install</h3><a class="anchor-link" href="#quick-install"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Quick Install</span></a></div><p>The <code>astro add</code> command-line tool automates the installation for you. Run one of the following commands in a new terminal window. (If you aren’t sure which package manager you’re using, run the first command.) Then, follow the prompts, and type “y” in the terminal (meaning “yes”) for each one.</p>
+<figure class="code-snippet is-terminal lang-sh">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#ABA8BD"># Using NPM</span></span>
+<span class="line"><span style="color:#D8DEE9">npx astro add sitemap</span></span>
+<span class="line"><span style="color:#ABA8BD"># Using Yarn</span></span>
+<span class="line"><span style="color:#D8DEE9">yarn astro add sitemap</span></span>
+<span class="line"><span style="color:#ABA8BD"># Using PNPM</span></span>
+<span class="line"><span style="color:#D8DEE9">pnpx astro add sitemap</span></span></code></pre>
+</figure><p>Then, restart the dev server by typing <code>CTRL-C</code> and then <code>npm run astro dev</code> in the terminal window that was running Astro.</p><p>Because this command is new, it might not properly set things up. If that happens, <a href="https://github.com/withastro/astro/issues">feel free to log an issue on our GitHub</a> and try the manual installation steps below.</p><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="manual-install">Manual Install</h3><a class="anchor-link" href="#manual-install"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Manual Install</span></a></div><p>First, install the <code>@astrojs/sitemap</code> package using your package manager. If you’re using npm or aren’t sure, run this in the terminal:</p>
+<figure class="code-snippet is-terminal lang-sh">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#D8DEE9">npm install @astrojs/sitemap</span></span></code></pre>
+</figure><p>Then, apply this integration to your <code>astro.config.*</code> file using the <code>integrations</code> property:</p>
+<figure class="code-snippet has-title lang-js">
+	<figcaption class="header"><span class="title">astro.config.mjs</span></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">defineConfig</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;astro/config&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">sitemap</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;@astrojs/sitemap&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF657C">export</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">default</span><span style="color:#D8DEE9"> </span><span style="color:#66ADFF">defineConfig</span><span style="color:#D8DEE9">(</span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#C7C5D3">  </span><span style="color:#ABA8BD">// ...</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#66ADFF">integrations</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> [</span><span style="color:#66ADFF">sitemap</span><span style="color:#D8DEE9">()]</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">)</span></span></code></pre>
+</figure><p>Then, restart the dev server.</p><div class="heading-wrapper level-h2" tabindex="-1"><h2 id="usage">Usage</h2><a class="anchor-link" href="#usage"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Usage</span></a></div><p><code>@astrojs/sitemap</code> requires a deployment / site URL for generation. Add your site’s URL under your <code>astro.config.*</code> using the <code>site</code> property. This must begin with <code>http:</code> or <code>https:</code>.</p>
+<figure class="code-snippet has-title lang-js">
+	<figcaption class="header"><span class="title">astro.config.mjs</span></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">defineConfig</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;astro/config&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">sitemap</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;@astrojs/sitemap&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF657C">export</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">default</span><span style="color:#D8DEE9"> </span><span style="color:#66ADFF">defineConfig</span><span style="color:#D8DEE9">(</span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#C7C5D3">  </span><span style="color:#ABA8BD">// ...</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#66ADFF">site</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;https://stargazers.club&#39;</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#66ADFF">integrations</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> [</span><span style="color:#66ADFF">sitemap</span><span style="color:#D8DEE9">()]</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">)</span></span></code></pre>
+</figure><p>Note that unlike other configuration options, <code>site</code> is set in the root <code>defineConfig</code> object, rather than inside the <code>sitemap()</code> call.</p><p>Now, <a href="/en/reference/cli-reference/">build your site for production</a> via the <code>astro build</code> command. You should find your sitemap under <code>dist/</code> for both <code>sitemap-index.xml</code> and <code>sitemap-0.xml</code>!</p><blockquote>
+<p><strong>Warning</strong>
+If you forget to add a <code>site</code>, you’ll get a friendly warning when you build, and the <code>sitemap-index.xml</code> file won’t be generated.</p>
+</blockquote><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="example-of-generated-files-for-a-two-page-website">Example of generated files for a two-page website</h3><a class="anchor-link" href="#example-of-generated-files-for-a-two-page-website"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Example of generated files for a two-page website</span></a></div><p><strong><code>sitemap-index.xml</code></strong></p>
+<figure class="code-snippet lang-xml">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#C7C5D3">&lt;?</span><span style="color:#5E81AC">xml</span><span style="color:#FFBD2E"> version</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;1.0&quot;</span><span style="color:#FFBD2E"> encoding</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;UTF-8&quot;</span><span style="color:#C7C5D3">?&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">sitemapindex</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">xmlns</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;http://www.sitemaps.org/schemas/sitemap/0.9&quot;</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">sitemap</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">loc</span><span style="color:#C7C5D3">&gt;</span><span style="color:#D8DEE9">https://stargazers.club/sitemap-0.xml</span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">loc</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">sitemap</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">sitemapindex</span><span style="color:#C7C5D3">&gt;</span></span></code></pre>
+</figure><p><strong><code>sitemap-0.xml</code></strong></p>
+<figure class="code-snippet lang-xml">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#C7C5D3">&lt;?</span><span style="color:#5E81AC">xml</span><span style="color:#FFBD2E"> version</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;1.0&quot;</span><span style="color:#FFBD2E"> encoding</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;UTF-8&quot;</span><span style="color:#C7C5D3">?&gt;</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">urlset</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">xmlns</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;http://www.sitemaps.org/schemas/sitemap/0.9&quot;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">xmlns</span><span style="color:#C7C5D3">:</span><span style="color:#FFBD2E">news</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;http://www.google.com/schemas/sitemap-news/0.9&quot;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">xmlns</span><span style="color:#C7C5D3">:</span><span style="color:#FFBD2E">xhtml</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;http://www.w3.org/1999/xhtml&quot;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">xmlns</span><span style="color:#C7C5D3">:</span><span style="color:#FFBD2E">image</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;http://www.google.com/schemas/sitemap-image/1.1&quot;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">xmlns</span><span style="color:#C7C5D3">:</span><span style="color:#FFBD2E">video</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;http://www.google.com/schemas/sitemap-video/1.1&quot;</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">url</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">loc</span><span style="color:#C7C5D3">&gt;</span><span style="color:#D8DEE9">https://stargazers.club/</span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">loc</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">url</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">url</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">loc</span><span style="color:#C7C5D3">&gt;</span><span style="color:#D8DEE9">https://stargazers.club/second-page/</span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">loc</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">url</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">urlset</span><span style="color:#C7C5D3">&gt;</span></span></code></pre>
+</figure><div class="heading-wrapper level-h2" tabindex="-1"><h2 id="configuration">Configuration</h2><a class="anchor-link" href="#configuration"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Configuration</span></a></div><p>To configure this integration, pass an object to the <code>sitemap()</code> function call in <code>astro.config.mjs</code>.</p>
+<figure class="code-snippet has-title lang-js">
+	<figcaption class="header"><span class="title">astro.config.mjs</span></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#FF657C">...</span></span>
+<span class="line"><span style="color:#FF657C">export</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">default</span><span style="color:#D8DEE9"> </span><span style="color:#66ADFF">defineConfig</span><span style="color:#D8DEE9">(</span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#66ADFF">integrations</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> [</span><span style="color:#66ADFF">sitemap</span><span style="color:#D8DEE9">(</span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#66ADFF">filter</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">...</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">)]</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">)</span><span style="color:#C7C5D3">;</span></span></code></pre>
+</figure><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="filter">filter</h3><a class="anchor-link" href="#filter"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled filter</span></a></div><p>All pages are included in your sitemap by default. By adding a custom <code>filter</code> function, you can filter  included pages by URL.</p>
+<figure class="code-snippet has-title lang-js">
+	<figcaption class="header"><span class="title">astro.config.mjs</span></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#FF657C">...</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#66ADFF">sitemap</span><span style="color:#D8DEE9">(</span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">      </span><span style="color:#66ADFF">filter</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> (page) </span><span style="color:#FF657C">=&gt;</span><span style="color:#D8DEE9"> page </span><span style="color:#FF657C">!==</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;https://stargazers.club/secret-vip-lounge&#39;</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">)</span><span style="color:#C7C5D3">,</span></span></code></pre>
+</figure><p>The function will be called for every page on your site. The <code>page</code> function parameter is the full URL of the page currently under considering, including your <code>site</code> domain. Return <code>true</code> to include the page in your sitemap, and <code>false</code> to leave it out.</p><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="custompages">customPages</h3><a class="anchor-link" href="#custompages"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled customPages</span></a></div><p>In some cases, a page might be part of your deployed site but not part of your Astro project. If you’d like to include a page in your sitemap that <em>isn’t</em> created by Astro, you can use this option.</p>
+<figure class="code-snippet has-title lang-js">
+	<figcaption class="header"><span class="title">astro.config.mjs</span></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#FF657C">...</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#66ADFF">sitemap</span><span style="color:#D8DEE9">(</span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">      </span><span style="color:#66ADFF">customPages</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> [</span><span style="color:#16C082">&#39;https://stargazers.club/external-page&#39;</span><span style="color:#C7C5D3">,</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;https://stargazers.club/external-page2&#39;</span><span style="color:#D8DEE9">]</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">)</span><span style="color:#C7C5D3">,</span></span></code></pre>
+</figure><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="entrylimit">entryLimit</h3><a class="anchor-link" href="#entrylimit"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled entryLimit</span></a></div><p>The maximum number entries per sitemap file. The default value is 45000. A sitemap index and multiple sitemaps are created if you have more entries. See this <a href="https://developers.google.com/search/docs/advanced/sitemaps/large-sitemaps">explanation of splitting up a large sitemap</a>.</p>
+<figure class="code-snippet has-title lang-js">
+	<figcaption class="header"><span class="title">astro.config.mjs</span></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">sitemap</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;@astrojs/sitemap&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF657C">export</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">default</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#66ADFF">site</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;https://stargazers.club&#39;</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#66ADFF">integrations</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> [</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#66ADFF">sitemap</span><span style="color:#D8DEE9">(</span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">      </span><span style="color:#66ADFF">entryLimit</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#EBCB8B">10000</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">)</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#D8DEE9">  ]</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span></span></code></pre>
+</figure><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="changefreq-lastmod-and-priority">changefreq, lastmod, and priority</h3><a class="anchor-link" href="#changefreq-lastmod-and-priority"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled changefreq, lastmod, and priority</span></a></div><p>These options correspond to the <code>&lt;changefreq&gt;</code>, <code>&lt;lastmod&gt;</code>, and <code>&lt;priortity&gt;</code> tags in the <a href="https://www.sitemaps.org/protocol.html">Sitemap XML specification.</a></p><p>Note that <code>changefreq</code> and <code>priority</code> are ignored by Google.</p><blockquote>
+<p><strong>Note</strong>
+Due to limitations of Astro’s <a href="/en/reference/integrations-reference/">Integration API</a>, this integration can’t analyze a given page’s source code. This configuration option can set <code>changefreq</code>, <code>lastmod</code> and <code>priority</code> on a <em>site-wide</em> basis; see the next option <strong>serialize</strong> for how you can set these values on a per-page basis.</p>
+</blockquote>
+<figure class="code-snippet has-title lang-js">
+	<figcaption class="header"><span class="title">astro.config.mjs</span></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">sitemap</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;@astrojs/sitemap&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF657C">export</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">default</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#66ADFF">site</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;https://stargazers.club&#39;</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#66ADFF">integrations</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> [</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#66ADFF">sitemap</span><span style="color:#D8DEE9">(</span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">      </span><span style="color:#66ADFF">changefreq</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;weekly&#39;</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#D8DEE9">      </span><span style="color:#66ADFF">priority</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#EBCB8B">0.7</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#D8DEE9">      </span><span style="color:#66ADFF">lastmod</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">new</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">Date</span><span style="color:#D8DEE9">(</span><span style="color:#16C082">&#39;2022-02-24&#39;</span><span style="color:#D8DEE9">)</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">)</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#D8DEE9">  ]</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span></span></code></pre>
+</figure><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="serialize">serialize</h3><a class="anchor-link" href="#serialize"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled serialize</span></a></div><p>A function called for each sitemap entry just before writing to a disk. This function can be asynchronous.</p><p>It receives as its parameter a <code>SitemapItem</code> object that can have these properties:</p><ul>
+<li><code>url</code> (absolute page URL). This is the only property that is guaranteed to be on <code>SitemapItem</code>.</li>
+<li><code>changefreq</code></li>
+<li><code>lastmod</code> (ISO formatted date, <code>String</code> type)</li>
+<li><code>priority</code></li>
+<li><code>links</code>.</li>
+</ul><p>This <code>links</code> property contains a <code>LinkItem</code> list of alternate pages including a parent page.</p><p>The <code>LinkItem</code> type has two fields: <code>url</code> (the fully-qualified URL for the version of this page for the specified language) and <code>lang</code> (a supported language code targeted by this version of the page).</p><p>The <code>serialize</code> function should return <code>SitemapItem</code>, touched or not.</p><p>The example below shows the ability to add sitemap specific properties individually.</p>
+<figure class="code-snippet has-title lang-js">
+	<figcaption class="header"><span class="title">astro.config.mjs</span></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">sitemap</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;@astrojs/sitemap&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF657C">export</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">default</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#66ADFF">site</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;https://stargazers.club&#39;</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#66ADFF">integrations</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> [</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#66ADFF">sitemap</span><span style="color:#D8DEE9">(</span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">      </span><span style="color:#66ADFF">serialize</span><span style="color:#D8DEE9">(item) </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">        </span><span style="color:#FF657C">if</span><span style="color:#D8DEE9"> (</span><span style="color:#16C082">/</span><span style="color:#EBCB8B">exclude-from-sitemap</span><span style="color:#16C082">/</span><span style="color:#C7C5D3">.</span><span style="color:#66ADFF">test</span><span style="color:#D8DEE9">(item</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">url)) </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">          </span><span style="color:#FF657C">return</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">undefined</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#D8DEE9">        </span><span style="color:#C7C5D3">}</span></span>
+<span class="line"><span style="color:#D8DEE9">        </span><span style="color:#FF657C">if</span><span style="color:#D8DEE9"> (</span><span style="color:#16C082">/</span><span style="color:#EBCB8B">your-special-page</span><span style="color:#16C082">/</span><span style="color:#C7C5D3">.</span><span style="color:#66ADFF">test</span><span style="color:#D8DEE9">(item</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">url)) </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">          item</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">changefreq </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;daily&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#D8DEE9">          item</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">lastmod </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">new</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">Date</span><span style="color:#D8DEE9">()</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#D8DEE9">          item</span><span style="color:#C7C5D3">.</span><span style="color:#D8DEE9">priority </span><span style="color:#FF657C">=</span><span style="color:#D8DEE9"> </span><span style="color:#EBCB8B">0.9</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#D8DEE9">        </span><span style="color:#C7C5D3">}</span></span>
+<span class="line"><span style="color:#D8DEE9">        </span><span style="color:#FF657C">return</span><span style="color:#D8DEE9"> item</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"><span style="color:#D8DEE9">      </span><span style="color:#C7C5D3">},</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">)</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#D8DEE9">  ]</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#C7C5D3">}</span></span></code></pre>
+</figure><div class="heading-wrapper level-h3" tabindex="-1"><h3 id="i18n">i18n</h3><a class="anchor-link" href="#i18n"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled i18n</span></a></div><p>To localize a sitemap, pass an object to this <code>i18n</code> option.</p><p>This object has two required properties:</p><ul>
+<li><code>defaultLocale</code>: <code>String</code>. Its value must exist as one of <code>locales</code> keys.</li>
+<li><code>locales</code>:  <code>Record&lt;String, String&gt;</code>, key/value - pairs. The key is used to look for a locale part in a page path. The value is a language attribute, only English alphabet and hyphen allowed.</li>
+</ul><p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang">Read more about language attributes</a>.</p><p><a href="https://developers.google.com/search/docs/advanced/crawling/localized-versions#all-method-guidelines">Read more about localization</a>.</p>
+<figure class="code-snippet has-title lang-js">
+	<figcaption class="header"><span class="title">astro.config.mjs</span></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#FF657C">import</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">sitemap</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">from</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;@astrojs/sitemap&#39;</span><span style="color:#C7C5D3">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF657C">export</span><span style="color:#D8DEE9"> </span><span style="color:#FF657C">default</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#66ADFF">site</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;https://stargazers.club&#39;</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#66ADFF">integrations</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> [</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#66ADFF">sitemap</span><span style="color:#D8DEE9">(</span><span style="color:#C7C5D3">{</span><span style="color:#D8DEE9">  </span></span>
+<span class="line"><span style="color:#D8DEE9">      </span><span style="color:#66ADFF">i18n</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">        </span><span style="color:#66ADFF">defaultLocale</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;en&#39;</span><span style="color:#C7C5D3">,</span><span style="color:#D8DEE9">   </span><span style="color:#ABA8BD">// All urls that don&#39;t contain `es` or `fr` after `https://stargazers.club/` will be treated as default locale, i.e. `en`</span></span>
+<span class="line"><span style="color:#D8DEE9">        </span><span style="color:#66ADFF">locales</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#C7C5D3">{</span></span>
+<span class="line"><span style="color:#D8DEE9">          </span><span style="color:#66ADFF">en</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;en-US&#39;</span><span style="color:#C7C5D3">,</span><span style="color:#D8DEE9">         </span><span style="color:#ABA8BD">// The `defaultLocale` value must present in `locales` keys</span></span>
+<span class="line"><span style="color:#D8DEE9">          </span><span style="color:#66ADFF">es</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;es-ES&#39;</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#D8DEE9">          </span><span style="color:#66ADFF">fr</span><span style="color:#C7C5D3">:</span><span style="color:#D8DEE9"> </span><span style="color:#16C082">&#39;fr-CA&#39;</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#D8DEE9">        </span><span style="color:#C7C5D3">},</span></span>
+<span class="line"><span style="color:#D8DEE9">      </span><span style="color:#C7C5D3">},</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">}</span><span style="color:#D8DEE9">)</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#D8DEE9">  ]</span><span style="color:#C7C5D3">,</span></span>
+<span class="line"><span style="color:#C7C5D3">};</span></span></code></pre>
+</figure><p>The resulting sitemap looks like this:</p>
+<figure class="code-snippet lang-xml">
+	<figcaption class="header"></figcaption>
+	<pre class="astro-code" style="background-color: #312749; overflow-x: auto;"><code><span class="line"><span style="color:#D8DEE9">...</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">url</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">loc</span><span style="color:#C7C5D3">&gt;</span><span style="color:#D8DEE9">https://stargazers.club/</span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">loc</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">xhtml</span><span style="color:#C7C5D3">:</span><span style="color:#FF657C">link</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">rel</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;alternate&quot;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">hreflang</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;en-US&quot;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">href</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;https://stargazers.club/&quot;</span><span style="color:#C7C5D3">/&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">xhtml</span><span style="color:#C7C5D3">:</span><span style="color:#FF657C">link</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">rel</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;alternate&quot;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">hreflang</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;es-ES&quot;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">href</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;https://stargazers.club/es/&quot;</span><span style="color:#C7C5D3">/&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">xhtml</span><span style="color:#C7C5D3">:</span><span style="color:#FF657C">link</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">rel</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;alternate&quot;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">hreflang</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;fr-CA&quot;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">href</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;https://stargazers.club/fr/&quot;</span><span style="color:#C7C5D3">/&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">url</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">url</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">loc</span><span style="color:#C7C5D3">&gt;</span><span style="color:#D8DEE9">https://stargazers.club/es/</span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">loc</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">xhtml</span><span style="color:#C7C5D3">:</span><span style="color:#FF657C">link</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">rel</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;alternate&quot;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">hreflang</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;en-US&quot;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">href</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;https://stargazers.club/&quot;</span><span style="color:#C7C5D3">/&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">xhtml</span><span style="color:#C7C5D3">:</span><span style="color:#FF657C">link</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">rel</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;alternate&quot;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">hreflang</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;es-ES&quot;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">href</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;https://stargazers.club/es/&quot;</span><span style="color:#C7C5D3">/&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">xhtml</span><span style="color:#C7C5D3">:</span><span style="color:#FF657C">link</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">rel</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;alternate&quot;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">hreflang</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;fr-CA&quot;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">href</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;https://stargazers.club/fr/&quot;</span><span style="color:#C7C5D3">/&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">url</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">url</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">loc</span><span style="color:#C7C5D3">&gt;</span><span style="color:#D8DEE9">https://stargazers.club/fr/</span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">loc</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">xhtml</span><span style="color:#C7C5D3">:</span><span style="color:#FF657C">link</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">rel</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;alternate&quot;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">hreflang</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;en-US&quot;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">href</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;https://stargazers.club/&quot;</span><span style="color:#C7C5D3">/&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">xhtml</span><span style="color:#C7C5D3">:</span><span style="color:#FF657C">link</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">rel</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;alternate&quot;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">hreflang</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;es-ES&quot;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">href</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;https://stargazers.club/es/&quot;</span><span style="color:#C7C5D3">/&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">xhtml</span><span style="color:#C7C5D3">:</span><span style="color:#FF657C">link</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">rel</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;alternate&quot;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">hreflang</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;fr-CA&quot;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">href</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;https://stargazers.club/fr/&quot;</span><span style="color:#C7C5D3">/&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">url</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">url</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FF657C">loc</span><span style="color:#C7C5D3">&gt;</span><span style="color:#D8DEE9">https://stargazers.club/es/second-page/</span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">loc</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">xhtml</span><span style="color:#C7C5D3">:</span><span style="color:#FF657C">link</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">rel</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;alternate&quot;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">hreflang</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;es-ES&quot;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">href</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;https://stargazers.club/es/second-page/&quot;</span><span style="color:#C7C5D3">/&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">xhtml</span><span style="color:#C7C5D3">:</span><span style="color:#FF657C">link</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">rel</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;alternate&quot;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">hreflang</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;fr-CA&quot;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">href</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;https://stargazers.club/fr/second-page/&quot;</span><span style="color:#C7C5D3">/&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">    </span><span style="color:#C7C5D3">&lt;</span><span style="color:#FFBD2E">xhtml</span><span style="color:#C7C5D3">:</span><span style="color:#FF657C">link</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">rel</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;alternate&quot;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">hreflang</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;en-US&quot;</span><span style="color:#D8DEE9"> </span><span style="color:#FFBD2E">href</span><span style="color:#D8DEE9">=</span><span style="color:#16C082">&quot;https://stargazers.club/second-page/&quot;</span><span style="color:#C7C5D3">/&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">  </span><span style="color:#C7C5D3">&lt;/</span><span style="color:#FF657C">url</span><span style="color:#C7C5D3">&gt;</span></span>
+<span class="line"><span style="color:#D8DEE9">...</span></span></code></pre>
+</figure><div class="heading-wrapper level-h2" tabindex="-1"><h2 id="examples">Examples</h2><a class="anchor-link" href="#examples"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Examples</span></a></div><ul>
+<li>The official Astro website uses Astro Sitemap to generate <a href="https://astro.build/sitemap-index.xml">its sitemap</a>.</li>
+<li>The <a href="https://github.com/withastro/astro/tree/latest/examples/integrations-playground?on=github">integrations playground template</a> comes with Astro Sitemap installed. Try adding a route and building the project!</li>
+<li><a href="https://github.com/search?q=%22@astrojs/sitemap%22+filename:package.json&type=Code">Browse projects with Astro Sitemap on GitHub</a> for more examples!</li>
+</ul><div class="heading-wrapper level-h2" tabindex="-1"><h2 id="troubleshooting">Troubleshooting</h2><a class="anchor-link" href="#troubleshooting"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Troubleshooting</span></a></div><p>For help, check out the <code>#support-threads</code> channel on <a href="https://astro.build/chat">Discord</a>. Our friendly Support Squad members are here to help!</p><p>You can also check our <a href="/en/guides/integrations-guide/">Astro Integration Documentation</a> for more on integrations.</p><div class="heading-wrapper level-h2" tabindex="-1"><h2 id="contributing">Contributing</h2><a class="anchor-link" href="#contributing"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Contributing</span></a></div><p>This package is maintained by Astro’s Core team. You’re welcome to submit an issue or PR!</p><div class="heading-wrapper level-h2" tabindex="-1"><h2 id="changelog">Changelog</h2><a class="anchor-link" href="#changelog"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span><span class="sr-only">Section titled Changelog</span></a></div><p>See <a href="https://github.com/withastro/astro/tree/main/packages/integrations/sitemap/CHANGELOG.md">CHANGELOG.md</a> for a history of changes to this integration.</p><h2 class="astro-CQ2FNVLQ">
+		More Integrations
+
+	</h2><section class="integrations-nav astro-RWNYYAL3">
+	<section class="cards-nav astro-RWNYYAL3 astro-DV2PVJYU">
+	<h3 class="astro-RWNYYAL3">UI Frameworks</h3>
+	<ul class="fluid-grid fluid-grid--minimal astro-PKPSMDLR">
+	<li class="card card--minimal astro-DV2PVJYU astro-JYN6V6GM">
+	<div class="logo circle astro-QPL3RH27" style="--logo-size: 4rem; --logo-padding: .1875em;">
+	<img src="/logos/lit.svg" alt="" loading="lazy" decoding="async" width="64" height="64" class="astro-QPL3RH27">
+</div>
+
+
+	<div class="stack astro-JYN6V6GM">
+		<h3 class="astro-JYN6V6GM">
+			<a href="/ar/guides/integrations-guide/lit/" aria-current="false" class="astro-JYN6V6GM">
+				<span class="scope">@astrojs/&#8203;</span>lit
+			</a>
+		</h3>
+		
+	</div>
+</li>
+
+<li class="card card--minimal astro-DV2PVJYU astro-JYN6V6GM">
+	<div class="logo circle astro-QPL3RH27" style="--logo-size: 4rem; --logo-padding: .1875em;">
+	<img src="/logos/preact.svg" alt="" loading="lazy" decoding="async" width="64" height="64" class="astro-QPL3RH27">
+</div>
+
+
+	<div class="stack astro-JYN6V6GM">
+		<h3 class="astro-JYN6V6GM">
+			<a href="/ar/guides/integrations-guide/preact/" aria-current="false" class="astro-JYN6V6GM">
+				<span class="scope">@astrojs/&#8203;</span>preact
+			</a>
+		</h3>
+		
+	</div>
+</li>
+
+<li class="card card--minimal astro-DV2PVJYU astro-JYN6V6GM">
+	<div class="logo circle astro-QPL3RH27" style="--logo-size: 4rem; --logo-padding: .2em;">
+	<img src="/logos/react.svg" alt="" loading="lazy" decoding="async" width="64" height="64" class="astro-QPL3RH27">
+</div>
+
+
+	<div class="stack astro-JYN6V6GM">
+		<h3 class="astro-JYN6V6GM">
+			<a href="/ar/guides/integrations-guide/react/" aria-current="false" class="astro-JYN6V6GM">
+				<span class="scope">@astrojs/&#8203;</span>react
+			</a>
+		</h3>
+		
+	</div>
+</li>
+
+<li class="card card--minimal astro-DV2PVJYU astro-JYN6V6GM">
+	<div class="logo circle astro-QPL3RH27" style="--logo-size: 4rem; --logo-padding: .1875em;">
+	<img src="/logos/solid.svg" alt="" loading="lazy" decoding="async" width="64" height="64" class="astro-QPL3RH27">
+</div>
+
+
+	<div class="stack astro-JYN6V6GM">
+		<h3 class="astro-JYN6V6GM">
+			<a href="/ar/guides/integrations-guide/solid-js/" aria-current="false" class="astro-JYN6V6GM">
+				<span class="scope">@astrojs/&#8203;</span>solid-js
+			</a>
+		</h3>
+		
+	</div>
+</li>
+
+<li class="card card--minimal astro-DV2PVJYU astro-JYN6V6GM">
+	<div class="logo circle astro-QPL3RH27" style="--logo-size: 4rem; --logo-padding: .1875em;">
+	<img src="/logos/svelte.svg" alt="" loading="lazy" decoding="async" width="64" height="64" class="astro-QPL3RH27">
+</div>
+
+
+	<div class="stack astro-JYN6V6GM">
+		<h3 class="astro-JYN6V6GM">
+			<a href="/ar/guides/integrations-guide/svelte/" aria-current="false" class="astro-JYN6V6GM">
+				<span class="scope">@astrojs/&#8203;</span>svelte
+			</a>
+		</h3>
+		
+	</div>
+</li>
+
+<li class="card card--minimal astro-DV2PVJYU astro-JYN6V6GM">
+	<div class="logo circle astro-QPL3RH27" style="--logo-size: 4rem; --logo-padding: .3em .2em .2em;">
+	<img src="/logos/vue.svg" alt="" loading="lazy" decoding="async" width="64" height="64" class="astro-QPL3RH27">
+</div>
+
+
+	<div class="stack astro-JYN6V6GM">
+		<h3 class="astro-JYN6V6GM">
+			<a href="/ar/guides/integrations-guide/vue/" aria-current="false" class="astro-JYN6V6GM">
+				<span class="scope">@astrojs/&#8203;</span>vue
+			</a>
+		</h3>
+		
+	</div>
+</li>
+
+
+</ul>
+
+
+</section>
+
+<section class="cards-nav astro-RWNYYAL3 astro-DV2PVJYU">
+	<h3 class="astro-RWNYYAL3">SSR Adapters</h3>
+	<ul class="fluid-grid fluid-grid--minimal astro-PKPSMDLR">
+	<li class="card card--minimal astro-DV2PVJYU astro-JYN6V6GM">
+	<div class="logo circle astro-QPL3RH27" style="--logo-size: 4rem; --logo-padding: .1875em;">
+	<img src="/logos/cloudflare-pages.svg" alt="" loading="lazy" decoding="async" width="64" height="64" class="astro-QPL3RH27">
+</div>
+
+
+	<div class="stack astro-JYN6V6GM">
+		<h3 class="astro-JYN6V6GM">
+			<a href="/ar/guides/integrations-guide/cloudflare/" aria-current="false" class="astro-JYN6V6GM">
+				<span class="scope">@astrojs/&#8203;</span>cloudflare
+			</a>
+		</h3>
+		
+	</div>
+</li>
+
+<li class="card card--minimal astro-DV2PVJYU astro-JYN6V6GM">
+	<div class="logo circle astro-QPL3RH27" style="--logo-size: 4rem; --logo-padding: 0;">
+	<img src="/logos/deno.svg" alt="" loading="lazy" decoding="async" width="64" height="64" class="astro-QPL3RH27">
+</div>
+
+
+	<div class="stack astro-JYN6V6GM">
+		<h3 class="astro-JYN6V6GM">
+			<a href="/ar/guides/integrations-guide/deno/" aria-current="false" class="astro-JYN6V6GM">
+				<span class="scope">@astrojs/&#8203;</span>deno
+			</a>
+		</h3>
+		
+	</div>
+</li>
+
+<li class="card card--minimal astro-DV2PVJYU astro-JYN6V6GM">
+	<div class="logo circle astro-QPL3RH27" style="--logo-size: 4rem; --logo-padding: .1625em;">
+	<img src="/logos/netlify.svg" alt="" loading="lazy" decoding="async" width="64" height="64" class="astro-QPL3RH27">
+</div>
+
+
+	<div class="stack astro-JYN6V6GM">
+		<h3 class="astro-JYN6V6GM">
+			<a href="/ar/guides/integrations-guide/netlify/" aria-current="false" class="astro-JYN6V6GM">
+				<span class="scope">@astrojs/&#8203;</span>netlify
+			</a>
+		</h3>
+		
+	</div>
+</li>
+
+<li class="card card--minimal astro-DV2PVJYU astro-JYN6V6GM">
+	<div class="logo circle astro-QPL3RH27" style="--logo-size: 4rem; --logo-padding: .1875em;">
+	<img src="/logos/node.svg" alt="" loading="lazy" decoding="async" width="64" height="64" class="astro-QPL3RH27">
+</div>
+
+
+	<div class="stack astro-JYN6V6GM">
+		<h3 class="astro-JYN6V6GM">
+			<a href="/ar/guides/integrations-guide/node/" aria-current="false" class="astro-JYN6V6GM">
+				<span class="scope">@astrojs/&#8203;</span>node
+			</a>
+		</h3>
+		
+	</div>
+</li>
+
+<li class="card card--minimal astro-DV2PVJYU astro-JYN6V6GM">
+	<div class="logo circle astro-QPL3RH27" style="--logo-size: 4rem; --logo-padding: .3em .3em .35em;">
+	<img src="/logos/vercel.svg" alt="" loading="lazy" decoding="async" width="64" height="64" class="astro-QPL3RH27">
+</div>
+
+
+	<div class="stack astro-JYN6V6GM">
+		<h3 class="astro-JYN6V6GM">
+			<a href="/ar/guides/integrations-guide/vercel/" aria-current="false" class="astro-JYN6V6GM">
+				<span class="scope">@astrojs/&#8203;</span>vercel
+			</a>
+		</h3>
+		
+	</div>
+</li>
+
+
+</ul>
+
+
+</section>
+
+<section class="cards-nav astro-RWNYYAL3 astro-DV2PVJYU">
+	<h3 class="astro-RWNYYAL3">Others</h3>
+	<ul class="fluid-grid fluid-grid--minimal astro-PKPSMDLR">
+	<li class="card card--minimal astro-DV2PVJYU astro-JYN6V6GM">
+	<div class="logo circle astro-QPL3RH27" style="--logo-size: 4rem; --logo-padding: .1875em;">
+	<img src="/logos/astro-image.svg" alt="" loading="lazy" decoding="async" width="64" height="64" class="astro-QPL3RH27">
+</div>
+
+
+	<div class="stack astro-JYN6V6GM">
+		<h3 class="astro-JYN6V6GM">
+			<a href="/ar/guides/integrations-guide/image/" aria-current="false" class="astro-JYN6V6GM">
+				<span class="scope">@astrojs/&#8203;</span>image
+			</a>
+		</h3>
+		
+	</div>
+</li>
+
+<li class="card card--minimal astro-DV2PVJYU astro-JYN6V6GM">
+	<div class="logo circle astro-QPL3RH27" style="--logo-size: 4rem; --logo-padding: .1em;">
+	<img src="/logos/mdx.svg" alt="" loading="lazy" decoding="async" width="64" height="64" class="astro-QPL3RH27">
+</div>
+
+
+	<div class="stack astro-JYN6V6GM">
+		<h3 class="astro-JYN6V6GM">
+			<a href="/ar/guides/integrations-guide/mdx/" aria-current="false" class="astro-JYN6V6GM">
+				<span class="scope">@astrojs/&#8203;</span>mdx
+			</a>
+		</h3>
+		
+	</div>
+</li>
+
+<li class="card card--minimal astro-DV2PVJYU astro-JYN6V6GM">
+	<div class="logo circle astro-QPL3RH27" style="--logo-size: 4rem; --logo-padding: .2em .2em .25em .25em;">
+	<img src="/logos/partytown.svg" alt="" loading="lazy" decoding="async" width="64" height="64" class="astro-QPL3RH27">
+</div>
+
+
+	<div class="stack astro-JYN6V6GM">
+		<h3 class="astro-JYN6V6GM">
+			<a href="/ar/guides/integrations-guide/partytown/" aria-current="false" class="astro-JYN6V6GM">
+				<span class="scope">@astrojs/&#8203;</span>partytown
+			</a>
+		</h3>
+		
+	</div>
+</li>
+
+<li class="card card--minimal astro-DV2PVJYU astro-JYN6V6GM">
+	<div class="logo circle astro-QPL3RH27" style="--logo-size: 4rem; --logo-padding: .25em;">
+	<img src="/logos/prefetch.svg" alt="" loading="lazy" decoding="async" width="64" height="64" class="astro-QPL3RH27">
+</div>
+
+
+	<div class="stack astro-JYN6V6GM">
+		<h3 class="astro-JYN6V6GM">
+			<a href="/ar/guides/integrations-guide/prefetch/" aria-current="false" class="astro-JYN6V6GM">
+				<span class="scope">@astrojs/&#8203;</span>prefetch
+			</a>
+		</h3>
+		
+	</div>
+</li>
+
+<li class="card card--minimal astro-DV2PVJYU astro-JYN6V6GM">
+	<div class="logo circle astro-QPL3RH27" style="--logo-size: 4rem; --logo-padding: .1875em .25em .25em;">
+	<img src="/logos/sitemap.svg" alt="" loading="lazy" decoding="async" width="64" height="64" class="astro-QPL3RH27">
+</div>
+
+
+	<div class="stack astro-JYN6V6GM">
+		<h3 class="astro-JYN6V6GM">
+			<a href="/ar/guides/integrations-guide/sitemap/" aria-current="page" class="astro-JYN6V6GM">
+				<span class="scope">@astrojs/&#8203;</span>sitemap
+			</a>
+		</h3>
+		
+	</div>
+</li>
+
+<li class="card card--minimal astro-DV2PVJYU astro-JYN6V6GM">
+	<div class="logo circle astro-QPL3RH27" style="--logo-size: 4rem; --logo-padding: .1875em;">
+	<img src="/logos/tailwind.svg" alt="" loading="lazy" decoding="async" width="64" height="64" class="astro-QPL3RH27">
+</div>
+
+
+	<div class="stack astro-JYN6V6GM">
+		<h3 class="astro-JYN6V6GM">
+			<a href="/ar/guides/integrations-guide/tailwind/" aria-current="false" class="astro-JYN6V6GM">
+				<span class="scope">@astrojs/&#8203;</span>tailwind
+			</a>
+		</h3>
+		
+	</div>
+</li>
+
+
+</ul>
+
+
+</section>
+
+
+</section>
+
+
+	</section>
+	
+</article>
+
+
+			</div>
+		</main>
+	</body></html>
+
